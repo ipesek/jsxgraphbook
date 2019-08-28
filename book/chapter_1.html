@@ -1,0 +1,300 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Chapter 1 - JSXGraph Book</title>
+        
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body class="light">
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+                        </div>
+
+                        <h1 class="menu-title">JSXGraph Book</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <script type="text/javascript" charset="UTF-8" src="//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraphcore.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css" />
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+<p>#JSXGraph Book</p>
+<h3><a class="header" href="#avgust-2019" id="avgust-2019">Avgust, 2019</a></h3>
+<h3><a class="header" href="#ver-01-alpha" id="ver-01-alpha">ver. 0.1 alpha</a></h3>
+<p>This book was created with the financianal support of Erasmus+ KA2 project ITEMS</p>
+<div id="box16" class="jxgbox" style="width:375px; height:250px;margin-left:auto; margin-right:auto;"></div> 
+<script type='text/javascript'>
+	var brd16 = JXG.JSXGraph.initBoard('box16', {boundingbox: [-10.4625,7.6,10.4625,-5]});
+	brd16.options.point.visible = false;
+	brd16.options.point.fixed = false;
+	brd16.options.polygon.borders.visible = false;
+    var template_color = 'DarkSlateGray';
+    var template_hcolor = 'LightSlateGray';
+    var color1 = 'Crimson';
+	var kot16 = brd16.create('slider', [[-9.5,-4],[-0.5,-4],[90,90,-60]], {withlabel:false});	
+	var B116 = brd16.create('point', [-1,-4], {name:'B116'});
+	var Vues16 = brd16.create('point', [function(){return kot16.Value() > 0 ? -0.9217 : (kot16.Value() < -30 ? -Math.PI/2 : -0.9217+(-Math.PI/2+0.9217)/30*(-kot16.Value()))}, function(){return kot16.Value() > -30 ? -0.55088 : (kot16.Value() < -29 ? -0.55088+(-1+0.55088)/30*(-30-kot16.Value()) : -1)}], {name:'Vues16', color:color1});
+	var zoom16 = 1.6;
+	var x16 = function(){return -zoom16 * Math.cos(Vues16.X()) * Math.sin(Vues16.Y())};
+	var X16 = brd16.create('point', [function(){return B116.X() + zoom16 * Math.sin(Vues16.X())}, function(){return B116.Y()+x16}], {name:'X'});
+	var u16 = brd16.create('point', [function(){return zoom16*Math.sin(Vues16.X());},x16], {name:'u16'});
+	var k16 = -1;
+	var Z16 = brd16.create('point', [function(){return B116.X()}, function(){return B116.Y()+zoom16*Math.cos(Vues16.Y())}], {name:'Z16'});
+	var w16 = brd16.create('point', [0,function(){return zoom16*Math.cos(Vues16.Y());}], {name:'w16'});
+	var Y_16 = brd16.create('point', [function(){return B116.X()+zoom16*Math.cos(Vues16.X())}, function(){return B116.Y()+zoom16*Math.sin(Vues16.X())*Math.sin(Vues16.Y())}], {name:'Y'});
+	var v16 = brd16.create('point', [function(){return zoom16*Math.cos(Vues16.X())},function(){return zoom16*Math.sin(Vues16.X())*Math.sin(Vues16.Y());}], {name:'v16'});
+	var O16 = brd16.create('point', [1,2], {name:'O16'});
+	var a16 = 1;
+	var b16 = 1;
+	var d16 = 2; 
+	var vzorec16 = brd16.create('slider', [[18,5.5],[18,-2],[1,1,11]], {withlabel:false});
+	var K16 = brd16.create('point', [function(){return O16.X() + a16 * u16.X() + b16 * v16.X()},function(){return O16.Y() + a16 * u16.Y() + b16 * v16.Y()}], {name:'K16'});
+	var L16 = brd16.create('point', [function(){return O16.X() - a16 * u16.X() + b16 * v16.X()},function(){return O16.Y() - a16 * u16.Y() + b16 * v16.Y()}], {name:'L16'});
+	var M16 = brd16.create('point', [function(){return O16.X() - a16 * u16.X() - b16 * v16.X()},function(){return O16.Y() - a16 * u16.Y() - b16 * v16.Y()}], {name:'M16'});
+	var N16 = brd16.create('point', [function(){return O16.X() + a16 * u16.X() - b16 * v16.X()},function(){return O16.Y() + a16 * u16.Y() - b16 * v16.Y()}], {name:'N16'});
+	brd16.create('polygon', [L16,K16,N16,M16], {fillopacity:0.05});
+	brd16.create('segment', [L16,K16], {});
+	brd16.create('segment', [K16,N16], {});
+	brd16.create('segment', [N16,M16], {});
+	brd16.create('segment', [M16,L16], {});
+	var P16 = brd16.create('point', [function(){return O16.X() + a16 * u16.X() + b16 * v16.X() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() + a16 * u16.Y() + b16 * v16.Y() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'P16'});
+	var Q16 = brd16.create('point', [function(){return O16.X() + a16 * u16.X() - b16 * v16.X() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() + a16 * u16.Y() - b16 * v16.Y() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'Q16'});
+	var R16 = brd16.create('point', [function(){return O16.X() - a16 * u16.X() + b16 * v16.X() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() - a16 * u16.Y() + b16 * v16.Y() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'R16'});
+	var S16 = brd16.create('point', [function(){return O16.X() - a16 * u16.X() - b16 * v16.X() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() - a16 * u16.Y() - b16 * v16.Y() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'S16'});
+	brd16.create('polygon', [K16,P16,Q16,N16]);
+	brd16.create('segment', [K16,P16], {});//vedno
+	brd16.create('segment', [P16,Q16], {});//vedno
+	brd16.create('segment', [Q16,N16], {});//vedno
+	brd16.create('segment', [N16,K16], {});//vedno
+	brd16.create('polygon', [L16,M16,S16,R16], {opacity:function(){return vzorec16.Value()==1||vzorec16.Value()==2||vzorec16.Value()==3||vzorec16.Value()==4||vzorec16.Value()==7||vzorec16.Value()==7||vzorec16.Value()==8||vzorec16.Value()==9||vzorec16.Value()==10?0.25:0;}});
+	brd16.create('segment', [L16,M16], {});//vedno
+	brd16.create('segment', [M16,S16], {opacity:function(){return vzorec16.Value()!=5&&vzorec16.Value()!=6&&vzorec16.Value()!=11?1:0}});
+	brd16.create('segment', [S16,R16], {opacity:function(){return vzorec16.Value()!=5&&vzorec16.Value()!=6&&vzorec16.Value()!=11?1:0}});
+	brd16.create('segment', [R16,L16], {opacity:function(){return vzorec16.Value()!=5&&vzorec16.Value()!=6&&vzorec16.Value()!=11?1:0}});
+	var T16 = brd16.create('point', [function(){return O16.X() + a16 * u16.X() + b16 * v16.X() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * v16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() + a16 * u16.Y() + b16 * v16.Y() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * v16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'T16'});
+	var U16 = brd16.create('point', [function(){return O16.X() - a16 * u16.X() + b16 * v16.X() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * v16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() - a16 * u16.Y() + b16 * v16.Y() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * v16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'U16'});
+	var V16 = brd16.create('point', [function(){return O16.X() + a16 * u16.X() - b16 * v16.X() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * v16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() + a16 * u16.Y() - b16 * v16.Y() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * v16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'V16'});
+	var W16 = brd16.create('point', [function(){return O16.X() - a16 * u16.X() - b16 * v16.X() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * v16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() - a16 * u16.Y() - b16 * v16.Y() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * v16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'W16'});
+	brd16.create('polygon', [N16,V16,W16,M16], {opacity:function(){return vzorec16.Value()==1||vzorec16.Value()==5||vzorec16.Value()==6||vzorec16.Value()==10||vzorec16.Value()==11?0.25:0;}});
+	brd16.create('segment', [N16,V16], {opacity:function(){return vzorec16.Value()==1||vzorec16.Value()==5||vzorec16.Value()==6||vzorec16.Value()==10||vzorec16.Value()==11?1:0}});
+	brd16.create('segment', [V16,W16], {opacity:function(){return vzorec16.Value()==1||vzorec16.Value()==5||vzorec16.Value()==6||vzorec16.Value()==10||vzorec16.Value()==11?1:0}});
+	brd16.create('segment', [W16,M16], {opacity:function(){return vzorec16.Value()==1||vzorec16.Value()==5||vzorec16.Value()==6||vzorec16.Value()==10||vzorec16.Value()==11?1:0}});
+	brd16.create('segment', [M16,N16], {});
+	brd16.create('polygon', [K16,T16,U16,L16], {opacity:function(){return vzorec16.Value()<7?0.25:0;}});
+	brd16.create('segment', [K16,T16], {opacity:function(){return vzorec16.Value()<7?1:0}});
+	brd16.create('segment', [T16,U16], {opacity:function(){return vzorec16.Value()<7?1:0}});
+	brd16.create('segment', [U16,L16], {opacity:function(){return vzorec16.Value()!=7&&vzorec16.Value()!=8&&vzorec16.Value()!=9&&vzorec16.Value()!=10&&vzorec16.Value()!=11?1:0}});
+	brd16.create('segment', [L16,K16], {opacity:function(){return vzorec16.Value()==5?1:0}});
+	var A16 = brd16.create('point', [function(){return O16.X() + a16 * u16.X() + b16 * v16.X() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X() + 2 * a16 * Math.cos(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + b16 * Math.sin(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() + a16 * u16.Y() + b16 * v16.Y() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y() + 2 * a16 * Math.cos(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + b16 * Math.sin(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'A16'});
+	var B16 = brd16.create('point', [function(){return O16.X() + a16 * u16.X() - b16 * v16.X() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X() + 2 * a16 * Math.cos(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + b16 * Math.sin(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() + a16 * u16.Y() - b16 * v16.Y() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y() + 2 * a16 * Math.cos(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + b16 * Math.sin(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'B16'});
+	brd16.create('polygon', [B16,Q16,P16,A16], {opacity:function(){return vzorec16.Value()<9&&vzorec16.Value()!=7?0.25:0;}});
+	brd16.create('segment', [B16,Q16], {opacity:function(){return vzorec16.Value()!=7&&vzorec16.Value()!=9&&vzorec16.Value()!=10&&vzorec16.Value()!=11?1:0}});
+	brd16.create('segment', [Q16,P16], {});//vedno
+	brd16.create('segment', [P16,A16], {opacity:function(){return vzorec16.Value()!=7&&vzorec16.Value()!=9&&vzorec16.Value()!=10&&vzorec16.Value()!=11?1:0}});
+	brd16.create('segment', [A16,B16], {opacity:function(){return vzorec16.Value()!=7&&vzorec16.Value()!=9&&vzorec16.Value()!=10&&vzorec16.Value()!=11?1:0}});
+	brd16.options.text.anchory = 'top';
+	brd16.options.text.fontsize = 16;
+	var ploscina16 = brd16.create('slider', [[0.5,-4],[9.5,-4],[0,0,8]], {withlabel:false});
+		ploscina16.hideElement();
+		ploscina16.highline.hideElement();
+		ploscina16.baseline.hideElement();
+	brd16.create('text', [function(){return V16.X() + 1.3},function(){return V16.Y()-0.3}, function(){return '$a$'}], {opacity:function(){return ploscina16.Value() > 0 ? 1 : 0}});
+	brd16.create('text', [function(){return W16.X() + 0.3},function(){return W16.Y()+1.375}, function(){return '$a$'}], {opacity:function(){return ploscina16.Value() > 0 ? 1 : 0}});
+	brd16.create('text', [function(){return V16.X() + 1.2},function(){return V16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 1 ? 1 : 0}});
+	brd16.create('text', [function(){return N16.X() + 1.2},function(){return N16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 2 ? 1 : 0}});
+	brd16.create('text', [function(){return M16.X() + 1.2},function(){return M16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 3 ? 1 : 0}});
+	brd16.create('text', [function(){return Q16.X() + 1.2},function(){return Q16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 4 ? 1 : 0}});
+	brd16.create('text', [function(){return B16.X() + 1.2},function(){return B16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 5 ? 1 : 0}});
+	brd16.create('text', [function(){return K16.X() + 1.2},function(){return K16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 6 ? 1 : 0}});
+	brd16.create('text', [function(){return L16.X() + 1.2},function(){return L16.Y() + 1.75}, function(){return '$P=?$'}], {opacity:function(){return ploscina16.Value() > 7 ? 1 : 0}});
+	kot16.on('drag', function(){
+		if(kot16.Value() > -60){
+			ploscina16.hideElement();
+			ploscina16.highline.hideElement();
+			ploscina16.baseline.hideElement();
+			ploscina16.moveTo([-9.5,-4]);
+			//ploscina16.baseline.hideElement();
+		} else {
+			ploscina16.showElement();
+			ploscina16.highline.showElement();
+			ploscina16.baseline.showElement();
+			ploscina16.moveTo([-9.75,-4]);
+		}
+	});
+</script></div>
+<p>$$a^2$$</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
