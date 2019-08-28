@@ -7,7 +7,7 @@
 ### Avgust, 2019
 ### ver. 0.1 alpha
 
-This book was created with the financianal support of Erasmus+ KA2 project ITEMS
+This book was created with the financial support of Erasmus+ KA2 project ITEMS
 
 <div id="box16" class="jxgbox" style="width:375px; height:250px;margin-left:auto; margin-right:auto;"></div> 
 <script type='text/javascript'>

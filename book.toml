@@ -7,4 +7,8 @@ title = "JSXGraph Book"
 
 [build]
 build-dir = "docs"
-create-missing = false
+
+[output.html]
+additional-css = ["files/jsxgraph.css"]
+additional-js = ["files/jsxgraphcore.js"]
+mathjax-support = true

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Chapter 1 - JSXGraph Book</title>
+        <title>Introduction - JSXGraph Book</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -29,7 +29,12 @@
 
         <!-- Custom theme stylesheets -->
         
+        <link rel="stylesheet" href="files/jsxgraph.css">
+        
 
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
         
     </head>
     <body class="light">
@@ -78,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li><a href="chapter_1.html" class="active"><strong aria-hidden="true">1.</strong> Chapter 1</a></li></ol>
+                <ol class="chapter"><li><a href="introduction.html" class="active"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="setup.html"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html"><strong aria-hidden="true">3.</strong> Basics</a></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><a href="moodle.html"><strong aria-hidden="true">5.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="formulas.html"><strong aria-hidden="true">5.1.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">5.2.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">6.</strong> Templates</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -145,22 +150,20 @@
 
                 <div id="content" class="content">
                     <main>
-                        <script type="text/javascript" charset="UTF-8" src="//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraphcore.js"></script>
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css" />
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
-<p>#JSXGraph Book</p>
-<h3><a class="header" href="#avgust-2019" id="avgust-2019">Avgust, 2019</a></h3>
-<h3><a class="header" href="#ver-01-alpha" id="ver-01-alpha">ver. 0.1 alpha</a></h3>
-<p>This book was created with the financianal support of Erasmus+ KA2 project ITEMS</p>
-<div id="box16" class="jxgbox" style="width:375px; height:250px;margin-left:auto; margin-right:auto;"></div> 
+                        <script type="text/javascript" src="files/jsxgraphcore.js"></script>
+<p>This is a manual about the <a href="https://jsxgraph.org/">JSXGraph</a>. </p>
+<p>JSXGraph is a cross-browser JavaScript library for interactive geometry, function plotting, charting, and data visualization in the web browser.</p>
+<p>This book covers the basics, how to build simple constructions and also some advanced topics on how to include JSXGraph in Moodle. </p>
+<p>Below is an example of power of JSXGraph.<br />
+<em>Hint: Move the dot and observe.</em> </p>
+<div id="box16" class="jxgbox" style="width:500px; height:333px;margin-left:auto; margin-right:auto;"></div> 
 <script type='text/javascript'>
+    JXG.Options.board.showNavigation = false;
+    var color1 = "crimson";
 	var brd16 = JXG.JSXGraph.initBoard('box16', {boundingbox: [-10.4625,7.6,10.4625,-5]});
 	brd16.options.point.visible = false;
 	brd16.options.point.fixed = false;
 	brd16.options.polygon.borders.visible = false;
-    var template_color = 'DarkSlateGray';
-    var template_hcolor = 'LightSlateGray';
-    var color1 = 'Crimson';
 	var kot16 = brd16.create('slider', [[-9.5,-4],[-0.5,-4],[90,90,-60]], {withlabel:false});	
 	var B116 = brd16.create('point', [-1,-4], {name:'B116'});
 	var Vues16 = brd16.create('point', [function(){return kot16.Value() > 0 ? -0.9217 : (kot16.Value() < -30 ? -Math.PI/2 : -0.9217+(-Math.PI/2+0.9217)/30*(-kot16.Value()))}, function(){return kot16.Value() > -30 ? -0.55088 : (kot16.Value() < -29 ? -0.55088+(-1+0.55088)/30*(-30-kot16.Value()) : -1)}], {name:'Vues16', color:color1});
@@ -192,12 +195,12 @@
 	var R16 = brd16.create('point', [function(){return O16.X() - a16 * u16.X() + b16 * v16.X() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() - a16 * u16.Y() + b16 * v16.Y() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'R16'});
 	var S16 = brd16.create('point', [function(){return O16.X() - a16 * u16.X() - b16 * v16.X() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() - a16 * u16.Y() - b16 * v16.Y() - d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'S16'});
 	brd16.create('polygon', [K16,P16,Q16,N16]);
-	brd16.create('segment', [K16,P16], {});//vedno
-	brd16.create('segment', [P16,Q16], {});//vedno
-	brd16.create('segment', [Q16,N16], {});//vedno
-	brd16.create('segment', [N16,K16], {});//vedno
+	brd16.create('segment', [K16,P16], {});
+	brd16.create('segment', [P16,Q16], {});
+	brd16.create('segment', [Q16,N16], {});
+	brd16.create('segment', [N16,K16], {});
 	brd16.create('polygon', [L16,M16,S16,R16], {opacity:function(){return vzorec16.Value()==1||vzorec16.Value()==2||vzorec16.Value()==3||vzorec16.Value()==4||vzorec16.Value()==7||vzorec16.Value()==7||vzorec16.Value()==8||vzorec16.Value()==9||vzorec16.Value()==10?0.25:0;}});
-	brd16.create('segment', [L16,M16], {});//vedno
+	brd16.create('segment', [L16,M16], {});
 	brd16.create('segment', [M16,S16], {opacity:function(){return vzorec16.Value()!=5&&vzorec16.Value()!=6&&vzorec16.Value()!=11?1:0}});
 	brd16.create('segment', [S16,R16], {opacity:function(){return vzorec16.Value()!=5&&vzorec16.Value()!=6&&vzorec16.Value()!=11?1:0}});
 	brd16.create('segment', [R16,L16], {opacity:function(){return vzorec16.Value()!=5&&vzorec16.Value()!=6&&vzorec16.Value()!=11?1:0}});
@@ -219,31 +222,30 @@
 	var B16 = brd16.create('point', [function(){return O16.X() + a16 * u16.X() - b16 * v16.X() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X() + 2 * a16 * Math.cos(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.X() + b16 * Math.sin(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.X()},function(){return O16.Y() + a16 * u16.Y() - b16 * v16.Y() + d16 * Math.cos((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + d16 * Math.sin((kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y() + 2 * a16 * Math.cos(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * u16.Y() + b16 * Math.sin(2 * (kot16.Value() < 0 ? 0 : kot16.Value())*Math.PI/180) * w16.Y()}], {name:'B16'});
 	brd16.create('polygon', [B16,Q16,P16,A16], {opacity:function(){return vzorec16.Value()<9&&vzorec16.Value()!=7?0.25:0;}});
 	brd16.create('segment', [B16,Q16], {opacity:function(){return vzorec16.Value()!=7&&vzorec16.Value()!=9&&vzorec16.Value()!=10&&vzorec16.Value()!=11?1:0}});
-	brd16.create('segment', [Q16,P16], {});//vedno
+	brd16.create('segment', [Q16,P16], {});
 	brd16.create('segment', [P16,A16], {opacity:function(){return vzorec16.Value()!=7&&vzorec16.Value()!=9&&vzorec16.Value()!=10&&vzorec16.Value()!=11?1:0}});
 	brd16.create('segment', [A16,B16], {opacity:function(){return vzorec16.Value()!=7&&vzorec16.Value()!=9&&vzorec16.Value()!=10&&vzorec16.Value()!=11?1:0}});
 	brd16.options.text.anchory = 'top';
 	brd16.options.text.fontsize = 16;
 	var ploscina16 = brd16.create('slider', [[0.5,-4],[9.5,-4],[0,0,8]], {withlabel:false});
-		ploscina16.hideElement();
-		ploscina16.highline.hideElement();
-		ploscina16.baseline.hideElement();
-	brd16.create('text', [function(){return V16.X() + 1.3},function(){return V16.Y()-0.3}, function(){return '$a$'}], {opacity:function(){return ploscina16.Value() > 0 ? 1 : 0}});
-	brd16.create('text', [function(){return W16.X() + 0.3},function(){return W16.Y()+1.375}, function(){return '$a$'}], {opacity:function(){return ploscina16.Value() > 0 ? 1 : 0}});
-	brd16.create('text', [function(){return V16.X() + 1.2},function(){return V16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 1 ? 1 : 0}});
-	brd16.create('text', [function(){return N16.X() + 1.2},function(){return N16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 2 ? 1 : 0}});
-	brd16.create('text', [function(){return M16.X() + 1.2},function(){return M16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 3 ? 1 : 0}});
-	brd16.create('text', [function(){return Q16.X() + 1.2},function(){return Q16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 4 ? 1 : 0}});
-	brd16.create('text', [function(){return B16.X() + 1.2},function(){return B16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 5 ? 1 : 0}});
-	brd16.create('text', [function(){return K16.X() + 1.2},function(){return K16.Y() + 1.75}, function(){return '$a^2$'}], {opacity:function(){return ploscina16.Value() > 6 ? 1 : 0}});
-	brd16.create('text', [function(){return L16.X() + 1.2},function(){return L16.Y() + 1.75}, function(){return '$P=?$'}], {opacity:function(){return ploscina16.Value() > 7 ? 1 : 0}});
+		ploscina16.setDisplayRendNode(false);
+		ploscina16.highline.setDisplayRendNode(false);
+		ploscina16.baseline.setDisplayRendNode(false);
+	brd16.create('text', [function(){return V16.X() + 1.3},function(){return V16.Y()-0.3}, function(){return 'a'}], {opacity:function(){return ploscina16.Value() > 0 ? 1 : 0}});
+	brd16.create('text', [function(){return W16.X() + 0.3},function(){return W16.Y()+1.375}, function(){return 'a'}], {opacity:function(){return ploscina16.Value() > 0 ? 1 : 0}});
+	brd16.create('text', [function(){return V16.X() + 1.2},function(){return V16.Y() + 1.75}, function(){return 'a^2'}], {opacity:function(){return ploscina16.Value() > 1 ? 1 : 0}});
+	brd16.create('text', [function(){return N16.X() + 1.2},function(){return N16.Y() + 1.75}, function(){return 'a^2'}], {opacity:function(){return ploscina16.Value() > 2 ? 1 : 0}});
+	brd16.create('text', [function(){return M16.X() + 1.2},function(){return M16.Y() + 1.75}, function(){return 'a^2'}], {opacity:function(){return ploscina16.Value() > 3 ? 1 : 0}});
+	brd16.create('text', [function(){return Q16.X() + 1.2},function(){return Q16.Y() + 1.75}, function(){return 'a^2'}], {opacity:function(){return ploscina16.Value() > 4 ? 1 : 0}});
+	brd16.create('text', [function(){return B16.X() + 1.2},function(){return B16.Y() + 1.75}, function(){return 'a^2'}], {opacity:function(){return ploscina16.Value() > 5 ? 1 : 0}});
+	brd16.create('text', [function(){return K16.X() + 1.2},function(){return K16.Y() + 1.75}, function(){return 'a^2'}], {opacity:function(){return ploscina16.Value() > 6 ? 1 : 0}});
+	brd16.create('text', [function(){return L16.X() + 1.2},function(){return L16.Y() + 1.75}, function(){return 'P=?'}], {opacity:function(){return ploscina16.Value() > 7 ? 1 : 0}});
 	kot16.on('drag', function(){
 		if(kot16.Value() > -60){
-			ploscina16.hideElement();
-			ploscina16.highline.hideElement();
-			ploscina16.baseline.hideElement();
+			ploscina16.setDisplayRendNode(false);
+			ploscina16.highline.setDisplayRendNode(false);
+			ploscina16.baseline.setDisplayRendNode(false);
 			ploscina16.moveTo([-9.5,-4]);
-			//ploscina16.baseline.hideElement();
 		} else {
 			ploscina16.showElement();
 			ploscina16.highline.showElement();
@@ -251,8 +253,7 @@
 			ploscina16.moveTo([-9.75,-4]);
 		}
 	});
-</script></div>
-<p>$$a^2$$</p>
+</script>
 
                     </main>
 
@@ -260,6 +261,10 @@
                         <!-- Mobile navigation buttons -->
                         
 
+                        
+                            <a rel="next" href="setup.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
 
                         <div style="clear: both"></div>
@@ -271,10 +276,29 @@
                 
 
                 
+                    <a href="setup.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
             </nav>
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         
@@ -292,6 +316,8 @@
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
+        
+        <script type="text/javascript" src="files/jsxgraphcore.js"></script>
         
 
         
