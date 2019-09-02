@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li><a href="introduction.html" class="active"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="setup.html"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html"><strong aria-hidden="true">3.</strong> Basics</a></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><a href="moodle.html"><strong aria-hidden="true">5.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="formulas.html"><strong aria-hidden="true">5.1.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">5.2.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">6.</strong> Templates</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li><a href="introduction.html" class="active"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="setup.html"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html"><strong aria-hidden="true">3.</strong> Basics</a></li><li><ol class="section"><li><a href="board.html"><strong aria-hidden="true">3.1.</strong> Drawing area</a></li><li><a href="basic_objects.html"><strong aria-hidden="true">3.2.</strong> Using basic objects</a></li><li><a href="functions.html"><strong aria-hidden="true">3.3.</strong> Functions drawing</a></li></ol></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><ol class="section"><li><a href="moving.html"><strong aria-hidden="true">4.1.</strong> Moving objects</a></li><li><a href="sliders.html"><strong aria-hidden="true">4.2.</strong> Sliders</a></li><li><a href="animation_sliders.html"><strong aria-hidden="true">4.3.</strong> Animating with sliders</a></li></ol></li><li><a href="advanced.html"><strong aria-hidden="true">5.</strong> Advanced topics</a></li><li><ol class="section"><li><a href="screencapture.html"><strong aria-hidden="true">5.1.</strong> Capture the construction as image</a></li><li><a href="jsxoptions.html"><strong aria-hidden="true">5.2.</strong> JSXGraph options</a></li><li><a href="trigers.html"><strong aria-hidden="true">5.3.</strong> Triggers</a></li><li><a href="user_actions.html"><strong aria-hidden="true">5.4.</strong> Saving user actions</a></li></ol></li><li><a href="moodle.html"><strong aria-hidden="true">6.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="jsxfilter.html"><strong aria-hidden="true">6.1.</strong> JSXGraph as a Moodle Filter</a></li><li><a href="formulas.html"><strong aria-hidden="true">6.2.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">6.3.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">7.</strong> Templates</a></li><li><a href="gui.html"><strong aria-hidden="true">8.</strong> JSX Gui</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -151,9 +151,12 @@
                 <div id="content" class="content">
                     <main>
                         <script type="text/javascript" src="files/jsxgraphcore.js"></script>
+<h4><a class="header" href="#this-is-work-in-progress" id="this-is-work-in-progress">This is work in progress</a></h4>
 <p>This is a manual about the <a href="https://jsxgraph.org/">JSXGraph</a>. </p>
 <p>JSXGraph is a cross-browser JavaScript library for interactive geometry, function plotting, charting, and data visualization in the web browser.</p>
 <p>This book covers the basics, how to build simple constructions and also some advanced topics on how to include JSXGraph in Moodle. </p>
+<p><strong><em>To build JSXGraph constructions you don't need to be programmer (algthough it helps), but is rather more like putting together
+elements of the construction.</em></strong></p>
 <p>Below is an example of power of JSXGraph.<br />
 <em>Hint: Move the dot and observe.</em> </p>
 <div id="box16" class="jxgbox" style="width:500px; height:333px;margin-left:auto; margin-right:auto;"></div> 
@@ -284,21 +287,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

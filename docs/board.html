@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Basics - JSXGraph Book</title>
+        <title>Drawing area - JSXGraph Book</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="setup.html"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html" class="active"><strong aria-hidden="true">3.</strong> Basics</a></li><li><ol class="section"><li><a href="board.html"><strong aria-hidden="true">3.1.</strong> Drawing area</a></li><li><a href="basic_objects.html"><strong aria-hidden="true">3.2.</strong> Using basic objects</a></li><li><a href="functions.html"><strong aria-hidden="true">3.3.</strong> Functions drawing</a></li></ol></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><ol class="section"><li><a href="moving.html"><strong aria-hidden="true">4.1.</strong> Moving objects</a></li><li><a href="sliders.html"><strong aria-hidden="true">4.2.</strong> Sliders</a></li><li><a href="animation_sliders.html"><strong aria-hidden="true">4.3.</strong> Animating with sliders</a></li></ol></li><li><a href="advanced.html"><strong aria-hidden="true">5.</strong> Advanced topics</a></li><li><ol class="section"><li><a href="screencapture.html"><strong aria-hidden="true">5.1.</strong> Capture the construction as image</a></li><li><a href="jsxoptions.html"><strong aria-hidden="true">5.2.</strong> JSXGraph options</a></li><li><a href="trigers.html"><strong aria-hidden="true">5.3.</strong> Triggers</a></li><li><a href="user_actions.html"><strong aria-hidden="true">5.4.</strong> Saving user actions</a></li></ol></li><li><a href="moodle.html"><strong aria-hidden="true">6.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="jsxfilter.html"><strong aria-hidden="true">6.1.</strong> JSXGraph as a Moodle Filter</a></li><li><a href="formulas.html"><strong aria-hidden="true">6.2.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">6.3.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">7.</strong> Templates</a></li><li><a href="gui.html"><strong aria-hidden="true">8.</strong> JSX Gui</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="setup.html"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html"><strong aria-hidden="true">3.</strong> Basics</a></li><li><ol class="section"><li><a href="board.html" class="active"><strong aria-hidden="true">3.1.</strong> Drawing area</a></li><li><a href="basic_objects.html"><strong aria-hidden="true">3.2.</strong> Using basic objects</a></li><li><a href="functions.html"><strong aria-hidden="true">3.3.</strong> Functions drawing</a></li></ol></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><ol class="section"><li><a href="moving.html"><strong aria-hidden="true">4.1.</strong> Moving objects</a></li><li><a href="sliders.html"><strong aria-hidden="true">4.2.</strong> Sliders</a></li><li><a href="animation_sliders.html"><strong aria-hidden="true">4.3.</strong> Animating with sliders</a></li></ol></li><li><a href="advanced.html"><strong aria-hidden="true">5.</strong> Advanced topics</a></li><li><ol class="section"><li><a href="screencapture.html"><strong aria-hidden="true">5.1.</strong> Capture the construction as image</a></li><li><a href="jsxoptions.html"><strong aria-hidden="true">5.2.</strong> JSXGraph options</a></li><li><a href="trigers.html"><strong aria-hidden="true">5.3.</strong> Triggers</a></li><li><a href="user_actions.html"><strong aria-hidden="true">5.4.</strong> Saving user actions</a></li></ol></li><li><a href="moodle.html"><strong aria-hidden="true">6.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="jsxfilter.html"><strong aria-hidden="true">6.1.</strong> JSXGraph as a Moodle Filter</a></li><li><a href="formulas.html"><strong aria-hidden="true">6.2.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">6.3.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">7.</strong> Templates</a></li><li><a href="gui.html"><strong aria-hidden="true">8.</strong> JSX Gui</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -150,21 +150,58 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#basics" id="basics">Basics</a></h1>
-<p>In this chapter we will show some basic examples on how to make first JSXGraph construction. </p>
+                        <h1><a class="header" href="#drawing-area" id="drawing-area">Drawing area</a></h1>
+<p>JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
+HTML which we will tell Javascript to use as canvas. This is done like this</p>
+<pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>If look at the line closely we see few properties. For us it is important <code>id=&quot;jxgbox&quot;</code> which we use to connect with JSXGraph.
+Next is <code>class=&quot;jxgbox&quot;</code> where we can specify how our board will look like. This is more advanced topic and will be discussed later.
+Last property is `style=&quot;width:500px; height:200px;&quot; where we define size of our drawing board.<br />
+<em>Important: here we do not define our coordinate system, but only the size of our canvas</em></p>
+<p>When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside</p>
+<pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+</code></pre>
+<p>We can see we called function initBoard, which constructs our drawing board . This function need at least one argument, 
+which is the name of id we defined earlier for div in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
+JSXGraph coordinate system of our construction.</p>
+<p>Code of whole example is then following:</p>
+<pre><code class="language-HTML">&lt;!DOCTYPE HTML&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;JSXGraph templatek&lt;/title&gt;
+        &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
+        &lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
+/jsxgraphcore.js&quot;&gt;&lt;/script&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css
+&quot; /&gt;
+    &lt;/head&gt;
+  &lt;body&gt;
+
+     &lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+
+     &lt;script&gt;
+        var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+     &lt;/script&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>You can copy-paste to a file (name it <code>example1.html</code>) and open it your favorite browser. </p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
                         
-                            <a rel="prev" href="setup.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="basics.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
                         
 
                         
-                            <a rel="next" href="board.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="basic_objects.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         
@@ -176,13 +213,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="setup.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="basics.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="board.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="basic_objects.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 

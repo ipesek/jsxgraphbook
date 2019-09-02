@@ -1,10 +1,15 @@
 <script type="text/javascript" src="files/jsxgraphcore.js"></script>
 
+#### This is work in progress
+
 This is a manual about the [JSXGraph](https://jsxgraph.org/). 
 
 JSXGraph is a cross-browser JavaScript library for interactive geometry, function plotting, charting, and data visualization in the web browser.
 
 This book covers the basics, how to build simple constructions and also some advanced topics on how to include JSXGraph in Moodle. 
+
+**_To build JSXGraph constructions you don't need to be programmer (algthough it helps), but is rather more like putting together
+elements of the construction._**
 
 Below is an example of power of JSXGraph.   
 *Hint: Move the dot and observe.* 

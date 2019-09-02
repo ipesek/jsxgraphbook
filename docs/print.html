@@ -85,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="setup.html"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html"><strong aria-hidden="true">3.</strong> Basics</a></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><a href="moodle.html"><strong aria-hidden="true">5.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="formulas.html"><strong aria-hidden="true">5.1.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">5.2.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">6.</strong> Templates</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="setup.html"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html"><strong aria-hidden="true">3.</strong> Basics</a></li><li><ol class="section"><li><a href="board.html"><strong aria-hidden="true">3.1.</strong> Drawing area</a></li><li><a href="basic_objects.html"><strong aria-hidden="true">3.2.</strong> Using basic objects</a></li><li><a href="functions.html"><strong aria-hidden="true">3.3.</strong> Functions drawing</a></li></ol></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><ol class="section"><li><a href="moving.html"><strong aria-hidden="true">4.1.</strong> Moving objects</a></li><li><a href="sliders.html"><strong aria-hidden="true">4.2.</strong> Sliders</a></li><li><a href="animation_sliders.html"><strong aria-hidden="true">4.3.</strong> Animating with sliders</a></li></ol></li><li><a href="advanced.html"><strong aria-hidden="true">5.</strong> Advanced topics</a></li><li><ol class="section"><li><a href="screencapture.html"><strong aria-hidden="true">5.1.</strong> Capture the construction as image</a></li><li><a href="jsxoptions.html"><strong aria-hidden="true">5.2.</strong> JSXGraph options</a></li><li><a href="trigers.html"><strong aria-hidden="true">5.3.</strong> Triggers</a></li><li><a href="user_actions.html"><strong aria-hidden="true">5.4.</strong> Saving user actions</a></li></ol></li><li><a href="moodle.html"><strong aria-hidden="true">6.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="jsxfilter.html"><strong aria-hidden="true">6.1.</strong> JSXGraph as a Moodle Filter</a></li><li><a href="formulas.html"><strong aria-hidden="true">6.2.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">6.3.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">7.</strong> Templates</a></li><li><a href="gui.html"><strong aria-hidden="true">8.</strong> JSX Gui</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -153,9 +153,12 @@
                 <div id="content" class="content">
                     <main>
                         <script type="text/javascript" src="files/jsxgraphcore.js"></script>
+<h4><a class="header" href="#this-is-work-in-progress" id="this-is-work-in-progress">This is work in progress</a></h4>
 <p>This is a manual about the <a href="https://jsxgraph.org/">JSXGraph</a>. </p>
 <p>JSXGraph is a cross-browser JavaScript library for interactive geometry, function plotting, charting, and data visualization in the web browser.</p>
 <p>This book covers the basics, how to build simple constructions and also some advanced topics on how to include JSXGraph in Moodle. </p>
+<p><strong><em>To build JSXGraph constructions you don't need to be programmer (algthough it helps), but is rather more like putting together
+elements of the construction.</em></strong></p>
 <p>Below is an example of power of JSXGraph.<br />
 <em>Hint: Move the dot and observe.</em> </p>
 <div id="box16" class="jxgbox" style="width:500px; height:333px;margin-left:auto; margin-right:auto;"></div> 
@@ -257,12 +260,103 @@
 	});
 </script>
 <h1><a class="header" href="#how-to-setup" id="how-to-setup">How to setup</a></h1>
+<p>When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
+we just need to save it and refresh the page <em>(F5)</em> in browser. 
+Very simple template for building and testing is below</p>
+<pre><code class="language-HTML">&lt;!DOCTYPE HTML&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;JSXGraph templatek&lt;/title&gt;
+        &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
+        &lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot; src=&quot;//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraphcore.js&quot;&gt;&lt;/script&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css&quot; /&gt;
+    &lt;/head&gt;
+  &lt;body&gt;
+
+     HTML elements (div for canvas)
+
+     &lt;script&gt;
+     // JSXGraph code goes here.
+     &lt;/script&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<p>If we want to use math symbols <em>(we have to write it in latex code)</em> then we have add below line after the script line.</p>
+<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
+</code></pre>
+<p><em>This scripts are all downloaded from the internet, therefore we need an constant internet connection.</em></p>
 <h1><a class="header" href="#basics" id="basics">Basics</a></h1>
+<p>In this chapter we will show some basic examples on how to make first JSXGraph construction. </p>
+<h1><a class="header" href="#drawing-area" id="drawing-area">Drawing area</a></h1>
+<p>JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
+HTML which we will tell Javascript to use as canvas. This is done like this</p>
+<pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>If look at the line closely we see few properties. For us it is important <code>id=&quot;jxgbox&quot;</code> which we use to connect with JSXGraph.
+Next is <code>class=&quot;jxgbox&quot;</code> where we can specify how our board will look like. This is more advanced topic and will be discussed later.
+Last property is `style=&quot;width:500px; height:200px;&quot; where we define size of our drawing board.<br />
+<em>Important: here we do not define our coordinate system, but only the size of our canvas</em></p>
+<p>When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside</p>
+<pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+</code></pre>
+<p>We can see we called function initBoard, which constructs our drawing board . This function need at least one argument, 
+which is the name of id we defined earlier for div in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
+JSXGraph coordinate system of our construction.</p>
+<p>Code of whole example is then following:</p>
+<pre><code class="language-HTML">&lt;!DOCTYPE HTML&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;JSXGraph templatek&lt;/title&gt;
+        &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
+        &lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
+/jsxgraphcore.js&quot;&gt;&lt;/script&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css
+&quot; /&gt;
+    &lt;/head&gt;
+  &lt;body&gt;
+
+     &lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+
+     &lt;script&gt;
+        var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+     &lt;/script&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>You can copy-paste to a file (name it <code>example1.html</code>) and open it your favorite browser. </p>
+<script type="text/javascript" src="files/jsxgraphcore.js"></script>
+<h1><a class="header" href="#using-basic-objects" id="using-basic-objects">Using basic objects</a></h1>
+<p>Points are one of the most basic objects in JSXGraph. In this example we will draw a point on a drawing board. </p>
+<pre><code class="language-JS">var p = board.create('point',[-3,1]);
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+ var p = board.create('point',[-2,1]);
+</script>
+<h1><a class="header" href="#functions-drawing" id="functions-drawing">Functions drawing</a></h1>
 <h1><a class="header" href="#animating" id="animating">Animating</a></h1>
+<h1><a class="header" href="#moving-objects" id="moving-objects">Moving objects</a></h1>
+<h1><a class="header" href="#sliders" id="sliders">Sliders</a></h1>
+<h1><a class="header" href="#animating-with-sliders" id="animating-with-sliders">Animating with sliders</a></h1>
+<h1><a class="header" href="#advanced-topics" id="advanced-topics">Advanced topics</a></h1>
+<h1><a class="header" href="#capture-the-construction" id="capture-the-construction">Capture the construction</a></h1>
+<h1><a class="header" href="#jsxgraph-options" id="jsxgraph-options">JSXGraph options</a></h1>
+<h1><a class="header" href="#triggers" id="triggers">Triggers</a></h1>
+<h1><a class="header" href="#saving-user-actions" id="saving-user-actions">Saving user actions</a></h1>
 <h1><a class="header" href="#jsxgraph-and-moodle" id="jsxgraph-and-moodle">JSXGraph and Moodle</a></h1>
+<h1><a class="header" href="#jsxgraph-as-a-moodle-filter" id="jsxgraph-as-a-moodle-filter">JSXGraph as a Moodle Filter</a></h1>
 <h1><a class="header" href="#jsxgraph-and-moodle-formulas" id="jsxgraph-and-moodle-formulas">JSXGraph and Moodle Formulas</a></h1>
 <h1><a class="header" href="#jsxgraph-and-stack" id="jsxgraph-and-stack">JSXGraph and Stack</a></h1>
 <h1><a class="header" href="#templates" id="templates">Templates</a></h1>
+<p><a href="http://www.iucbeniki.si/jsxPredloge/">Templates for some classic interactive questions</a></p>
+<h1><a class="header" href="#jsx-gui" id="jsx-gui">JSX Gui</a></h1>
+<p><a href="https://github.com/ddrakulic/JSXGUI">JSX GUI on github</a></p>
 <h1><a class="header" href="#contributors" id="contributors">Contributors</a></h1>
 <ul>
 <li>Igor Pesek </li>
@@ -293,21 +387,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

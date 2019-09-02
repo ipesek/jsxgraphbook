@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="setup.html" class="active"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html"><strong aria-hidden="true">3.</strong> Basics</a></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><a href="moodle.html"><strong aria-hidden="true">5.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="formulas.html"><strong aria-hidden="true">5.1.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">5.2.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">6.</strong> Templates</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="setup.html" class="active"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html"><strong aria-hidden="true">3.</strong> Basics</a></li><li><ol class="section"><li><a href="board.html"><strong aria-hidden="true">3.1.</strong> Drawing area</a></li><li><a href="basic_objects.html"><strong aria-hidden="true">3.2.</strong> Using basic objects</a></li><li><a href="functions.html"><strong aria-hidden="true">3.3.</strong> Functions drawing</a></li></ol></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><ol class="section"><li><a href="moving.html"><strong aria-hidden="true">4.1.</strong> Moving objects</a></li><li><a href="sliders.html"><strong aria-hidden="true">4.2.</strong> Sliders</a></li><li><a href="animation_sliders.html"><strong aria-hidden="true">4.3.</strong> Animating with sliders</a></li></ol></li><li><a href="advanced.html"><strong aria-hidden="true">5.</strong> Advanced topics</a></li><li><ol class="section"><li><a href="screencapture.html"><strong aria-hidden="true">5.1.</strong> Capture the construction as image</a></li><li><a href="jsxoptions.html"><strong aria-hidden="true">5.2.</strong> JSXGraph options</a></li><li><a href="trigers.html"><strong aria-hidden="true">5.3.</strong> Triggers</a></li><li><a href="user_actions.html"><strong aria-hidden="true">5.4.</strong> Saving user actions</a></li></ol></li><li><a href="moodle.html"><strong aria-hidden="true">6.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="jsxfilter.html"><strong aria-hidden="true">6.1.</strong> JSXGraph as a Moodle Filter</a></li><li><a href="formulas.html"><strong aria-hidden="true">6.2.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">6.3.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">7.</strong> Templates</a></li><li><a href="gui.html"><strong aria-hidden="true">8.</strong> JSX Gui</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -151,6 +151,34 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#how-to-setup" id="how-to-setup">How to setup</a></h1>
+<p>When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
+we just need to save it and refresh the page <em>(F5)</em> in browser. 
+Very simple template for building and testing is below</p>
+<pre><code class="language-HTML">&lt;!DOCTYPE HTML&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;JSXGraph templatek&lt;/title&gt;
+        &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
+        &lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot; src=&quot;//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraphcore.js&quot;&gt;&lt;/script&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;//cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css&quot; /&gt;
+    &lt;/head&gt;
+  &lt;body&gt;
+
+     HTML elements (div for canvas)
+
+     &lt;script&gt;
+     // JSXGraph code goes here.
+     &lt;/script&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<p>If we want to use math symbols <em>(we have to write it in latex code)</em> then we have add below line after the script line.</p>
+<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
+</code></pre>
+<p><em>This scripts are all downloaded from the internet, therefore we need an constant internet connection.</em></p>
 
                     </main>
 
@@ -189,21 +217,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         
