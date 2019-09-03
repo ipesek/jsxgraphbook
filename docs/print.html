@@ -287,6 +287,15 @@ Very simple template for building and testing is below</p>
 <p>If we want to use math symbols <em>(we have to write it in latex code)</em> then we have add below line after the script line.</p>
 <pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
 </code></pre>
+<p>If you want to use $ $ for math symbols, then add following lines</p>
+<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js' async&gt;&lt;/script&gt;
+&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({
+   &quot;HTML-CSS&quot;: {availableFonts: [&quot;TeX&quot;],scale: 90},
+    tex2jax: {inlineMath: [[&quot;$&quot;,&quot;$&quot;]],  displayMath: [[&quot;$$&quot;,&quot;$$&quot;]],  processEscapes: true},
+    config:[&quot;TeX-AMS_HTML.js&quot;]});
+&lt;/script&gt;
+</code></pre>
 <p><em>This scripts are all downloaded from the internet, therefore we need an constant internet connection.</em></p>
 <h1><a class="header" href="#basics" id="basics">Basics</a></h1>
 <p>In this chapter we will show some basic examples on how to make first JSXGraph construction. </p>

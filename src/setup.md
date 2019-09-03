@@ -31,5 +31,17 @@ If we want to use math symbols _(we have to write it in latex code)_ then we hav
 ```
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 ```
+If you want to use $ $ for math symbols, then add following lines
+```
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js' async></script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+   "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+    tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+    config:["TeX-AMS_HTML.js"]});
+</script>
+```
+
+
 
 _This scripts are all downloaded from the internet, therefore we need an constant internet connection._
