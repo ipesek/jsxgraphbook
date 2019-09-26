@@ -1,18 +1,48 @@
-<script type="text/javascript" src="files/jsxgraphcore.js"></script>
 
+
+
+{lang=EN}
 #### This is work in progress
-
 This is a manual about the [JSXGraph](https://jsxgraph.org/). 
 
 JSXGraph is a cross-browser JavaScript library for interactive geometry, function plotting, charting, and data visualization in the web browser.
 
 This book covers the basics, how to build simple constructions and also some advanced topics on how to include JSXGraph in Moodle. 
 
-**_To build JSXGraph constructions you don't need to be programmer (algthough it helps), but is rather more like putting together
+**_To build JSXGraph constructions you don't need to be programmer (although it helps), but is rather more like
+ putting together
 elements of the construction._**
 
 Below is an example of power of JSXGraph.   
 *Hint: Move the dot and observe.* 
+{/lang}
+
+{lang=CZ}
+#### Toto je nedokončená práce
+Toto je příručka o [JSXGraph] (https://jsxgraph.org/).
+
+JSXGraph je knihovna JavaScript pro více prohlížečů pro interaktivní geometrii, vykreslování funkcí, mapování a vizualizaci dat ve webovém prohlížeči.
+
+Tato kniha se zabývá základy, jak vytvářet jednoduché konstrukce a také některá pokročilá témata, jak začlenit JSXGraph do Moodle.
+
+Chcete-li stavět konstrukce JSXGraph, nemusíte být programátorem (i když to pomáhá), ale je to spíš jako sestavování prvků konstrukce.
+
+Níže je uveden příklad síly JSXGraph.
+Tip: Pohybujte tečkou a sledujte ji.
+{/lang}
+
+{lang=SI}
+To je priročnik o JSXGraphu.
+
+JSXGraph je knjižnica JavaScript v brskalniku za interaktivno geometrijo, risanje funkcij, grafikone in vizualizacijo podatkov v spletnem brskalniku.
+
+Ta knjiga zajema osnove, kako zgraditi preproste konstrukcije in tudi nekatere napredne teme o tem, kako vključiti JSXGraph v Moodle.
+
+Če želite zgraditi JSXGraph konstrukcije, vam ni treba biti programer (čeprav pomaga), ampak je bolj podoben sestavljanju elementov konstrukcije.
+
+Spodaj je primer moči JSXGraph.
+Namig: premaknite piko in opazujte.
+{/lang}
 
 <div id="box16" class="jxgbox" style="width:500px; height:333px;margin-left:auto; margin-right:auto;"></div> 
 <script type='text/javascript'>

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>JSXGraph as a Moodle Filter - JSXGraph Book</title>
+        <title> JSXGraph book</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -29,8 +29,10 @@
 
         <!-- Custom theme stylesheets -->
         
+
+        <script type="text/javascript" src="files/jquery.js"></script>
+        <script type="text/javascript" src="files/jsxgraphcore.js"></script>
         <link rel="stylesheet" href="files/jsxgraph.css">
-        
 
         
         <!-- MathJax -->
@@ -83,7 +85,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><a href="setup.html"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html"><strong aria-hidden="true">3.</strong> Basics</a></li><li><ol class="section"><li><a href="board.html"><strong aria-hidden="true">3.1.</strong> Drawing area</a></li><li><a href="basic_objects.html"><strong aria-hidden="true">3.2.</strong> Using basic objects</a></li><li><a href="functions.html"><strong aria-hidden="true">3.3.</strong> Functions drawing</a></li></ol></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><ol class="section"><li><a href="moving.html"><strong aria-hidden="true">4.1.</strong> Moving objects</a></li><li><a href="sliders.html"><strong aria-hidden="true">4.2.</strong> Sliders</a></li><li><a href="animation_sliders.html"><strong aria-hidden="true">4.3.</strong> Animating with sliders</a></li></ol></li><li><a href="advanced.html"><strong aria-hidden="true">5.</strong> Advanced topics</a></li><li><ol class="section"><li><a href="screencapture.html"><strong aria-hidden="true">5.1.</strong> Capture the construction as image</a></li><li><a href="jsxoptions.html"><strong aria-hidden="true">5.2.</strong> JSXGraph options</a></li><li><a href="trigers.html"><strong aria-hidden="true">5.3.</strong> Triggers</a></li><li><a href="user_actions.html"><strong aria-hidden="true">5.4.</strong> Saving user actions</a></li></ol></li><li><a href="moodle.html"><strong aria-hidden="true">6.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="jsxfilter.html" class="active"><strong aria-hidden="true">6.1.</strong> JSXGraph as a Moodle Filter</a></li><li><a href="formulas.html"><strong aria-hidden="true">6.2.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">6.3.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">7.</strong> Templates</a></li><li><a href="gui.html"><strong aria-hidden="true">8.</strong> JSX Gui</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
+                <ol class="chapter"><li><a href="introduction.html"><strong aria-hidden="true">1.</strong> {lang=EN}Introduction{/lang} {lang=SI}Uvod{/lang} {lang=CZ}Úvod{/lang}</a></li><li><a href="setup.html"><strong aria-hidden="true">2.</strong> How to setup</a></li><li><a href="basics.html"><strong aria-hidden="true">3.</strong> Basics</a></li><li><ol class="section"><li><a href="board.html"><strong aria-hidden="true">3.1.</strong> Drawing area</a></li><li><a href="basic_objects.html"><strong aria-hidden="true">3.2.</strong> Using basic objects</a></li><li><a href="functions.html"><strong aria-hidden="true">3.3.</strong> Functions drawing</a></li></ol></li><li><a href="animations.html"><strong aria-hidden="true">4.</strong> Animating</a></li><li><ol class="section"><li><a href="moving.html"><strong aria-hidden="true">4.1.</strong> Moving objects</a></li><li><a href="sliders.html"><strong aria-hidden="true">4.2.</strong> Sliders</a></li><li><a href="animation_sliders.html"><strong aria-hidden="true">4.3.</strong> Animating with sliders</a></li><li><a href="something.html"><strong aria-hidden="true">4.4.</strong> Something</a></li></ol></li><li><a href="advanced.html"><strong aria-hidden="true">5.</strong> Advanced topics</a></li><li><ol class="section"><li><a href="screencapture.html"><strong aria-hidden="true">5.1.</strong> Capture the construction as image</a></li><li><a href="jsxoptions.html"><strong aria-hidden="true">5.2.</strong> JSXGraph options</a></li><li><a href="trigers.html"><strong aria-hidden="true">5.3.</strong> Triggers</a></li><li><a href="user_actions.html"><strong aria-hidden="true">5.4.</strong> Saving user actions</a></li></ol></li><li><a href="moodle.html"><strong aria-hidden="true">6.</strong> JSXGraph and Moodle</a></li><li><ol class="section"><li><a href="jsxfilter.html" class="active"><strong aria-hidden="true">6.1.</strong> JSXGraph as a Moodle Filter</a></li><li><a href="formulas.html"><strong aria-hidden="true">6.2.</strong> JSXGraph and Moodle Formulas</a></li><li><a href="stack.html"><strong aria-hidden="true">6.3.</strong> JSXGraph and Stack</a></li></ol></li><li><a href="templates.html"><strong aria-hidden="true">7.</strong> Templates</a></li><li><a href="gui.html"><strong aria-hidden="true">8.</strong> JSX Gui</a></li><li class="spacer"></li><li class="affix"><a href="contributors.html">Contributors</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -98,6 +100,16 @@
                             <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                                 <i class="fa fa-bars"></i>
                             </button>
+
+                            <button id="lang-toggle" class="icon-button" type="button" title="Change language" aria-label="Change language" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list">
+                                EN
+                            </button>
+                            <ul id="lang-list" class="theme-popup" aria-label="Languages" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="EN">English</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="CZ">Čeština</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="SI">Slovenščina</button></li>
+                            </ul>
+
                             <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                                 <i class="fa fa-paint-brush"></i>
                             </button>
@@ -108,19 +120,24 @@
                                 <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
                             </ul>
+
+
+
                             
                             <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
                                 <i class="fa fa-search"></i>
                             </button>
                             
+
                         </div>
 
-                        <h1 class="menu-title">JSXGraph Book</h1>
+                        <h1 class="menu-title" id="menu-title">{lang=EN}JSXGraph Book{/lang}{lang=SI}Knjiga o JSXGraphu{/lang}{lang=CZ}JSXGraph knjiga{/lang}</h1>
 
                         <div class="right-buttons">
                             <a href="print.html" title="Print this book" aria-label="Print this book">
                                 <i id="print-button" class="fa fa-print"></i>
                             </a>
+
                             
                         </div>
                     </div>
@@ -201,13 +218,12 @@
         <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
         
 
+        <script src="files/jsxbook.js" type="text/javascript" charset="utf-8"></script>
         <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
         <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
         <script src="book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
-        
-        <script type="text/javascript" src="files/jsxgraphcore.js"></script>
         
 
         

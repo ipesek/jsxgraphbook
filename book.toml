@@ -3,12 +3,11 @@ authors = ["IgorP"]
 language = "en"
 multilingual = false
 src = "src"
-title = "JSXGraph Book"
+title = "{lang=EN}JSXGraph Book{/lang}{lang=SI}Knjiga o JSXGraphu{/lang}{lang=CZ}JSXGraph knjiga{/lang}"
 
 [build]
 build-dir = "docs"
 
 [output.html]
-additional-css = ["files/jsxgraph.css"]
-additional-js = ["files/jsxgraphcore.js"]
+theme = "src/theme"
 mathjax-support = true

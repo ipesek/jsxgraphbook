@@ -1,6 +1,6 @@
 # Table of contents
 
-- [Introduction](introduction.md)
+- [{lang=EN}Introduction{/lang} {lang=SI}Uvod{/lang} {lang=CZ}Úvod{/lang}](introduction.md)
 - [How to setup](setup.md)
 - [Basics](basics.md)
     - [Drawing area](board.md)
@@ -10,6 +10,7 @@
     - [Moving objects](moving.md)
     - [Sliders](sliders.md)
     - [Animating with sliders](animation_sliders.md)
+    - [Something](something.md)
 - [Advanced topics](advanced.md)
     - [Capture the construction as image](screencapture.md)
     - [JSXGraph options](jsxoptions.md)
