@@ -1,9 +1,20 @@
 # How to setup
 
+{lang=EN}
 When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
 we just need to save it and refresh the page _(F5)_ in browser. 
 Very simple template for building and testing is below
-
+{/lang}
+{lang=CZ}
+When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
+we just need to save it and refresh the page _(F5)_ in browser. 
+Very simple template for building and testing is below
+{/lang}
+{lang=SI}
+When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
+we just need to save it and refresh the page _(F5)_ in browser. 
+Very simple template for building and testing is below
+{/lang}
 ```HTML
 <!DOCTYPE HTML>
 <html lang="en">
@@ -28,12 +39,28 @@ Very simple template for building and testing is below
 </html>
 
 ```
-
+{lang=EN}
 If we want to use math symbols _(we have to write it in latex code)_ then we have add below line after the script line.
 ```
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
 ```
 If you want to use $ $ for math symbols, then add following lines
+{/lang}
+{lang=CZ}
+If we want to use math symbols _(we have to write it in latex code)_ then we have add below line after the script line.
+```
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+```
+If you want to use $ $ for math symbols, then add following lines
+{/lang}
+{lang=SI}
+If we want to use math symbols _(we have to write it in latex code)_ then we have add below line after the script line.
+```
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async></script>
+```
+If you want to use $ $ for math symbols, then add following lines
+{/lang}
+
 ```
 <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js' async></script>
 <script type="text/x-mathjax-config">
@@ -44,6 +71,12 @@ MathJax.Hub.Config({
 </script>
 ```
 
-
-
+{lang=EN}
 _This scripts are all downloaded from the internet, therefore we need an constant internet connection._
+{/lang}
+{lang=CZ}
+_This scripts are all downloaded from the internet, therefore we need an constant internet connection._
+{/lang}
+{lang=SI}
+_This scripts are all downloaded from the internet, therefore we need an constant internet connection._
+{/lang}

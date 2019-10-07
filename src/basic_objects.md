@@ -1,8 +1,16 @@
 <script type="text/javascript" src="files/jsxgraphcore.js"></script>
 # Using basic objects
-
+{lang=EN}
 Points are one of the most basic objects in JSXGraph. In this example we will draw a point on a drawing board. 
+{/lang}
 
+{lang=SI}
+Points are one of the most basic objects in JSXGraph. In this example we will draw a point on a drawing board. 
+{/lang}
+
+{lang=CZ}
+Points are one of the most basic objects in JSXGraph. In this example we will draw a point on a drawing board. 
+{/lang}
 ```JS
 var p = board.create('point',[-3,1]);
 ```
