@@ -1,1 +1,0 @@
-# JSXGraph and Stack

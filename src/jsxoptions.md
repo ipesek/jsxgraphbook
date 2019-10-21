@@ -1,1 +1,0 @@
-# JSXGraph options

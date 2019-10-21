@@ -1,1 +1,0 @@
-# Animating with sliders
