@@ -36,7 +36,13 @@
 
         
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+              "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+               tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+                config:["TeX-AMS_HTML.js"]});
+        </script>
         
     </head>
     <body class="light">
@@ -167,7 +173,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang" id="langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang">{lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
+                        <p>{lang=EN}</p>
+<h2><a class="header" href="#example" id="example">Example</a></h2>
+<p>{/lang}
+{lang=SI}Example{/lang}
+{lang=CZ}Example{/lang}</p>
 
                     </main>
 

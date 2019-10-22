@@ -36,7 +36,13 @@
 
         
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+              "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+               tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+                config:["TeX-AMS_HTML.js"]});
+        </script>
         
     </head>
     <body class="light">
@@ -167,24 +173,40 @@
 
                 <div id="content" class="content">
                     <main>
-                        <script type="text/javascript" src="files/jsxgraphcore.js"></script>
-<h1><a class="header" href="#using-basic-objects" id="using-basic-objects">Using basic objects</a></h1>
-<p>{lang=EN}
-Points are one of the most basic objects in JSXGraph. In this example we will draw a point on a drawing board. 
+                        <p>{lang=EN}</p>
+<h2><a class="header" href="#creating-points" id="creating-points">Creating points</a></h2>
+<p>Points are one of the most basic objects in JSXGraph. We always create objects on the JSX board, therefore we must use same 
+board variable for the construction of all objects that will be on board.
 {/lang}</p>
-<p>{lang=SI}
-Points are one of the most basic objects in JSXGraph. In this example we will draw a point on a drawing board. 
+<p>{lang=SI}</p>
+<h2><a class="header" href="#risanje-točk" id="risanje-točk">Risanje točk</a></h2>
+<p>{/lang}</p>
+<p>{lang=CZ}</p>
+<h1><a class="header" href="#creating-points-1" id="creating-points-1">Creating points</a></h1>
+<p>Points are one of the most basic objects in JSXGraph. In this example we will draw two points on a drawing board. 
 {/lang}</p>
-<p>{lang=CZ}
-Points are one of the most basic objects in JSXGraph. In this example we will draw a point on a drawing board. 
-{/lang}</p>
-<pre><code class="language-JS">var p = board.create('point',[-3,1]);
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+ board.create('point',[-2,1]);
+ var q = board.create('point',[3,0]);
+&lt;/script&gt;
 </code></pre>
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
  var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
- var p = board.create('point',[-2,1]);
+ board.create('point',[-3,1]);
+ var q = board.create('point',[3,0]);
 </script>
+<p>{lang=EN}
+Let us now observe <code>board.create('point',[-2,1]);</code>. Here we use variable board and call a method <em>create</em> which takes 
+two arguments. First argument is the type of the object and second the coordinates where this object should be. If we
+define coordinates outside of the bounding box, the object will exist but won't be visible because it is outside visible 
+area of our drawing board. </p>
+<p>Next line <code>var q = board.create('point',[3,0]);</code> is very similar to the previous line, with only one diference. We start 
+the line with <code>var q = </code> which we use to store this object in variable <em>q</em>. This is good and necessary practice, because 
+in the constructions we often reference different object and define their relationships, which will be more apparent in following pages.</p>
+<p>{/lang}</p>
 
                     </main>
 

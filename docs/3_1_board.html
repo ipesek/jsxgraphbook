@@ -36,7 +36,13 @@
 
         
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+              "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+               tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+                config:["TeX-AMS_HTML.js"]});
+        </script>
         
     </head>
     <body class="light">
@@ -167,10 +173,11 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#drawing-area" id="drawing-area">Drawing area</a></h1>
-<p>{lang=EN}
-JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
-HTML which we will tell Javascript to use as canvas. This is done like this</p>
+                        <p>{lang=EN}</p>
+<h2><a class="header" href="#drawing-area" id="drawing-area">Drawing area</a></h2>
+<p>JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
+HTML which we will tell Javascript to use as canvas. First we create a place in HTML where we will our construction be. 
+For this we use <code>div</code> element with some properties.</p>
 <pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 </code></pre>
 <p>If look at the line closely we see few properties. For us it is important <code>id=&quot;jxgbox&quot;</code> which we use to connect with JSXGraph.
@@ -180,10 +187,13 @@ Last property is `style=&quot;width:500px; height:200px;&quot; where we define s
 <p>When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside</p>
 <pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
 </code></pre>
-<p>We can see we called function initBoard, which constructs our drawing board . This function need at least one argument, 
-which is the name of id we defined earlier for div in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
+<p>We can see we called function initBoard, which constructs our drawing board . This function needs at least one argument, 
+which is the <em>id</em> of the element <code>div</code> we defined in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
 JSXGraph coordinate system of our construction.</p>
-<p>Code of whole example is then following:{/lang}</p>
+<p>Observing both lines we see, that we have two measures for size. With <code>div</code> we created canvas with the size in pixels. 
+Then we declared also coordinate system with board where we defined our coordinate system, which we will use to place 
+objects on the board. 
+{/lang}</p>
 <p>{lang=SI}
 JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
 HTML which we will tell Javascript to use as canvas. This is done like this</p>
@@ -215,30 +225,8 @@ Last property is `style=&quot;width:500px; height:200px;&quot; where we define s
 <p>We can see we called function initBoard, which constructs our drawing board . This function need at least one argument, 
 which is the name of id we defined earlier for div in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
 JSXGraph coordinate system of our construction.</p>
-<p>Code of whole example is then following:{/lang}</p>
-<pre><code class="language-HTML">&lt;!DOCTYPE HTML&gt;
-&lt;html lang=&quot;en&quot;&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;title&gt;JSXGraph templatek&lt;/title&gt;
-        &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
-        &lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
-/jsxgraphcore.js&quot;&gt;&lt;/script&gt;
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css
-&quot; /&gt;
-    &lt;/head&gt;
-  &lt;body&gt;
-
-     &lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
-
-     &lt;script&gt;
-        var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
-     &lt;/script&gt;
-
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<p>You can copy-paste to a file (name it <code>example1.html</code>) and open it your favorite browser. </p>
+<p>Code of whole example is then following:
+{/lang}</p>
 
                     </main>
 

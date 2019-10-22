@@ -1,6 +1,3 @@
-
-
-
 {lang=EN}
 #### This is work in progress
 This is a manual about the [JSXGraph](https://jsxgraph.org/). 

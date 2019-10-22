@@ -36,7 +36,13 @@
 
         
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+              "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+               tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+                config:["TeX-AMS_HTML.js"]});
+        </script>
         
     </head>
     <body class="light">

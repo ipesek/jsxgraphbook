@@ -36,7 +36,13 @@
 
         
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+              "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+               tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+                config:["TeX-AMS_HTML.js"]});
+        </script>
         
     </head>
     <body class="light">
@@ -167,9 +173,9 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#basics" id="basics">Basics</a></h1>
-<p>{lang=EN}
-JSXGraph construction is composed from:</p>
+                        <p>{lang=EN}</p>
+<h2><a class="header" href="#basics" id="basics">Basics</a></h2>
+<p>JSXGraph construction is composed from:</p>
 <ul>
 <li>drawing board</li>
 <li>objects (points, lines, etc.)</li>

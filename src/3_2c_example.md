@@ -1,1 +1,5 @@
-# {lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}
+{lang=EN}
+## Example
+{/lang}
+{lang=SI}Example{/lang}
+{lang=CZ}Example{/lang}

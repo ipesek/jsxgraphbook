@@ -38,7 +38,13 @@
 
         
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+              "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+               tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+                config:["TeX-AMS_HTML.js"]});
+        </script>
         
     </head>
     <body class="light">
@@ -295,11 +301,13 @@ Namig: premaknite piko in opazujte.
 		}
 	});
 </script>
-<h1><a class="header" href="#how-to-setup" id="how-to-setup">How to setup</a></h1>
-<p>{lang=EN}
-When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
-we just need to save it and refresh the page <em>(F5)</em> in browser. 
-Very simple template for building and testing is below
+<p>{lang=EN}</p>
+<h2><a class="header" href="#how-to-setup" id="how-to-setup">How to setup</a></h2>
+<p>When we prepare JSX construction it is most convenient to prepare it locally. For that we have to create some file (eg. 
+example.htm), copy paste template provided below and we can start constructing. After we save the program, we can open it in our
+favorite browser (Firefox, Chrome, etc). 
+We can repeat following: edit the file, save it and refresh it (<em>(F5)</em> in a browser) until we're not satisfied with result.</p>
+<p>Basic template for building and testing is below
 {/lang}
 {lang=CZ}
 When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
@@ -319,124 +327,13 @@ Very simple template for building and testing is below
         &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
         &lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
 /jsxgraphcore.js&quot;&gt;&lt;/script&gt;
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css
-&quot; /&gt;
-    &lt;/head&gt;
-  &lt;body&gt;
-
-     HTML elements (div for canvas)
-
-     &lt;script&gt;
-     // JSXGraph code goes here.
-     &lt;/script&gt;
-
-  &lt;/body&gt;
-&lt;/html&gt;
-
-</code></pre>
-<p>{lang=EN}
-If we want to use math symbols <em>(we have to write it in latex code)</em> then we have add below line after the script line.</p>
-<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
-</code></pre>
-<p>If you want to use $ $ for math symbols, then add following lines
-{/lang}
-{lang=CZ}
-If we want to use math symbols <em>(we have to write it in latex code)</em> then we have add below line after the script line.</p>
-<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
-</code></pre>
-<p>If you want to use $ $ for math symbols, then add following lines
-{/lang}
-{lang=SI}
-If we want to use math symbols <em>(we have to write it in latex code)</em> then we have add below line after the script line.</p>
-<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
-</code></pre>
-<p>If you want to use $ $ for math symbols, then add following lines
-{/lang}</p>
-<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js' async&gt;&lt;/script&gt;
-&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-MathJax.Hub.Config({
-   &quot;HTML-CSS&quot;: {availableFonts: [&quot;TeX&quot;],scale: 90},
-    tex2jax: {inlineMath: [[&quot;$&quot;,&quot;$&quot;]],  displayMath: [[&quot;$$&quot;,&quot;$$&quot;]],  processEscapes: true},
-    config:[&quot;TeX-AMS_HTML.js&quot;]});
-&lt;/script&gt;
-</code></pre>
-<p>{lang=EN}
-<em>This scripts are all downloaded from the internet, therefore we need an constant internet connection.</em>
-{/lang}
-{lang=CZ}
-<em>This scripts are all downloaded from the internet, therefore we need an constant internet connection.</em>
-{/lang}
-{lang=SI}
-<em>This scripts are all downloaded from the internet, therefore we need an constant internet connection.</em>
-{/lang}</p>
-<h1><a class="header" href="#basics" id="basics">Basics</a></h1>
-<p>{lang=EN}
-JSXGraph construction is composed from:</p>
-<ul>
-<li>drawing board</li>
-<li>objects (points, lines, etc.)</li>
-<li>relations between objects (optional, if we want some dynamics in the construction)</li>
-<li>events (optional, if we want some additional actions to be triggered)</li>
-</ul>
-<p>In this section we will cover how to create drawing board, objects and use them to construct some simple examples.</p>
-<p>{/lang}</p>
-<h1><a class="header" href="#drawing-area" id="drawing-area">Drawing area</a></h1>
-<p>{lang=EN}
-JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
-HTML which we will tell Javascript to use as canvas. This is done like this</p>
-<pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
-</code></pre>
-<p>If look at the line closely we see few properties. For us it is important <code>id=&quot;jxgbox&quot;</code> which we use to connect with JSXGraph.
-Next is <code>class=&quot;jxgbox&quot;</code> where we can specify how our board will look like. This is more advanced topic and will be discussed later.
-Last property is `style=&quot;width:500px; height:200px;&quot; where we define size of our drawing board.<br />
-<em>Important: here we do not define our coordinate system, but only the size of our canvas</em></p>
-<p>When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside</p>
-<pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
-</code></pre>
-<p>We can see we called function initBoard, which constructs our drawing board . This function need at least one argument, 
-which is the name of id we defined earlier for div in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
-JSXGraph coordinate system of our construction.</p>
-<p>Code of whole example is then following:{/lang}</p>
-<p>{lang=SI}
-JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
-HTML which we will tell Javascript to use as canvas. This is done like this</p>
-<pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
-</code></pre>
-<p>If look at the line closely we see few properties. For us it is important <code>id=&quot;jxgbox&quot;</code> which we use to connect with JSXGraph.
-Next is <code>class=&quot;jxgbox&quot;</code> where we can specify how our board will look like. This is more advanced topic and will be discussed later.
-Last property is `style=&quot;width:500px; height:200px;&quot; where we define size of our drawing board.<br />
-<em>Important: here we do not define our coordinate system, but only the size of our canvas</em></p>
-<p>When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside</p>
-<pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
-</code></pre>
-<p>We can see we called function initBoard, which constructs our drawing board . This function need at least one argument, 
-which is the name of id we defined earlier for div in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
-JSXGraph coordinate system of our construction.</p>
-<p>Code of whole example is then following:{/lang}</p>
-<p>{lang=CZ}
-JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
-HTML which we will tell Javascript to use as canvas. This is done like this</p>
-<pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
-</code></pre>
-<p>If look at the line closely we see few properties. For us it is important <code>id=&quot;jxgbox&quot;</code> which we use to connect with JSXGraph.
-Next is <code>class=&quot;jxgbox&quot;</code> where we can specify how our board will look like. This is more advanced topic and will be discussed later.
-Last property is `style=&quot;width:500px; height:200px;&quot; where we define size of our drawing board.<br />
-<em>Important: here we do not define our coordinate system, but only the size of our canvas</em></p>
-<p>When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside</p>
-<pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
-</code></pre>
-<p>We can see we called function initBoard, which constructs our drawing board . This function need at least one argument, 
-which is the name of id we defined earlier for div in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
-JSXGraph coordinate system of our construction.</p>
-<p>Code of whole example is then following:{/lang}</p>
-<pre><code class="language-HTML">&lt;!DOCTYPE HTML&gt;
-&lt;html lang=&quot;en&quot;&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;title&gt;JSXGraph templatek&lt;/title&gt;
-        &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
-        &lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
-/jsxgraphcore.js&quot;&gt;&lt;/script&gt;
+        &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js' async&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+          MathJax.Hub.Config({
+              &quot;HTML-CSS&quot;: {availableFonts: [&quot;TeX&quot;],scale: 90},
+               tex2jax: {inlineMath: [[&quot;$&quot;,&quot;$&quot;]],  displayMath: [[&quot;$$&quot;,&quot;$$&quot;]],  processEscapes: true},
+                config:[&quot;TeX-AMS_HTML.js&quot;]});
+        &lt;/script&gt;   
         &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css
 &quot; /&gt;
     &lt;/head&gt;
@@ -450,29 +347,163 @@ JSXGraph coordinate system of our construction.</p>
 
   &lt;/body&gt;
 &lt;/html&gt;
+
 </code></pre>
-<p>You can copy-paste to a file (name it <code>example1.html</code>) and open it your favorite browser. </p>
-<script type="text/javascript" src="files/jsxgraphcore.js"></script>
-<h1><a class="header" href="#using-basic-objects" id="using-basic-objects">Using basic objects</a></h1>
 <p>{lang=EN}
-Points are one of the most basic objects in JSXGraph. In this example we will draw a point on a drawing board. 
+<em>This scripts are all downloaded from the internet, therefore we need an constant internet connection.</em>
+{/lang}
+{lang=CZ}
+<em>This scripts are all downloaded from the internet, therefore we need an constant internet connection.</em>
+{/lang}
+{lang=SI}
+<em>This scripts are all downloaded from the internet, therefore we need an constant internet connection.</em>
+{/lang}</p>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#basics" id="basics">Basics</a></h2>
+<p>JSXGraph construction is composed from:</p>
+<ul>
+<li>drawing board</li>
+<li>objects (points, lines, etc.)</li>
+<li>relations between objects (optional, if we want some dynamics in the construction)</li>
+<li>events (optional, if we want some additional actions to be triggered)</li>
+</ul>
+<p>In this section we will cover how to create drawing board, objects and use them to construct some simple examples.</p>
+<p>{/lang}</p>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#drawing-area" id="drawing-area">Drawing area</a></h2>
+<p>JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
+HTML which we will tell Javascript to use as canvas. First we create a place in HTML where we will our construction be. 
+For this we use <code>div</code> element with some properties.</p>
+<pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>If look at the line closely we see few properties. For us it is important <code>id=&quot;jxgbox&quot;</code> which we use to connect with JSXGraph.
+Next is <code>class=&quot;jxgbox&quot;</code> where we can specify how our board will look like. This is more advanced topic and will be discussed later.
+Last property is `style=&quot;width:500px; height:200px;&quot; where we define size of our drawing board.<br />
+<em>Important: here we do not define our coordinate system, but only the size of our canvas</em></p>
+<p>When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside</p>
+<pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+</code></pre>
+<p>We can see we called function initBoard, which constructs our drawing board . This function needs at least one argument, 
+which is the <em>id</em> of the element <code>div</code> we defined in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
+JSXGraph coordinate system of our construction.</p>
+<p>Observing both lines we see, that we have two measures for size. With <code>div</code> we created canvas with the size in pixels. 
+Then we declared also coordinate system with board where we defined our coordinate system, which we will use to place 
+objects on the board. 
 {/lang}</p>
 <p>{lang=SI}
-Points are one of the most basic objects in JSXGraph. In this example we will draw a point on a drawing board. 
-{/lang}</p>
+JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
+HTML which we will tell Javascript to use as canvas. This is done like this</p>
+<pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>If look at the line closely we see few properties. For us it is important <code>id=&quot;jxgbox&quot;</code> which we use to connect with JSXGraph.
+Next is <code>class=&quot;jxgbox&quot;</code> where we can specify how our board will look like. This is more advanced topic and will be discussed later.
+Last property is `style=&quot;width:500px; height:200px;&quot; where we define size of our drawing board.<br />
+<em>Important: here we do not define our coordinate system, but only the size of our canvas</em></p>
+<p>When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside</p>
+<pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+</code></pre>
+<p>We can see we called function initBoard, which constructs our drawing board . This function need at least one argument, 
+which is the name of id we defined earlier for div in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
+JSXGraph coordinate system of our construction.</p>
+<p>Code of whole example is then following:{/lang}</p>
 <p>{lang=CZ}
-Points are one of the most basic objects in JSXGraph. In this example we will draw a point on a drawing board. 
+JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
+HTML which we will tell Javascript to use as canvas. This is done like this</p>
+<pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>If look at the line closely we see few properties. For us it is important <code>id=&quot;jxgbox&quot;</code> which we use to connect with JSXGraph.
+Next is <code>class=&quot;jxgbox&quot;</code> where we can specify how our board will look like. This is more advanced topic and will be discussed later.
+Last property is `style=&quot;width:500px; height:200px;&quot; where we define size of our drawing board.<br />
+<em>Important: here we do not define our coordinate system, but only the size of our canvas</em></p>
+<p>When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside</p>
+<pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+</code></pre>
+<p>We can see we called function initBoard, which constructs our drawing board . This function need at least one argument, 
+which is the name of id we defined earlier for div in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
+JSXGraph coordinate system of our construction.</p>
+<p>Code of whole example is then following:
 {/lang}</p>
-<pre><code class="language-JS">var p = board.create('point',[-3,1]);
+<p>{lang=EN}</p>
+<h2><a class="header" href="#creating-points" id="creating-points">Creating points</a></h2>
+<p>Points are one of the most basic objects in JSXGraph. We always create objects on the JSX board, therefore we must use same 
+board variable for the construction of all objects that will be on board.
+{/lang}</p>
+<p>{lang=SI}</p>
+<h2><a class="header" href="#risanje-točk" id="risanje-točk">Risanje točk</a></h2>
+<p>{/lang}</p>
+<p>{lang=CZ}</p>
+<h1><a class="header" href="#creating-points-1" id="creating-points-1">Creating points</a></h1>
+<p>Points are one of the most basic objects in JSXGraph. In this example we will draw two points on a drawing board. 
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+ board.create('point',[-2,1]);
+ var q = board.create('point',[3,0]);
+&lt;/script&gt;
 </code></pre>
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
  var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
- var p = board.create('point',[-2,1]);
+ board.create('point',[-3,1]);
+ var q = board.create('point',[3,0]);
 </script>
-<h1><a class="header" href="#langencreating-lineslanglangsicreating-basic-objectslanglangczusing-basic-objectslang" id="langencreating-lineslanglangsicreating-basic-objectslanglangczusing-basic-objectslang">{lang=EN}Creating lines{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
-<h1><a class="header" href="#langenadding-properties-to-the-objectslanglangsicreating-basic-objectslanglangczusing-basic-objectslang" id="langenadding-properties-to-the-objectslanglangsicreating-basic-objectslanglangczusing-basic-objectslang">{lang=EN}Adding properties to the objects{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
-<h1><a class="header" href="#langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang" id="langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang">{lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
+<p>{lang=EN}
+Let us now observe <code>board.create('point',[-2,1]);</code>. Here we use variable board and call a method <em>create</em> which takes 
+two arguments. First argument is the type of the object and second the coordinates where this object should be. If we
+define coordinates outside of the bounding box, the object will exist but won't be visible because it is outside visible 
+area of our drawing board. </p>
+<p>Next line <code>var q = board.create('point',[3,0]);</code> is very similar to the previous line, with only one diference. We start 
+the line with <code>var q = </code> which we use to store this object in variable <em>q</em>. This is good and necessary practice, because 
+in the constructions we often reference different object and define their relationships, which will be more apparent in following pages.</p>
+<p>{/lang}</p>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#creating-lines" id="creating-lines">Creating lines</a></h2>
+<p>Lines are the next type of the objects that we will learn. Line is defined by two points through which line is drawn.
+Here is an example of a board with two lines.
+{/lang}
+{lang=SI}
+Creating basic objects
+{/lang}
+{lang=CZ}Using basic objects{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+ var line1 = board.create(&quot;line&quot;,[[-3,1],[3,-1]]);
+
+ var p = board.create('point',[-2,-1]);
+ var q = board.create('point',[3,1]);
+ var line2 = board.create(&quot;line&quot;,[p,q]);
+&lt;/script&gt;
+</code></pre>
+<p>Result:</p>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+ var line1 = board.create("line",[[-3,1],[3,-1]]);
+ var p = board.create('point',[-2,-1]);
+ var q = board.create('point',[3,1]);
+ var line2 = board.create("line",[p,q]);
+</script>
+<p>{lang=EN}
+Line of code <code>var line1 = board.create(&quot;line&quot;,[[-3,1],[3,-1]]);</code> creates $line1$ through two points <code>[-3,1]</code> and <code>[3,-1]</code>. 
+For each point again we had to define $x$ and $y$ coordinate. Because for the line we need to provide a list of two points, 
+we enclose both points in square brackets, therefore the list of two points is <code>[[-3,1],[3,-1]]</code>.</p>
+<p>For the second $line2$ we first defined two points $p$ and $q$ and used them as `[p,q] when defining the $line2$. Here we already
+see why ìt is useful to store objects in variables, because now we could define third line, that could also go though point $p$ or $q$ 
+and we don't need to worry if coordinates are correct.</p>
+<p><em>Note: In Javascript lists are written in square brackets <strong>[ ]</strong>.</em> 
+{/lang}</p>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#adding-properties-to-the-objects" id="adding-properties-to-the-objects">Adding properties to the objects</a></h2>
+<p>{/lang}</p>
+<p>{lang=SI}Creating basic objects{/lang}
+{lang=CZ}Using basic objects{/lang}</p>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#example" id="example">Example</a></h2>
+<p>{/lang}
+{lang=SI}Example{/lang}
+{lang=CZ}Example{/lang}</p>
 <h1><a class="header" href="#langencircleslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langencircleslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Circles{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
 <h1><a class="header" href="#langenpolygonslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenpolygonslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Polygons{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
 <h1><a class="header" href="#langenintersectionslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenintersectionslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Intersections{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
@@ -481,10 +512,10 @@ Points are one of the most basic objects in JSXGraph. In this example we will dr
 <h1><a class="header" href="#langendrawing-functionslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langendrawing-functionslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Drawing functions{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
 <h1><a class="header" href="#langenanimatinglanglangsianimatinglanglangczanimatinglang" id="langenanimatinglanglangsianimatinglanglangczanimatinglang">{lang=EN}Animating{/lang}{lang=SI}Animating{/lang}{lang=CZ}Animating{/lang}</a></h1>
 <h1><a class="header" href="#langenmoving-objectslanglangsimoving-objectslanglangczmoving-objectslang" id="langenmoving-objectslanglangsimoving-objectslanglangczmoving-objectslang">{lang=EN}Moving objects{/lang}{lang=SI}Moving objects{/lang}{lang=CZ}Moving objects{/lang}</a></h1>
-<h1><a class="header" href="#langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang-1" id="langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang-1">{lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
+<h1><a class="header" href="#langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang" id="langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang">{lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
 <h1><a class="header" href="#langensliderslanglangsisliderslanglangczsliderslang" id="langensliderslanglangsisliderslanglangczsliderslang">{lang=EN}Sliders{/lang}{lang=SI}Sliders{/lang}{lang=CZ}Sliders{/lang}</a></h1>
 <h1><a class="header" href="#langenanimating-with-sliderslanglangsianimating-with-sliderslanglangczanimating-with-sliderslang" id="langenanimating-with-sliderslanglangsianimating-with-sliderslanglangczanimating-with-sliderslang">{lang=EN}Animating with sliders{/lang}{lang=SI}Animating with sliders{/lang}{lang=CZ}Animating with sliders{/lang}</a></h1>
-<h1><a class="header" href="#langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang-2" id="langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang-2">{lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
+<h1><a class="header" href="#langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang-1" id="langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang-1">{lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
 <h1><a class="header" href="#langentransformationslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langentransformationslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Transformations{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
 <h1><a class="header" href="#langenadvanced-topicslanglangsiadvanced-topicslanglangczadvanced-topicslang" id="langenadvanced-topicslanglangsiadvanced-topicslanglangczadvanced-topicslang">{lang=EN}Advanced topics{/lang}{lang=SI}Advanced topics{/lang}{lang=CZ}Advanced topics{/lang}</a></h1>
 <h1><a class="header" href="#langenadding-imageslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenadding-imageslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Adding images{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>

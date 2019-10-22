@@ -1,5 +1,5 @@
-# Basics
 {lang=EN}
+## Basics
 JSXGraph construction is composed from:
 * drawing board
 * objects (points, lines, etc.)

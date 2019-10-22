@@ -36,7 +36,13 @@
 
         
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+              "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+               tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+                config:["TeX-AMS_HTML.js"]});
+        </script>
         
     </head>
     <body class="light">
@@ -167,11 +173,13 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#how-to-setup" id="how-to-setup">How to setup</a></h1>
-<p>{lang=EN}
-When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
-we just need to save it and refresh the page <em>(F5)</em> in browser. 
-Very simple template for building and testing is below
+                        <p>{lang=EN}</p>
+<h2><a class="header" href="#how-to-setup" id="how-to-setup">How to setup</a></h2>
+<p>When we prepare JSX construction it is most convenient to prepare it locally. For that we have to create some file (eg. 
+example.htm), copy paste template provided below and we can start constructing. After we save the program, we can open it in our
+favorite browser (Firefox, Chrome, etc). 
+We can repeat following: edit the file, save it and refresh it (<em>(F5)</em> in a browser) until we're not satisfied with result.</p>
+<p>Basic template for building and testing is below
 {/lang}
 {lang=CZ}
 When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
@@ -191,46 +199,27 @@ Very simple template for building and testing is below
         &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
         &lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
 /jsxgraphcore.js&quot;&gt;&lt;/script&gt;
+        &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js' async&gt;&lt;/script&gt;
+        &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+          MathJax.Hub.Config({
+              &quot;HTML-CSS&quot;: {availableFonts: [&quot;TeX&quot;],scale: 90},
+               tex2jax: {inlineMath: [[&quot;$&quot;,&quot;$&quot;]],  displayMath: [[&quot;$$&quot;,&quot;$$&quot;]],  processEscapes: true},
+                config:[&quot;TeX-AMS_HTML.js&quot;]});
+        &lt;/script&gt;   
         &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css
 &quot; /&gt;
     &lt;/head&gt;
   &lt;body&gt;
 
-     HTML elements (div for canvas)
+     &lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 
      &lt;script&gt;
-     // JSXGraph code goes here.
+        var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
      &lt;/script&gt;
 
   &lt;/body&gt;
 &lt;/html&gt;
 
-</code></pre>
-<p>{lang=EN}
-If we want to use math symbols <em>(we have to write it in latex code)</em> then we have add below line after the script line.</p>
-<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
-</code></pre>
-<p>If you want to use $ $ for math symbols, then add following lines
-{/lang}
-{lang=CZ}
-If we want to use math symbols <em>(we have to write it in latex code)</em> then we have add below line after the script line.</p>
-<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
-</code></pre>
-<p>If you want to use $ $ for math symbols, then add following lines
-{/lang}
-{lang=SI}
-If we want to use math symbols <em>(we have to write it in latex code)</em> then we have add below line after the script line.</p>
-<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML' async&gt;&lt;/script&gt;
-</code></pre>
-<p>If you want to use $ $ for math symbols, then add following lines
-{/lang}</p>
-<pre><code>&lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js' async&gt;&lt;/script&gt;
-&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-MathJax.Hub.Config({
-   &quot;HTML-CSS&quot;: {availableFonts: [&quot;TeX&quot;],scale: 90},
-    tex2jax: {inlineMath: [[&quot;$&quot;,&quot;$&quot;]],  displayMath: [[&quot;$$&quot;,&quot;$$&quot;]],  processEscapes: true},
-    config:[&quot;TeX-AMS_HTML.js&quot;]});
-&lt;/script&gt;
 </code></pre>
 <p>{lang=EN}
 <em>This scripts are all downloaded from the internet, therefore we need an constant internet connection.</em>
