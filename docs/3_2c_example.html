@@ -175,7 +175,8 @@
                     <main>
                         <p>{lang=EN}</p>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
-<p>{/lang}
+<p>here we will put some example.
+{/lang}
 {lang=SI}Example{/lang}
 {lang=CZ}Example{/lang}</p>
 
@@ -216,21 +217,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         
