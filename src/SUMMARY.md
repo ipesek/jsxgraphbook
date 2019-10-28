@@ -1,8 +1,8 @@
 # Table of contents
 
 - [{lang=EN}Introduction{/lang} {lang=SI}Uvod{/lang} {lang=CZ}Úvod{/lang}](1_introduction.md)
-- [{lang=EN}How to setup{/lang}{lang=SI}How to setup{/lang}{lang=CZ}How to setup{/lang}](2_setup.md)
-- [{lang=EN}Basics{/lang}{lang=SI}Basics{/lang}{lang=CZ}Basics{/lang}](3_basics.md)
+- [{lang=EN}How to setup{/lang}{lang=SI}How to setup{/lang}{lang=CZ}Jak začít{/lang}](2_setup.md)
+- [{lang=EN}Basics{/lang}{lang=SI}Basics{/lang}{lang=CZ}Základy{/lang}](3_basics.md)
     - [{lang=EN}Drawing area{/lang}{lang=SI}Drawing area{/lang}{lang=CZ}Drawing area{/lang}](3_1_board.md)
     - [{lang=EN}Creating points{/lang}{lang=SI}Creating points{/lang}{lang=CZ}Creating points{/lang}](3_2_basic_objects.md)
     - [{lang=EN}Creating lines{/lang}{lang=SI}Creating lines{/lang}{lang=CZ}Creating lines{/lang}](3_2a_lines.md)

@@ -10,9 +10,13 @@ We can repeat following: edit the file, save it and refresh it (_(F5)_ in a brow
 Basic template for building and testing is below
 {/lang}
 {lang=CZ}
-When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
-we just need to save it and refresh the page _(F5)_ in browser. 
-Very simple template for building and testing is below
+## Jak zaèít
+Když chceme vytvoøit novou konstrukci v JXSGraphu, nejlepší je pøipravit si ji lokálnì, ve svém poèítaèi. Není nutné nahrávat ji na nìjaký server,
+staèí ji prostì uložit ve formì souboru HTML a otevøít v našem oblíbeném prohlížeèi.
+Níže je uveden vzor obsahu HTML souboru webové stránky pro tvorbu a testování JSX appletu. 
+Staèí jednoduše vytvoøit soubor, napø. priklad.html, a zkopírovat do nìj obsah níže uvedeného okna. Jediné, co potom budeme pøi tvorbì vlastního appletu
+mìnit je pasáž mezi tagy _<script>_ a _</script>_.
+Dokud nejsme spokojeni s podobou appletu, opakujeme následující akce: editace souboru, jeho uložení a prohlédnutí prohlížeèem (stránku prohlížeèe obnovíme stisknutím _(F5)_).      
 {/lang}
 {lang=SI}
 When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
@@ -54,7 +58,7 @@ Very simple template for building and testing is below
 _This scripts are all downloaded from the internet, therefore we need an constant internet connection._
 {/lang}
 {lang=CZ}
-_This scripts are all downloaded from the internet, therefore we need an constant internet connection._
+_Všechny použité skripty jsou nahrávány z internetu, proto je tøeba mít trvalé internetové pøipojení._
 {/lang}
 {lang=SI}
 _This scripts are all downloaded from the internet, therefore we need an constant internet connection._
