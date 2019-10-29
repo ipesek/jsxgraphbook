@@ -10,13 +10,15 @@ We can repeat following: edit the file, save it and refresh it (_(F5)_ in a brow
 Basic template for building and testing is below
 {/lang}
 {lang=CZ}
-## Jak zaèít
-Kdy chceme vytvoøit novou konstrukci v JXSGraphu, nejlepší je pøipravit si ji lokálnì, ve svém poèítaèi. Není nutné nahrávat ji na nìjakı server,
-staèí ji prostì uloit ve formì souboru HTML a otevøít v našem oblíbeném prohlíeèi.
-Níe je uveden vzor obsahu HTML souboru webové stránky pro tvorbu a testování JSX appletu. 
-Staèí jednoduše vytvoøit soubor, napø. priklad.html, a zkopírovat do nìj obsah níe uvedeného okna. Jediné, co potom budeme pøi tvorbì vlastního appletu
-mìnit je pasá mezi tagy _<script>_ a _</script>_.
-Dokud nejsme spokojeni s podobou appletu, opakujeme následující akce: editace souboru, jeho uloení a prohlédnutí prohlíeèem (stránku prohlíeèe obnovíme stisknutím _(F5)_).      
+## Jak zaÄÃ­t
+KdyÅ¾ chceme vytvoÅ™it novou konstrukci v JXSGraphu, nejlepÅ¡Ã­ je pÅ™ipravit si ji lokÃ¡lnÄ›, ve svÃ©m poÄÃ­taÄi. 
+NenÃ­ nutnÃ© ji nahrÃ¡vat na nÄ›jakÃ½ server, staÄÃ­, kdyÅ¾ ji uloÅ¾Ã­me formou HTML souboru do svÃ©ho poÄÃ­taÄe a nÃ¡slednÄ› otevÅ™eme v naÅ¡em oblÃ­benÃ©m prohlÃ­Å¾eÄi.
+
+NÃ­Å¾e je uveden vzor obsahu HTML souboru webovÃ© strÃ¡nky pro tvorbu a testovÃ¡nÃ­ JSX appletu. 
+StaÄÃ­ jednoduÅ¡e vytvoÅ™it soubor, napÅ™. _priklad.html_, a zkopÃ­rovat do nÄ›j obsah nÃ­Å¾e uvedenÃ©ho okna. JedinÃ©, co potom budeme pÅ™i tvorbÄ› vlastnÃ­ho appletu
+mÄ›nit je pasÃ¡Å¾ mezi tagy _script_.
+
+Dokud nejsme spokojeni s podobou appletu, opakujeme nÃ¡sledujÃ­cÃ­ akce: editace souboru, jeho uloÅ¾enÃ­ a prohlÃ©dnutÃ­ prohlÃ­Å¾eÄem (strÃ¡nku prohlÃ­Å¾eÄe obnovÃ­me stisknutÃ­m _(F5)_).      
 {/lang}
 {lang=SI}
 When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
@@ -58,7 +60,7 @@ Very simple template for building and testing is below
 _This scripts are all downloaded from the internet, therefore we need an constant internet connection._
 {/lang}
 {lang=CZ}
-_Všechny pouité skripty jsou nahrávány z internetu, proto je tøeba mít trvalé internetové pøipojení._
+_VÅ¡echny pouÅ¾itÃ© skripty jsou nahrÃ¡vÃ¡ny z internetu, proto je tÅ™eba mÃ­t trvalÃ© internetovÃ© pÅ™ipojenÃ­._
 {/lang}
 {lang=SI}
 _This scripts are all downloaded from the internet, therefore we need an constant internet connection._
