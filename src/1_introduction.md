@@ -16,7 +16,7 @@ Below is an example of power of JSXGraph.
 
 {lang=CZ}
 #### Na tomto díle se stále pracuje
-Toto je příručka pro práci v [JSXGraph] (https://jsxgraph.org/).
+Toto je příručka pro práci v [JSXGraphu](https://jsxgraph.org/).
 
 JSXGraph je knihovna JavaScriptu pro realizaci dynamické interaktivní geometrie, vykreslování funkcí, grafů a další vizualizace dat přímo ve webovém prohlížeči, nezávisle na jeho typu.
 
@@ -25,7 +25,7 @@ Tato příručka je věnována především úvodu do základních konstrukcí v
 **_Chcete-li tvořit dynamické materiály v JSXGraphu, nemusíte být nutně programátorem (i když by Vám to samozřejmě pomohlo), ve většině případů práce připomíná spíše skládání prvků stavebnice._**
 
 Níže je uvedena ukázka možností JSXGraphu 
-(Návod: Pohybujte posuvníkem - bodem na úsečce při dolním okraji okna a sledujte, co se děje.).
+(Návod: Pohybujte posuvníkem - bodem na úsečce při dolním okraji okna a sledujte, co se děje).
 {/lang}
 
 {lang=SI}
