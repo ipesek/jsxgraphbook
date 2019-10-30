@@ -11,14 +11,14 @@ Basic template for building and testing is below
 {/lang}
 {lang=CZ}
 ## Jak začít
-Když chceme vytvořit novou konstrukci v JXSGraphu, nejlepší je připravit si ji lokálně, ve svém počítači. 
+Když chceme vytvořit novou konstrukci v JSXGraphu, nejlepší je připravit si ji lokálně, ve svém počítači. 
 Není nutné ji nahrávat na nějaký server, stačí, když ji uložíme formou HTML souboru do svého počítače a následně otevřeme v našem oblíbeném prohlížeči.
 
 Níže je uveden vzor obsahu HTML souboru webové stránky pro tvorbu a testování JSX appletu. 
-Stačí jednoduše vytvořit soubor, např. _priklad.html_, a zkopírovat do něj obsah níže uvedeného okna. Jediné, co potom budeme při tvorbě vlastního appletu
-měnit je pasáž mezi tagy _script_.
+Stačí jednoduše vytvořit soubor, řekněme s názvem _priklad.html_, a zkopírovat do něj obsah níže uvedeného okna. Jediné, co potom budeme při tvorbě vlastního appletu
+měnit, je pasáž mezi tagy _\<script\>, \</script\>_.
 
-Dokud nejsme spokojeni s podobou appletu, opakujeme následující akce: editace souboru, jeho uložení a prohlédnutí prohlížečem (stránku prohlížeče obnovíme stisknutím _(F5)_).      
+Dokud nejsme spokojeni s podobou appletu, opakujeme následující akce: editace souboru, jeho uložení a prohlédnutí prohlížečem (zobrazení stránky v prohlížeči aktualizujeme stisknutím _(F5)_).      
 {/lang}
 {lang=SI}
 When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
