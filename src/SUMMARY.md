@@ -5,7 +5,7 @@
 - [{lang=EN}Basics{/lang}{lang=SI}Basics{/lang}{lang=CZ}Základy{/lang}](3_basics.md)
     - [{lang=EN}Drawing area{/lang}{lang=SI}Drawing area{/lang}{lang=CZ}Drawing area{/lang}](3_1_board.md)
     - [{lang=EN}Creating points{/lang}{lang=SI}Creating points{/lang}{lang=CZ}Creating points{/lang}](3_2_basic_objects.md)
-    - [{lang=EN}Creating lines{/lang}{lang=SI}Creating lines{/lang}{lang=CZ}Creating lines{/lang}](3_2a_lines.md)
+    - [{lang=EN}Creating lines{/lang}{lang=SI}Creating lines{/lang}{lang=CZ}Kreslení přímek{/lang}](3_2a_lines.md)
     - [{lang=EN}Adding attributes to the objects{/lang}{lang=SI}Adding properties to the objects{/lang}{lang=CZ}Adding properties to the objects{/lang}](3_2b_objects_drawing.md)
     - [{lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Example{/lang}](3_2c_example.md)
     - [{lang=EN}Circles{/lang}{lang=SI}Circles{/lang}{lang=CZ}Circles{/lang}](3_3_circles.md)
