@@ -577,10 +577,183 @@ examples of their usage.</strong></p>
 {lang=CZ}Adding properties to the objects{/lang}</p>
 <p>{lang=EN}</p>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
-<p>here we will put some example.
-{/lang}
-{lang=SI}Example{/lang}
-{lang=CZ}Example{/lang}</p>
+<p><strong>Harmonic conjugate points.</strong> Given three collinear points <em>A</em>, <em>B</em> and <em>C</em>; <em>C</em> being outside the line segment <em>AB</em>.
+Determine the point <em>D</em> of the segment <em>AB</em> so that the ratio of its distances to <em>A</em> and <em>B</em>, respectively, is equal to the 
+ration of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>. </p>
+<p>This point <em>D</em> is called the <em>harmonic conjugate of C with respect to A and B</em> and points <em>A</em>, <em>B</em>, <em>C</em> and <em>D</em> together 
+form the so called <em>harmonic quadruple</em>.
+{/lang}</p>
+<p>{lang=CZ}</p>
+<h2><a class="header" href="#example-1" id="example-1">Example</a></h2>
+<p><strong>Harmonic conjugate points.</strong> Given three collinear points <em>A</em>, <em>B</em> and <em>C</em>; <em>C</em> being outside the line segment <em>AB</em>.
+Determine the point <em>D</em> of the segment <em>AB</em> so that the ratio of its distances to <em>A</em> and <em>B</em>, respectively, is equal to the 
+ration of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>. </p>
+<p>This point <em>D</em> is called the <em>harmonic conjugate of C with respect to A and B</em> and points <em>A</em>, <em>B</em>, <em>C</em> and <em>D</em> together 
+form the so called <em>harmonic quadruple</em>.
+{/lang}</p>
+<p>{lang=SI}</p>
+<h2><a class="header" href="#example-2" id="example-2">Example</a></h2>
+<p><strong>Harmonic conjugate points.</strong> Given three collinear points <em>A</em>, <em>B</em> and <em>C</em>; <em>C</em> being outside the line segment <em>AB</em>.
+Determine the point <em>D</em> of the segment <em>AB</em> so that the ratio of its distances to <em>A</em> and <em>B</em>, respectively, is equal to the 
+ration of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>. </p>
+<p>This point <em>D</em> is called the <em>harmonic conjugate of C with respect to A and B</em> and points <em>A</em>, <em>B</em>, <em>C</em> and <em>D</em> together 
+form the so called <em>harmonic quadruple</em>.
+{/lang}</p>
+<p>{lang=EN}
+<em>Result:</em>
+To solve the task, we construct the so called <a href="https://en.wikipedia.org/wiki/Complete_quadrangle">complete quadrangle</a>,
+as shown below.
+{/lang}</p>
+<p>{lang=CZ}
+<em>Výsledek:</em>
+To solve the task, we construct the so called <a href="https://en.wikipedia.org/wiki/Complete_quadrangle">complete quadrangle</a>,
+as shown below.
+{/lang}</p>
+<p>{lang=SI}
+<em>Result:</em>
+To solve the task, we construct the so called <a href="https://en.wikipedia.org/wiki/Complete_quadrangle">complete quadrangle</a>,
+as shown below.
+{/lang}</p>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:400px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 5, 5, -3]});
+ var A = board.create('point',[-4,-2]);
+ var B = board.create('point',[0,-2]);
+ var p = board.create('line',[A,B],{name: 'p',withLabel: true, color: 'green'});
+ var C = board.create('glider', [4, 0, p]);
+ var E = board.create('point', [1,4], {name: 'E',size:2, color: 'blue'});
+ var q = board.create('line',[A,E],{name: 'q',withLabel: true, color: 'green'});
+ var r = board.create('line',[B,E],{name: 'r',withLabel: true, color: 'green'});
+ var F = board.create('glider', [0,0,q], {name: 'F',size:2, color: 'blue'});
+ var s = board.create('line',[C,F],{name: 's',withLabel: true, color: 'green'});
+ var G = board.create('intersection', [s, r,0], {name: 'G',size:2, color: 'blue'});
+ var t = board.create('line',[A,G],{color: 'grey'});
+ var u = board.create('line',[B,F],{color: 'grey'});
+ var H = board.create('intersection', [t, u], {name: 'H',size:2, color: 'blue'});
+ var v = board.create('line', [E,H],{color: 'grey'});
+ var D = board.create('intersection', [p, v, 0]);
+</script>
+<p>{lang=EN}
+<em>Solution:</em></p>
+<p>First, we define the bounding box and create two points <em>A</em> and <em>B</em> with the line <em>p</em> passing through them:
+{/lang}</p>
+<p>{lang=CZ}
+<em>Solution:</em></p>
+<p>First, we define the bounding box and create two points <em>A</em> and <em>B</em> with the line <em>p</em> passing through them:
+{/lang}</p>
+<p>{lang=SI}
+<em>Solution:</em></p>
+<p>First, we define the bounding box and create two points <em>A</em> and <em>B</em> with the line <em>p</em> passing through them:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 5, 5, -3]});
+ var A = board.create('point',[-4,-2]);
+ var B = board.create('point',[0,-2]);
+ var p = board.create('line',[A,B],{name: 'p',withLabel: true, color: 'green'});
+&lt;/script&gt; 
+</code></pre>
+<p>{lang=EN}
+Then, we put the point <em>C</em> on <em>p</em> so that it can move along it:
+{/lang}</p>
+<p>{lang=CZ}
+Then, we put the point <em>C</em> on <em>p</em> so that it can move along it:
+{/lang}</p>
+<p>{lang=SI}
+Then, we put the point <em>C</em> on <em>p</em> so that it can move along it:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 5, 5, -3]});
+ var A = board.create('point',[-4,-2]);
+ var B = board.create('point',[0,-2]);
+ var p = board.create('line',[A,B],{name: 'p',withLabel: true, color: 'green'});
+ var C = board.create('glider', [4, 0, p]);
+&lt;/script&gt; 
+</code></pre>
+<p>{lang=EN}
+Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it by the straight lines <em>q</em> and <em>r</em> to points
+<em>A</em> and <em>B</em>, respectively:
+{/lang}</p>
+<p>{lang=CZ}
+Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it by the straight lines <em>q</em> and <em>r</em> to points
+<em>A</em> and <em>B</em>, respectively:
+{/lang}</p>
+<p>{lang=SI}
+Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it by the straight lines <em>q</em> and <em>r</em> to points
+<em>A</em> and <em>B</em>, respectively:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 5, 5, -3]});
+ var A = board.create('point',[-4,-2]);
+ var B = board.create('point',[0,-2]);
+ var p = board.create('line',[A,B],{name: 'p',withLabel: true, color: 'green'});
+ var C = board.create('glider', [4, 0, p]);
+ var E = board.create('point', [1,4], {name: 'E',size:2, color: 'blue'});
+ var q = board.create('line',[A,E],{name: 'q',withLabel: true, color: 'green'});
+ var r = board.create('line',[B,E],{name: 'r',withLabel: true, color: 'green'});
+&lt;/script&gt; 
+</code></pre>
+<p>{lang=EN}
+After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
+points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
+{/lang}</p>
+<p>{lang=CZ}
+After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
+points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
+{/lang}</p>
+<p>{lang=SI}
+After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
+points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 5, 5, -3]});
+ var A = board.create('point',[-4,-2]);
+ var B = board.create('point',[0,-2]);
+ var p = board.create('line',[A,B],{name: 'p',withLabel: true, color: 'green'});
+ var C = board.create('glider', [4, 0, p]);
+ var E = board.create('point', [1,4], {name: 'E',size:2, color: 'blue'});
+ var q = board.create('line',[A,E],{name: 'q',withLabel: true, color: 'green'});
+ var r = board.create('line',[B,E],{name: 'r',withLabel: true, color: 'green'});
+ var F = board.create('glider', [0,0,q], {name: 'F',size:2, color: 'blue'});
+ var s = board.create('line',[C,F],{name: 's',withLabel: true, color: 'green'});
+ var G = board.create('intersection', [s, r,0], {name: 'G',size:2, color: 'blue'});
+&lt;script&gt; 
+</code></pre>
+<p>{lang=EN}
+Finally, we draw lines <em>t=AG</em> and <em>u=BF</em>, denote <em>H</em> their point of intersection, construct
+the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the desired point <em>D</em> as the intersection of lines <em>v</em> and <em>p</em>:
+{/lang}</p>
+<p>{lang=CZ}
+Finally, we draw lines <em>t=AG</em> and <em>u=BF</em>, denote <em>H</em> their point of intersection, construct
+the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the desired point <em>D</em> as the intersection of lines <em>v</em> and <em>p</em>:
+{/lang}</p>
+<p>{lang=SI}
+Finally, we draw lines <em>t=AG</em> and <em>u=BF</em>, denote <em>H</em> their point of intersection, construct
+the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the desired point <em>D</em> as the intersection of lines <em>v</em> and <em>p</em>:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 5, 5, -3]});
+ var A = board.create('point',[-4,-2]);
+ var B = board.create('point',[0,-2]);
+ var p = board.create('line',[A,B],{name: 'p',withLabel: true, color: 'green'});
+ var C = board.create('glider', [4, 0, p]);
+ var E = board.create('point', [1,4], {name: 'E',size:2, color: 'blue'});
+ var q = board.create('line',[A,E],{name: 'q',withLabel: true, color: 'green'});
+ var r = board.create('line',[B,E],{name: 'r',withLabel: true, color: 'green'});
+ var F = board.create('glider', [0,0,q], {name: 'F',size:2, color: 'blue'});
+ var s = board.create('line',[C,F],{name: 's',withLabel: true, color: 'green'});
+ var G = board.create('intersection', [s, r,0], {name: 'G',size:2, color: 'blue'});
+ var t = board.create('line',[A,G],{color: 'grey'});
+ var u = board.create('line',[B,F],{color: 'grey'});
+ var H = board.create('intersection', [t, u], {name: 'H',size:2, color: 'blue'});
+ var v = board.create('line', [E,H],{color: 'grey'});
+ var D = board.create('intersection', [p, v, 0]);
+&lt;/script&gt;
+</code></pre>
 <h1><a class="header" href="#langencircleslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langencircleslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Circles{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
 <h1><a class="header" href="#langenpolygonslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenpolygonslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Polygons{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
 <h1><a class="header" href="#langenintersectionslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenintersectionslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Intersections{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
