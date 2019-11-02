@@ -177,23 +177,23 @@
 <h2><a class="header" href="#example" id="example">Example</a></h2>
 <p><strong>Harmonic conjugate points.</strong> Given three collinear points <em>A</em>, <em>B</em> and <em>C</em>; <em>C</em> being outside the line segment <em>AB</em>.
 Determine the point <em>D</em> of the segment <em>AB</em> so that the ratio of its distances to <em>A</em> and <em>B</em>, respectively, is equal to the 
-ration of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>. </p>
+ratio of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>. </p>
 <p>This point <em>D</em> is called the <em>harmonic conjugate of C with respect to A and B</em> and points <em>A</em>, <em>B</em>, <em>C</em> and <em>D</em> together 
 form the so called <em>harmonic quadruple</em>.
 {/lang}</p>
 <p>{lang=CZ}</p>
+<h2><a class="header" href="#příklad" id="příklad">Příklad</a></h2>
+<p><strong>Harmonická čtveřice bodů.</strong> Jsou dány tři kolineární body <em>A</em>, <em>B</em> a <em>C</em>; <em>C</em> leží vně úsečky <em>AB</em>.
+Určete bod <em>D</em> úsečky <em>AB</em> takový, že poměr jeho vzdáleností od bodů <em>A</em> a <em>B</em>, v daném pořadí, je roven poměru
+vzdáleností bodu <em>C</em> od bodů <em>A</em> a <em>B</em>, tj. <em>|AD|/|BD|=|AC|/|BC|</em>. </p>
+<p>Bod <em>D</em> potom nazýváme <em>harmonicky sdružený s bodem C vzhledem k bodům A a B</em>, takové body <em>A</em>, <em>B</em>, <em>C</em> a <em>D</em> potom společně
+vytváří tzv. <em>harmonickou čtveřici</em>.
+{/lang}</p>
+<p>{lang=SI}</p>
 <h2><a class="header" href="#example-1" id="example-1">Example</a></h2>
 <p><strong>Harmonic conjugate points.</strong> Given three collinear points <em>A</em>, <em>B</em> and <em>C</em>; <em>C</em> being outside the line segment <em>AB</em>.
 Determine the point <em>D</em> of the segment <em>AB</em> so that the ratio of its distances to <em>A</em> and <em>B</em>, respectively, is equal to the 
-ration of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>. </p>
-<p>This point <em>D</em> is called the <em>harmonic conjugate of C with respect to A and B</em> and points <em>A</em>, <em>B</em>, <em>C</em> and <em>D</em> together 
-form the so called <em>harmonic quadruple</em>.
-{/lang}</p>
-<p>{lang=SI}</p>
-<h2><a class="header" href="#example-2" id="example-2">Example</a></h2>
-<p><strong>Harmonic conjugate points.</strong> Given three collinear points <em>A</em>, <em>B</em> and <em>C</em>; <em>C</em> being outside the line segment <em>AB</em>.
-Determine the point <em>D</em> of the segment <em>AB</em> so that the ratio of its distances to <em>A</em> and <em>B</em>, respectively, is equal to the 
-ration of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>. </p>
+ratio of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>. </p>
 <p>This point <em>D</em> is called the <em>harmonic conjugate of C with respect to A and B</em> and points <em>A</em>, <em>B</em>, <em>C</em> and <em>D</em> together 
 form the so called <em>harmonic quadruple</em>.
 {/lang}</p>
@@ -204,8 +204,8 @@ as shown below.
 {/lang}</p>
 <p>{lang=CZ}
 <em>Výsledek:</em>
-To solve the task, we construct the so called <a href="https://en.wikipedia.org/wiki/Complete_quadrangle">complete quadrangle</a>,
-as shown below.
+K řešení úlohy využijeme konstrukci tzv. <a href="https://en.wikipedia.org/wiki/Complete_quadrangle">úplného čtyřrohu</a>,
+jak vidíme níže.
 {/lang}</p>
 <p>{lang=SI}
 <em>Result:</em>
@@ -225,22 +225,23 @@ as shown below.
  var F = board.create('glider', [0,0,q], {name: 'F',size:2, color: 'blue'});
  var s = board.create('line',[C,F],{name: 's',withLabel: true, color: 'green'});
  var G = board.create('intersection', [s, r,0], {name: 'G',size:2, color: 'blue'});
- var t = board.create('line',[A,G],{color: 'grey'});
- var u = board.create('line',[B,F],{color: 'grey'});
+ var t = board.create('line',[A,G],{color: 'grey', dash:"2"});
+ var u = board.create('line',[B,F],{color: 'grey', dash:"2"});
  var H = board.create('intersection', [t, u], {name: 'H',size:2, color: 'blue'});
- var v = board.create('line', [E,H],{color: 'grey'});
+ var v = board.create('line', [E,H],{color: 'grey', dash:"2"});
  var D = board.create('intersection', [p, v, 0]);
 </script>
 <p>{lang=EN}
-<em>Solution:</em></p>
+<em>Programming:</em></p>
 <p>First, we define the bounding box and create two points <em>A</em> and <em>B</em> with the line <em>p</em> passing through them:
 {/lang}</p>
 <p>{lang=CZ}
-<em>Solution:</em></p>
-<p>First, we define the bounding box and create two points <em>A</em> and <em>B</em> with the line <em>p</em> passing through them:
+<em>Programování:</em></p>
+<p>Nejprve definujeme parametry nákresny, tj. rozměry okna a rozsah souřadnic, a v ní sestrojíme body <em>A</em> a <em>B</em> 
+spolu s přímkou <em>p</em>, která jimi prochází:
 {/lang}</p>
 <p>{lang=SI}
-<em>Solution:</em></p>
+<em>Programming:</em></p>
 <p>First, we define the bounding box and create two points <em>A</em> and <em>B</em> with the line <em>p</em> passing through them:
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
@@ -255,31 +256,10 @@ as shown below.
 Then, we put the point <em>C</em> on <em>p</em> so that it can move along it:
 {/lang}</p>
 <p>{lang=CZ}
-Then, we put the point <em>C</em> on <em>p</em> so that it can move along it:
+Potom na přímku <em>p</em> umístíme bod <em>C</em> tak, aby byl po ní volně pohyblivý:
 {/lang}</p>
 <p>{lang=SI}
 Then, we put the point <em>C</em> on <em>p</em> so that it can move along it:
-{/lang}</p>
-<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
-&lt;script&gt;
- var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 5, 5, -3]});
- var A = board.create('point',[-4,-2]);
- var B = board.create('point',[0,-2]);
- var p = board.create('line',[A,B],{name: 'p',withLabel: true, color: 'green'});
- var C = board.create('glider', [4, 0, p]);
-&lt;/script&gt; 
-</code></pre>
-<p>{lang=EN}
-Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it by the straight lines <em>q</em> and <em>r</em> to points
-<em>A</em> and <em>B</em>, respectively:
-{/lang}</p>
-<p>{lang=CZ}
-Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it by the straight lines <em>q</em> and <em>r</em> to points
-<em>A</em> and <em>B</em>, respectively:
-{/lang}</p>
-<p>{lang=SI}
-Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it by the straight lines <em>q</em> and <em>r</em> to points
-<em>A</em> and <em>B</em>, respectively:
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -288,22 +268,19 @@ Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it
  var B = board.create('point',[0,-2]);
  var p = board.create('line',[A,B],{name: 'p',withLabel: true, color: 'green'});
  var C = board.create('glider', [4, 0, p]);
- var E = board.create('point', [1,4], {name: 'E',size:2, color: 'blue'});
- var q = board.create('line',[A,E],{name: 'q',withLabel: true, color: 'green'});
- var r = board.create('line',[B,E],{name: 'r',withLabel: true, color: 'green'});
 &lt;/script&gt; 
 </code></pre>
 <p>{lang=EN}
-After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
-points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
+Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it by the straight lines <em>q</em> and <em>r</em> to points
+<em>A</em> and <em>B</em>, respectively:
 {/lang}</p>
 <p>{lang=CZ}
-After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
-points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
+Nyní umístíme čtvrtý bod <em>E</em> nad přímku <em>p</em> a přímkami <em>q</em> a <em>r</em> ho spojíme v daném pořadí postupně s body
+<em>A</em> a <em>B</em>:
 {/lang}</p>
 <p>{lang=SI}
-After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
-points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
+Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it by the straight lines <em>q</em> and <em>r</em> to points
+<em>A</em> and <em>B</em>, respectively:
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -315,22 +292,19 @@ points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with 
  var E = board.create('point', [1,4], {name: 'E',size:2, color: 'blue'});
  var q = board.create('line',[A,E],{name: 'q',withLabel: true, color: 'green'});
  var r = board.create('line',[B,E],{name: 'r',withLabel: true, color: 'green'});
- var F = board.create('glider', [0,0,q], {name: 'F',size:2, color: 'blue'});
- var s = board.create('line',[C,F],{name: 's',withLabel: true, color: 'green'});
- var G = board.create('intersection', [s, r,0], {name: 'G',size:2, color: 'blue'});
-&lt;script&gt; 
+&lt;/script&gt; 
 </code></pre>
 <p>{lang=EN}
-Finally, we draw lines <em>t=AG</em> and <em>u=BF</em>, denote <em>H</em> their point of intersection, construct
-the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the desired point <em>D</em> as the intersection of lines <em>v</em> and <em>p</em>:
+After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
+points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
 {/lang}</p>
 <p>{lang=CZ}
-Finally, we draw lines <em>t=AG</em> and <em>u=BF</em>, denote <em>H</em> their point of intersection, construct
-the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the desired point <em>D</em> as the intersection of lines <em>v</em> and <em>p</em>:
+Poté umístíme na přímku <em>r</em> bod <em>F</em>, někam mezi body <em>A</em> a <em>E</em>, sestrojíme přímku <em>s</em> procházející body <em>C</em> a <em>F</em> 
+a určíme jejich průsečík <em>G</em> s přímkou <em>r</em>:
 {/lang}</p>
 <p>{lang=SI}
-Finally, we draw lines <em>t=AG</em> and <em>u=BF</em>, denote <em>H</em> their point of intersection, construct
-the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the desired point <em>D</em> as the intersection of lines <em>v</em> and <em>p</em>:
+After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
+points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -345,10 +319,37 @@ the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the d
  var F = board.create('glider', [0,0,q], {name: 'F',size:2, color: 'blue'});
  var s = board.create('line',[C,F],{name: 's',withLabel: true, color: 'green'});
  var G = board.create('intersection', [s, r,0], {name: 'G',size:2, color: 'blue'});
- var t = board.create('line',[A,G],{color: 'grey'});
- var u = board.create('line',[B,F],{color: 'grey'});
+&lt;/script&gt; 
+</code></pre>
+<p>{lang=EN}
+Finally, we draw lines <em>t=AG</em> and <em>u=BF</em>, denote <em>H</em> their point of intersection, construct
+the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the desired point <em>D</em> as the intersection of lines <em>v</em> and <em>p</em>:
+{/lang}</p>
+<p>{lang=CZ}
+Nakonec sestrojíme přímky <em>t=AG</em> a <em>u=BF</em>, určíme a označíme <em>H</em> jejich průsečík, sestrojíme přímku <em>v</em>
+procházející body <em>H</em> a <em>E</em> a určíme hledaný bod <em>D</em> jako průsečík přímek <em>v</em> a <em>p</em>:
+{/lang}</p>
+<p>{lang=SI}
+Finally, we draw lines <em>t=AG</em> and <em>u=BF</em>, denote <em>H</em> their point of intersection, construct
+the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the desired point <em>D</em> as the intersection of lines <em>v</em> and <em>p</em>:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:400px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 5, 5, -3]});
+ var A = board.create('point',[-4,-2]);
+ var B = board.create('point',[0,-2]);
+ var p = board.create('line',[A,B],{name: 'p',withLabel: true, color: 'green'});
+ var C = board.create('glider', [4, 0, p]);
+ var E = board.create('point', [1,4], {name: 'E',size:2, color: 'blue'});
+ var q = board.create('line',[A,E],{name: 'q',withLabel: true, color: 'green'});
+ var r = board.create('line',[B,E],{name: 'r',withLabel: true, color: 'green'});
+ var F = board.create('glider', [0,0,q], {name: 'F',size:2, color: 'blue'});
+ var s = board.create('line',[C,F],{name: 's',withLabel: true, color: 'green'});
+ var G = board.create('intersection', [s, r,0], {name: 'G',size:2, color: 'blue'});
+ var t = board.create('line',[A,G],{color: 'grey', dash:&quot;2&quot;});
+ var u = board.create('line',[B,F],{color: 'grey', dash:&quot;2&quot;});
  var H = board.create('intersection', [t, u], {name: 'H',size:2, color: 'blue'});
- var v = board.create('line', [E,H],{color: 'grey'});
+ var v = board.create('line', [E,H],{color: 'grey', dash:&quot;2&quot;});
  var D = board.create('intersection', [p, v, 0]);
 &lt;/script&gt;
 </code></pre>
