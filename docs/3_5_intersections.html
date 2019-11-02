@@ -173,7 +173,56 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#langenintersectionslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenintersectionslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Intersections{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
+                        <p>{lang=EN}</p>
+<h2><a class="header" href="#intersections" id="intersections">Intersections</a></h2>
+<p>Sometimes we want to distinguish some intersections of our objects ( lines and circles). Usually we have to compute the
+intersections, but JSXGraph has very convenient objects <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Intersection.html"><em>Intersection</em></a> 
+which we can use, to do just that. In order to create an intersection, we need to use two lines, two circles or mix of them.
+We cannot use other objects to create this object.
+{lang=SI}</p>
+<h2><a class="header" href="#intersections-1" id="intersections-1">Intersections</a></h2>
+<p>{/lang}
+{lang=CZ}</p>
+<h2><a class="header" href="#intersections-2" id="intersections-2">Intersections</a></h2>
+<p>{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-2,0],{name:&quot;A&quot;});
+ var q = board.create('point',[-1,-1],{name:&quot;B&quot;, visible:false});
+ var r = board.create('point',[0,0],{name:&quot;C&quot;});
+ var circle1 = board.create('circle', [p,q]);
+ var circle2 = board.create('circle', [r,p]);
+ var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});
+ var inter2 = board.create('intersection',[circle1,circle2,1],{name:'I_2'});
+ var line = board.create('line',[inter1,inter2]);
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-2,0],{name:"A"});
+ var q = board.create('point',[-1,-1],{name:"B", visible:false});
+ var r = board.create('point',[0,0],{name:"C"});
+ var circle1 = board.create('circle', [p,q]);
+ var circle2 = board.create('circle', [r,p]);
+ var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});
+ var inter2 = board.create('intersection',[circle1,circle2,1],{name:'I_2'});
+ var line = board.create('line',[inter1,inter2]);
+</script>
+<p>{lang=EN}
+After we created points and two circles, we created two objects - <em>intersections</em>. </p>
+<p>In <code>var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});</code> we used a third argument <code>0</code> which we use
+in the case if there are two intersecting points and we decide which intersection we will use (with $0$ and $1$). 
+Notice that in <code>{name:'I_2'})</code> we used underscore in the name. 
+This is <a href="https://www.mathjax.org/">$LATEX$</a> notation and can be used for the labels to typeset beautiful math. </p>
+<p>As last we created new line <code>var line = board.create('line',[inter1,inter2]);</code>
+with the intersection objects. We can therefore use newly created objects as regular points in our constructions.
+{/lang}
+{lang=SI}</p>
+<p>{/lang}
+{lang=CZ}</p>
+<p>{/lang}</p>
 
                     </main>
 
@@ -212,21 +261,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

@@ -173,7 +173,58 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#langenangleslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenangleslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Angles{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
+                        <p>{lang=EN}</p>
+<h2><a class="header" href="#angles" id="angles">Angles</a></h2>
+<p>When we need to emphasise some angle in our construction, we can do this with object <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Angle.html"><em>Angle</em></a>. 
+As an input we need to provide three points $p1, p2, p3$ and the angle is drawn counterclockwise from $p1$ to $p3$ around $p2$. 
+Other combinations include two lines and a two direction (by +/- 1) or line and two coordinates.
+{/lang}
+{lang=SI}</p>
+<h2><a class="header" href="#angles-1" id="angles-1">Angles</a></h2>
+<p>{/lang}
+{lang=CZ}</p>
+<h2><a class="header" href="#angles-2" id="angles-2">Angles</a></h2>
+<p>{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-2,0],{name:&quot;A&quot;});
+ var q = board.create('point',[1,1.5],{name:&quot;B&quot;});
+ var r = board.create('point',[1,-1],{name:&quot;C&quot;});
+ var line1 = board.create('line',[p,q]);
+ var line2 = board.create('line',[p,r]);
+ var angle1 = board.create('angle',[&quot;C&quot;, &quot;A&quot;, &quot;B&quot;], {radius:2});
+ var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});
+ var angle3 = board.create('angle',[line2,line1,1,1], {radius:1,color:'blue'});
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-2,0],{name:"A", fixed:true});
+ var q = board.create('point',[1,1.5],{name:"B"});
+ var r = board.create('point',[1,-1],{name:"C"});
+ var line1 = board.create('line',[p,q]);
+ var line2 = board.create('line',[p,r]);
+ var angle1 = board.create('angle',["C", "A", "B"], {radius:2});
+ var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});
+ var angle3 = board.create('angle',[line2,line1,1,1], {radius:1,color:'blue'});
+</script>
+{lang=EN}
+<p>In this example we first created three points and then through them created two lines with common/intersection point $A$. </p>
+<p>Then we created first angle with <code>var angle = board.create('angle',[r, p, q], {radius:2});</code> using three points. Remember, 
+when defining angle with three points we have to provide them in counterclockwise order, where the angle is centered by the second point. Additionaly, we set an attribute
+<em>radius</em> to $2$, which tells JSXGraph how big the arc of an angle should be. </p>
+<p>Then the second angle $\beta$ was created using two lines and two directions (+/- 1) with following line
+<code>var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});</code>. This line presents another possible 
+method to input the parameters of an angle. We can combine them differently to get different angles at the intersection point $A$.</p>
+<p>Last angle is only a variation of <code>angle2</code> which different directions and as a result we can see that <code>angle1</code> and <code>angle3</code> 
+describe the same angle but with different input parameters.
+{/lang}
+{lang=SI}</p>
+<p>{/lang}
+{lang=CZ}</p>
+<p>{/lang}</p>
 
                     </main>
 
@@ -212,21 +263,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

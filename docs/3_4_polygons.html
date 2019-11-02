@@ -173,7 +173,57 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#langenpolygonslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenpolygonslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Polygons{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
+                        <p>{lang=EN}</p>
+<h2><a class="header" href="#polygons" id="polygons">Polygons</a></h2>
+<p>Polygons are very useful objects which can be used to construct a closed area with arbitrary many points (minimum is three). 
+Polygons can be convex or concave, depending on the input points. We can again define different <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Polygon.html">attributes</a>
+to the object.</p>
+<p>Example:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, showCopyright:false, showNavigation:false });
+
+ var p = board.create('point',[-2,0],{name:&quot;A&quot;});
+ var q = board.create('point',[-1,-1],{name:&quot;B&quot;});
+ var r = board.create('point',[1,-0.5],{name:&quot;D&quot;});
+ var s = board.create('point',[1,1],{name:&quot;E&quot;});
+ var t = board.create('point',[-1,1.5],{name:&quot;F&quot;});
+
+ var poly1 = board.create('polygon',[p,q,r,s,t],{name:&quot;Polygon 1&quot;,withLabel:true});
+
+ var points = [[2,-1],[4,1],[1,1],[-1,-1]];
+ var poly2 = board.create('polygon',points,{name:&quot;Polygon 2&quot;,withLabel:true,
+     hasInnerPoints:true, withLines:false, vertices:{visible:false}});
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-2,0],{name:"A"});
+ var q = board.create('point',[-1,-1],{name:"B"});
+ var r = board.create('point',[1,-0.5],{name:"D"});
+ var s = board.create('point',[1,1],{name:"E"});
+ var t = board.create('point',[-1,1.5],{name:"F"});
+ var poly1 = board.create('polygon',[p,q,r,s,t],{name:"Polygon 1",withLabel:true});
+ var points = [[2,-1],[4,1],[1,1],[-1,-1]];
+ var poly2 = board.create('polygon',points,{name:"Polygon 2",withLabel:true,hasInnerPoints:true, withLines:false, vertices:{visible:false}});
+</script>
+<p>As we mentioned earlier we need at least three points to make a polygon. In our example we created five points which then used
+to create a polygon. We used an attribute <em>withLabel</em> which tells JSXGraph to show the name of the polygon. </p>
+<p>For the second polygon we created a list of points, which is another approach to create a polygon. Here we again few new 
+attributes. Attribute <em>hasInnerPoints</em> enables user to move entire polygon. For example, moving Polygon 1 is not possible,
+only its points can be moved. Adding this attribute will enable moving the polygon. 
+Next attribute, <em>withLines</em> tells JSXgraph whether to draw borders of the polygon or not. The last attribute <em>vertices</em> is
+particullary interesting, because it does not have just a value, but a dictionary on the right side of <code>:</code>. The reason behind
+is that we can control the vertices with more than one attribute.</p>
+<p>{lang=SI}</p>
+<h2><a class="header" href="#polygons-1" id="polygons-1">Polygons</a></h2>
+<p>{/lang}
+{lang=CZ}</p>
+<h2><a class="header" href="#polygons-2" id="polygons-2">Polygons</a></h2>
+<p>{/lang}</p>
 
                     </main>
 
@@ -212,21 +262,6 @@
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

@@ -521,9 +521,8 @@ ukládat objekty do proměnných. Potom můžeme například klidně definovat t
 některým z bodů $p$, $q$ a nemusíme se strachovat, zda jeho souřadnice opisujeme dobře.</p>
 <p><em>Poznámka: V Javascriptu je seznam uváděn v hranatých závorkách <strong>[ ]</strong>.</em> 
 {/lang}</p>
-<p>{lang=EN}</p>
-<h2><a class="header" href="#adding-attributes-to-the-objects" id="adding-attributes-to-the-objects">Adding attributes to the objects</a></h2>
-<p>Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are 
+<p>{l{lang=EN}Adding attributes to the objects{/lang}{lang=SI}Adding properties to the objects{/lang}{lang=CZ}Adding properties to the objects{/lang}
+etc.) and some are 
 more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and 
 how line ends at the second point (more <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html">here</a>). 
 We can always look at the <a href="https://jsxgraph.uni-bayreuth.de/docs/index.html">JSXGraph API documentation</a>, which describes 
@@ -531,7 +530,7 @@ all the objects and their attributes. </p>
 <p>Let us look now at the example. 
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#adding-attributes-to-the-objects-1" id="adding-attributes-to-the-objects-1">Adding attributes to the objects</a></h2>
+<h2><a class="header" href="#adding-attributes-to-the-objects" id="adding-attributes-to-the-objects">Adding attributes to the objects</a></h2>
 <p>Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are 
 more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and 
 how line ends at the second point (more <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html">here</a>). 
@@ -843,12 +842,278 @@ the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the d
  var D = board.create('intersection', [p, v, 0]);
 &lt;/script&gt;
 </code></pre>
-<h1><a class="header" href="#langencircleslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langencircleslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Circles{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
-<h1><a class="header" href="#langenpolygonslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenpolygonslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Polygons{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
-<h1><a class="header" href="#langenintersectionslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenintersectionslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Intersections{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
-<h1><a class="header" href="#langenangleslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenangleslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Angles{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
-<h1><a class="header" href="#langencurveslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langencurveslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Curves{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
-<h1><a class="header" href="#langendrawing-functionslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langendrawing-functionslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Drawing functions{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
+<p>{lang=EN}
+##Circles</p>
+<p>In JSXGraph we don't have only points and lines. In this section we will learn about circles. They can be constructed 
+with different <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Circle.html#method">methods</a>, here we will present how to
+create with two points and a point and a radius. 
+Let us now look at the example.
+{/lang}
+{lang=SI}##Circles{/lang}{lang=CZ}##Circles{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true});
+
+ var p = board.create('point',[-1,-1],{name:&quot;A&quot;});
+ var q = board.create('point',[0,0],{name:&quot;B&quot;});
+
+ var circle1 = board.create(&quot;circle&quot;,[p,q],{strokeColor:&quot;red&quot;, strokeWidth:4});
+ var circle2 = board.create(&quot;circle&quot;,[&quot;B&quot;,1.8],{method:&quot;pointRadius&quot;, fillColor:&quot;gray&quot;, 
+     fillOpacity:0.2});
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true});
+ var p = board.create('point',[-1,-1],{name:"A"});
+ var q = board.create('point',[0,0],{name:"B"});
+ var circle1 = board.create("circle",[p,q],{strokeColor:"red", strokeWidth:4});
+ var circle2 = board.create("circle",["B",1.8],{method:"pointRadius", fillColor:"gray", fillOpacity:0.2});
+</script>
+<p>First what we notice is, that when we initialized the board with a new argument <code>keepAspectRatio:true</code> which we use
+to tell JSXGraph that we want that html object and drawing board keep the aspect ratio between $x$ and $y$ axis. Setting this to
+true is necessary if circles should look like circles and not like ellipses. </p>
+<p>After creating both points we create two circles. <em>Circle1</em> is created with <code>var circle1 = board.create(&quot;circle&quot;,[p,q],{strokecolor:&quot;red&quot;, strokeWidth:4});</code>.
+We can see, that here we created circle with two points which is default method for creating the circles. We used 
+two additional attributes which we used to set the color and width of the stroke. Color here was not defined with 
+RGB system, but with the color name (REF needed). </p>
+<p><em>Circle2</em> is more interesting <code>var circle2 = board.create(&quot;circle&quot;,[&quot;B&quot;,1.5],{method:&quot;pointRadius&quot;, fillcolor:&quot;gray&quot;, fillopacity:0.2});</code>
+since we created it with the point and radius method. We explicitly set this as a attribute.
+Also instead of using variable name for the point, we used name of the point <code>&quot;B&quot;</code>, which can be very useful when having 
+many objects in the construction (and generating objects dynamically). We also used two attributes for filling the area of circle,
+namely <em>fillColor</em> which defines the color of the fill and <em>fillOpacity</em> sets the opacity of the area (ranging from $0$ to $1$, where $1$ means solid color with no opacity).</p>
+<p>{lang=EN}</p>
+<p>{/lang}</p>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#polygons" id="polygons">Polygons</a></h2>
+<p>Polygons are very useful objects which can be used to construct a closed area with arbitrary many points (minimum is three). 
+Polygons can be convex or concave, depending on the input points. We can again define different <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Polygon.html">attributes</a>
+to the object.</p>
+<p>Example:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, showCopyright:false, showNavigation:false });
+
+ var p = board.create('point',[-2,0],{name:&quot;A&quot;});
+ var q = board.create('point',[-1,-1],{name:&quot;B&quot;});
+ var r = board.create('point',[1,-0.5],{name:&quot;D&quot;});
+ var s = board.create('point',[1,1],{name:&quot;E&quot;});
+ var t = board.create('point',[-1,1.5],{name:&quot;F&quot;});
+
+ var poly1 = board.create('polygon',[p,q,r,s,t],{name:&quot;Polygon 1&quot;,withLabel:true});
+
+ var points = [[2,-1],[4,1],[1,1],[-1,-1]];
+ var poly2 = board.create('polygon',points,{name:&quot;Polygon 2&quot;,withLabel:true,
+     hasInnerPoints:true, withLines:false, vertices:{visible:false}});
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-2,0],{name:"A"});
+ var q = board.create('point',[-1,-1],{name:"B"});
+ var r = board.create('point',[1,-0.5],{name:"D"});
+ var s = board.create('point',[1,1],{name:"E"});
+ var t = board.create('point',[-1,1.5],{name:"F"});
+ var poly1 = board.create('polygon',[p,q,r,s,t],{name:"Polygon 1",withLabel:true});
+ var points = [[2,-1],[4,1],[1,1],[-1,-1]];
+ var poly2 = board.create('polygon',points,{name:"Polygon 2",withLabel:true,hasInnerPoints:true, withLines:false, vertices:{visible:false}});
+</script>
+<p>As we mentioned earlier we need at least three points to make a polygon. In our example we created five points which then used
+to create a polygon. We used an attribute <em>withLabel</em> which tells JSXGraph to show the name of the polygon. </p>
+<p>For the second polygon we created a list of points, which is another approach to create a polygon. Here we again few new 
+attributes. Attribute <em>hasInnerPoints</em> enables user to move entire polygon. For example, moving Polygon 1 is not possible,
+only its points can be moved. Adding this attribute will enable moving the polygon. 
+Next attribute, <em>withLines</em> tells JSXgraph whether to draw borders of the polygon or not. The last attribute <em>vertices</em> is
+particullary interesting, because it does not have just a value, but a dictionary on the right side of <code>:</code>. The reason behind
+is that we can control the vertices with more than one attribute.</p>
+<p>{lang=SI}</p>
+<h2><a class="header" href="#polygons-1" id="polygons-1">Polygons</a></h2>
+<p>{/lang}
+{lang=CZ}</p>
+<h2><a class="header" href="#polygons-2" id="polygons-2">Polygons</a></h2>
+<p>{/lang}</p>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#intersections" id="intersections">Intersections</a></h2>
+<p>Sometimes we want to distinguish some intersections of our objects ( lines and circles). Usually we have to compute the
+intersections, but JSXGraph has very convenient objects <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Intersection.html"><em>Intersection</em></a> 
+which we can use, to do just that. In order to create an intersection, we need to use two lines, two circles or mix of them.
+We cannot use other objects to create this object.
+{lang=SI}</p>
+<h2><a class="header" href="#intersections-1" id="intersections-1">Intersections</a></h2>
+<p>{/lang}
+{lang=CZ}</p>
+<h2><a class="header" href="#intersections-2" id="intersections-2">Intersections</a></h2>
+<p>{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-2,0],{name:&quot;A&quot;});
+ var q = board.create('point',[-1,-1],{name:&quot;B&quot;, visible:false});
+ var r = board.create('point',[0,0],{name:&quot;C&quot;});
+ var circle1 = board.create('circle', [p,q]);
+ var circle2 = board.create('circle', [r,p]);
+ var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});
+ var inter2 = board.create('intersection',[circle1,circle2,1],{name:'I_2'});
+ var line = board.create('line',[inter1,inter2]);
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-2,0],{name:"A"});
+ var q = board.create('point',[-1,-1],{name:"B", visible:false});
+ var r = board.create('point',[0,0],{name:"C"});
+ var circle1 = board.create('circle', [p,q]);
+ var circle2 = board.create('circle', [r,p]);
+ var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});
+ var inter2 = board.create('intersection',[circle1,circle2,1],{name:'I_2'});
+ var line = board.create('line',[inter1,inter2]);
+</script>
+<p>{lang=EN}
+After we created points and two circles, we created two objects - <em>intersections</em>. </p>
+<p>In <code>var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});</code> we used a third argument <code>0</code> which we use
+in the case if there are two intersecting points and we decide which intersection we will use (with $0$ and $1$). 
+Notice that in <code>{name:'I_2'})</code> we used underscore in the name. 
+This is <a href="https://www.mathjax.org/">$LATEX$</a> notation and can be used for the labels to typeset beautiful math. </p>
+<p>As last we created new line <code>var line = board.create('line',[inter1,inter2]);</code>
+with the intersection objects. We can therefore use newly created objects as regular points in our constructions.
+{/lang}
+{lang=SI}</p>
+<p>{/lang}
+{lang=CZ}</p>
+<p>{/lang}</p>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#angles" id="angles">Angles</a></h2>
+<p>When we need to emphasise some angle in our construction, we can do this with object <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Angle.html"><em>Angle</em></a>. 
+As an input we need to provide three points $p1, p2, p3$ and the angle is drawn counterclockwise from $p1$ to $p3$ around $p2$. 
+Other combinations include two lines and a two direction (by +/- 1) or line and two coordinates.
+{/lang}
+{lang=SI}</p>
+<h2><a class="header" href="#angles-1" id="angles-1">Angles</a></h2>
+<p>{/lang}
+{lang=CZ}</p>
+<h2><a class="header" href="#angles-2" id="angles-2">Angles</a></h2>
+<p>{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-2,0],{name:&quot;A&quot;});
+ var q = board.create('point',[1,1.5],{name:&quot;B&quot;});
+ var r = board.create('point',[1,-1],{name:&quot;C&quot;});
+ var line1 = board.create('line',[p,q]);
+ var line2 = board.create('line',[p,r]);
+ var angle1 = board.create('angle',[&quot;C&quot;, &quot;A&quot;, &quot;B&quot;], {radius:2});
+ var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});
+ var angle3 = board.create('angle',[line2,line1,1,1], {radius:1,color:'blue'});
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-2,0],{name:"A", fixed:true});
+ var q = board.create('point',[1,1.5],{name:"B"});
+ var r = board.create('point',[1,-1],{name:"C"});
+ var line1 = board.create('line',[p,q]);
+ var line2 = board.create('line',[p,r]);
+ var angle1 = board.create('angle',["C", "A", "B"], {radius:2});
+ var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});
+ var angle3 = board.create('angle',[line2,line1,1,1], {radius:1,color:'blue'});
+</script>
+{lang=EN}
+<p>In this example we first created three points and then through them created two lines with common/intersection point $A$. </p>
+<p>Then we created first angle with <code>var angle = board.create('angle',[r, p, q], {radius:2});</code> using three points. Remember, 
+when defining angle with three points we have to provide them in counterclockwise order, where the angle is centered by the second point. Additionaly, we set an attribute
+<em>radius</em> to $2$, which tells JSXGraph how big the arc of an angle should be. </p>
+<p>Then the second angle $\beta$ was created using two lines and two directions (+/- 1) with following line
+<code>var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});</code>. This line presents another possible 
+method to input the parameters of an angle. We can combine them differently to get different angles at the intersection point $A$.</p>
+<p>Last angle is only a variation of <code>angle2</code> which different directions and as a result we can see that <code>angle1</code> and <code>angle3</code> 
+describe the same angle but with different input parameters.
+{/lang}
+{lang=SI}</p>
+<p>{/lang}
+{lang=CZ}</p>
+<p>{/lang}</p>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#curves" id="curves">Curves</a></h2>
+<p><a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Curve.html">Curves</a> in JSXgraph does not mean just curves from functions 
+or polynomials, but also parametric curves, polar curves or data plots. In our example we will show how to use data 
+for data plotting, for other uses please check API documentation.
+{/lang}
+{lang=SI}</p>
+<h2><a class="header" href="#curves-1" id="curves-1">Curves</a></h2>
+<p>{/lang}
+{lang=CZ}</p>
+<h2><a class="header" href="#curves-2" id="curves-2">Curves</a></h2>
+<p>{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-1, 10, 11, -2], axis:true, showCopyright:false, showNavigation:false });
+ var x = [1,2,3,4,5,6,7,8,9,10];
+ var y = [8.4,1,0.1,9,3.3,3.3,4.5,8,9,4];
+ var curve = board.create('curve',[x,y],{curveType:'plot'});
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-1, 10, 11, -2], axis:true, showCopyright:false, showNavigation:false });
+ var x = [1,2,3,4,5,6,7,8,9,10];
+ var y = [8.4,1,0.1,9,3.3,3.3,4.5,8,9,4];
+ var curve = board.create('curve',[x,y],{curveType:'plot'});
+</script>
+<p>{lang=EN}
+In this example we had to change the bounding box of the board in order to accommodate the data. Otherwise not all points 
+will be visible.</p>
+<p>To draw a data plot we need first two lists of data. In our case we used two lists <code>x</code> and <code>y</code> and filled them with numbers. 
+But is not the only way how to obtain the data (e.g. see this <a href="https://jsxgraph.uni-bayreuth.de/wiki/index.php/Data_plot">example</a>).
+As last we had to set the type of curve using attribute <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Curve.html#curveType"><em>curveType</em></a>.
+{/lang}</p>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#drawing-mathematical-functions" id="drawing-mathematical-functions">Drawing mathematical functions</a></h2>
+<p>In the constructions we often need to draw mathematical functions, e.g. sine or cosine, polynomals or other known functions.
+JSXGraph provide convenient method to draw such functions. Lets look at the example.
+{/lang}
+{lang=SI}</p>
+<h2><a class="header" href="#functions-drawing" id="functions-drawing">Functions drawing</a></h2>
+<p>{/lang}
+{lang=CZ}</p>
+<h2><a class="header" href="#functions-drawing-1" id="functions-drawing-1">Functions drawing</a></h2>
+<p>{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:300px; height:300px; margin:auto&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-4, 4, 4, -4], axis:true,  showCopyright:false, showNavigation:false });
+ var graph1 = board.create('functiongraph', [function(x){return Math.sin(x);}, -Math.PI, Math.PI],{name:'sin(x)', withLabel:true});
+ var graph2 = board.create('functiongraph', [function(x){return x*x-2;}, -3, 3],{name:'x^2 - 2', withLabel:true, strokeColor:'red'});
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:300px; height:300px; margin:auto"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-4, 4, 4, -4], axis:true,  showCopyright:false, showNavigation:false });
+ var graph1 = board.create('functiongraph', [function(x){return Math.sin(x);},-Math.PI,Math.PI],{name:'sin(x)', withLabel:true});
+ var graph2 = board.create('functiongraph', [function(x){return x*x-2;},-3,3],{name:'x^2 - 2', withLabel:true, strokeColor:'red'});
+</script>
+<p>{lang=EN}
+In this example we first changed properties of <code>div</code> and set the width and heigth to form a square area, because we wanted 
+nicer looking construction (other posibility would be to use attribute <em>keepAspectRatio</em> in initBoard()). Then we created
+two functions. </p>
+<p>To draw a $\sin (x)$ function we used <em>functiongraph</em> as a type 
+<code>var graph1 = board.create('functiongraph', </code>.<br />
+But what follows is something new.
+Let us look closely to <code>[function(x){return Math.sin(x);},-Math.PI,Math.PI]</code>. With type <em>functiongraph</em> we told JSXGraph that
+we will be drawing a function on some interval, therefore we need to provide the function we want to draw. 
+<code>function(x){return Math.sin(x);}</code> does just that. Here we use anonymous function <code>function(x)</code> where we provide parameter <code>x</code>,
+that is used by JSXgraph to provide <code>x</code> values from the interval we have set with second and third element of the list. In our 
+case this is <code>-Math.PI, Math.PI</code>. Now we have to define a function that will return a value ($y-coordinate$) for the given $x$.
+This was done by <code>{return Math.sin(x);}</code>. We have to use reserved word <code>return</code> which is followed by a function, in our case
+<code>Math.sin(x)</code>. We end this with <code>;}</code> which must use to end the statement and the function.</p>
+<p>In the second <em>graph2</em> we have drawn a quadratic function <code>{return x*x-2;}</code> on the interval <code>-3, 3</code>. We also used some attributes
+which we already explained on previous pages.</p>
+<p>Note: For the <em>sine</em> function we used <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Javascript Math</a> library. 
+{/lang}</p>
 <h1><a class="header" href="#langenanimatinglanglangsianimatinglanglangczanimatinglang" id="langenanimatinglanglangsianimatinglanglangczanimatinglang">{lang=EN}Animating{/lang}{lang=SI}Animating{/lang}{lang=CZ}Animating{/lang}</a></h1>
 <h1><a class="header" href="#langenmoving-objectslanglangsimoving-objectslanglangczmoving-objectslang" id="langenmoving-objectslanglangsimoving-objectslanglangczmoving-objectslang">{lang=EN}Moving objects{/lang}{lang=SI}Moving objects{/lang}{lang=CZ}Moving objects{/lang}</a></h1>
 <h1><a class="header" href="#langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang" id="langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang">{lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
@@ -900,21 +1165,6 @@ the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the d
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

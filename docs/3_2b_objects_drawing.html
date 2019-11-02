@@ -173,9 +173,8 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>{lang=EN}</p>
-<h2><a class="header" href="#adding-attributes-to-the-objects" id="adding-attributes-to-the-objects">Adding attributes to the objects</a></h2>
-<p>Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are 
+                        <p>{l{lang=EN}Adding attributes to the objects{/lang}{lang=SI}Adding properties to the objects{/lang}{lang=CZ}Adding properties to the objects{/lang}
+etc.) and some are 
 more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and 
 how line ends at the second point (more <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html">here</a>). 
 We can always look at the <a href="https://jsxgraph.uni-bayreuth.de/docs/index.html">JSXGraph API documentation</a>, which describes 
@@ -183,7 +182,7 @@ all the objects and their attributes. </p>
 <p>Let us look now at the example. 
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#adding-attributes-to-the-objects-1" id="adding-attributes-to-the-objects-1">Adding attributes to the objects</a></h2>
+<h2><a class="header" href="#adding-attributes-to-the-objects" id="adding-attributes-to-the-objects">Adding attributes to the objects</a></h2>
 <p>Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are 
 more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and 
 how line ends at the second point (more <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html">here</a>). 
@@ -353,21 +352,6 @@ pokud mu nastavíme hodnotu <em>false</em>. Vyzkoušejte to!</p>
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

@@ -1,6 +1,5 @@
-{lang=EN}
-## Adding attributes to the objects
-Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are 
+{l{lang=EN}Adding attributes to the objects{/lang}{lang=SI}Adding properties to the objects{/lang}{lang=CZ}Adding properties to the objects{/lang}
+ etc.) and some are 
 more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and 
 how line ends at the second point (more [here](https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html)). 
 We can always look at the [JSXGraph API documentation](https://jsxgraph.uni-bayreuth.de/docs/index.html), which describes 
