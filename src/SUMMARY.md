@@ -8,7 +8,7 @@
     - [{lang=EN}Creating lines{/lang}{lang=SI}Creating lines{/lang}{lang=CZ}Kreslení přímek{/lang}](3_2a_lines.md)
     - [{lang=EN}Adding attributes to the objects{/lang}{lang=SI}Adding properties to the objects{/lang}{lang=CZ}Nastavení vlastností objektů{/lang}](3_2b_objects_drawing.md)
     - [{lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang}](3_2c_example.md)
-    - [{lang=EN}Circles{/lang}{lang=SI}Circles{/lang}{lang=CZ}Circles{/lang}](3_3_circles.md)
+    - [{lang=EN}Circles{/lang}{lang=SI}Circles{/lang}{lang=CZ}Kružnice{/lang}](3_3_circles.md)
     - [{lang=EN}Polygons{/lang}{lang=SI}Polygons{/lang}{lang=CZ}Polygons{/lang}](3_4_polygons.md)
     - [{lang=EN}Intersections{/lang}{lang=SI}Intersections{/lang}{lang=CZ}Intersections{/lang}](3_5_intersections.md)
     - [{lang=EN}Angles{/lang}{lang=SI}Angles{/lang}{lang=CZ}Angles{/lang}](3_6_angles.md)
