@@ -1,6 +1,7 @@
 {lang=EN}
-#### This is work in progress
-This is a manual about the [JSXGraph](https://jsxgraph.org/). 
+## This is a manual about the [JSXGraph](https://jsxgraph.org/). 
+
+#### (Work in progress)
 
 JSXGraph is a cross-browser JavaScript library for interactive geometry, function plotting, charting, and data visualization in the web browser.
 
@@ -15,8 +16,9 @@ Below is an example of power of JSXGraph.
 {/lang}
 
 {lang=CZ}
-#### Na tomto díle se stále pracuje
-Toto je příručka pro práci v [JSXGraphu](https://jsxgraph.org/).
+## Příručka pro práci v [JSXGraphu](https://jsxgraph.org/).
+
+#### (Na tomto díle se stále pracuje)
 
 JSXGraph je knihovna JavaScriptu pro realizaci dynamické interaktivní geometrie, vykreslování funkcí, grafů a další vizualizace dat přímo ve webovém prohlížeči, nezávisle na jeho typu.
 
