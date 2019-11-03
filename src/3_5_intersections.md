@@ -5,11 +5,21 @@ Sometimes we want to distinguish some intersections of our objects ( lines and c
 intersections, but JSXGraph has very convenient objects [_Intersection_](https://jsxgraph.uni-bayreuth.de/docs/symbols/Intersection.html) 
 which we can use, to do just that. In order to create an intersection, we need to use two lines, two circles or mix of them.
 We cannot use other objects to create this object.
+{/lang}
+
 {lang=SI}
 ## Intersections
 {/lang}
+
+
 {lang=CZ}
-## Intersections
+## Průsečíky
+
+Pro určení průsečíků přímek a kružnic můžeme v JSXGraphu použít přímo objekt 
+[_Intersection_](https://jsxgraph.uni-bayreuth.de/docs/symbols/Intersection.html) (*průsečík*), nemusíme tyto průsečíky počítat. 
+Pro jeho zadání potřebujeme dvě  přímky, dvě kružnice nebo jednu přímku a jednu kružnici. Jiné objekty pro určení jejich průsečíku
+nelze použít.
+
 {/lang}
 
 ```JS
@@ -51,9 +61,22 @@ This is [$LATEX$](https://www.mathjax.org/) notation and can be used for the lab
 As last we created new line `var line = board.create('line',[inter1,inter2]);`
 with the intersection objects. We can therefore use newly created objects as regular points in our constructions.
 {/lang}
+
 {lang=SI}
 
 {/lang}
+
 {lang=CZ}
+Po vytvoření bodů a dvou kružnic jsme definovali dva objekty typu průsečík - _intersections_. 
+
+V kódu `var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});` jsme použili za výčtem dvou kružnic třetí
+argument, zde konkrétně s hodnotou `0`, který zadáváme v případě, že objekty mají dva průsečíky a my chceme ovlivnit, který
+z nich použijeme (uvedením $0$ nebo $1$). 
+Za povšimnutí stojí, že jsme v atributu `{name:'I_2'})` použili ve jménu symbol podtržítka pro zápis dolního indexu.
+Jedná se o syntaxi typografického systému [$LATEX$](https://www.mathjax.org/), která může být v JSXGraphu použita při zápisu
+jmenovek pro dosažení lépe vypadajícího matematického zápisu. 
+
+Nakonec jsme definovali novou přímku `var line = board.create('line',[inter1,inter2]);`
+procházející získanými průsečíky. Z toho je vidět, jak můžeme nově získané objekty hned použít jako určující body pro další konstrukci.
 
 {/lang}

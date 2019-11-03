@@ -1,5 +1,6 @@
-{l{lang=EN}Adding attributes to the objects{/lang}{lang=SI}Adding properties to the objects{/lang}{lang=CZ}Adding properties to the objects{/lang}
- etc.) and some are 
+{lang=EN}
+## Adding attributes to the objects
+Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are 
 more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and 
 how line ends at the second point (more [here](https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html)). 
 We can always look at the [JSXGraph API documentation](https://jsxgraph.uni-bayreuth.de/docs/index.html), which describes 
@@ -27,19 +28,7 @@ Body mají například různé tvary, u přímky pak lze např. stanovit, zda bu
 (atribut *straightLast*) a jak v něm bude končit (více [zde](https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html)). 
 
 Popisy všech atributů objektů JSXGraphu jsou uvedeny v dokumentaci [JSXGraph Reference](https://jsxgraph.uni-bayreuth.de/docs/index.html). 
-{/lang}
 
-
-{lang=EN}
-Let us look now at the example. 
-{/lang}
-
-
-{lang=SI}
-Let us look now at the example. 
-{/lang}
-
-{lang=CZ}
 Podívejme se na následující příklad: 
 {/lang}
 
@@ -168,7 +157,7 @@ V dokumentaci jsou uvedeny nastavené hodnoty pro všechny atributy. Druhým nov
  
 V kódu `var line2 = board.create("line",[p,q],{straightLast:false, dash:"4" });` definice přímky byly použity dva
 atributy, první z nich _straightLast_ určuje, že přímka skončí ve druhém z určujících bodů, druhý _dash_ potom určuje, jak bude čára nakreslena.
-Parametr _dash_ může nabývat různých hodnot, jejich přehled viz [documentation for dash attribute](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#dash).
+Parametr _dash_ může nabývat různých hodnot, jejich přehled viz [dokumentace pro atribut \"dash\"](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#dash).
 
 Tak jako v3echny objekty i nákresna (*Board*) má své [atributy](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html). 
 Jedním z nich je _boundingbox_, který používáme již od první ukázky kódu nákresny, ale ještě jsme ho nekomentovali. 
