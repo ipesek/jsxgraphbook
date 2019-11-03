@@ -87,7 +87,7 @@ kde *p*, *q* jsou dva body, které jí určují, *p* je střed kružnice a *q* j
 atributy pro barvu a tloušťku čáry. Barva přitom není definována systémem RGB, ale jménem barvy (je potřeba REF). 
 
 Kružnice _Circle2_ je zajímavější, protože je dána středem a poloměrem. Definujeme ji kódem
-`var circle2 = board.create("circle",["B",1.5],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`.
+`var circle2 = board.create("circle",["B",1.5],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`
 Tato metoda konstrukce kružnice musí být zadána explicitně formou atributu, na rozdíl od té předchozí, která je v JSXGraphu implicitní.
 Také stojí za povšimnutí, že jsme v tomto kódu nepoužili jméno proměnné *q*, do které je bod uložen, ale přímo jméno "B" tohoto bodu.
 Což může být velmi užitečné, když máme v konstrukci více objektů a když jsou objekty generovány dynamicky. 
