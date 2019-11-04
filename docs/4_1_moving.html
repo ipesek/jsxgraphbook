@@ -173,7 +173,58 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#langenmoving-objectslanglangsimoving-objectslanglangczmoving-objectslang" id="langenmoving-objectslanglangsimoving-objectslanglangczmoving-objectslang">{lang=EN}Moving objects{/lang}{lang=SI}Moving objects{/lang}{lang=CZ}Moving objects{/lang}</a></h1>
+                        <p>{lang=EN}</p>
+<h2><a class="header" href="#moving-objects" id="moving-objects">Moving objects</a></h2>
+<p>Sometimes we want to move points to explain or present some concept. We can use this to animate the point by moving to 
+final point (using method moveTo()) or only visiting some point and returning back to the start.
+We will use both methods in next example.
+{/lang}
+{lang=SI}</p>
+<h2><a class="header" href="#moving-objects-1" id="moving-objects-1">Moving objects</a></h2>
+<p>{/lang}
+{lang=CZ}</p>
+<h2><a class="header" href="#moving-objects-2" id="moving-objects-2">Moving objects</a></h2>
+<p>{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-4, 4, 4, -4],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-1,0],{name:&quot;A&quot;});
+ var q = board.create('point',[3,2],{name:&quot;B&quot;});
+ var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);
+ var button2 = board.create('button',[-3,3,'Move A', function(){p.moveTo([Math.random()*8-4,Math.random()*8-4],500);}]);
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:300px; height:300px; margin:auto"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-4, 4, 4, -4],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var p = board.create('point',[-1,0],{name:"A"});
+ var q = board.create('point',[3,2],{name:"B"});
+ var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);
+ var button2 = board.create('button',[-3,3,'Move A', function(){p.moveTo([Math.random()*8-4,Math.random()*8-4],500);}]);
+</script>
+<p>First three lines are usual, but in the next line <code>var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);</code> we use 
+two new commands. </p>
+<p>Let us focus first on the second command: <code>q.visit([3, -2], 1800, 2)</code>. Until now we always 
+used only one method <em>create()</em> which we provided with parameters to create points, etc. on the board. Now we introduce 
+a new method for the point which is called <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.CoordsElement.html#visit"><em>visit()</em></a>.
+Its syntax is <strong>visit(where, time, options)</strong> with three parameters,</p>
+<ul>
+<li><em>where</em> coordinates of our destination e.g. <code>[3, -2]</code>,</li>
+<li><em>time</em> how long should it take e.g. <code>1800</code>,</li>
+<li><em>options</em> in our case how many repetitions of our visit e.g <code>2</code>. </li>
+</ul>
+<p>First command creates a button on a board which click on it triggers some action. The parameters in the list are as follows
+<strong>[x-coordinate, y-coordinate, title on the button, action]</strong>. In our case the action was anonymous function with the 
+<em>visit</em> method on point <em>q</em>.</p>
+<p>The second button is created in next line, but let us now look at the action more closely which is <code>p.moveTo([Math.random()*8-4,Math.random()*8-4],500);</code>.
+Here we use on the point <em>q</em> new method <em>moveTo</em> which takes only two parameters</p>
+<ul>
+<li>destination coordinates as a list of two elements e.g  <code>[Math.random()*8-4,Math.random()*8-4]</code></li>
+<li>animation time in miliseconds, e.g <code>500</code>.</li>
+</ul>
+<p>For the coordinates we use <em>Math.random</em> method, which every time we click on the button creates new random number between 0 and 1 
+which we multiply by $8$ and subtract by $4$, result then will be between $-4$ and $4$m which are also limits of our bounding box.
+We do the same for both coordinates. As a result our point p (<code>&quot;A&quot;</code>) moves across the board randomly. </p>
 
                     </main>
 
