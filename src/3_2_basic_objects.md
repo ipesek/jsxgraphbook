@@ -9,8 +9,8 @@ board variable for the construction of all objects that will be on board.
 {/lang}
 
 {lang=CZ}
-# Creating points
-Points are one of the most basic objects in JSXGraph. In this example we will draw two points on a drawing board. 
+# Vytváření bodů
+Body jsou základními a nejjednoduššími objekty v JSXGraph. V tomto příkladu zakreslíme do nákresny dva body. 
 {/lang}
 ```JS
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
@@ -38,4 +38,11 @@ the line with `var q = ` which we use to store this object in variable *q*. This
 in the constructions we often reference different object and define their relationships, which will be more apparent in following pages.
 
 
+{/lang}
+{lang=CZ}
+Zaměřme se nyní na `board.create('point',[-2,1]);`. Zde využíváme proměnnou *board* a metodu *create*, která vyžaduje dva argumenty. Prvním argumentem určujeme, jaký typ objekt se má v nákresně vytvořit, což je v našem případě bod, *point*. Druhý argument určuje souřadnice, na kterých bude bod v nákresně sestrojen. Pokud použijeme souřadnice, které leží mimo námi nadefinovaný systém souřadnic, tak se bod stejně sestrojí. Vytvořený bod ale nebude na naší nákresně viditelný, neboť bude sestrojen mimo zobrazovanou plochu. Pohybem po nákresně pomocí zoomu a šipek v jejím pravém dolním rohu je však možné sestrojený bod objevit.
+
+Další řádek `var q = board.create('point',[3,0]);` je velice podobný předchozí konstrukci pouze s jedním rozdílem. Naší konstrukci začínáme `var q = `. Toto přiřazení slouží obecně k ukládání objektů do proměnných. V naší ukázce sestrojený bod ukládáme do proměnné *q*.
+
+Ukládání objektů do proměnných je dobrou a často nezbytnou praxí. V konstrukcích se budeme často odkazovat na existující objekty a definovat mezi nimi vztahy a to právě pomocí proměnných. Toto bude patrnější na následujících stránkách.
 {/lang}

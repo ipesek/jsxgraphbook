@@ -3,7 +3,7 @@ authors = ["IgorP"]
 language = "en"
 multilingual = false
 src = "src"
-title = "{lang=EN}JSXGraph Book{/lang}{lang=SI}Knjiga o JSXGraphu{/lang}{lang=CZ}JSXGraph knjiga{/lang}"
+title = "{lang=EN}JSXGraph Book{/lang}{lang=SI}Knjiga o JSXGraphu{/lang}{lang=CZ}Příručka JSXGraph{/lang}"
 
 [build]
 build-dir = "docs"
