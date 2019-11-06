@@ -9,7 +9,7 @@ board variable for the construction of all objects that will be on board.
 {/lang}
 
 {lang=CZ}
-# Vytváření bodů
+## Vytváření bodů
 Body jsou základními a nejjednoduššími objekty v JSXGraph. V tomto příkladu zakreslíme do nákresny dva body. 
 {/lang}
 ```JS
