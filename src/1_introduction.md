@@ -141,3 +141,6 @@ Namig: premaknite piko in opazujte.
 		}
 	});
 </script>
+
+[![ITEMS](files/images/items_logo_blue.png)](https://itemspro.eu)
+[![Cofunded by the Erasmus+ programme of the European union](files/images/eu_flag_co_funded_pos_rgb_left_small.jpg)](https://ec.europa.eu/programmes/erasmus-plus/)
