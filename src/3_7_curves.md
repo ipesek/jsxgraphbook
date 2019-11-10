@@ -22,8 +22,7 @@ tohoto objektu viz [JSXGraph Reference](https://jsxgraph.uni-bayreuth.de/docs/sy
 ```JS
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
- var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-1, 10, 11, -2], 
-			axis:true, showCopyright:false, showNavigation:false });
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-1, 10, 11, -2], axis:true, showCopyright:false, showNavigation:false });
  var x = [1,2,3,4,5,6,7,8,9,10];
  var y = [8.4,1,0.1,9,3.3,3.3,4.5,8,9,4];
  var curve = board.create('curve',[x,y],{curveType:'plot'});

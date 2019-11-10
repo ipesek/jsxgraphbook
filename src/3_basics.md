@@ -11,4 +11,17 @@ In this section we will cover how to create drawing board, objects and use them 
 
 {/lang}
 
+{lang=CZ}
+## Základy
+Konstrukce v JSXGraphu má tyto základní prvky:
+* nákresna
+* objekty (body, přímky atd.)
+* vztahy mezi objekty (volitelné, chceme-li mít v konstrukci nějakou dynamiku)
+* události (volitelné, pokud chceme, aby byly spuštěny nějaké doplňkové akce)
+
+
+V této části příručky se budeme věnovat vytvoření nákresny a zobrazení základních objektů, jejichž užití si budeme ilustrovat
+prostřednictvím jednoduchých příkladů.
+
+{/lang}
 
