@@ -253,9 +253,10 @@ Zde aplikujeme na bod <em>q</em> novou metodu <em>moveTo</em>, která využívá
 <li>souřadnice cíle jako seznam o dvou složkách, např. <code>[Math.random()*8-4,Math.random()*8-4]</code></li>
 <li>čas animace v <em>ms</em>, např. <code>500</code>.</li>
 </ul>
-<p>For the coordinates we use <em>Math.random</em> method, which every time we click on the button creates new random number between 0 and 1 
-which we multiply by $8$ and subtract by $4$, result then will be between $-4$ and $4$m which are also limits of our bounding box.
-We do the same for both coordinates. As a result our point p (<code>&quot;A&quot;</code>) moves across the board randomly. 
+<p>Pro stanovení souřadnic cíle používáme metodu <em>Math.random</em>, která při každém kliknutí na tlačítko
+generuje náhodné číslo z intervalu od 0 do 1. Toto číslo se pak v našem konkrétním případě násobí $8$ a od výsledku 
+se odečte $4$, aby byla hodnota příslušné souřadnice z rozmezí od $-4$ do $4$, které odpovídá rozsahu nákresny.
+Tímto způsobem definujeme obě souřadnice cíle pohybu. Výsledným efektem je náhodný pohyb našeho bodu p (<code>&quot;A&quot;</code>) po nákresně. 
 {/lang}</p>
 
                     </main>
