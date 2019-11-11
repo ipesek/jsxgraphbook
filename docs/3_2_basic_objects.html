@@ -182,7 +182,7 @@ board variable for the construction of all objects that will be on board.
 <h2><a class="header" href="#risanje-točk" id="risanje-točk">Risanje točk</a></h2>
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
-<h1><a class="header" href="#vytváření-bodů" id="vytváření-bodů">Vytváření bodů</a></h1>
+<h2><a class="header" href="#vytváření-bodů" id="vytváření-bodů">Vytváření bodů</a></h2>
 <p>Body jsou základními a nejjednoduššími objekty v JSXGraph. V tomto příkladu zakreslíme do nákresny dva body. 
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
@@ -250,21 +250,6 @@ Zaměřme se nyní na <code>board.create('point',[-2,1]);</code>. Zde využívá
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

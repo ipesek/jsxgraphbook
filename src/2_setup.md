@@ -30,7 +30,7 @@ Very simple template for building and testing is below
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>JSXGraph templatek</title>
+        <title>JSXGraph template</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <script type="text/javascript" charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
 /jsxgraphcore.js"></script>

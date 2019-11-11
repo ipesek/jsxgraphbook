@@ -301,6 +301,8 @@ Namig: premaknite piko in opazujte.
 		}
 	});
 </script>
+<p><a href="https://itemspro.eu"><img src="files/images/items_logo_blue.png" alt="ITEMS" /></a>
+<a href="https://ec.europa.eu/programmes/erasmus-plus/"><img src="files/images/eu_flag_co_funded_pos_rgb_left_small.jpg" alt="Cofunded by the Erasmus+ programme of the European union" /></a></p>
 <p>{lang=EN}</p>
 <h2><a class="header" href="#how-to-setup" id="how-to-setup">How to setup</a></h2>
 <p>When we prepare JSX construction it is most convenient to prepare it locally. For that we have to create some file (eg. 
@@ -327,7 +329,7 @@ Very simple template for building and testing is below
 &lt;html lang=&quot;en&quot;&gt;
     &lt;head&gt;
         &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;title&gt;JSXGraph templatek&lt;/title&gt;
+        &lt;title&gt;JSXGraph template&lt;/title&gt;
         &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
         &lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
 /jsxgraphcore.js&quot;&gt;&lt;/script&gt;
@@ -444,7 +446,7 @@ board variable for the construction of all objects that will be on board.
 <h2><a class="header" href="#risanje-točk" id="risanje-točk">Risanje točk</a></h2>
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
-<h1><a class="header" href="#vytváření-bodů" id="vytváření-bodů">Vytváření bodů</a></h1>
+<h2><a class="header" href="#vytváření-bodů" id="vytváření-bodů">Vytváření bodů</a></h2>
 <p>Body jsou základními a nejjednoduššími objekty v JSXGraph. V tomto příkladu zakreslíme do nákresny dva body. 
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
@@ -1502,21 +1504,6 @@ Vidíme zde, že pro získání okamžité hodnoty posuvníku použijeme spojen�
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         
