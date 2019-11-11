@@ -5,11 +5,18 @@ Sometimes we want to move points to explain or present some concept. We can use 
 final point (using method moveTo()) or only visiting some point and returning back to the start.
 We will use both methods in next example.
 {/lang}
+
 {lang=SI}
 ## Moving objects
 {/lang}
+
 {lang=CZ}
-## Moving objects
+## Pohybování s objekty
+
+Pro ilustraci nebo vysvětlení některých jevů potřebujeme mít někdy možnost cíleně pohybovat s&nbsp;vybranými body obrázku. 
+Můžeme například bod jednoduše přemístit do daného cílového místa (použitím metody *moveTo()*), nebo ho někam pošleme, aby se 
+potom vrátil zpět do výchozího místa.
+V&nbsp;následujícím příkladu použijeme oba tyto režimy pohybu.
 {/lang}
 
 ```JS
@@ -32,6 +39,8 @@ We will use both methods in next example.
  var button2 = board.create('button',[-3,3,'Move A', function(){p.moveTo([Math.random()*8-4,Math.random()*8-4],500);}]);
 </script>
 
+
+{lang=EN}
 First three lines are usual, but in the next line `var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);` we use 
 two new commands. 
 
@@ -55,6 +64,34 @@ Its syntax is __visit(where, time, options)__ with three parameters,
 For the coordinates we use _Math.random_ method, which every time we click on the button creates new random number between 0 and 1 
 which we multiply by $8$ and subtract by $4$, result then will be between $-4$ and $4$m which are also limits of our bounding box.
 We do the same for both coordinates. As a result our point p (`"A"`) moves across the board randomly. 
-
+{/lang}
 
  
+{lang=CZ}
+Význam prvích tří řádků (za značkou \<script\>) už známe, další řádek `var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);` ale přináší 
+dva nové příkazy. 
+
+Pojďme se nejprve zaměřit na příkaz: `q.visit([3, -2], 1800, 2)`. Dosud jsme používali jenom metodu _create()_,
+kterou jsme doplnili náležitými parametry pro zobrazení bodů apod. na nákresnu. Nyní představujeme novou metodu
+pro nakládání s bodem, která se nazývá [_visit()_](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.CoordsElement.html#visit).
+Její syntaxe je __visit(místo, doba trvání, volby)__ s těmito třemi parametry:
+ * _místo_ (_where_) souřadnice cíle pohybu, např. `[3, -2]`,
+ * _doba trvání_ (_time_) jak dlouho, v milisekundách, to bude trvat, např. `1800`,
+ * _volby_ (_options_), v našem případě se jedná o počet opakování, např. `2`. 
+ 
+ Výše uvedený kód čtvrtého řádku vytvoří v nákresně tlačítko, kliknutím na které se spustí nějaká akce. 
+ Význam parametrů uvedených v seznamu je následující: 
+ __[x-souřadnice, y-souřadnice, nápis na tlačítku, akce]__. Akcí je v našem případě anonymní funkce
+ aplikující metodu _visit_ na bod _q_.
+ 
+ Druhé tlačítko je vytvořeno na následujícím řádku. Pojďme se ale detailněji zaměřit na příslušnou akci, což je `p.moveTo([Math.random()*8-4,Math.random()*8-4],500);`.
+ Zde aplikujeme na bod _q_ novou metodu _moveTo_, která využívá pouze dva parametry:
+* souřadnice cíle jako seznam o dvou složkách, např. `[Math.random()*8-4,Math.random()*8-4]`
+* čas animace v *ms*, např. `500`.
+
+Pro stanovení souřadnic cíle používáme metodu _Math.random_, která při každém kliknutí na tlačítko
+generuje náhodné číslo z intervalu od 0 do 1. Toto číslo se pak v našem konkrétním případě násobí $8$ a od výsledku 
+se odečte $4$, aby byla hodnota příslušné souřadnice z rozmezí od $-4$ do $4$, které odpovídá rozsahu nákresny.
+Tímto způsobem definujeme obě souřadnice cíle pohybu. Výsledným efektem je náhodný pohyb našeho bodu p (`"A"`) po nákresně. 
+{/lang}
+
