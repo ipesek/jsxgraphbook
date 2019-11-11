@@ -89,8 +89,9 @@ Její syntaxe je __visit(místo, doba trvání, volby)__ s těmito třemi parame
 * souřadnice cíle jako seznam o dvou složkách, např. `[Math.random()*8-4,Math.random()*8-4]`
 * čas animace v *ms*, např. `500`.
 
-For the coordinates we use _Math.random_ method, which every time we click on the button creates new random number between 0 and 1 
-which we multiply by $8$ and subtract by $4$, result then will be between $-4$ and $4$m which are also limits of our bounding box.
-We do the same for both coordinates. As a result our point p (`"A"`) moves across the board randomly. 
+Pro stanovení souřadnic cíle používáme metodu _Math.random_, která při každém kliknutí na tlačítko
+generuje náhodné číslo z intervalu od 0 do 1. Toto číslo se pak v našem konkrétním případě násobí $8$ a od výsledku 
+se odečte $4$, aby byla hodnota příslušné souřadnice z rozmezí od $-4$ do $4$, které odpovídá rozsahu nákresny.
+Tímto způsobem definujeme obě souřadnice cíle pohybu. Výsledným efektem je náhodný pohyb našeho bodu p (`"A"`) po nákresně. 
 {/lang}
 

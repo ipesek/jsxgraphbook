@@ -1389,22 +1389,25 @@ Zde aplikujeme na bod <em>q</em> novou metodu <em>moveTo</em>, která využívá
 <li>souřadnice cíle jako seznam o dvou složkách, např. <code>[Math.random()*8-4,Math.random()*8-4]</code></li>
 <li>čas animace v <em>ms</em>, např. <code>500</code>.</li>
 </ul>
-<p>For the coordinates we use <em>Math.random</em> method, which every time we click on the button creates new random number between 0 and 1 
-which we multiply by $8$ and subtract by $4$, result then will be between $-4$ and $4$m which are also limits of our bounding box.
-We do the same for both coordinates. As a result our point p (<code>&quot;A&quot;</code>) moves across the board randomly. 
+<p>Pro stanovení souřadnic cíle používáme metodu <em>Math.random</em>, která při každém kliknutí na tlačítko
+generuje náhodné číslo z intervalu od 0 do 1. Toto číslo se pak v našem konkrétním případě násobí $8$ a od výsledku 
+se odečte $4$, aby byla hodnota příslušné souřadnice z rozmezí od $-4$ do $4$, které odpovídá rozsahu nákresny.
+Tímto způsobem definujeme obě souřadnice cíle pohybu. Výsledným efektem je náhodný pohyb našeho bodu p (<code>&quot;A&quot;</code>) po nákresně. 
 {/lang}</p>
 <h1><a class="header" href="#langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang" id="langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang">{lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
 <p>{lang=EN}</p>
 <h2><a class="header" href="#sliders" id="sliders">Sliders</a></h2>
 <p>Sliders can be used in various settings, where we want that users try or tinker with the values of some variable. In our example
 we will upgrade example with the quadratic function.
-{/lang}
-{lang=SI}</p>
+{/lang}</p>
+<p>{lang=SI}</p>
 <h2><a class="header" href="#sliders-1" id="sliders-1">Sliders</a></h2>
-<p>{/lang}
-{lang=CZ}</p>
-<h2><a class="header" href="#sliders-2" id="sliders-2">Sliders</a></h2>
 <p>{/lang}</p>
+<p>{lang=CZ}</p>
+<h2><a class="header" href="#posuvníky" id="posuvníky">Posuvníky</a></h2>
+<p>Posuvník (<em>slider</em>) můžeme použít v různých situacích, ve kterých chceme, aby měl uživatel možnost bezprostředně měnit 
+hodnotu nějaké proměnné. Pro ukázku použití posuvníků jsme zvolili náležitou úpravu dříve uvedeného příkladu s kvadratickou funkcí.
+{/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:300px; height:300px; margin:auto&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
  var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-8, 8, 8, -8], axis:true,  showCopyright:false, showNavigation:false });
@@ -1436,6 +1439,22 @@ in similar way, except we set the attribute <em>snapWidth</em> to $1$ to generat
 We can see, that to get the value of the slider we used the variable name and method <em>Value()</em> e.g. <code>a.Value()</code>. </p>
 <p>Now the quadratic function is not fixed with the values but can be dynamically changed with the user interaction.</p>
 <p>{/lang}</p>
+<p>{lang=CZ}
+Obrázek jsme doplnili dvěma posuvníky, kterými ovládáme koeficienty $a$, $c$ dané kvadratické funkce.
+Pojďme se podrobně podívat na to, jak jsme vytvořili první <em>posuvník</em> (<em>slider</em>): <code>var a = board.create('slider', [[-7.5, -3], [-4,-3], [-3, 1, 3]], {name:'a', snapWidth: 0.1});</code></p>
+<p>Pro vytvoření posuvníku potřebujeme definovat následující parametry:</p>
+<ul>
+<li>souřadnice počátečního bodu posuvníku, např. <code>[-7.5, -3]</code>,</li>
+<li>souřadnice koncového bodu posuvníku, např. <code>[-4,-3]</code>,</li>
+<li>určující hodnoty posuvníku formou seznamu <code>[min, start, max]</code>, např. <code>[-3, 1, 3]</code>.</li>
+</ul>
+<p>V příkladu jsme dále použili atribut <em>snapWidth</em>, který stanoví, jak jemný má být krok posuvníku. Druhý posuvník je vytvořen
+podobným způsobem, kromě toho, že jsme atributu <em>snapWidth</em> přiřadili hodnotu $1$, aby nabýval pouze celočíselných hodnot.</p>
+<p>V posledním řádku kódu jsme použili hodnoty obou posuvníků v definici naší kvadratické funkce 
+<code>return a.Value()*x*x + c.Value()</code>.
+Vidíme zde, že pro získání okamžité hodnoty posuvníku použijeme spojení jména proměnné a metody <em>Value()</em> takto <code>a.Value()</code>. </p>
+<p>Předpis kvadratické funkce tak už není neměnný, díky posuvníkům může být jeho podoba uživatelem dynamicky měněna.
+{/lang}</p>
 <h1><a class="header" href="#langenanimating-with-sliderslanglangsianimating-with-sliderslanglangczanimating-with-sliderslang" id="langenanimating-with-sliderslanglangsianimating-with-sliderslanglangczanimating-with-sliderslang">{lang=EN}Animating with sliders{/lang}{lang=SI}Animating with sliders{/lang}{lang=CZ}Animating with sliders{/lang}</a></h1>
 <h1><a class="header" href="#langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang-1" id="langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang-1">{lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
 <h1><a class="header" href="#langentransformationslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langentransformationslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Transformations{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>

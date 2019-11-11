@@ -4,11 +4,16 @@
 Sliders can be used in various settings, where we want that users try or tinker with the values of some variable. In our example
 we will upgrade example with the quadratic function.
 {/lang}
+
 {lang=SI}
 ## Sliders
 {/lang}
+
 {lang=CZ}
-## Sliders
+## Posuvníky
+
+Posuvník (_slider_) můžeme použít v různých situacích, ve kterých chceme, aby měl uživatel možnost bezprostředně měnit 
+hodnotu nějaké proměnné. Pro ukázku použití posuvníků jsme zvolili náležitou úpravu dříve uvedeného příkladu s kvadratickou funkcí.
 {/lang}
 
 ```JS
@@ -47,4 +52,23 @@ We can see, that to get the value of the slider we used the variable name and me
 
 Now the quadratic function is not fixed with the values but can be dynamically changed with the user interaction.
 
+{/lang}
+
+{lang=CZ}
+Obrázek jsme doplnili dvěma posuvníky, kterými ovládáme koeficienty $a$, $c$ dané kvadratické funkce.
+Pojďme se podrobně podívat na to, jak jsme vytvořili první _posuvník_ (_slider_): `var a = board.create('slider', [[-7.5, -3], [-4,-3], [-3, 1, 3]], {name:'a', snapWidth: 0.1});`
+
+Pro vytvoření posuvníku potřebujeme definovat následující parametry:
+* souřadnice počátečního bodu posuvníku, např. `[-7.5, -3]`,
+* souřadnice koncového bodu posuvníku, např. `[-4,-3]`,
+* určující hodnoty posuvníku formou seznamu `[min, start, max]`, např. `[-3, 1, 3]`.
+
+V příkladu jsme dále použili atribut _snapWidth_, který stanoví, jak jemný má být krok posuvníku. Druhý posuvník je vytvořen
+podobným způsobem, kromě toho, že jsme atributu _snapWidth_ přiřadili hodnotu $1$, aby nabýval pouze celočíselných hodnot.
+
+V posledním řádku kódu jsme použili hodnoty obou posuvníků v definici naší kvadratické funkce 
+`return a.Value()*x*x + c.Value()`.
+Vidíme zde, že pro získání okamžité hodnoty posuvníku použijeme spojení jména proměnné a metody _Value()_ takto `a.Value()`. 
+
+Předpis kvadratické funkce tak už není neměnný, díky posuvníkům může být jeho podoba uživatelem dynamicky měněna.
 {/lang}
