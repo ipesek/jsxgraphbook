@@ -1,5 +1,5 @@
 # jsxgraphbook
-Book on how to use [JSXGraph](https://jsxgraph.org)
+Book on how to use [JSXGraph](https://jsxgraph.org). See it live at https://ipesek.github.io/jsxgraphbook/ .
 
 ## Build
 
