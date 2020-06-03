@@ -3,7 +3,7 @@ Book on how to use [JSXGraph](https://jsxgraph.org). See it live at https://ipes
 
 ## Build
 
-* Install `mdbook` from https://github.com/rust-lang/mdBook
+* Install `mdbook` from https://github.com/rust-lang/mdBook, ver. 0.3.7
 * Run `mdbook build` in the root directory of the project
 * The output pages are in the subfolder `docs`
 
