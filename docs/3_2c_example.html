@@ -299,8 +299,8 @@ After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</
 points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
 {/lang}</p>
 <p>{lang=CZ}
-Poté umístíme na přímku <em>r</em> bod <em>F</em>, někam mezi body <em>A</em> a <em>E</em>, sestrojíme přímku <em>s</em> procházející body <em>C</em> a <em>F</em> 
-a určíme jejich průsečík <em>G</em> s přímkou <em>r</em>:
+Poté umístíme na přímku <em>q</em> bod <em>F</em>, někam mezi body <em>A</em> a <em>E</em>, sestrojíme přímku <em>s</em> procházející body <em>C</em> a <em>F</em> 
+a určíme její průsečík <em>G</em> s přímkou <em>r</em>:
 {/lang}</p>
 <p>{lang=SI}
 After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
@@ -391,6 +391,21 @@ the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the d
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         

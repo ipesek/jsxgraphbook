@@ -63,7 +63,7 @@ JSXGraph potřebuje nějakou zobrazovací plochu, nákresnu, na kterou může vy
 
 Pokud se na řádek s kódem pozorně zaměříme, odhalíme několik nadefinovaných vlastností. Pro nás nejdůležitější je `id="jxgbox"`, který slouží k identifikaci nákresny a její propojení s JSXGraph. Následuje `class="jxgbox"`, což je přiřazení třídy, které slouží k nadefinování vzhledu naší nákresny. To je však pokročilejší téma, kterému se budeme věnovat později. Poslední vlastností je `style="width:500px; height:200px;"`. Ta slouží k určení velikosti naší nákresny na webové stránce. 
 
-_Důležité: zde nenastavujeme podobu a polohu naší soustavy souřadnic, ale pouze velikost zobrazované nákresny_
+_Důležité: Zde nenastavujeme podobu a polohu naší soustavy souřadnic, ale pouze velikost zobrazované nákresny._
 
 Jakmile jsme si nadefinovali naší nákresnu, musíme ji propojit s JSXGraph. Toho dosáhneme následujícím řádkem, který však musíme umístit do prvku `<script>`, abychom jednoznačně určili, že se již jedná o samotný skript.
 

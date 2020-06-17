@@ -216,7 +216,7 @@ JSXGraph coordinate system of our construction.</p>
 <pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 </code></pre>
 <p>Pokud se na řádek s kódem pozorně zaměříme, odhalíme několik nadefinovaných vlastností. Pro nás nejdůležitější je <code>id=&quot;jxgbox&quot;</code>, který slouží k identifikaci nákresny a její propojení s JSXGraph. Následuje <code>class=&quot;jxgbox&quot;</code>, což je přiřazení třídy, které slouží k nadefinování vzhledu naší nákresny. To je však pokročilejší téma, kterému se budeme věnovat později. Poslední vlastností je <code>style=&quot;width:500px; height:200px;&quot;</code>. Ta slouží k určení velikosti naší nákresny na webové stránce. </p>
-<p><em>Důležité: zde nenastavujeme podobu a polohu naší soustavy souřadnic, ale pouze velikost zobrazované nákresny</em></p>
+<p><em>Důležité: Zde nenastavujeme podobu a polohu naší soustavy souřadnic, ale pouze velikost zobrazované nákresny.</em></p>
 <p>Jakmile jsme si nadefinovali naší nákresnu, musíme ji propojit s JSXGraph. Toho dosáhneme následujícím řádkem, který však musíme umístit do prvku <code>&lt;script&gt;</code>, abychom jednoznačně určili, že se již jedná o samotný skript.</p>
 <pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
 </code></pre>
@@ -261,6 +261,21 @@ JSXGraph coordinate system of our construction.</p>
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         
