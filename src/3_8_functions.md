@@ -95,7 +95,7 @@ Argumentem `{return Math.sin(x);}` je pro JSXGraph definována funkce, která pr
 funkční hodnotu ($y-souřadnici$). Museli jsme použít klíčové slovo `return` následované příslušnou funkcí, 
 v našem případě `Math.sin(x)`. Zadání funkce zakončíme znakem `;` a ukončíme závorku `}`.
 
-Druhý graf _graph2_ přísluší kvadratické funkci `{return x*x-2;}` on the interval `-3, 3`. Samozřejmě, k nastavení vzhledu 
+Druhý graf _graph2_ přísluší kvadratické funkci `{return x*x-2;}` na intervalu `-3, 3`. Samozřejmě, k nastavení vzhledu 
 grafů používáme i atributy, které byly představeny v předchozích kapitolách.
 
 Poznámka: Pro funkci _sinus_ byla použita knihovna [Javascript Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math). 

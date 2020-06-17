@@ -84,7 +84,7 @@ Nastavení hodnoty *true* je nezbytné pro to, aby kružnice vypadaly v nákresn
 
 Nyní k vlastní konstrukci kružnice. Kružnice _Circle1_ je definována kódem `var circle1 = board.create("circle",[p,q],{strokecolor:"red", strokeWidth:4});`,
 kde *p*, *q* jsou dva body, které jí určují, *p* je střed kružnice a *q* je bod, kterým kružnice prochází. V definici jsou užity dva 
-atributy pro barvu a tloušťku čáry. Barva přitom není definována systémem RGB, ale jménem barvy (je potřeba REF). 
+atributy pro barvu a tloušťku čáry. Barva přitom není definována systémem RGB, ale jménem barvy. 
 
 Kružnice _Circle2_ je zajímavější, protože je dána středem a poloměrem. Definujeme ji kódem
 `var circle2 = board.create("circle",["B",1.5],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`

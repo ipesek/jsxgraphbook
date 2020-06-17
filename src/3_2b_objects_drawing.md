@@ -159,7 +159,7 @@ V kódu `var line2 = board.create("line",[p,q],{straightLast:false, dash:"4" });
 atributy, první z nich _straightLast_ určuje, že přímka skončí ve druhém z určujících bodů, druhý _dash_ potom určuje, jak bude čára nakreslena.
 Parametr _dash_ může nabývat různých hodnot, jejich přehled viz [dokumentace pro atribut \"dash\"](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#dash).
 
-Tak jako v3echny objekty i nákresna (*Board*) má své [atributy](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html). 
+Tak jako všechny objekty i nákresna (*Board*) má své [atributy](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html). 
 Jedním z nich je _boundingbox_, který používáme již od první ukázky kódu nákresny, ale ještě jsme ho nekomentovali. 
 Dalším atributem nákresny je _showNavigation_, který nám dovoluje skrýt navigační tlačítka v pravém dolním rohu nákresny,
 pokud mu nastavíme hodnotu *false*. Vyzkoušejte to!

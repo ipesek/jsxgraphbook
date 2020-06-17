@@ -159,8 +159,8 @@ points *C* and *F* and determine its intersection *G* with the line *r*:
 {/lang}
 
 {lang=CZ}
-Poté umístíme na přímku *r* bod *F*, někam mezi body *A* a *E*, sestrojíme přímku *s* procházející body *C* a *F* 
-a určíme jejich průsečík *G* s přímkou *r*:
+Poté umístíme na přímku *q* bod *F*, někam mezi body *A* a *E*, sestrojíme přímku *s* procházející body *C* a *F* 
+a určíme její průsečík *G* s přímkou *r*:
 {/lang}
 
 {lang=SI}
