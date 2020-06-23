@@ -1463,6 +1463,97 @@ Vidíme zde, že pro získání okamžité hodnoty posuvníku použijeme spojen�
 <h1><a class="header" href="#langenadvanced-topicslanglangsiadvanced-topicslanglangczadvanced-topicslang" id="langenadvanced-topicslanglangsiadvanced-topicslanglangczadvanced-topicslang">{lang=EN}Advanced topics{/lang}{lang=SI}Advanced topics{/lang}{lang=CZ}Advanced topics{/lang}</a></h1>
 <h1><a class="header" href="#langenadding-imageslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenadding-imageslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Adding images{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
 <h1><a class="header" href="#langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelang" id="langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelang">{lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Capture the construction as image{/lang}</a></h1>
+<p>{lang=EN}
+JSXGraph offers several possibilities to take a snapshot of a construction.
+This may be useful for a user who wants to take a screenshot of a construction, but it
+may also be useful for in an eLearning environment where students send a screenshot as
+their solution of an exercise to a web server.
+{/lang}</p>
+<h2><a class="header" href="#langenscreenshot-buttonlang" id="langenscreenshot-buttonlang">{lang=EN}Screenshot button{/lang}</a></h2>
+<p>{lang=EN}
+The easiest way to enable screenshots is to add the <em>screenshot icon</em> ⌘ in the
+navigation bar of the construction by adding the attribute
+<code>showScreenshot:true</code> (and <code>showNavigation:true</code>) to the board attributes.</p>
+<p>When the user clicks on the ⌘ icon, an image containing the construction will
+appear over the JSXgraph board. By right clicking on this image the user can download
+the image.
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, showCopyright:false,
+     showNavigation:true,
+     showScreenshot:true });
+
+ var p = board.create('point',[-2,0],{name:&quot;A&quot;});
+ var q = board.create('point',[-1,-1],{name:&quot;B&quot;});
+ var r = board.create('point',[1,-0.5],{name:&quot;C&quot;});
+ var s = board.create('point',[1,1],{name:&quot;D&quot;});
+ var t = board.create('point',[-1,1.5],{name:&quot;E&quot;});
+
+ var poly1 = board.create('polygon',[p,q,r,s,t],{name:&quot;&quot;, withLabel:true});
+});
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+(function(){
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, showCopyright:false,
+     showNavigation:true, showScreenshot: true });
+ var p = board.create('point',[-2,0],{name:"A"});
+ var q = board.create('point',[-1,-1],{name:"B"});
+ var r = board.create('point',[1,-0.5],{name:"C"});
+ var s = board.create('point',[1,1],{name:"D"});
+ var t = board.create('point',[-1,1.5],{name:"E"});
+ var poly1 = board.create('polygon',[p,q,r,s,t],{name:"", withLabel:true});
+})();
+</script>
+<p>{lang=EN}
+There are a few options available:</p>
+<ul>
+<li><code>scale</code>: scaling factor (default=1)</li>
+<li><code>type</code>: format of the screenshot image. Default: png</li>
+<li><code>symbol</code>: Unicode symbol which is shown in the navigation bar. Default: '\u2318'</li>
+<li><code>css</code>: CSS rules to format the div element containing the screen shot image</li>
+<li><code>cssButton</code>: CSS rules to format the close button of the div element containing the screen shot image
+{/lang}</li>
+</ul>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox2&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox2', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, showCopyright:false,
+     showNavigation:true,
+     showScreenshot:true });
+
+ var p = board.create('point',[-2,0],{name:&quot;A&quot;});
+ var q = board.create('point',[-1,-1],{name:&quot;B&quot;});
+ var r = board.create('point',[1,-0.5],{name:&quot;C&quot;});
+ var s = board.create('point',[1,1],{name:&quot;D&quot;});
+ var t = board.create('point',[-1,1.5],{name:&quot;E&quot;});
+
+ var poly1 = board.create('polygon',[p,q,r,s,t],{name:&quot;&quot;, withLabel:true});
+});
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox2" class="jxgbox" style="width:500px; height:200px;"></div>
+<script>
+(function(){
+ var board = JXG.JSXGraph.initBoard('jxgbox2', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, showCopyright:false,
+     showNavigation:true, showScreenshot: true,
+     screenshot: {
+            scale:1
+        }
+     });
+ var p = board.create('point',[-2,0],{name:"A"});
+ var q = board.create('point',[-1,-1],{name:"B"});
+ var r = board.create('point',[1,-0.5],{name:"C"});
+ var s = board.create('point',[1,1],{name:"D"});
+ var t = board.create('point',[-1,1.5],{name:"E"});
+ var poly1 = board.create('polygon',[p,q,r,s,t],{name:"", withLabel:true});
+})();
+</script>
 <h1><a class="header" href="#langenjsxgraph-optionslanglangsijsxgraph-optionslanglangczjsxgraph-optionslang" id="langenjsxgraph-optionslanglangsijsxgraph-optionslanglangczjsxgraph-optionslang">{lang=EN}JSXGraph options{/lang}{lang=SI}JSXGraph options{/lang}{lang=CZ}JSXGraph options{/lang}</a></h1>
 <h1><a class="header" href="#langentriggerslanglangsitriggerslanglangcztriggerslang" id="langentriggerslanglangsitriggerslanglangcztriggerslang">{lang=EN}Triggers{/lang}{lang=SI}Triggers{/lang}{lang=CZ}Triggers{/lang}</a></h1>
 <h1><a class="header" href="#langensaving-user-actionslanglangsisaving-user-actionslanglangczsaving-user-actionslang" id="langensaving-user-actionslanglangsisaving-user-actionslanglangczsaving-user-actionslang">{lang=EN}Saving user actions{/lang}{lang=SI}Saving user actions{/lang}{lang=CZ}Saving user actions{/lang}</a></h1>
