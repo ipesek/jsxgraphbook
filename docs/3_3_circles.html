@@ -243,7 +243,7 @@ dáváme JSXGraphu pokyn, aby byl zachován poměr stran nákresny odpovídajíc
 Nastavení hodnoty <em>true</em> je nezbytné pro to, aby kružnice vypadaly v nákresně skutečně jako kružnice a ne jako elipsy. </p>
 <p>Nyní k vlastní konstrukci kružnice. Kružnice <em>Circle1</em> je definována kódem <code>var circle1 = board.create(&quot;circle&quot;,[p,q],{strokecolor:&quot;red&quot;, strokeWidth:4});</code>,
 kde <em>p</em>, <em>q</em> jsou dva body, které jí určují, <em>p</em> je střed kružnice a <em>q</em> je bod, kterým kružnice prochází. V definici jsou užity dva 
-atributy pro barvu a tloušťku čáry. Barva přitom není definována systémem RGB, ale jménem barvy (je potřeba REF). </p>
+atributy pro barvu a tloušťku čáry. Barva přitom není definována systémem RGB, ale jménem barvy. </p>
 <p>Kružnice <em>Circle2</em> je zajímavější, protože je dána středem a poloměrem. Definujeme ji kódem
 <code>var circle2 = board.create(&quot;circle&quot;,[&quot;B&quot;,1.5],{method:&quot;pointRadius&quot;, fillcolor:&quot;gray&quot;, fillopacity:0.2});</code>
 Tato metoda konstrukce kružnice musí být zadána explicitně formou atributu, na rozdíl od té předchozí, která je v JSXGraphu implicitní.
@@ -291,6 +291,21 @@ výplně a <em>fillOpacity</em>, kterým nastavíme neprůhlednost této plochy 
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         

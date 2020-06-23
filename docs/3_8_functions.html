@@ -248,7 +248,7 @@ meze jsou dány druhým a třetím prvkem seznamu parametrů, tj. hodnotami <cod
 Argumentem <code>{return Math.sin(x);}</code> je pro JSXGraph definována funkce, která pro dané $x$ vrátí příslušnou 
 funkční hodnotu ($y-souřadnici$). Museli jsme použít klíčové slovo <code>return</code> následované příslušnou funkcí, 
 v našem případě <code>Math.sin(x)</code>. Zadání funkce zakončíme znakem <code>;</code> a ukončíme závorku <code>}</code>.</p>
-<p>Druhý graf <em>graph2</em> přísluší kvadratické funkci <code>{return x*x-2;}</code> on the interval <code>-3, 3</code>. Samozřejmě, k nastavení vzhledu 
+<p>Druhý graf <em>graph2</em> přísluší kvadratické funkci <code>{return x*x-2;}</code> na intervalu <code>-3, 3</code>. Samozřejmě, k nastavení vzhledu 
 grafů používáme i atributy, které byly představeny v předchozích kapitolách.</p>
 <p>Poznámka: Pro funkci <em>sinus</em> byla použita knihovna <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Javascript Math</a>. 
 {/lang}</p>
@@ -290,6 +290,21 @@ grafů používáme i atributy, které byly představeny v předchozích kapitol
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         

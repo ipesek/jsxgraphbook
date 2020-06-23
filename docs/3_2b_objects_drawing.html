@@ -300,7 +300,7 @@ V dokumentaci jsou uvedeny nastavené hodnoty pro všechny atributy. Druhým nov
 <p>V kódu <code>var line2 = board.create(&quot;line&quot;,[p,q],{straightLast:false, dash:&quot;4&quot; });</code> definice přímky byly použity dva
 atributy, první z nich <em>straightLast</em> určuje, že přímka skončí ve druhém z určujících bodů, druhý <em>dash</em> potom určuje, jak bude čára nakreslena.
 Parametr <em>dash</em> může nabývat různých hodnot, jejich přehled viz <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#dash">dokumentace pro atribut &quot;dash&quot;</a>.</p>
-<p>Tak jako v3echny objekty i nákresna (<em>Board</em>) má své <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html">atributy</a>. 
+<p>Tak jako všechny objekty i nákresna (<em>Board</em>) má své <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html">atributy</a>. 
 Jedním z nich je <em>boundingbox</em>, který používáme již od první ukázky kódu nákresny, ale ještě jsme ho nekomentovali. 
 Dalším atributem nákresny je <em>showNavigation</em>, který nám dovoluje skrýt navigační tlačítka v pravém dolním rohu nákresny,
 pokud mu nastavíme hodnotu <em>false</em>. Vyzkoušejte to!</p>
@@ -345,6 +345,21 @@ pokud mu nastavíme hodnotu <em>false</em>. Vyzkoušejte to!</p>
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         

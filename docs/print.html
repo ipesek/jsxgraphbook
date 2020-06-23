@@ -430,7 +430,7 @@ JSXGraph coordinate system of our construction.</p>
 <pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 </code></pre>
 <p>Pokud se na řádek s kódem pozorně zaměříme, odhalíme několik nadefinovaných vlastností. Pro nás nejdůležitější je <code>id=&quot;jxgbox&quot;</code>, který slouží k identifikaci nákresny a její propojení s JSXGraph. Následuje <code>class=&quot;jxgbox&quot;</code>, což je přiřazení třídy, které slouží k nadefinování vzhledu naší nákresny. To je však pokročilejší téma, kterému se budeme věnovat později. Poslední vlastností je <code>style=&quot;width:500px; height:200px;&quot;</code>. Ta slouží k určení velikosti naší nákresny na webové stránce. </p>
-<p><em>Důležité: zde nenastavujeme podobu a polohu naší soustavy souřadnic, ale pouze velikost zobrazované nákresny</em></p>
+<p><em>Důležité: Zde nenastavujeme podobu a polohu naší soustavy souřadnic, ale pouze velikost zobrazované nákresny.</em></p>
 <p>Jakmile jsme si nadefinovali naší nákresnu, musíme ji propojit s JSXGraph. Toho dosáhneme následujícím řádkem, který však musíme umístit do prvku <code>&lt;script&gt;</code>, abychom jednoznačně určili, že se již jedná o samotný skript.</p>
 <pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
 </code></pre>
@@ -663,7 +663,7 @@ V dokumentaci jsou uvedeny nastavené hodnoty pro všechny atributy. Druhým nov
 <p>V kódu <code>var line2 = board.create(&quot;line&quot;,[p,q],{straightLast:false, dash:&quot;4&quot; });</code> definice přímky byly použity dva
 atributy, první z nich <em>straightLast</em> určuje, že přímka skončí ve druhém z určujících bodů, druhý <em>dash</em> potom určuje, jak bude čára nakreslena.
 Parametr <em>dash</em> může nabývat různých hodnot, jejich přehled viz <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#dash">dokumentace pro atribut &quot;dash&quot;</a>.</p>
-<p>Tak jako v3echny objekty i nákresna (<em>Board</em>) má své <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html">atributy</a>. 
+<p>Tak jako všechny objekty i nákresna (<em>Board</em>) má své <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html">atributy</a>. 
 Jedním z nich je <em>boundingbox</em>, který používáme již od první ukázky kódu nákresny, ale ještě jsme ho nekomentovali. 
 Dalším atributem nákresny je <em>showNavigation</em>, který nám dovoluje skrýt navigační tlačítka v pravém dolním rohu nákresny,
 pokud mu nastavíme hodnotu <em>false</em>. Vyzkoušejte to!</p>
@@ -796,8 +796,8 @@ After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</
 points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
 {/lang}</p>
 <p>{lang=CZ}
-Poté umístíme na přímku <em>r</em> bod <em>F</em>, někam mezi body <em>A</em> a <em>E</em>, sestrojíme přímku <em>s</em> procházející body <em>C</em> a <em>F</em> 
-a určíme jejich průsečík <em>G</em> s přímkou <em>r</em>:
+Poté umístíme na přímku <em>q</em> bod <em>F</em>, někam mezi body <em>A</em> a <em>E</em>, sestrojíme přímku <em>s</em> procházející body <em>C</em> a <em>F</em> 
+a určíme její průsečík <em>G</em> s přímkou <em>r</em>:
 {/lang}</p>
 <p>{lang=SI}
 After this, we put the point <em>F</em> on <em>r</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
@@ -920,7 +920,7 @@ dáváme JSXGraphu pokyn, aby byl zachován poměr stran nákresny odpovídajíc
 Nastavení hodnoty <em>true</em> je nezbytné pro to, aby kružnice vypadaly v nákresně skutečně jako kružnice a ne jako elipsy. </p>
 <p>Nyní k vlastní konstrukci kružnice. Kružnice <em>Circle1</em> je definována kódem <code>var circle1 = board.create(&quot;circle&quot;,[p,q],{strokecolor:&quot;red&quot;, strokeWidth:4});</code>,
 kde <em>p</em>, <em>q</em> jsou dva body, které jí určují, <em>p</em> je střed kružnice a <em>q</em> je bod, kterým kružnice prochází. V definici jsou užity dva 
-atributy pro barvu a tloušťku čáry. Barva přitom není definována systémem RGB, ale jménem barvy (je potřeba REF). </p>
+atributy pro barvu a tloušťku čáry. Barva přitom není definována systémem RGB, ale jménem barvy. </p>
 <p>Kružnice <em>Circle2</em> je zajímavější, protože je dána středem a poloměrem. Definujeme ji kódem
 <code>var circle2 = board.create(&quot;circle&quot;,[&quot;B&quot;,1.5],{method:&quot;pointRadius&quot;, fillcolor:&quot;gray&quot;, fillopacity:0.2});</code>
 Tato metoda konstrukce kružnice musí být zadána explicitně formou atributu, na rozdíl od té předchozí, která je v JSXGraphu implicitní.
@@ -1280,7 +1280,7 @@ meze jsou dány druhým a třetím prvkem seznamu parametrů, tj. hodnotami <cod
 Argumentem <code>{return Math.sin(x);}</code> je pro JSXGraph definována funkce, která pro dané $x$ vrátí příslušnou 
 funkční hodnotu ($y-souřadnici$). Museli jsme použít klíčové slovo <code>return</code> následované příslušnou funkcí, 
 v našem případě <code>Math.sin(x)</code>. Zadání funkce zakončíme znakem <code>;</code> a ukončíme závorku <code>}</code>.</p>
-<p>Druhý graf <em>graph2</em> přísluší kvadratické funkci <code>{return x*x-2;}</code> on the interval <code>-3, 3</code>. Samozřejmě, k nastavení vzhledu 
+<p>Druhý graf <em>graph2</em> přísluší kvadratické funkci <code>{return x*x-2;}</code> na intervalu <code>-3, 3</code>. Samozřejmě, k nastavení vzhledu 
 grafů používáme i atributy, které byly představeny v předchozích kapitolách.</p>
 <p>Poznámka: Pro funkci <em>sinus</em> byla použita knihovna <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Javascript Math</a>. 
 {/lang}</p>
@@ -1595,6 +1595,21 @@ There are a few options available:</p>
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         
