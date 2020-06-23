@@ -1465,9 +1465,9 @@ Vidíme zde, že pro získání okamžité hodnoty posuvníku použijeme spojen�
 <h1><a class="header" href="#langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelang" id="langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelang">{lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Capture the construction as image{/lang}</a></h1>
 <p>{lang=EN}
 JSXGraph offers several possibilities to take a snapshot of a construction.
-This may be useful for a user who wants to take a screenshot of a construction, but it
-may also be useful for in an eLearning environment where students send a screenshot as
-their solution of an exercise to a web server.
+This may be useful for a student who should be enabled to take a screenshot of a construction, 
+but it may also be useful in an e-learning environment where students' solution of an exercise
+should be stored on a web server in form of a screenshot.
 {/lang}</p>
 <h2><a class="header" href="#langenscreenshot-buttonlang" id="langenscreenshot-buttonlang">{lang=EN}Screenshot button{/lang}</a></h2>
 <p>{lang=EN}
@@ -1566,8 +1566,10 @@ There are a few options available:</p>
 })();
 </script>
 <h2><a class="header" href="#langensave-to-canvaslang" id="langensave-to-canvaslang">{lang=EN}Save to canvas{/lang}</a></h2>
-<p>JSXGraph constructions can be displayed as static image in a canvas element supplied by developer.
-The following HTML code contains a JSXGraph construction, a button and a canvas element.</p>
+<p>{lang=EN}
+JSXGraph constructions can be displayed as static image in a canvas element supplied by developer.
+The following HTML code contains a JSXGraph construction, a button and a canvas element.
+{/lang}</p>
 <pre><code class="language-HTML">&lt;div id=&quot;jxgbox3&quot; class=&quot;jxgbox&quot; 
     style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 &lt;p&gt;
@@ -1579,10 +1581,24 @@ The following HTML code contains a JSXGraph construction, a button and a canvas 
 &lt;/canvas&gt;
 &lt;/p&gt;
 </code></pre>
-<p>In addition to the JSXGraph construction, an event listener is added to the button with the ID <code>start_save</code>
+<p>{lang=EN}
+In addition to the JSXGraph construction, an event listener is added to the button with the ID <code>start_save</code>
 which calls the method <code>board.renderer.dumpToCanvas()</code> with the ID of the canvas element, the width and height 
-of the exported image and a boolean variable if the texts should be displayed, too.</p>
-<pre><code class="language-JS"> document.getElementById('start_save').onclick = function() {
+of the exported image and a boolean variable if the texts should be displayed, too.
+{/lang}</p>
+<pre><code class="language-JS"> var board = JXG.JSXGraph.initBoard('jxgbox3', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio: true, 
+     showCopyright: false,
+     showNavigation: true, 
+     });
+ var p = board.create('point', [-2,0], {name:&quot;A&quot;});
+ var q = board.create('point', [-1,-1], {name:&quot;B&quot;});
+ var r = board.create('point', [1,-0.5], {name:&quot;C&quot;});
+ var s = board.create('point', [1,1], {name:&quot;D&quot;});
+ var t = board.create('point', [-1,1.5], {name:&quot;E&quot;});
+ var poly1 = board.create('polygon', [p,q,r,s,t], {name:&quot;&quot;, withLabel:true});
+ document.getElementById('start_save').onclick = function() {
     var withTexts = true;
     board.renderer.dumpToCanvas('canvas_out', 500, 200, withTexts);
  };
@@ -1616,8 +1632,35 @@ of the exported image and a boolean variable if the texts should be displayed, t
  })();
 </script>
 <h2><a class="header" href="#save-as-data-uri" id="save-as-data-uri">Save as data URI</a></h2>
-<p>The next possibility is to store the construction as data URI. This is the method of choice 
-if a screenshot of a construction should be stored on a web server in e.g. an e-learning environment.</p>
+<p>{lang=EN}
+The next possibility is to store the construction as data URI. This is the method of choice 
+if a screenshot of a construction should be stored on a web server in e.g. an e-learning environment.
+The screenhost can be exported as string with the method</p>
+<pre><code class="language-JS">    var withTexts = true, txt;
+    txt = board.renderer.dumpToDataURI(withTexts);
+</code></pre>
+<p>The data URI will contain the base64 encoded SVG code of the construction. Text elements which are displayed as HTML texts
+above the construction will be packed into a SVH <code>foreignObject</code> element. Usually, 
+only web browser are able to display the content of these <code>foreignObject</code> elements.
+{/lang}</p>
+<pre><code class="language-JS"> var board = JXG.JSXGraph.initBoard('jxgbox4', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio: true, 
+     showCopyright: false,
+     showNavigation: true, 
+     });
+ var p = board.create('point', [-2,0], {name:&quot;A&quot;});
+ var q = board.create('point', [-1,-1], {name:&quot;B&quot;});
+ var r = board.create('point', [1,-0.5], {name:&quot;C&quot;});
+ var s = board.create('point', [1,1], {name:&quot;D&quot;});
+ var t = board.create('point', [-1,1.5], {name:&quot;E&quot;});
+ var poly1 = board.create('polygon', [p,q,r,s,t], {name:&quot;&quot;, withLabel:true});
+ document.getElementById('dump_uri').onclick = function() {
+    var withTexts = true, txt;
+    txt = board.renderer.dumpToDataURI(withTexts);
+    document.getElementById('text_out').value = txt;
+ };
+</code></pre>
 <div id="jxgbox4" class="jxgbox" 
      style="width:500px; height:200px;"></div>
 <p>
@@ -1626,11 +1669,11 @@ if a screenshot of a construction should be stored on a web server in e.g. an e-
 <textarea id="text_out" rows="10" cols="50"></textarea>
 </p>
 <script>
-//(function(){
+(function(){
  var board = JXG.JSXGraph.initBoard('jxgbox4', {
      boundingbox: [-5, 2, 5, -2],
      keepAspectRatio: true, 
-     showCopyright: true,
+     showCopyright: false,
      showNavigation: true, 
      });
  var p = board.create('point', [-2,0], {name:"A"});
@@ -1640,10 +1683,11 @@ if a screenshot of a construction should be stored on a web server in e.g. an e-
  var t = board.create('point', [-1,1.5], {name:"E"});
  var poly1 = board.create('polygon', [p,q,r,s,t], {name:"", withLabel:true});
  document.getElementById('dump_uri').onclick = function() {
-    var withTexts = true;
-    document.getElementById('text_out').value = board.renderer.dumpToDataURI(withTexts);
+    var withTexts = true, txt;
+    txt = board.renderer.dumpToDataURI(withTexts);
+    document.getElementById('text_out').value = txt;
  };
-// })();
+})();
 </script>
 <h1><a class="header" href="#langenjsxgraph-optionslanglangsijsxgraph-optionslanglangczjsxgraph-optionslang" id="langenjsxgraph-optionslanglangsijsxgraph-optionslanglangczjsxgraph-optionslang">{lang=EN}JSXGraph options{/lang}{lang=SI}JSXGraph options{/lang}{lang=CZ}JSXGraph options{/lang}</a></h1>
 <h1><a class="header" href="#langentriggerslanglangsitriggerslanglangcztriggerslang" id="langentriggerslanglangsitriggerslanglangcztriggerslang">{lang=EN}Triggers{/lang}{lang=SI}Triggers{/lang}{lang=CZ}Triggers{/lang}</a></h1>
