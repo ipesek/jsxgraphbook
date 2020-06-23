@@ -1480,18 +1480,21 @@ the image.
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
- var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
-     keepAspectRatio:true, showCopyright:false,
+ var board = JXG.JSXGraph.initBoard('jxgbox', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, 
+     showCopyright:false,
      showNavigation:true,
      showScreenshot:true });
 
- var p = board.create('point',[-2,0],{name:&quot;A&quot;});
- var q = board.create('point',[-1,-1],{name:&quot;B&quot;});
- var r = board.create('point',[1,-0.5],{name:&quot;C&quot;});
- var s = board.create('point',[1,1],{name:&quot;D&quot;});
- var t = board.create('point',[-1,1.5],{name:&quot;E&quot;});
+ var p = board.create('point', [-2,0], {name:&quot;A&quot;});
+ var q = board.create('point', [-1,-1], {name:&quot;B&quot;});
+ var r = board.create('point', [1,-0.5], {name:&quot;C&quot;});
+ var s = board.create('point', [1,1], {name:&quot;D&quot;});
+ var t = board.create('point', [-1,1.5], {name:&quot;E&quot;});
 
- var poly1 = board.create('polygon',[p,q,r,s,t],{name:&quot;&quot;, withLabel:true});
+ var poly1 = board.create('polygon',[p,q,r,s,t],
+                {name:&quot;&quot;, withLabel:true});
 });
 &lt;/script&gt;
 </code></pre>
@@ -1521,38 +1524,126 @@ There are a few options available:</p>
 </ul>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox2&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
- var board = JXG.JSXGraph.initBoard('jxgbox2', {boundingbox: [-5, 2, 5, -2],
-     keepAspectRatio:true, showCopyright:false,
-     showNavigation:true,
-     showScreenshot:true });
-
- var p = board.create('point',[-2,0],{name:&quot;A&quot;});
- var q = board.create('point',[-1,-1],{name:&quot;B&quot;});
- var r = board.create('point',[1,-0.5],{name:&quot;C&quot;});
- var s = board.create('point',[1,1],{name:&quot;D&quot;});
- var t = board.create('point',[-1,1.5],{name:&quot;E&quot;});
-
- var poly1 = board.create('polygon',[p,q,r,s,t],{name:&quot;&quot;, withLabel:true});
-});
+ var board = JXG.JSXGraph.initBoard('jxgbox2', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio: true, 
+     showCopyright: false,
+     showNavigation: true, 
+     showScreenshot: true,
+     screenshot: {
+            scale: 3,
+            symbol: \u2318
+        }
+     });
+ var p = board.create('point', [-2,0], {name:&quot;A&quot;});
+ var q = board.create('point', [-1,-1], {name:&quot;B&quot;});
+ var r = board.create('point', [1,-0.5], {name:&quot;C&quot;});
+ var s = board.create('point', [1,1], {name:&quot;D&quot;});
+ var t = board.create('point', [-1,1.5], {name:&quot;E&quot;});
+ var poly1 = board.create('polygon', [p,q,r,s,t], {name:&quot;&quot;, withLabel:true});
 &lt;/script&gt;
 </code></pre>
 <div id="jxgbox2" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
 (function(){
- var board = JXG.JSXGraph.initBoard('jxgbox2', {boundingbox: [-5, 2, 5, -2],
-     keepAspectRatio:true, showCopyright:false,
-     showNavigation:true, showScreenshot: true,
+ var board = JXG.JSXGraph.initBoard('jxgbox2', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio: true, 
+     showCopyright: false,
+     showNavigation: true, 
+     showScreenshot: true,
      screenshot: {
-            scale:1
+            scale: 3,
+            symbol: '\u2318'
         }
      });
- var p = board.create('point',[-2,0],{name:"A"});
- var q = board.create('point',[-1,-1],{name:"B"});
- var r = board.create('point',[1,-0.5],{name:"C"});
- var s = board.create('point',[1,1],{name:"D"});
- var t = board.create('point',[-1,1.5],{name:"E"});
- var poly1 = board.create('polygon',[p,q,r,s,t],{name:"", withLabel:true});
+ var p = board.create('point', [-2,0], {name:"A"});
+ var q = board.create('point', [-1,-1], {name:"B"});
+ var r = board.create('point', [1,-0.5], {name:"C"});
+ var s = board.create('point', [1,1], {name:"D"});
+ var t = board.create('point', [-1,1.5], {name:"E"});
+ var poly1 = board.create('polygon', [p,q,r,s,t], {name:"", withLabel:true});
 })();
+</script>
+<h2><a class="header" href="#langensave-to-canvaslang" id="langensave-to-canvaslang">{lang=EN}Save to canvas{/lang}</a></h2>
+<p>JSXGraph constructions can be displayed as static image in a canvas element supplied by developer.
+The following HTML code contains a JSXGraph construction, a button and a canvas element.</p>
+<pre><code class="language-HTML">&lt;div id=&quot;jxgbox3&quot; class=&quot;jxgbox&quot; 
+    style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;p&gt;
+&lt;button id=&quot;start_save&quot;&gt;Save to canvas&lt;/button&gt;
+&lt;p&gt;
+&lt;canvas id=&quot;canvas_out&quot; 
+    style=&quot;width:500px; height:200px; border: solid 2px blue; 
+           border-radius:5px&quot;&gt;
+&lt;/canvas&gt;
+&lt;/p&gt;
+</code></pre>
+<p>In addition to the JSXGraph construction, an event listener is added to the button with the ID <code>start_save</code>
+which calls the method <code>board.renderer.dumpToCanvas()</code> with the ID of the canvas element, the width and height 
+of the exported image and a boolean variable if the texts should be displayed, too.</p>
+<pre><code class="language-JS"> document.getElementById('start_save').onclick = function() {
+    var withTexts = true;
+    board.renderer.dumpToCanvas('canvas_out', 500, 200, withTexts);
+ };
+</code></pre>
+<div id="jxgbox3" class="jxgbox" 
+     style="width:500px; height:200px;"></div>
+<p>
+<button id="start_save">Save to canvas</button>
+<p>
+<canvas id="canvas_out" 
+     style="width:500px; height:200px; border: solid 2px blue; border-radius:5px"></canvas>
+</p>
+<script>
+(function(){
+ var board = JXG.JSXGraph.initBoard('jxgbox3', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio: true, 
+     showCopyright: false,
+     showNavigation: true, 
+     });
+ var p = board.create('point', [-2,0], {name:"A"});
+ var q = board.create('point', [-1,-1], {name:"B"});
+ var r = board.create('point', [1,-0.5], {name:"C"});
+ var s = board.create('point', [1,1], {name:"D"});
+ var t = board.create('point', [-1,1.5], {name:"E"});
+ var poly1 = board.create('polygon', [p,q,r,s,t], {name:"", withLabel:true});
+ document.getElementById('start_save').onclick = function() {
+    var withTexts = true;
+    board.renderer.dumpToCanvas('canvas_out', 500, 200, withTexts);
+ };
+ })();
+</script>
+<h2><a class="header" href="#save-as-data-uri" id="save-as-data-uri">Save as data URI</a></h2>
+<p>The next possibility is to store the construction as data URI. This is the method of choice 
+if a screenshot of a construction should be stored on a web server in e.g. an e-learning environment.</p>
+<div id="jxgbox4" class="jxgbox" 
+     style="width:500px; height:200px;"></div>
+<p>
+<button id="dump_uri">Save to text</button>
+<p>
+<textarea id="text_out" rows="10" cols="50"></textarea>
+</p>
+<script>
+//(function(){
+ var board = JXG.JSXGraph.initBoard('jxgbox4', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio: true, 
+     showCopyright: true,
+     showNavigation: true, 
+     });
+ var p = board.create('point', [-2,0], {name:"A"});
+ var q = board.create('point', [-1,-1], {name:"B"});
+ var r = board.create('point', [1,-0.5], {name:"C"});
+ var s = board.create('point', [1,1], {name:"D"});
+ var t = board.create('point', [-1,1.5], {name:"E"});
+ var poly1 = board.create('polygon', [p,q,r,s,t], {name:"", withLabel:true});
+ document.getElementById('dump_uri').onclick = function() {
+    var withTexts = true;
+    document.getElementById('text_out').value = board.renderer.dumpToDataURI(withTexts);
+ };
+// })();
 </script>
 <h1><a class="header" href="#langenjsxgraph-optionslanglangsijsxgraph-optionslanglangczjsxgraph-optionslang" id="langenjsxgraph-optionslanglangsijsxgraph-optionslanglangczjsxgraph-optionslang">{lang=EN}JSXGraph options{/lang}{lang=SI}JSXGraph options{/lang}{lang=CZ}JSXGraph options{/lang}</a></h1>
 <h1><a class="header" href="#langentriggerslanglangsitriggerslanglangcztriggerslang" id="langentriggerslanglangsitriggerslanglangcztriggerslang">{lang=EN}Triggers{/lang}{lang=SI}Triggers{/lang}{lang=CZ}Triggers{/lang}</a></h1>

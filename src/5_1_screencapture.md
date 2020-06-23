@@ -22,18 +22,21 @@ the image.
 ```JS
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
- var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
-     keepAspectRatio:true, showCopyright:false,
+ var board = JXG.JSXGraph.initBoard('jxgbox', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, 
+     showCopyright:false,
      showNavigation:true,
      showScreenshot:true });
 
- var p = board.create('point',[-2,0],{name:"A"});
- var q = board.create('point',[-1,-1],{name:"B"});
- var r = board.create('point',[1,-0.5],{name:"C"});
- var s = board.create('point',[1,1],{name:"D"});
- var t = board.create('point',[-1,1.5],{name:"E"});
+ var p = board.create('point', [-2,0], {name:"A"});
+ var q = board.create('point', [-1,-1], {name:"B"});
+ var r = board.create('point', [1,-0.5], {name:"C"});
+ var s = board.create('point', [1,1], {name:"D"});
+ var t = board.create('point', [-1,1.5], {name:"E"});
 
- var poly1 = board.create('polygon',[p,q,r,s,t],{name:"", withLabel:true});
+ var poly1 = board.create('polygon',[p,q,r,s,t],
+                {name:"", withLabel:true});
 });
 </script>
 ```
@@ -66,37 +69,140 @@ There are a few options available:
 ```JS
 <div id="jxgbox2" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
- var board = JXG.JSXGraph.initBoard('jxgbox2', {boundingbox: [-5, 2, 5, -2],
-     keepAspectRatio:true, showCopyright:false,
-     showNavigation:true,
-     showScreenshot:true });
-
- var p = board.create('point',[-2,0],{name:"A"});
- var q = board.create('point',[-1,-1],{name:"B"});
- var r = board.create('point',[1,-0.5],{name:"C"});
- var s = board.create('point',[1,1],{name:"D"});
- var t = board.create('point',[-1,1.5],{name:"E"});
-
- var poly1 = board.create('polygon',[p,q,r,s,t],{name:"", withLabel:true});
-});
+ var board = JXG.JSXGraph.initBoard('jxgbox2', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio: true, 
+     showCopyright: false,
+     showNavigation: true, 
+     showScreenshot: true,
+     screenshot: {
+            scale: 3,
+            symbol: \u2318
+        }
+     });
+ var p = board.create('point', [-2,0], {name:"A"});
+ var q = board.create('point', [-1,-1], {name:"B"});
+ var r = board.create('point', [1,-0.5], {name:"C"});
+ var s = board.create('point', [1,1], {name:"D"});
+ var t = board.create('point', [-1,1.5], {name:"E"});
+ var poly1 = board.create('polygon', [p,q,r,s,t], {name:"", withLabel:true});
 </script>
 ```
 
 <div id="jxgbox2" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
 (function(){
- var board = JXG.JSXGraph.initBoard('jxgbox2', {boundingbox: [-5, 2, 5, -2],
-     keepAspectRatio:true, showCopyright:false,
-     showNavigation:true, showScreenshot: true,
+ var board = JXG.JSXGraph.initBoard('jxgbox2', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio: true, 
+     showCopyright: false,
+     showNavigation: true, 
+     showScreenshot: true,
      screenshot: {
-            scale:1
+            scale: 3,
+            symbol: '\u2318'
         }
      });
- var p = board.create('point',[-2,0],{name:"A"});
- var q = board.create('point',[-1,-1],{name:"B"});
- var r = board.create('point',[1,-0.5],{name:"C"});
- var s = board.create('point',[1,1],{name:"D"});
- var t = board.create('point',[-1,1.5],{name:"E"});
- var poly1 = board.create('polygon',[p,q,r,s,t],{name:"", withLabel:true});
+ var p = board.create('point', [-2,0], {name:"A"});
+ var q = board.create('point', [-1,-1], {name:"B"});
+ var r = board.create('point', [1,-0.5], {name:"C"});
+ var s = board.create('point', [1,1], {name:"D"});
+ var t = board.create('point', [-1,1.5], {name:"E"});
+ var poly1 = board.create('polygon', [p,q,r,s,t], {name:"", withLabel:true});
 })();
 </script>
+
+## {lang=EN}Save to canvas{/lang}
+
+JSXGraph constructions can be displayed as static image in a canvas element supplied by developer.
+The following HTML code contains a JSXGraph construction, a button and a canvas element.
+
+```HTML
+<div id="jxgbox3" class="jxgbox" 
+    style="width:500px; height:200px;"></div>
+<p>
+<button id="start_save">Save to canvas</button>
+<p>
+<canvas id="canvas_out" 
+    style="width:500px; height:200px; border: solid 2px blue; 
+           border-radius:5px">
+</canvas>
+</p>
+```
+
+In addition to the JSXGraph construction, an event listener is added to the button with the ID `start_save`
+which calls the method `board.renderer.dumpToCanvas()` with the ID of the canvas element, the width and height 
+of the exported image and a boolean variable if the texts should be displayed, too.
+
+
+```JS
+ document.getElementById('start_save').onclick = function() {
+    var withTexts = true;
+    board.renderer.dumpToCanvas('canvas_out', 500, 200, withTexts);
+ };
+```
+
+<div id="jxgbox3" class="jxgbox" 
+     style="width:500px; height:200px;"></div>
+<p>
+<button id="start_save">Save to canvas</button>
+<p>
+<canvas id="canvas_out" 
+     style="width:500px; height:200px; border: solid 2px blue; border-radius:5px"></canvas>
+</p>
+<script>
+(function(){
+ var board = JXG.JSXGraph.initBoard('jxgbox3', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio: true, 
+     showCopyright: false,
+     showNavigation: true, 
+     });
+ var p = board.create('point', [-2,0], {name:"A"});
+ var q = board.create('point', [-1,-1], {name:"B"});
+ var r = board.create('point', [1,-0.5], {name:"C"});
+ var s = board.create('point', [1,1], {name:"D"});
+ var t = board.create('point', [-1,1.5], {name:"E"});
+ var poly1 = board.create('polygon', [p,q,r,s,t], {name:"", withLabel:true});
+ document.getElementById('start_save').onclick = function() {
+    var withTexts = true;
+    board.renderer.dumpToCanvas('canvas_out', 500, 200, withTexts);
+ };
+ })();
+</script>
+
+## Save as data URI
+
+The next possibility is to store the construction as data URI. This is the method of choice 
+if a screenshot of a construction should be stored on a web server in e.g. an e-learning environment.
+
+<div id="jxgbox4" class="jxgbox" 
+     style="width:500px; height:200px;"></div>
+<p>
+<button id="dump_uri">Save to text</button>
+<p>
+<textarea id="text_out" rows="10" cols="50"></textarea>
+</p>
+<script>
+//(function(){
+ var board = JXG.JSXGraph.initBoard('jxgbox4', {
+     boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio: true, 
+     showCopyright: true,
+     showNavigation: true, 
+     });
+ var p = board.create('point', [-2,0], {name:"A"});
+ var q = board.create('point', [-1,-1], {name:"B"});
+ var r = board.create('point', [1,-0.5], {name:"C"});
+ var s = board.create('point', [1,1], {name:"D"});
+ var t = board.create('point', [-1,1.5], {name:"E"});
+ var poly1 = board.create('polygon', [p,q,r,s,t], {name:"", withLabel:true});
+ document.getElementById('dump_uri').onclick = function() {
+    var withTexts = true;
+    document.getElementById('text_out').value = board.renderer.dumpToDataURI(withTexts);
+ };
+// })();
+</script>
+
+
+
