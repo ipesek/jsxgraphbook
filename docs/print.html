@@ -1657,7 +1657,237 @@ Vidíme zde, že pro získání okamžité hodnoty posuvníku použijeme spojen�
 <p>Předpis kvadratické funkce tak už není neměnný, díky posuvníkům může být jeho podoba uživatelem dynamicky měněna.
 {/lang}</p>
 <h1><a class="header" href="#langenanimating-with-sliderslanglangsianimating-with-sliderslanglangczanimating-with-sliderslang" id="langenanimating-with-sliderslanglangsianimating-with-sliderslanglangczanimating-with-sliderslang">{lang=EN}Animating with sliders{/lang}{lang=SI}Animating with sliders{/lang}{lang=CZ}Animating with sliders{/lang}</a></h1>
-<h1><a class="header" href="#langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang" id="langenexamplelanglangsicreating-basic-objectslanglangczusing-basic-objectslang">{lang=EN}Example{/lang}{lang=SI}Creating basic objects{/lang}{lang=CZ}Using basic objects{/lang}</a></h1>
+<p>{lang=EN}</p>
+<h2><a class="header" href="#example-animation-with-slider" id="example-animation-with-slider">Example: Animation with slider</a></h2>
+<p><strong>Cycloids.</strong> Rolling a circle along a straight line a point firmly connected to its rim draws a curve 
+called a <a href="https://mathworld.wolfram.com/Cycloid.html">cycloid</a>. If the point is closer to the center a 
+curve drawn by it is called a <em>curtate cycloid</em>. If the point is further from the center than the rim, 
+the resulting curve is called a <em>prolate cycloid</em>, see figure below. Create a dynamic geometry model of the 
+given situation, movement of the circle controlled by the slider.
+{/lang}</p>
+<p>{lang=SI}</p>
+<h2><a class="header" href="#example-animation-with-slider-1" id="example-animation-with-slider-1">Example: Animation with slider</a></h2>
+<p><strong>Cycloids.</strong> Rolling a circle along a straight line a point firmly connected to its rim draws a curve 
+called a <a href="https://mathworld.wolfram.com/Cycloid.html">cycloid</a>. If the point is closer to the center a 
+curve drawn by it is called a <em>curtate cycloid</em>. If the point is further from the center than the rim, 
+the resulting curve is called a <em>prolate cycloid</em>, see figure below. Create a dynamic geometry model of the 
+given situation, movement of the circle controlled by the slider.
+{/lang}</p>
+<p>{lang=CZ}</p>
+<h2><a class="header" href="#příklad-animace-užitím-posuvníku" id="příklad-animace-užitím-posuvníku">Příklad: Animace užitím posuvníku</a></h2>
+<p><strong>Cykloidy.</strong> Při odvalování kruhu podél přímky vykresluje bod pevně spojený s jeho okrajem křivku
+zvanou <a href="https://mathworld.wolfram.com/Cycloid.html">cykloida</a>. Pokud je uvažovaný bod blíže ke středu kruhu, než je jeho okraj,
+jeho trajektorií je křivka zvaná <em>zkrácená cykloida</em> (<em>curtate cycloid</em>). Pokud je předmětný bod 
+dále od středu, než je okraj kruhu, jeho trajektorií je <em>prodloužená cykloida</em> (<em>prolate cycloid</em>). Vytvořte dynamický geometrický model popsaných situací u kterého je pohyb kružnice
+ovládán posuvníkem, viz níže uvedený obrázek.
+{/lang}</p>
+<div id="jxgbox" class="jxgbox" style="width:800px; height:300px;"></div>
+     <script>
+        var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-2, 5, 14, -1], axis:false, showClearTraces: true});
+        // A straight line as  a path for the circle
+        var M = board.create('point',[-1,0],{name:'M', face:'o', size:1, visible:false});
+        var N = board.create('point',[7,0],{name:'N', face:'o', size:1, visible:false});
+        var l1 = board.create('line', [M,N], {color:'black'});
+        // Sliders to control the values of r (radius of the circle) and l (the amount of translation of the circle center)
+        var r = board.create('slider', [[-1, -0.5], [1,-0.5], [0, 1, 3]], {name:'r', snapWidth: 0.1});
+        var l = board.create('slider', [[5, -0.5], [10,-0.5], [-2.00, 0, 18.00]], {name:'l', snapWidth: 0.01});
+        // Circle c with center C
+        var C = board.create('point', [function(){return l.Value();},function(){return r.Value();}], {color:'blue', size:1, name:'C'});
+        var c = board.create('circle', [C,function(){return r.Value();}], {color:'orange', fillOpacity: 0.1});
+        // Three fixed points with different distances from the center to get curtate, normal and prolate cycloid, respectively
+        var A0 = board.create('point', [function(){return C.X();}, function(){return 1.5*r.Value();}], {visible:false});
+        var B0 = board.create('point', [function(){return C.X();}, function(){return 2*r.Value();}], {visible:false});
+        var D0 = board.create('point', [function(){return C.X();}, function(){return 2.5*r.Value();}], {visible:false});
+        // moving points as images of the respective fixed points
+        var A = board.create('point',
+                [function(){return ((A0.X()-C.X())*Math.cos(l.Value()/r.Value())+(A0.Y()-C.Y())*Math.sin(l.Value()/r.Value()))+C.X();},
+                 function(){return (-(A0.X()-C.X())*Math.sin(l.Value()/r.Value())+(A0.Y()-C.Y())*Math.cos(l.Value()/r.Value()))+C.Y();}],
+                {size:1, color:'red', trace:true});
+        var B = board.create('point',
+                [function(){return ((B0.X()-C.X())*Math.cos(l.Value()/r.Value())+(B0.Y()-C.Y())*Math.sin(l.Value()/r.Value()))+C.X();},
+                 function(){return (-(B0.X()-C.X())*Math.sin(l.Value()/r.Value())+(B0.Y()-C.Y())*Math.cos(l.Value()/r.Value()))+C.Y();}],
+                {size:1, color:'green', trace:true});
+        var D = board.create('point',
+                [function(){return ((D0.X()-C.X())*Math.cos(l.Value()/r.Value())+(D0.Y()-C.Y())*Math.sin(l.Value()/r.Value()))+C.X();},
+                 function(){return (-(D0.X()-C.X())*Math.sin(l.Value()/r.Value())+(D0.Y()-C.Y())*Math.cos(l.Value()/r.Value()))+C.Y();}],
+                {size:1, color:'blue', trace:true});
+        </script>
+<p>{lang=EN}
+<em>Programming:</em></p>
+<p>First, we define dimensions, width and height, of the drawing area setting the corresponding properties of the <code>div</code> element:
+{/lang}</p>
+<p>{lang=SI}
+<em>Programming:</em></p>
+<p>First, we define dimensions, width and height, of the drawing area setting the corresponding properties of the <code>div</code> element:
+{/lang}</p>
+<p>{lang=CZ}
+<em>Programování:</em></p>
+<p>Nejprve stanovíme rozměry, tj. šířku a výšku, nákresny přiřazením náležitých hodnot odpovídajícím atributům prvku <code>div</code>: 
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:900px; height:300px;&quot;&gt;&lt;/div&gt;
+</code></pre>
+<p>{lang=EN}
+Subsequently, at the beginning of the code bounded by the tags <em>&lt;script&gt;, &lt;/script&gt;</em>, 
+we determine the Bounding box as follows:
+{/lang}</p>
+<p>{lang=SI}
+Subsequently, at the beginning of the code bounded by the tags <em>&lt;script&gt;, &lt;/script&gt;</em>, 
+we determine the Bounding box as follows:
+{/lang}</p>
+<p>{lang=CZ}
+Následně, na začátku kódu vymezeného tagy <em>&lt;script&gt;, &lt;/script&gt;</em>, 
+definujeme rozsahy souřadnicových os zavedených v nákresně:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:400px; height:250px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-2, 5, 16, -1], axis:false, showClearTraces: true});
+&lt;/script&gt;
+</code></pre>
+<p>{lang=EN}
+Note the attribute <code>showClearTraces</code> used above. Setting its value to <code>true</code> displays the button for deleting 
+the traces of points, see the circled times at the bottom of the bounding box.</p>
+<p>As the first of construction, we draw a straight line <em>MN</em>, a path for the circle:
+{/lang}</p>
+<p>{lang=SI}
+Note the attribute <code>showClearTraces</code> used above. Setting its value to <code>true</code> displays the button for deleting 
+the traces of points, see the circled times at the bottom of the bounding box.</p>
+<p>As the first of construction, we draw a straight line <em>MN</em>, a path for the circle:
+{/lang}</p>
+<p>{lang=CZ}
+Všimněme si atributu <code>showClearTraces</code>, který je použit ve výše uvedeném příkazu pro iniciaci nákresny. 
+Nastavení jeho hodnoty na <code>true</code> vede k zobrazení užitečného tlačítka pro mazání stop bodů, viz
+symbol kruhu s křížkem uvnitř při dolním okraji nákresny ve výše uvedeném dynamickém obrázku.</p>
+<p>Konstrukci řešení začneme sestrojením přímky <em>MN</em>, cesty pro odvalování kruhu:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:400px; height:250px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-2, 5, 16, -1], axis:false, showClearTraces: true});
+	var M = board.create('point',[-1,0],{name:'M', face:'o', size:1, visible:false});
+    var N = board.create('point',[7,0],{name:'N', face:'o', size:1, visible:false});
+    var l1 = board.create('line', [M,N], {color:'black'});
+&lt;/script&gt;
+</code></pre>
+<p>{lang=EN}
+Before drawing the circle, we create two sliders to control the values of <em>r</em>, radius of the circle, and <em>l</em>, 
+the amount of translation of the circle center, respectively:
+{/lang}</p>
+<p>{lang=SI}
+Before drawing the circle, we create two sliders to control the values of <em>r</em>, radius of the circle, and <em>l</em>, 
+the amount of translation of the circle center, respectively:
+{/lang}</p>
+<p>{lang=CZ}
+Před sestrojením vlastního kruhu vytvoříme dva posuvníky pro ovládání hodnot
+parametrů <em>r</em>, poloměru kruhu, a <em>l</em>, velikosti posunutí středu kruhu při jeho pohybu:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:400px; height:250px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-2, 5, 16, -1], axis:false, showClearTraces: true});
+	var M = board.create('point',[-1,0],{name:'M', face:'o', size:1, visible:false});
+    var N = board.create('point',[7,0],{name:'N', face:'o', size:1, visible:false});
+    var l1 = board.create('line', [M,N], {color:'black'});
+	var r = board.create('slider', [[-1, -0.5], [1,-0.5], [0, 1, 3]], {name:'r', snapWidth: 0.1});
+    var l = board.create('slider', [[5, -0.5], [10,-0.5], [-2.00, 0, 18.00]], {name:'l', snapWidth: 0.01});
+&lt;/script&gt;
+</code></pre>
+<p>{lang=EN}
+Then we proceed to the construction of the circle <em>c</em> with center <em>C</em> and radius <em>r</em>:
+{/lang}</p>
+<p>{lang=SI}
+Then we proceed to the construction of the circle <em>c</em> with center <em>C</em> and radius <em>r</em>:
+{/lang}</p>
+<p>{lang=CZ}
+Pokračujeme sestrojením samotného kruhu <em>c</em> se středem <em>C</em> a poloměrem <em>r</em>:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:400px; height:250px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-2, 5, 16, -1], axis:false, showClearTraces: true});
+	var M = board.create('point',[-1,0],{name:'M', face:'o', size:1, visible:false});
+    var N = board.create('point',[7,0],{name:'N', face:'o', size:1, visible:false});
+    var l1 = board.create('line', [M,N], {color:'black'});
+	var r = board.create('slider', [[-1, -0.5], [1,-0.5], [0, 1, 3]], {name:'r', snapWidth: 0.1});
+    var l = board.create('slider', [[5, -0.5], [10,-0.5], [-2.00, 0, 18.00]], {name:'l', snapWidth: 0.01});
+	var C = board.create('point', [function(){return l.Value();},function(){return r.Value();}], {color:'blue', size:1, name:'C'});
+    var c = board.create('circle', [C,function(){return r.Value();}], {color:'orange', fillOpacity: 0.1});
+&lt;/script&gt;
+</code></pre>
+<p>{lang=EN}
+By defining three fixed points <em>A0</em>, <em>B0</em>, <em>C0</em> with different distances from the circle’s center we contribute to obtaining 
+the above mentioned cycloids; <em>curtate</em>, <em>normal</em> and <em>prolate cycloid</em>, respectively:
+{/lang}</p>
+<p>{lang=SI}
+By defining three fixed points <em>A0</em>, <em>B0</em>, <em>C0</em> with different distances from the circle’s center we contribute to obtaining 
+the above mentioned cycloids; <em>curtate</em>, <em>normal</em> and <em>prolate cycloid</em>, respectively:
+{/lang}</p>
+<p>{lang=CZ}
+Definováním následujících tří pevných bodů <em>A0</em>, <em>B0</em>, <em>C0</em> s různými vzdálenostmi od 
+středu kruhu si připravíme startovní pozice pro získání výše uvedených cykloid; 
+<em>zkrácené</em>, <em>normální</em> a <em>prodloužené cykloidy</em>, v daném pořadí:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:400px; height:250px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-2, 5, 16, -1], axis:false, showClearTraces: true});
+	var M = board.create('point',[-1,0],{name:'M', face:'o', size:1, visible:false});
+    var N = board.create('point',[7,0],{name:'N', face:'o', size:1, visible:false});
+    var l1 = board.create('line', [M,N], {color:'black'});
+	var r = board.create('slider', [[-1, -0.5], [1,-0.5], [0, 1, 3]], {name:'r', snapWidth: 0.1});
+    var l = board.create('slider', [[5, -0.5], [10,-0.5], [-2.00, 0, 18.00]], {name:'l', snapWidth: 0.01});
+	var C = board.create('point', [function(){return l.Value();},function(){return r.Value();}], {color:'blue', size:1, name:'C'});
+    var c = board.create('circle', [C,function(){return r.Value();}], {color:'orange', fillOpacity: 0.1});
+	var A0 = board.create('point', [function(){return C.X();}, function(){return 1.5*r.Value();}], {visible:false});
+    var B0 = board.create('point', [function(){return C.X();}, function(){return 2*r.Value();}], {visible:false});
+    var D0 = board.create('point', [function(){return C.X();}, function(){return 2.5*r.Value();}], {visible:false});
+&lt;/script&gt;
+</code></pre>
+<p>{lang=EN}
+In fact, we will not directly move these points <em>A0</em>, <em>B0</em>, <em>C0</em>, but will create their instant images <em>A</em>, <em>B</em>, <em>C</em> dependent on values that variables 
+controlled by sliders, especially <em>l</em>, can gain:
+{/lang}</p>
+<p>{lang=SI}
+In fact, we will not directly move these points <em>A0</em>, <em>B0</em>, <em>C0</em>, but will create their instant images <em>A</em>, <em>B</em>, <em>C</em> dependent on values that variables 
+controlled by sliders, especially <em>l</em>, can gain:
+{/lang}</p>
+<p>{lang=CZ}
+Je třeba říci, že při animaci nepohybujeme přímo s těmito body <em>A0</em>, <em>B0</em>, <em>C0</em>, ale vytváříme jejich 
+okamžité obrazy <em>A</em>, <em>B</em>, <em>C</em> příslušející konkrétním hodnotám proměnných ovládaných posuvníky, především <em>l</em>:
+{/lang}</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:400px; height:250px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+    var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-2, 5, 16, -1], axis:false, showClearTraces: true});
+	var M = board.create('point',[-1,0],{name:'M', face:'o', size:1, visible:false});
+    var N = board.create('point',[7,0],{name:'N', face:'o', size:1, visible:false});
+    var l1 = board.create('line', [M,N], {color:'black'});
+	var r = board.create('slider', [[-1, -0.5], [1,-0.5], [0, 1, 3]], {name:'r', snapWidth: 0.1});
+    var l = board.create('slider', [[5, -0.5], [10,-0.5], [-2.00, 0, 18.00]], {name:'l', snapWidth: 0.01});
+	var C = board.create('point', [function(){return l.Value();},function(){return r.Value();}], {color:'blue', size:1, name:'C'});
+    var c = board.create('circle', [C,function(){return r.Value();}], {color:'orange', fillOpacity: 0.1});
+	var A0 = board.create('point', [function(){return C.X();}, function(){return 1.5*r.Value();}], {visible:false});
+    var B0 = board.create('point', [function(){return C.X();}, function(){return 2*r.Value();}], {visible:false});
+    var D0 = board.create('point', [function(){return C.X();}, function(){return 2.5*r.Value();}], {visible:false});
+	var A = board.create('point',
+            [function(){return ((A0.X()-C.X())*Math.cos(l.Value()/r.Value())+(A0.Y()-C.Y())*Math.sin(l.Value()/r.Value()))+C.X();},
+             function(){return (-(A0.X()-C.X())*Math.sin(l.Value()/r.Value())+(A0.Y()-C.Y())*Math.cos(l.Value()/r.Value()))+C.Y();}],
+            {size:1, color:'red', trace:true});
+
+    var B = board.create('point',
+            [function(){return ((B0.X()-C.X())*Math.cos(l.Value()/r.Value())+(B0.Y()-C.Y())*Math.sin(l.Value()/r.Value()))+C.X();},
+             function(){return (-(B0.X()-C.X())*Math.sin(l.Value()/r.Value())+(B0.Y()-C.Y())*Math.cos(l.Value()/r.Value()))+C.Y();}],
+            {size:1, color:'green', trace:true});
+
+    var D = board.create('point',
+            [function(){return ((D0.X()-C.X())*Math.cos(l.Value()/r.Value())+(D0.Y()-C.Y())*Math.sin(l.Value()/r.Value()))+C.X();},
+             function(){return (-(D0.X()-C.X())*Math.sin(l.Value()/r.Value())+(D0.Y()-C.Y())*Math.cos(l.Value()/r.Value()))+C.Y();}],
+            {size:1, color:'blue', trace:true});
+&lt;/script&gt;
+</code></pre>
+<p>{lang=EN}
+The task solution code is now complete.
+{/lang}</p>
+<p>{lang=SI}
+The task solution code is now complete.
+{/lang}</p>
+<p>{lang=CZ}
+Kód řešení úlohy je nyní kompletní.
+{/lang}</p>
 <h1><a class="header" href="#langentransformationslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langentransformationslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Transformations{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
 <h1><a class="header" href="#langenadvanced-topicslanglangsiadvanced-topicslanglangczadvanced-topicslang" id="langenadvanced-topicslanglangsiadvanced-topicslanglangczadvanced-topicslang">{lang=EN}Advanced topics{/lang}{lang=SI}Advanced topics{/lang}{lang=CZ}Advanced topics{/lang}</a></h1>
 <h1><a class="header" href="#langenadding-imageslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenadding-imageslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Adding images{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
