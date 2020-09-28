@@ -1,6 +1,6 @@
 {lang=EN}
 ## Creating points
-Points are one of the most basic objects in JSXGraph. We always create objects on the JSX board, therefore we must use same 
+Points are one of the most basic objects in JSXGraph. We always create objects on the JSXGraph board, therefore we must use same
 board variable for the construction of all objects that will be on board.
 {/lang}
 
@@ -11,6 +11,14 @@ board variable for the construction of all objects that will be on board.
 {lang=CZ}
 ## Vytváření bodů
 Body jsou základními a nejjednoduššími objekty v JSXGraph. V tomto příkladu zakreslíme do nákresny dva body. 
+{/lang}
+
+{lang=DE}
+## Punkte erzeugen
+
+Punkte gehören zu den grundlegensten Objekten in JSXGraph.
+Wir legen alle Objekte auf die Zeichenfläche (genannt "board"), deshalb verwenden wir für alle Objekte, die auf der dieser Zeichenfläche
+entstehen sollen, dieselbe Variable `board`.
 {/lang}
 ```JS
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
@@ -28,13 +36,13 @@ Body jsou základními a nejjednoduššími objekty v JSXGraph. V tomto příkla
 </script>
 
 {lang=EN}
-Let us now observe `board.create('point',[-2,1]);`. Here we use variable board and call a method *create* which takes 
+Let us now observe `board.create('point',[-2,1]);`. Here we use variable `board` and call a method *create* which takes
 two arguments. First argument is the type of the object and second the coordinates where this object should be. If we
-define coordinates outside of the bounding box, the object will exist but won't be visible because it is outside visible 
-area of our drawing board. 
+define coordinates outside of the bounding box, the object will exist but won't be visible because it is outside visible
+area of our drawing board.
 
-Next line `var q = board.create('point',[3,0]);` is very similar to the previous line, with only one diference. We start 
-the line with `var q = ` which we use to store this object in variable *q*. This is good and necessary practice, because 
+Next line `var q = board.create('point',[3,0]);` is very similar to the previous line, with only one diference. We start
+the line with `var q = ` which we use to store this object in variable *q*. This is good and necessary practice, because
 in the constructions we often reference different object and define their relationships, which will be more apparent in following pages.
 
 
@@ -45,4 +53,17 @@ Zaměřme se nyní na `board.create('point',[-2,1]);`. Zde využíváme proměnn
 Další řádek `var q = board.create('point',[3,0]);` je velice podobný předchozí konstrukci pouze s jedním rozdílem. Naší konstrukci začínáme `var q = `. Toto přiřazení slouží obecně k ukládání objektů do proměnných. V naší ukázce sestrojený bod ukládáme do proměnné *q*.
 
 Ukládání objektů do proměnných je dobrou a často nezbytnou praxí. V konstrukcích se budeme často odkazovat na existující objekty a definovat mezi nimi vztahy a to právě pomocí proměnných. Toto bude patrnější na následujících stránkách.
+{/lang}
+{lang=DE}
+Sehen wir uns den Befehl `board.create('point',[-2,1]);` genauer an:
+Wir verwenden die Variable `board` und rufen eine Method *create* auf, die zwei Argumente hat.
+
+Das erste Argument ist der Type des Objekts, das wir anlegen wollen, und das zweite Argument, legt fest wo das Objekt sein soll.
+Wenn wir Koordinaten außerhalb der Zeichenfläche angeben, wird das Ojekt zwar existieren, aber nicht sichtbar sein.
+
+Die nächste Programmzeile `var q = board.create('point',[3,0]);` ist der vorhergehenden sehr ähnlich, mit einem wesentlichen Unterschied.
+Wir starten die Zeile mit `var q = `. Damit speichern wir dieses Objekt in der Variablen *q*.
+Das ist bewährte und notwendige Praxis, denn in unseren Konstruktionen werden wir oft auf existierende Objekte
+zurückgreifen und ihre gegenseitigen Abhängigkeiten festlegen.
+Dies wird auf den folgenden Seiten klarer werden.
 {/lang}

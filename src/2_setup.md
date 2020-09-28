@@ -3,7 +3,7 @@
 {lang=EN}
 ## How to setup
 When we prepare JSX construction it is most convenient to prepare it locally. For that we have to create some file (eg.
-example.htm), copy paste template provided below and we can start constructing. After we save the program, we can open it in our
+`example.htm`), copy paste template provided below and we can start constructing. After we save the program, we can open it in our
 favorite browser (Firefox, Chrome, etc).
 We can repeat following: edit the file, save it and refresh it (_(F5)_ in a browser) until we're satisfied with result.
 

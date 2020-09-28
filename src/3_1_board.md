@@ -9,18 +9,19 @@ For this we use `div` element with some properties.
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 ```
 
-If look at the line closely we see few properties. For us it is important `id="jxgbox"` which we use to connect with JSXGraph.
+If we look at the line closely we see few properties. For us it is important `id="jxgbox"` which we use to connect with JSXGraph.
 Next is `class="jxgbox"` where we can specify how our board will look like. This is more advanced topic and will be discussed later.
 Last property is `style="width:500px; height:200px;" where we define size of our drawing board.  
 _Important: here we do not define our coordinate system, but only the size of our canvas_
 
 When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside
+of a `<script></script>` tag.
 
 ```JS
 var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
 ```
 
-We can see we called function initBoard, which constructs our drawing board . This function needs at least one argument,
+We can see we called function `initBoard`, which constructs our drawing board . This function needs at least one argument,
 which is the *id* of the element `div` we defined in our example ``jxgbox``. ``boundingbox: [-5, 2, 5, -2]`` tells
 JSXGraph coordinate system of our construction.
 
@@ -47,7 +48,7 @@ When we have defined our canvas, we have to connect them with JSXGraph. This is 
 var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
 ```
 
-We can see we called function initBoard, which constructs our drawing board . This function need at least one argument, 
+We can see we called function `initBoard`, which constructs our drawing board . This function need at least one argument,
 which is the name of id we defined earlier for div in our example ``jxgbox``. ``boundingbox: [-5, 2, 5, -2]`` tells
  JSXGraph coordinate system of our construction.
  
@@ -75,31 +76,38 @@ Vidíme, že jsme využili funkci `initBoard`, která po svém zavolání vytvo�
 
 Pokud mezi sebou porovnáme oba řádky kódu, zjistíme, že pro nastavení velikostí využíváme dvě různé míry. Pomocí `<div>` jsme určili velikost nákresny v pixelech. Poté jsme na nákresně definovali systém souřadnic, který bude sloužit k umisťování objektů do nákresny.
 {/lang}
+
 {lang=DE}
 ## Zeichenbereich
-JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in
-HTML which we will tell Javascript to use as canvas. First we create a place in HTML where we will our construction be.
-For this we use `div` element with some properties.
+
+JSXGraph benötigt eine Zeichenfläche, auf der die Konstruktion angelegt werden kann.
+Da die Konstruktion in einem Web-Browser mit Hilfe der Programmiersprache JavaScript angezeigt werden soll,
+müssen wir zuerst ein HTML-Element anlegen, das JSXGraph als Zeichenfläche verwenden kann.
+Dies geschieht, indem wir folgendes `div`-Element mit einigen Eigenschaften anlegen:
 ```HTML
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 ```
+Wenn wir diese Zeile genauer betrachten, sehen wir ein paar Besonderheiten.
+Besonders wichtig ist für unsere Zwecke das Attribut `id="jxgbox"`, das wir nützen um das HTML mit JSXGraph zu verbinden.
+Als nächstes folgt `class="jxgbox"`, womit wir festlegen, wie die Zeichenfläche aussieht.
+Das ist bereits ein Thema für Fortgeschrittenere und wird später diksutiert werden.
+Das letzte Attribut ist `style="width:500px; height:200px;"`, das die Größe der Zeichenfläche festlegt.  
+_Wichtig: damit legen wir nicht unser Koordinatensystem fest, sondern lediglich die Größe unserer Zeichenfläche._
 
-If look at the line closely we see few properties. For us it is important `id="jxgbox"` which we use to connect with JSXGraph.
-Next is `class="jxgbox"` where we can specify how our board will look like. This is more advanced topic and will be discussed later.
-Last property is `style="width:500px; height:200px;" where we define size of our drawing board.  
-_Important: here we do not define our coordinate system, but only the size of our canvas_
-
-When we have defined our canvas, we have to connect them with JSXGraph. This is done with following line, which should be put inside
+Wenn wir nun so unsere Zeichenfläche in HTML festgelegt haben, können wir sie mit JSXGraph verbinden.
+Dies machen wir mit der folgenden Zeile, die innerhalb eines `<script></script>`-Befehls stehen muß:
 
 ```JS
 var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
 ```
 
-We can see we called function initBoard, which constructs our drawing board . This function needs at least one argument,
-which is the *id* of the element `div` we defined in our example ``jxgbox``. ``boundingbox: [-5, 2, 5, -2]`` tells
-JSXGraph coordinate system of our construction.
+In dieser Zeile wird die Funktion die Funktion `initBoard` aufgerufen, die ein JSXGraph-Zeichenfläche angelegt.
+Diese Funktion erwartet mindestens ein Argument, nämlich die *id* des
+HTML-Elements `div`, die in unserem Beispiel den Wert ``jxgbox`` hat.
+Mit dem zweiten Argument ``{boundingbox: [-5, 2, 5, -2]}`` wird in JSXGraph das Koordinatensystem unserer Kornstruktion festgelegt.
 
-Observing both lines we see, that we have two measures for size. With `div` we created canvas with the size in pixels.
-Then we declared also coordinate system with board where we defined our coordinate system, which we will use to place
-objects on the board.
+Betrachtet wir beide Zeilen, so erkennen wir zwei Größeneinheiten.
+Mit `div` wurde eine Zeichenfläche angelegt, deren Größe in Pixel angegeben ist.
+Mit `initBoard` haben wir zudem ein Koordinatensystem in unserer Zeichenfläche angelegt, das wir nutzen werden um
+Objekte auf der Zeichnfläche zu positionieren.
 {/lang}
