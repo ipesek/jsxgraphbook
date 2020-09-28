@@ -1,18 +1,18 @@
 {lang=EN}
-## This is a manual about the [JSXGraph](https://jsxgraph.org/). 
+## This is a manual about the [JSXGraph](https://jsxgraph.org/).
 
 #### (Work in progress)
 
 JSXGraph is a cross-browser JavaScript library for interactive geometry, function plotting, charting, and data visualization in the web browser.
 
-This book covers the basics, how to build simple constructions and also some advanced topics on how to include JSXGraph in Moodle. 
+This book covers the basics, how to build simple constructions and also some advanced topics on how to include JSXGraph in Moodle.
 
 **_To build JSXGraph constructions you don't need to be programmer (although it helps), but is rather more like
  putting together
 elements of the construction._**
 
-Below is an example of power of JSXGraph.   
-*Hint: Move the dot and observe.* 
+Below is an example of power of JSXGraph.
+*Hint: Move the dot and observe.*
 {/lang}
 
 {lang=CZ}
@@ -43,7 +43,23 @@ Spodaj je primer moči JSXGraph.
 Namig: premaknite piko in opazujte.
 {/lang}
 
-<div id="box16" class="jxgbox" style="width:500px; height:333px;margin-left:auto; margin-right:auto;"></div> 
+{lang=DE}
+## Dies ist ein Handbuch zu [JSXGraph](https://jsxgraph.org/).
+
+#### (In Entstehung)
+
+JSXGraph ist eine browser-unabhängige JavaScript.Bibliothek zu interaktiver Geometrie, Funktionsgraphen, Diagrammen und Daten-Visualisierung im Web-Browser.
+
+Dieses Handbuch beschreibt die Grundlagen, wie einfache Konstruktionen erstellt werden können, sowie einige fortgeschrittenere Themen, zum Beispiel
+die Einbindung von JSXGraph in Moodle.
+
+**_Um JSXGraph-Konstruktionen erstellen zu können, muss man kein Programmierer sein (obwohl es hilfreich ist); es ist mer ein Zusammenstellen der Konstruktionselemente._**
+
+Das Beispiel unten zeigt die Mächtigkeit von JSXGraph.
+*Hinweis: Bewegen Sie den Punkt und beobachten Sie die Auswirkung.*
+{/lang}
+
+<div id="box16" class="jxgbox" style="width:500px; height:333px;margin-left:auto; margin-right:auto;"></div>
 <script type='text/javascript'>
     JXG.Options.board.showNavigation = false;
     var color1 = "crimson";
