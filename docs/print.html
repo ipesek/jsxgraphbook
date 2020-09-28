@@ -676,13 +676,15 @@ Body mají například různé tvary, u přímky pak lze např. stanovit, zda bu
 <p>Podívejme se na následující příklad: 
 {/lang}</p>
 <p>{lang=DE}</p>
-<h2><a class="header" href="#adding-attributes-to-the-objects-2" id="adding-attributes-to-the-objects-2">Adding attributes to the objects</a></h2>
-<p>Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are
-more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and
-how line ends at the second point (more <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html">here</a>).
-We can always look at the <a href="https://jsxgraph.uni-bayreuth.de/docs/index.html">JSXGraph API documentation</a>, which describes
-all the objects and their attributes.</p>
-<p>Let us look now at the example.
+<h2><a class="header" href="#attribute-zu-objekten-hinzufügen" id="attribute-zu-objekten-hinzufügen">Attribute zu Objekten hinzufügen</a></h2>
+<p>JSXGraph-Objekte besitzen Attribute, durch die sie beschrieben werden.
+Einige dieser Attribute stehen in allen Objekte zur Verfügung (z.B. <code>color</code>, <code>name</code>, etc.), andere Attribute gibt es nur
+bei speziellen Objekten.
+Zum Beispiel besitzen Punkte das Attribut <code>shape</code>, Geraden dagegen besitzen zum Beispiel Attribute, die festlegen, ob die Gerade über die definierenden Punkte hinuasgezeichnet wird oder nicht (Attribute <code>straightForst</code>und <code>straightLast</code>).
+Siehe hierzu auch <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html">here</a>.</p>
+<p>In der umfangreichen <a href="https://jsxgraph.uni-bayreuth.de/docs/index.html">JSXGraph API Dokumentation</a> werden
+alle Objekte und ihre Attribute detailliert beschrieben.</p>
+<p>Betrachten wir folgendes Beispiel.
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -720,7 +722,7 @@ and a value. As we mentioned earlier, objects can have specific attributes and a
 from other objects.</p>
 <p>In <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> first attribute is <em>name</em> which is borrowed
 from <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>, attribute <em>color</em> is also
-borowed, where attribute <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#size"><em>size</em></a> is not borrowed but belongs to object Point.
+borrowed, where attribute <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#size"><em>size</em></a> is not borrowed but belongs to object Point.
 We can read from the documentation: <em>Size of a point, either in pixel or user coordinates. Means radius resp. half the
 width of a point (depending on the face).</em></p>
 <p>Second point has some interesting attributes <code>var q = board.create('point',[3,1],{name:&quot;last&quot;,fixed:true, face:&quot;[]&quot;});</code>
@@ -747,7 +749,7 @@ and a value. As we mentioned earlier, objects can have specific attributes and a
 from other objects.</p>
 <p>In <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> first attribute is <em>name</em> which is borrowed 
 from <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>, attribute <em>color</em> is also 
-borowed, where attribute <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#size"><em>size</em></a> is not borrowed but belongs to object Point.
+borrowed, where attribute <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#size"><em>size</em></a> is not borrowed but belongs to object Point.
 We can read from the documentation: <em>Size of a point, either in pixel or user coordinates. Means radius resp. half the 
 width of a point (depending on the face).</em></p>
 <p>Second point has some interesting attributes <code>var q = board.create('point',[3,1],{name:&quot;last&quot;,fixed:true, face:&quot;[]&quot;});</code>
@@ -795,31 +797,40 @@ pokud mu nastavíme hodnotu <em>false</em>. Vyzkoušejte to!</p>
 <p><strong>Dokumentace je velkým zdrojem pro poznání všech atributů, které můžeme použít. Obsahuje také konkrétní příklady jejich použití.</strong>
 {/lang}</p>
 <p>{lang=DE}
-In this example we added some attributes to the both points and to the line.
-In all three examples we defined attributes as a list written between <code>{ }</code>. For each attribute we must write its name
-and a value. As we mentioned earlier, objects can have specific attributes and also more general borrowed (inherited)
-from other objects.</p>
-<p>In <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> first attribute is <em>name</em> which is borrowed
-from <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>, attribute <em>color</em> is also
-borowed, where attribute <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#size"><em>size</em></a> is not borrowed but belongs to object Point.
-We can read from the documentation: <em>Size of a point, either in pixel or user coordinates. Means radius resp. half the
+In diesem Beispiel wurden einige Attribute zu den beiden Punkten und der Geraden hinzugefügt.
+In allen drei Beispielen legen wir die Attribute durch eine Liste, die durch
+geschweifte Klammern <code>{ }</code> eingeschlossen ist, fest.
+Für jedes Attribut wird der Name und ein Wert angegeben. Wie bereits erwähnt, haben Objekte sowohl spezifische
+Attribute als auch allgemeinere Objekte, die von anderen Objekten vererbt sind.</p>
+<p>In <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> ist das erste Attribut <em>name</em>,
+das vom Element <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>
+abgeleitet ist.
+Das Attribut <em>color</em> ist ebenfalls von diesem Element abgeleitet und daher in nahezu allen Elementen verfügbar.
+Hingegen das Attribut <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#size"><em>size</em></a> ist ausschließlich im Objekt
+Punkt verfügbar.</p>
+<p>Aus der Dokumentation: <em>Size of a point, either in pixel or user coordinates. Means radius resp. half the
 width of a point (depending on the face).</em></p>
-<p>Second point has some interesting attributes <code>var q = board.create('point',[3,1],{name:&quot;last&quot;,fixed:true, face:&quot;[]&quot;});</code>
-First is the attribute <em>fixed</em> which defines whether objects can be moved (dragged) on the board. <em>Default</em> value for this
-attribute is false, which means we can move all objects on the board if they are not explicitly fixed. Now we first mentioned
-<em>default value</em>, which is used when do not explicitly set another value for some attribute. In the documentation for each
-attribute default value is also presented. The second new attribute is <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#face"><em>face</em></a>
-where we used one of the possible shapes of a point.</p>
-<p>When we defined <code>var line2 = board.create(&quot;line&quot;,[p,q],{straightLast:false, dash:&quot;4&quot; });</code>, we used two attributes,
-first defining how line will end at second point (<em>straightLast</em>) and second defining how the line will be drawn (<em>dash</em>).
-Again, <em>dash</em>  can have different values, <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#dash">documentation for dash attribute</a>
-tells us which are possible values.</p>
-<p>All objects have attributes, also Board object has <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html">them</a>.
-One of the attributes is <em>boundingbox</em>, which we used from first example, but didn't talk about it until now.
-E.g. if you don't like the navigation (bottom right), then you can add attribute <em>showNavigation</em> and set it to false. Try it!</p>
-<p><em><em>We can see that we can use attributes to fine tune on how our construction will behave and look.</em></em></p>
-<p><strong>Documentation is a great resource for discovering attributes and also has some
-examples of their usage.</strong>
+<p>Dem zweiten Punkt im obigen Beispiel werden die interessanten Attribute
+<code>var q = board.create('point',[3,1],{name:&quot;last&quot;,fixed:true, face:&quot;[]&quot;});</code> zugewiesen.
+Das Attribut <em>fixed</em> legt fest ob das Objekt vom Betrachter bewegt (gezogen) werden kann. Der <em>Standardwert</em> für dieses Attribut ist <code>false</code>, was heißt, dass we alle Objekte über die Zeichenfläche ziehen können, für die dies nicht explizit
+mit <code>fixed:true</code> unterbunden ist.</p>
+<p>Wir habe gerade erstmals den <em>Standardwert</em> (<em>default value</em>) eines Attributs erwähnt. Dieser wird verwendet,
+wenn nicht explizit ein anderer Wert gesetzt wird. In der Dokumentation wird für jedes Attribut der
+zugehörige <em>default value</em> aufgelistet.</p>
+<p>Das zweite neue Attribut ist <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#face"><em>face</em></a>
+mit dem wir eine der möglichen Punktformen gewählt hatten.</p>
+<p>Bei der Angabe <code>var line2 = board.create(&quot;line&quot;,[p,q],{straightLast:false, dash:&quot;4&quot; });</code> setzen wir zwei Attribute.
+Mit dem ersten Attribut wird bestimmt, dass die &quot;Gerade&quot; am zweiten Punkt endet (<em>straightLast</em>).
+Das zweite Attribut legt fest, wie die Gerade gezeichnet wird (<em>dash</em>).</p>
+<p>Wie zuvor kann <em>dash</em>  verschiedene Werte annehmen, in der <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#dash">Dokumentation für das dash-Attribut</a> sind die möglichen Werte aufgelistet.</p>
+<p>Alle Objekte haben Attribute, auch das board-Objekt hat
+<a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html">Attribute</a>.
+Eines dieser Attribute ist <em>boundingbox</em>, das bereits im ersten Beispiel verwendet wurde, aber über das noch nichts weiter gesagt wurde.</p>
+<p>Wenn zum Beispiel die Navigations-Icons unten rechts ausgeblendet werden sollen, so kann
+das Attribut <em>showNavigation</em> auf `false? gesetzt werden. Versuchen wir es!</p>
+<p><em><em>Wir sehen, dass wir mit Attributen Feineinstellungen zum Verhalten und Aussehen unserer Konstruktion vornehmen können.</em></em></p>
+<p><strong>Die Dokumentation ist eine hervorragende Quelle um Attribute zu entdecken. Zudem enthält sie viele Beispiele
+wie Attribute verwendet werden.</strong>
 {/lang}</p>
 <p>{lang=EN}</p>
 <h2><a class="header" href="#example" id="example">Example</a></h2>
