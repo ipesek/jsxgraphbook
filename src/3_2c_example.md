@@ -40,10 +40,8 @@ Bestimme einen Punkt *D* auf der Strecke *AB* so, dass das Verhältnis seiner Ab
 jeweils gleich dem Verhältnis der Abstände des Punktes *C* zu den Punkten *A* bzw. *B* ist, das heißt
 *\|AD\|\/\|BD\|=\|AC\|\/\|BC\|*.
 
-Der Punkt  *D* is called the *harmonic conjugate of C with respect to A and B* and points *A*, *B*, *C* and *D* together
-form the so called *harmonic quadruple*.
+Diese Konstellation wird [harmonische Teilung](https://de.wikipedia.org/wiki/Harmonische_Teilung) genannt.
 {/lang}
-
 
 {lang=EN}
 *Result:*
@@ -65,8 +63,8 @@ as shown below.
 
 {lang=DE}
 *Resultat:*
-Zur Lösung der Aufgabe konstruieren wir das sogenannte [complete quadrangle](https://en.wikipedia.org/wiki/Complete_quadrangle),
-as shown below.
+Zur Lösung der Aufgabe konstruieren wir das sogenannte [vollständige Viereck](https://de.wikipedia.org/wiki/Fano-Axiom#:~:text=Ein%20vollst%C3%A4ndiges%20Viereck%20in%20einer,liegen%20auf%20einer%20gemeinsamen%20Gerade.),
+wie unten zu sehen ist.
 {/lang}
 
 
@@ -124,7 +122,7 @@ Punkte:
  var A = board.create('point',[-4,-2]);
  var B = board.create('point',[0,-2]);
  var p = board.create('line',[A,B],{name: 'p',withLabel: true, color: 'green'});
-</script> 
+</script>
 ```
 
 {lang=EN}
@@ -187,7 +185,7 @@ durch *A* bzw. *B*:
  var E = board.create('point', [1,4], {name: 'E',size:2, color: 'blue'});
  var q = board.create('line',[A,E],{name: 'q',withLabel: true, color: 'green'});
  var r = board.create('line',[B,E],{name: 'r',withLabel: true, color: 'green'});
-</script> 
+</script>
 ```
 {lang=EN}
 After this, we put the point *F* on *q*, somewhere between *A* and *E*, draw a line *s* passing through
