@@ -76,7 +76,7 @@ to create a polygon. We used an attribute _withLabel_ which tells JSXGraph to sh
 For the second polygon we created a list of points, which is another approach to create a polygon. Here we again few new
 attributes. Attribute _hasInnerPoints_ enables user to move entire polygon. For example, moving Polygon 1 is not possible,
 only its points can be moved. Adding this attribute will enable moving the polygon.
-Next attribute, _withLines_ tells JSXgraph whether to draw borders of the polygon or not. The last attribute _vertices_ is
+Next attribute, _withLines_ tells JSXGraph whether to draw borders of the polygon or not. The last attribute _vertices_ is
 particularly interesting, because it does not have just a value, but a dictionary on the right side of `:`. The reason behind
 is that we can control the vertices with more than one attribute.
 {/lang}
@@ -88,7 +88,7 @@ to create a polygon. We used an attribute _withLabel_ which tells JSXGraph to sh
 For the second polygon we created a list of points, which is another approach to create a polygon. Here we again few new
 attributes. Attribute _hasInnerPoints_ enables user to move entire polygon. For example, moving Polygon 1 is not possible,
 only its points can be moved. Adding this attribute will enable moving the polygon.
-Next attribute, _withLines_ tells JSXgraph whether to draw borders of the polygon or not. The last attribute _vertices_ is
+Next attribute, _withLines_ tells JSXGraph whether to draw borders of the polygon or not. The last attribute _vertices_ is
 particularly interesting, because it does not have just a value, but a dictionary on the right side of `:`. The reason behind
 is that we can control the vertices with more than one attribute.
 {/lang}
@@ -121,7 +121,7 @@ Zur Konstruktion des zweite Polygons verwenden wir eine Liste von Koordinatenpaa
 Das Attribut _hasInnerPoints_ ermöglicht es dem Berachter, das gesamte Poylgon zu verschieben.
 Im Gegensatz dazu kann Polygon 1 nicht komplett verschoben werden, lediglich einzele Punkte oder Kanten
 können verzogen werden.
-Das nächste Attribut _withLines_ teilt JSXgraph mit, ob die Kanten / Ränder des Polygons angezeigt werden sollen oder nicht.
+Das nächste Attribut _withLines_ teilt JSXGraph mit, ob die Kanten / Ränder des Polygons angezeigt werden sollen oder nicht.
 Das letzte Attribut _vertices_ ist besonders interessant, denn es besitzt keinen einfachen Wert, sondern nach dem `:` folgt
 ein eigenes Attribut-Object, das die Eigenschaften der Polygon-Ecken festlegt. Der Grund ist, dass wir für die Ecken
 mehr als ein Attribut verändern wollen.

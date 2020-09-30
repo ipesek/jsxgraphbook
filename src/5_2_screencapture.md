@@ -15,7 +15,7 @@ navigation bar of the construction by adding the attribute
 `showScreenshot:true` (and `showNavigation:true`) to the board attributes.
 
 When the user clicks on the &#x2318; icon, an image containing the construction will
-appear over the JSXgraph board. By right clicking on this image the user can download
+appear over the JSXGraph board. By right clicking on this image the user can download
 the image.
 {/lang}
 

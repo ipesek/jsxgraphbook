@@ -51,7 +51,7 @@ But what follows is something new.
 Let us look closely to `[function(x){return Math.sin(x);},-Math.PI,Math.PI]`. With type _functiongraph_ we told JSXGraph that
 we will be drawing a function on some interval, therefore we need to provide the function we want to draw.
 `function(x){return Math.sin(x);}` does just that. Here we use anonymous function `function(x)` where we provide parameter `x`,
-that is used by JSXgraph to provide `x` values from the interval we have set with second and third element of the list. In our
+that is used by JSXGraph to provide `x` values from the interval we have set with second and third element of the list. In our
 case this is `-Math.PI, Math.PI`. Now we have to define a function that will return a value ($y-coordinate$) for the given $x$.
 This was done by `{return Math.sin(x);}`. We have to use reserved word `return` which is followed by a function, in our case
 `Math.sin(x)`. We end this with `;}` which must use to end the statement and the function.
@@ -79,7 +79,7 @@ But what follows is something new.
 Let us look closely to `[function(x){return Math.sin(x);},-Math.PI,Math.PI]`. With type _functiongraph_ we told JSXGraph that
 we will be drawing a function on some interval, therefore we need to provide the function we want to draw. 
 `function(x){return Math.sin(x);}` does just that. Here we use anonymous function `function(x)` where we provide parameter `x`,
-that is used by JSXgraph to provide `x` values from the interval we have set with second and third element of the list. In our 
+that is used by JSXGraph to provide `x` values from the interval we have set with second and third element of the list. In our 
 case this is `-Math.PI, Math.PI`. Now we have to define a function that will return a value ($y$-coordinate) for the given $x$.
 This was done by `{return Math.sin(x);}`. We have to use reserved word `return` which is followed by a function, in our case
 `Math.sin(x)`. We end this with `;}` which must use to end the statement and the function.
