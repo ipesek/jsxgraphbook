@@ -176,7 +176,7 @@
                     <main>
                         <p>{lang=EN}</p>
 <h2><a class="header" href="#curves" id="curves">Curves</a></h2>
-<p><a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Curve.html">Curves</a> in JSXgraph does not mean just curves from functions 
+<p><a href="https://jsxgraph.org/docs/symbols/Curve.html">Curves</a> in JSXgraph does not mean just curves from functions 
 or polynomials, but also parametric curves, polar curves or data plots. In our example we will show how to use data 
 for data plotting, for other uses please check API documentation.
 {/lang}</p>
@@ -185,10 +185,10 @@ for data plotting, for other uses please check API documentation.
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
 <h2><a class="header" href="#křivky" id="křivky">Křivky</a></h2>
-<p>Objekt <em>křivka</em> (<a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Curve.html">Curve</a>) v JSXgraphu nezahrnuje jenom
+<p>Objekt <em>křivka</em> (<a href="https://jsxgraph.org/docs/symbols/Curve.html">Curve</a>) v JSXgraphu nezahrnuje jenom
 grafy funkcí nebo polynomů, ale také parametrické křivky, křivky definované v polárních souřadnicích nebo různé grafické
 reprezentace dat. Následujícím příkladem ilustrujeme užití objektu <em>Curve</em> ke grafické reprezentaci dat. Další možnosti 
-tohoto objektu viz <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Curve.html">JSXGraph Reference</a>.
+tohoto objektu viz <a href="https://jsxgraph.org/docs/symbols/Curve.html">JSXGraph Reference</a>.
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -209,22 +209,22 @@ tohoto objektu viz <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Curve.
 In this example we had to change the bounding box of the board in order to accommodate the data. Otherwise not all points 
 will be visible.</p>
 <p>To draw a data plot we need first two lists of data. In our case we used two lists <code>x</code> and <code>y</code> and filled them with numbers. 
-But is not the only way how to obtain the data (e.g. see this <a href="https://jsxgraph.uni-bayreuth.de/wiki/index.php/Data_plot">example</a>).
-As last we had to set the type of curve using attribute <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Curve.html#curveType"><em>curveType</em></a>.
+But is not the only way how to obtain the data (e.g. see this <a href="https://jsxgraph.org/wiki/index.php/Data_plot">example</a>).
+As last we had to set the type of curve using attribute <a href="https://jsxgraph.org/docs/symbols/Curve.html#curveType"><em>curveType</em></a>.
 {/lang}</p>
 <p>{lang=SI}
 In this example we had to change the bounding box of the board in order to accommodate the data. Otherwise not all points 
 will be visible.</p>
 <p>To draw a data plot we need first two lists of data. In our case we used two lists <code>x</code> and <code>y</code> and filled them with numbers. 
-But is not the only way how to obtain the data (e.g. see this <a href="https://jsxgraph.uni-bayreuth.de/wiki/index.php/Data_plot">example</a>).
-As last we had to set the type of curve using attribute <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Curve.html#curveType"><em>curveType</em></a>.
+But is not the only way how to obtain the data (e.g. see this <a href="https://jsxgraph.org/wiki/index.php/Data_plot">example</a>).
+As last we had to set the type of curve using attribute <a href="https://jsxgraph.org/docs/symbols/Curve.html#curveType"><em>curveType</em></a>.
 {/lang}</p>
 <p>{lang=CZ}
 V tomto příkladu jsme především upravili nastavení nákresny, aby více odpovídala potřebám zobrazení daných dat. Kromě změny
 rozsahu souřadnic, aby byly vidět všechny body, jsme mimo jiné atributem <em>axis</em> s hodnotou <em>true</em> zajistili zobrazení souřadnicových os.</p>
 <p>Pro grafické zobrazení dat potřebujeme dva datové seznamy. V uvedeném příkladě jsou použity seznamy <code>x</code> a <code>y</code>, vyplněné čísly. 
-To ale není jediný způsob zadání dat (viz např. tento <a href="https://jsxgraph.uni-bayreuth.de/wiki/index.php/Data_plot">příklad</a>).</p>
-<p>Způsob zobrazení křivky je nastaven pomocí atributu <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Curve.html#curveType"><em>curveType</em></a>.
+To ale není jediný způsob zadání dat (viz např. tento <a href="https://jsxgraph.org/wiki/index.php/Data_plot">příklad</a>).</p>
+<p>Způsob zobrazení křivky je nastaven pomocí atributu <a href="https://jsxgraph.org/docs/symbols/Curve.html#curveType"><em>curveType</em></a>.
 {/lang}</p>
 
                     </main>
@@ -264,21 +264,6 @@ To ale není jediný způsob zadání dat (viz např. tento <a href="https://jsx
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

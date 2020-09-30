@@ -2,7 +2,7 @@
 ## Circles
 
 In JSXGraph we don't have only points and lines. In this section we will learn about circles. They can be constructed
-with different [methods](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Circle.html#method), here we will present how to
+with different [methods](https://jsxgraph.org/docs/symbols/JXG.Circle.html#method), here we will present how to
  create with two points and a point and a radius.
 Let us now look at the example.
 {/lang}
@@ -13,7 +13,7 @@ Let us now look at the example.
 ## Kružnice
 
 V JSXGraphu nemáme k dispozici jenom body a přímky. Jsou zde definovány ještě další objekty, se kterými se postupně seznámíme.
-Tato kapitola pojednává o kružnicích. Ty mohou být sestrojeny různými [metodami](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Circle.html#method).
+Tato kapitola pojednává o kružnicích. Ty mohou být sestrojeny různými [metodami](https://jsxgraph.org/docs/symbols/JXG.Circle.html#method).
 Zaměříme se na dvě z nich, konstrukci kružnice dané dvěma body a konstrukci kružnice dané bodem a poloměrem.
 Podívejme se na následující příklad:
 {/lang}
@@ -22,7 +22,7 @@ Podívejme se na následující příklad:
 ## Kreise
 
 In JSXGraph haben wir nicht nur Punkte und Geraden zur Verfügung. In diesem Kapitel lernen wir Kreise kennen.
-Sie können auf mehrere verschiedene [Weisen](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Circle.html#method) konstruiert werden.
+Sie können auf mehrere verschiedene [Weisen](https://jsxgraph.org/docs/symbols/JXG.Circle.html#method) konstruiert werden.
 Hier zeigen wir die Konstruktionen durch zwei Punkte und durch einen Punkt und einen Radius.
 Betrachten wir ein Beispiel.
 {/lang}

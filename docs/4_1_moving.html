@@ -212,7 +212,7 @@ First three lines are usual, but in the next line <code>var button1 = board.crea
 two new commands. </p>
 <p>Let us focus first on the second command: <code>q.visit([3, -2], 1800, 2)</code>. Until now we always 
 used only one method <em>create()</em> which we provided with parameters to create points, etc. on the board. Now we introduce 
-a new method for the point which is called <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.CoordsElement.html#visit"><em>visit()</em></a>.
+a new method for the point which is called <a href="https://jsxgraph.org/docs/symbols/JXG.CoordsElement.html#visit"><em>visit()</em></a>.
 Its syntax is <strong>visit(where, time, options)</strong> with three parameters,</p>
 <ul>
 <li><em>where</em> coordinates of our destination e.g. <code>[3, -2]</code>,</li>
@@ -237,7 +237,7 @@ Význam prvích tří řádků (za značkou &lt;script&gt;) už známe, další 
 dva nové příkazy. </p>
 <p>Pojďme se nejprve zaměřit na příkaz: <code>q.visit([3, -2], 1800, 2)</code>. Dosud jsme používali jenom metodu <em>create()</em>,
 kterou jsme doplnili náležitými parametry pro zobrazení bodů apod. na nákresnu. Nyní představujeme novou metodu
-pro nakládání s bodem, která se nazývá <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.CoordsElement.html#visit"><em>visit()</em></a>.
+pro nakládání s bodem, která se nazývá <a href="https://jsxgraph.org/docs/symbols/JXG.CoordsElement.html#visit"><em>visit()</em></a>.
 Její syntaxe je <strong>visit(místo, doba trvání, volby)</strong> s těmito třemi parametry:</p>
 <ul>
 <li><em>místo</em> (<em>where</em>) souřadnice cíle pohybu, např. <code>[3, -2]</code>,</li>
@@ -297,21 +297,6 @@ Tímto způsobem definujeme obě souřadnice cíle pohybu. Výsledným efektem j
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

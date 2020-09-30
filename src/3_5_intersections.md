@@ -2,7 +2,7 @@
 ## Intersections
 
 Sometimes we want to distinguish some intersections of our objects ( lines and circles). Usually we have to compute the
-intersections, but JSXGraph has very convenient objects [_Intersection_](https://jsxgraph.uni-bayreuth.de/docs/symbols/Intersection.html) 
+intersections, but JSXGraph has very convenient objects [_Intersection_](https://jsxgraph.org/docs/symbols/Intersection.html) 
 which we can use, to do just that. In order to create an intersection, we need to use two lines, two circles or mix of them.
 We cannot use other objects to create this object.
 {/lang}
@@ -16,7 +16,7 @@ We cannot use other objects to create this object.
 ## Průsečíky
 
 Pro určení průsečíků přímek a kružnic můžeme v JSXGraphu použít přímo objekt 
-[_Intersection_](https://jsxgraph.uni-bayreuth.de/docs/symbols/Intersection.html) (*průsečík*), nemusíme tyto průsečíky počítat. 
+[_Intersection_](https://jsxgraph.org/docs/symbols/Intersection.html) (*průsečík*), nemusíme tyto průsečíky počítat. 
 Pro jeho zadání potřebujeme dvě  přímky, dvě kružnice nebo jednu přímku a jednu kružnici. Jiné objekty pro určení jejich průsečíku
 nelze použít.
 

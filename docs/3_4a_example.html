@@ -251,17 +251,17 @@ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-4, 3, 4, -3]});
 <p>{lang=EN}
 There will be eleven points in the diagram, namely vertices of polygons, their centers and a midpoint. 
 To set their appearance we use two general options, as follows. First, to get the best possible positions 
-of their labels, with as few overlaps with image lines as possible, we use the <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Label.html#autoPosition"><code>autoPosition = true</code></a> option (it works in v1.1+):
+of their labels, with as few overlaps with image lines as possible, we use the <a href="https://jsxgraph.org/docs/symbols/Label.html#autoPosition"><code>autoPosition = true</code></a> option (it works in v1.1+):
 {/lang}</p>
 <p>{lang=CZ}
 Obrázek obsahuje celkem jedenáct bodů spolu s jejich popisky, konkrétně se jedná o vrcholy mnohoúhelníků, jejich středy a střed úsečky <em>AG</em>.
 Pro nastavení jejich zobrazení použijeme následující dvě obecné volby. Jednak, pro co nejlepší zobrazení popisků bodů, s minimem překryvů
-s čarami obrázku, použijeme volbu <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Label.html#autoPosition"><code>autoPosition = true</code></a> (dostupná ve verzi v1.1+):
+s čarami obrázku, použijeme volbu <a href="https://jsxgraph.org/docs/symbols/Label.html#autoPosition"><code>autoPosition = true</code></a> (dostupná ve verzi v1.1+):
 {/lang}</p>
 <p>{lang=SI}
 There will be eleven points in the diagram, namely vertices of polygons, their centers and a midpoint. 
 To set their appearance we use two general options, as follows. First, to get the best possible positions 
-of their labels, with as few overlaps with image lines as possible, we use the <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Label.html#autoPosition"><code>autoPosition = true</code></a> option (it works in v1.1+):
+of their labels, with as few overlaps with image lines as possible, we use the <a href="https://jsxgraph.org/docs/symbols/Label.html#autoPosition"><code>autoPosition = true</code></a> option (it works in v1.1+):
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:400px; height:300px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -558,21 +558,6 @@ The task solution code is now complete.
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

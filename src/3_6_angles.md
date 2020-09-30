@@ -1,7 +1,7 @@
 {lang=EN}
 ## Angles
 
-When we need to emphasise some angle in our construction, we can do this with object [_Angle_](https://jsxgraph.uni-bayreuth.de/docs/symbols/Angle.html). 
+When we need to emphasise some angle in our construction, we can do this with object [_Angle_](https://jsxgraph.org/docs/symbols/Angle.html). 
 As an input we need to provide three points $p1, p2, p3$ and the angle is drawn counterclockwise from $p1$ to $p3$ around $p2$. 
 Other combinations include two lines and a two direction (by +/- 1) or line and two coordinates.
 {/lang}
@@ -13,7 +13,7 @@ Other combinations include two lines and a two direction (by +/- 1) or line and 
 {lang=CZ}
 ## Úhly
 
-Pro zvýraznění konkrétních úhlů v konstrukci nabízí JSXGraph objekt [_Angle_](https://jsxgraph.uni-bayreuth.de/docs/symbols/Angle.html) (*Úhel*). 
+Pro zvýraznění konkrétních úhlů v konstrukci nabízí JSXGraph objekt [_Angle_](https://jsxgraph.org/docs/symbols/Angle.html) (*Úhel*). 
 Jako vstupní údaje je třeba zadat tři body $p1, p2, p3$, úhel je pak vykreslen v kladném smyslu (tj. proti směru pohybu hodinových ručiček)
 od bodu $p1$ (bod na počátečním rameni) do bodu $p3$ (bod na koncovém rameni), kolem $p2$ (vrchol). 
 

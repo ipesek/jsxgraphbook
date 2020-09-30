@@ -99,21 +99,21 @@ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-4, 3, 4, -3]});
 {lang=EN}
 There will be eleven points in the diagram, namely vertices of polygons, their centers and a midpoint. 
 To set their appearance we use two general options, as follows. First, to get the best possible positions 
-of their labels, with as few overlaps with image lines as possible, we use the [`autoPosition = true`](https://jsxgraph.uni-bayreuth.de/docs/symbols/Label.html#autoPosition) option (it works in v1.1+):
+of their labels, with as few overlaps with image lines as possible, we use the [`autoPosition = true`](https://jsxgraph.org/docs/symbols/Label.html#autoPosition) option (it works in v1.1+):
 {/lang}
 
 
 {lang=CZ}
 Obrázek obsahuje celkem jedenáct bodů spolu s jejich popisky, konkrétně se jedná o vrcholy mnohoúhelníků, jejich středy a střed úsečky *AG*.
 Pro nastavení jejich zobrazení použijeme následující dvě obecné volby. Jednak, pro co nejlepší zobrazení popisků bodů, s minimem překryvů
-s čarami obrázku, použijeme volbu [`autoPosition = true`](https://jsxgraph.uni-bayreuth.de/docs/symbols/Label.html#autoPosition) (dostupná ve verzi v1.1+):
+s čarami obrázku, použijeme volbu [`autoPosition = true`](https://jsxgraph.org/docs/symbols/Label.html#autoPosition) (dostupná ve verzi v1.1+):
 {/lang}
 
 
 {lang=SI}
 There will be eleven points in the diagram, namely vertices of polygons, their centers and a midpoint. 
 To set their appearance we use two general options, as follows. First, to get the best possible positions 
-of their labels, with as few overlaps with image lines as possible, we use the [`autoPosition = true`](https://jsxgraph.uni-bayreuth.de/docs/symbols/Label.html#autoPosition) option (it works in v1.1+):
+of their labels, with as few overlaps with image lines as possible, we use the [`autoPosition = true`](https://jsxgraph.org/docs/symbols/Label.html#autoPosition) option (it works in v1.1+):
 {/lang}
 
 ```JS

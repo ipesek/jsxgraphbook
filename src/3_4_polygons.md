@@ -2,7 +2,7 @@
 ## Polygons
 
 Polygons are very useful objects which can be used to construct a closed area with arbitrary many points (minimum is three).
-Polygons can be convex or concave, depending on the input points. We can again define different [attributes](https://jsxgraph.uni-bayreuth.de/docs/symbols/Polygon.html)
+Polygons can be convex or concave, depending on the input points. We can again define different [attributes](https://jsxgraph.org/docs/symbols/Polygon.html)
 to the object.
 
 Example:
@@ -18,7 +18,7 @@ Example:
 Mnohoúhelníky jsou v geometrii velmi frekventované objekty. Můžeme je chápat jako části roviny ohraničené uzavřenou
 lomenou čarou s libovolným počtem vrcholů (minimum jsou tři). Mnohoúhelník může být *konvexní* nebo *konkávní* (říkáme též *nekonvexní*),
 v závislosti na rozložení určujících bodů (vrcholů). Stejně jako jiným objektům i mnohoúhelníkům můžeme přiřadit různé
-[atributy](https://jsxgraph.uni-bayreuth.de/docs/symbols/Polygon.html).
+[atributy](https://jsxgraph.org/docs/symbols/Polygon.html).
 
 Příklad:
 {/lang}
@@ -29,7 +29,7 @@ Příklad:
 Polygone (Vielecke) sind sehr hilfreiche Objekte, die verwendet werden können um eine abgeschlossene
 Fläche mit beliebig vielen Punkten (aber minimal drei) anzulegen.
 Polygone können konvex sein, müssen es aber nicht sein. Dies ist abhängig von den definierenden Punkten.
-Auch hier können wir mit verschiedenen [Attributen](https://jsxgraph.uni-bayreuth.de/docs/symbols/Polygon.html)
+Auch hier können wir mit verschiedenen [Attributen](https://jsxgraph.org/docs/symbols/Polygon.html)
 das Aussehen und Verhalten ändern.
 
 Beispiel:
