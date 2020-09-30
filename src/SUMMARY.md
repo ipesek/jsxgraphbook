@@ -23,7 +23,7 @@
     - [{lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang} {lang=DE}Beispiel{/lang}](4_3a_example.md)
     - [{lang=EN}Transformations{/lang}{lang=SI}Transformations{/lang}{lang=CZ}Transformace{/lang} {lang=DE}Transformationen{/lang}](4_4_transformations.md)
 - [{lang=EN}Advanced topics{/lang}{lang=SI}Advanced topics{/lang}{lang=CZ}Pokročilá témata{/lang} {lang=DE}Fortgeschrittene Themen{/lang}](5_advanced.md)
-    - [{lang=EN}Adding images{/lang}{lang=SI}Adding images{/lang}{lang=CZ}Vkládání obrázků{/lang} {lang=DE}Bilder hinzufügen{/lang}](5_1_adding_images.md)
+    - [{lang=EN}Adding images{/lang}{lang=SI}Adding images{/lang}{lang=CZ}Vkládání obrázků{/lang} {lang=DE}Bilder einbinden{/lang}](5_1_adding_images.md)
     - [{lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Zachycení konstrukce jako obrázku{/lang} {lang=DE}Speichern einer Konstruktion als Bild{/lang}](5_1_screencapture.md)
     - [{lang=EN}JSXGraph options{/lang}{lang=SI}JSXGraph options{/lang}{lang=CZ}Volby JSXGraphu{/lang} {lang=DE}JSXGraph-Optionen{/lang}](5_2_jsxoptions.md)
     - [{lang=EN}Events{/lang}{lang=SI}Events{/lang}{lang=CZ}Události{/lang} {lang=DE}Ereignisbehandlung{/lang}](5_3_trigers.md)
