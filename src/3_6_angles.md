@@ -29,7 +29,7 @@ Wenn Winkel in unserer Konstruktion gekennzeichnet werden sollen, kann dies mit 
 Als Eingabe müssen wir drei Punkte $p1, p2, p3$ bereitstellen. Der Winkel wird dann gegen den Uhrzeigersinn
 von $p1$ nach $p3$ um $p2 markiert.
 
-Andere Variante sind, zwei Geraden und eine Richtung (mit +/-1) oder eine Gerade und zwei Koordinaten zu verwenden.
+Andere Möglichkeiten sind, zwei Geraden und eine Richtung (mit +/-1) oder eine Gerade und zwei Koordinaten zu verwenden.
 {/lang}
 
 ```JS

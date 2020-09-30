@@ -23,7 +23,7 @@ nelze použít.
 {/lang}
 
 {lang=DE}
-## Schnittpunke
+## Schnittpunkte
 
 Hin und wieder wollen wir einige Schnittpunkte unserer Objekte (Geraden und Kreise) auszeichnen.
 Normalerweise müssten wir die Schnittpunkte berechnen, aber JSXGraph stellt das sehr komfortable Objekt

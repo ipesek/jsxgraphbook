@@ -197,7 +197,7 @@ od bodu $p1$ (bod na počátečním rameni) do bodu $p3$ (bod na koncovém ramen
 <a href="https://jsxgraph.org/docs/symbols/Angle.html"><em>Angle</em></a> bewerkstelligt werden.
 Als Eingabe müssen wir drei Punkte $p1, p2, p3$ bereitstellen. Der Winkel wird dann gegen den Uhrzeigersinn
 von $p1$ nach $p3$ um $p2 markiert.</p>
-<p>Andere Variante sind, zwei Geraden und eine Richtung (mit +/-1) oder eine Gerade und zwei Koordinaten zu verwenden.
+<p>Andere Möglichkeiten sind, zwei Geraden und eine Richtung (mit +/-1) oder eine Gerade und zwei Koordinaten zu verwenden.
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -310,21 +310,6 @@ den gleichen Winkel kennzeichnen, aber unterschiedliche Eingabeparameter verwend
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         
