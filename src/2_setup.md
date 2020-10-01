@@ -42,10 +42,30 @@ Hier ist eine Vorlage für eine einfache HTML-Datei mit JSXGraph:
 ```HTML
 <!DOCTYPE HTML>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>JSXGraph template</title>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <head>
+    <meta charset="UTF-8">
+    <title>JSXGraph template</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraph.css" rel="stylesheet" type="text/css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraphcore.js" type="text/javascript" charset="UTF-8"></script>
+    <!-- The next line is optional: MathJax -->
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" id="MathJax-script" async></script>
+  </head>
+  <body>
+
+  <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
+
+  <script>
+    var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+  </script>
+
+  </body>
+</html>
+```
+
+<!--
+    OLD Mathjax:
+
         <script type="text/javascript" charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
 /jsxgraphcore.js"></script>
         <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js' async></script>
@@ -54,22 +74,9 @@ Hier ist eine Vorlage für eine einfache HTML-Datei mit JSXGraph:
               "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
                tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
                 config:["TeX-AMS_HTML.js"]});
-        </script>   
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css
-" />
-    </head>
-  <body>
+        </script>
+-->
 
-     <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
-
-     <script>
-        var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
-     </script>
-
-  </body>
-</html>
-
-```
 {lang=EN}
 _These scripts are all downloaded from the internet, therefore we need an constant internet connection._
 {/lang}
