@@ -81,7 +81,7 @@ Here we will deal only with the programming of the illustrative dynamic figure.
 {/lang}
 
 {lang=DE}
-Die Lösung der Aufgabe, d.h. den Beweis der Behauptung, sei dem Leser überlassen.
+Die Lösung der Aufgabe, d.h. der Beweis der Behauptung, sei dem Leser überlassen.
 Hier wollen wir uns nur mit der Programmierung der erläuternden dynamischen Zeichnung widmen.
 {/lang}
 
@@ -104,7 +104,7 @@ Nejprve musíme definovat parametry nákresny:
 First, we define the Bounding box as follows:
 {/lang}
 
-{lang=SI}
+{lang=DE}
 *Programmierung:*
 
 Zuerst geben wir die *bounding box* wie folgt an:
@@ -140,8 +140,8 @@ of their labels, with as few overlaps with image lines as possible, we use the [
 {lang=DE}
 In der Zeichnung sind elf Punkte enthalten, nämlich die Ecken der Polygone, deren Mittelpunke und ein Strecken-Mittelpunkt.
 Um ihr Aussehen festzulegen, setzen wir zwei Attribute für alle Elemente der Konstruktion.
-Wir setzen [`autoPosition = true`](https://jsxgraph.org/docs/symbols/Label.html#autoPosition) um das Überlappen von Beschriftungen und
-Strecken möglichst zu verhindern (ab Version 1.1.0).
+Wir setzen [`autoPosition = true`](https://jsxgraph.org/docs/symbols/Label.html#autoPosition). Damit wird das Überlappen von Beschriftungen und
+Strecken möglichst zu verhindert (ab Version 1.1.0).
 {/lang}
 
 

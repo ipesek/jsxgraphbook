@@ -56,14 +56,15 @@ Ukládání objektů do proměnných je dobrou a často nezbytnou praxí. V kons
 {/lang}
 {lang=DE}
 Sehen wir uns den Befehl `board.create('point',[-2,1]);` genauer an:
-Wir verwenden die Variable `board` und rufen eine Method *create* auf, die zwei Argumente hat.
+Wir verwenden die Variable `board` und rufen deren Methode *create* auf, die zwei Argumente hat.
 
 Das erste Argument ist der Typ des Objekts, das wir anlegen wollen. Das zweite Argument legt fest wo das Objekt sein soll.
 Wenn wir Koordinaten außerhalb der Zeichenfläche angeben, wird das Ojekt zwar existieren, aber nicht sichtbar sein.
 
-Die nächste Programmzeile `var q = board.create('point',[3,0]);` ist der vorhergehenden sehr ähnlich, mit einem wesentlichen Unterschied.
+Die nächste Programmzeile `var q = board.create('point',[3,0]);` ist der vorhergehenden sehr ähnlich - mit einem wesentlichen Unterschied.
 Wir starten die Zeile mit `var q = `. Damit speichern wir dieses Objekt in der Variablen *q*.
-Das ist bewährte und notwendige Praxis, denn in unseren Konstruktionen werden wir oft auf existierende Objekte
+Das ist bewährte und notwendige Praxis, denn in unseren Konstruktionen werden wir oft auf
+bereits existierende Objekte
 zurückgreifen und ihre gegenseitigen Abhängigkeiten festlegen.
 Dies wird auf den folgenden Seiten klarer werden.
 {/lang}

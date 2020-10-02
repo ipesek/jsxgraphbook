@@ -23,8 +23,8 @@ Podívejme se na následující příklad:
 
 In JSXGraph haben wir nicht nur Punkte und Geraden zur Verfügung. In diesem Kapitel lernen wir Kreise kennen.
 Sie können auf mehrere verschiedene [Weisen](https://jsxgraph.org/docs/symbols/JXG.Circle.html#method) konstruiert werden.
-Hier zeigen wir die Konstruktionen durch zwei Punkte und durch einen Punkt und einen Radius.
-Betrachten wir ein Beispiel.
+Hier zeigen wir die Konstruktionen durch zwei Punkte, sowie durch einen Punkt und einen Radius.
+Betrachten wir ein Beispiel:
 {/lang}
 
 
@@ -109,23 +109,26 @@ výplně a _fillOpacity_, kterým nastavíme neprůhlednost této plochy (kruhu)
 
 {lang=DE}
 Zuerst sehen wir, dass bei der Initialisierung der Zeichenfläche das neue Attribut `keepAspectRatio:true`
-verwendet wurde um JSXGraph mitzuteilen, dass wir das Verhältnis zwischen $x$- und $y$-Achse im HTML-Objekt gleich haben wollen.
+verwendet wurde, um JSXGraph mitzuteilen, dass wir das Verhältnis zwischen $x$- und $y$-Achse im HTML-Objekt gleich haben wollen.
 Dies ist notwendig, damit Kreise wie Kreise aussehen und nicht wie Ellipsen, falls das Verhältnis von Breite zu Höhe des HTML-Objektes
-nicht dem verhältnis von Breite zu Höhe der *bounding box* entspricht.
+nicht dem Verhältnis von Breite zu Höhe der *bounding box* entspricht.
 
 Nach dem Anlegen zweier Punkte konstruieren wir zwei Kreise.
-_Circle1_ wird erzeugt durch `var circle1 = board.create("circle",[p,q],{strokecolor:"red", strokeWidth:4});`.
-Wir sehen, dass hier ein Kreis durch Angabe zweier Punkte erzeugt wird, was die Standardmethode zur Kreiserzeugung ist.
-Dabei verwenden wir zwei weitere Attribute um die Farbe und Breite der Kreislinie zu setzen.
-Die Farbe wird in diesem Fall nicht im RGB-System angegeben sondern durch einen [Farbnamen](https://en.wikipedia.org/wiki/Web_colors).
+_circle1_ wird erzeugt durch `var circle1 = board.create("circle",[p,q],{strokecolor:"red", strokeWidth:4});`.
+Wir sehen, dass hier ein Kreis durch Angabe zweier Punkte erzeugt wird. Dies ist wahrscheinlich die Standardmethode zur Kreiserzeugung.
+Dabei verwenden wir zwei weitere Attribute mit denen wir die Farbe und Breite der Kreislinie setzen.
+Die Farbe wird in diesem Fall nicht im RGB-System angegeben, sondern durch einen [Farbnamen](https://en.wikipedia.org/wiki/Web_colors).
 
-_Circle2_ ist noch interessanter: `var circle2 = board.create("circle",["B",1.5],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`.
-Dieser Kreise wird mit der Punkt-Radius-Methode erzeugt. Wir geben diese Methode explizit als Attribut an.
+_circle2_ ist noch interessanter:
+
+`var circle2 = board.create("circle",["B",1.5],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`
+
+Dieser Kreis wird mit der Punkt-Radius-Methode erzeugt. Wir geben diese Methode explizit als Attribut an.
 Das ist zwar nicht unbedingt nötig, aber sicher ist sicher.
 Zudem - anstatt für den Mittelpunkt einen Variablennamen oder ein Koordinatenpaar anzugeben - verwenden wir den Namen des Punktes `"B"`,
 was sehr nützlich sein kann, falls die Konstruktion sehr viele Objekte enthält (und Objekte dynamisch erzeugt werden).
-Ausserdem verwenden wir zwei Attribute um die Kreisfläche zu färben: _fillColor_ legt die Füllfarbe fest und _fillOpacity_
-setzt die Durchsichtigkeit (Opacity) der Kreisfläche und nimmt Wert zwischen
+Ausserdem verwenden wir zwei Attribute zur Färbung der Kreisfläche: _fillColor_ legt die Füllfarbe fest und _fillOpacity_
+setzt die Durchsichtigkeit (Opacity) der Kreisfläche und nimmt Werte zwischen
 $0$ und $1$ an, wobei $1$ undurchsichtig bedeutet.
 {/lang}
 
