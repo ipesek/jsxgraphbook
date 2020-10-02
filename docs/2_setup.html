@@ -209,34 +209,39 @@ dem Resultat zufrieden sind.</p>
 {/lang}</p>
 <pre><code class="language-HTML">&lt;!DOCTYPE HTML&gt;
 &lt;html lang=&quot;en&quot;&gt;
-    &lt;head&gt;
-        &lt;meta charset=&quot;UTF-8&quot;&gt;
-        &lt;title&gt;JSXGraph template&lt;/title&gt;
-        &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
-        &lt;script type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot; src=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
-/jsxgraphcore.js&quot;&gt;&lt;/script&gt;
-        &lt;script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js' async&gt;&lt;/script&gt;
-        &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
-          MathJax.Hub.Config({
-              &quot;HTML-CSS&quot;: {availableFonts: [&quot;TeX&quot;],scale: 90},
-               tex2jax: {inlineMath: [[&quot;$&quot;,&quot;$&quot;]],  displayMath: [[&quot;$$&quot;,&quot;$$&quot;]],  processEscapes: true},
-                config:[&quot;TeX-AMS_HTML.js&quot;]});
-        &lt;/script&gt;   
-        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7/jsxgraph.css
-&quot; /&gt;
-    &lt;/head&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;JSXGraph template&lt;/title&gt;
+    &lt;meta content=&quot;text/html; charset=utf-8&quot; http-equiv=&quot;Content-Type&quot;&gt;
+    &lt;link href=&quot;https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraph.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+    &lt;script src=&quot;//cdnjs.cloudflare.com/ajax/libs/jsxgraph/1.1.0/jsxgraphcore.js&quot; type=&quot;text/javascript&quot; charset=&quot;UTF-8&quot;&gt;&lt;/script&gt;
+    &lt;!-- The next line is optional: MathJax --&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js&quot; id=&quot;MathJax-script&quot; async&gt;&lt;/script&gt;
+  &lt;/head&gt;
   &lt;body&gt;
 
-     &lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 
-     &lt;script&gt;
-        var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
-     &lt;/script&gt;
+  &lt;script&gt;
+    var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
+  &lt;/script&gt;
 
   &lt;/body&gt;
 &lt;/html&gt;
-
 </code></pre>
+<!--
+    OLD Mathjax:
+
+        <script type="text/javascript" charset="UTF-8" src="https://cdnjs.cloudflare.com/ajax/libs/jsxgraph/0.99.7
+/jsxgraphcore.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js' async></script>
+        <script type="text/x-mathjax-config">
+          MathJax.Hub.Config({
+              "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
+               tex2jax: {inlineMath: [["$","$"]],  displayMath: [["$$","$$"]],  processEscapes: true},
+                config:["TeX-AMS_HTML.js"]});
+        </script>
+-->
 <p>{lang=EN}
 <em>These scripts are all downloaded from the internet, therefore we need an constant internet connection.</em>
 {/lang}
@@ -287,6 +292,21 @@ dem Resultat zufrieden sind.</p>
 
         </div>
 
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
         
 
         
