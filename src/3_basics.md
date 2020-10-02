@@ -43,10 +43,10 @@ In this section we will cover how to create drawing board, objects and use them 
 Jede JSXGraph-Konstruktion setzt sich zusammen aus:
 * Zeichenfläche
 * Objekten (Punkten, Geraden, etc.)
-* Beziehungen zwischen Objekten (optional, falls wir Dynamik in der Konstruktion benötigen)
+* Beziehungen zwischen Objekten (nur falls wir Dynamik in der Konstruktion benötigen)
 * Ereignissen (events) (optional, falls zusätzliche Aktionen ausgelöst werden sollen)
 
-In thiesem Kapitel werden wir kennenlernen, wie dieZeichenfläche angelegt wird und wie sie für einfache
+In diesem Kapitel werden wir kennenlernen, wie eine Zeichenfläche angelegt wird und wie sie für einfache
 Beispiele genutzt werden kann.
 
 {/lang}

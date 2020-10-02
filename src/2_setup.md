@@ -21,19 +21,19 @@ měnit, je pasáž mezi tagy _\<script\>, \</script\>_.
 Dokud nejsme spokojeni s podobou appletu, opakujeme následující akce: editace souboru, jeho uložení a prohlédnutí prohlížečem (zobrazení stránky v prohlížeči aktualizujeme stisknutím _(F5)_).
 {/lang}
 {lang=SI}
-When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server, 
+When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server,
 we just need to save it and refresh the page _(F5)_ in browser. 
 Very simple template for building and testing is below
 {/lang}
 {lang=DE}
 ## Vorbereitung
-Eine JSXGraph-Konstrunktion kann am bequemsten lokal mit einem Text-Editor auf einem Computer erstellt werden.
+Eine JSXGraph-Konstruktion kann am bequemsten lokal mit einem Text-Editor auf einem Computer erstellt werden.
 Dazu legen wir eine leere HTML-Datei an (z.B. `example.htm`) und kopieren die untenstehende Vorlage in die Datei.
 Danach können wir mit dem Konstruieren beginnen.
 Nachdem wir die Datei gespeichert haben, können wir sie
-in einem Web-Browser unserer Wahl (Firefox, Chrome, etc) öffnen.
+in einem Web-Browser unserer Wahl (Firefox, Chrome, etc) ansehen.
 
-Dieser Prozess kann beliebig wiederholt werden: Datei bearbeiten, speichern und im Browser aktualisieren (_(F5)_ im Web-Browser), bis wir mit
+Dieser Prozess kann beliebig wiederholt werden: Datei bearbeiten, speichern und im Browser aktualisieren (_(F5)_ im Web-Browser), so lange bis wir mit
 dem Resultat zufrieden sind.
 
 Hier ist eine Vorlage für eine einfache HTML-Datei mit JSXGraph:
@@ -87,5 +87,5 @@ _Všechny použité skripty jsou nahrávány z internetu, proto je třeba mít t
 _These scripts are all downloaded from the internet, therefore we need an constant internet connection._
 {/lang}
 {lang=DE}
-_Diese Programme werden alle vom Internet heruntergeladen, deshalb benötigen wir eine Internetverbindung._
+_Diese Zusatzdateien werden alle aus dem Internet heruntergeladen, deshalb benötigen wir eine Internetverbindung._
 {/lang}

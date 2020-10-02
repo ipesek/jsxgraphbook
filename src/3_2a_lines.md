@@ -19,9 +19,9 @@ jejím určujícím bodům přiřazeny.
 
 {lang=DE}
 ## Geraden erzeugen
-Geraden sind der nächste Objekttype, den wir kennenlernen.
+*Geraden* sind der nächste Objekttyp, den wir kennenlernen.
 Eine Gerade wird durch zwei Punkte festgelegt.
-Hier ist ein Beispiel einer Zeichenfläche mit zwei Geraden.
+Hier ist ein Beispiel einer Zeichenfläche mit zwei Geraden:
 {/lang}
 
 ```JS
@@ -84,14 +84,14 @@ _Poznámka: V Javascriptu je seznam uváděn v hranatých závorkách **[ ]**._
 {/lang}
 
 {lang=DE}
-Durch die Programmzeile `var line1 = board.create("line",[[-3,1],[3,-1]]);` wird die Gerade $line1$ durch die zwei Punkte `[-3,1]` and `[3,-1]` erzeugt.
+Durch die Programmzeile `var line1 = board.create("line",[[-3,1],[3,-1]]);` wird die Gerade `line1` durch die zwei Punkte `[-3,1]` and `[3,-1]` erzeugt.
 Für jeden der beiden Punkte haben wir $x$- und $y$-Koordinate in der Form `[x, y]` angegeben.
-Da wir für die Gerade eine Liste mit zwei Punkten benötigen, sind beide Koordinatenpaare wiederum in eckige Klammern eingeschlossen, d.h.
-die Liste der beiden Punkte wird mit `[[-3,1],[3,-1]]` angegeben.
+Da wir für die Gerade eine Liste mit zwei Punkten benötigen, sind beide Koordinatenpaare wiederum in eckige Klammern eingeschlossen. Kurz gesagt,
+die Liste der Koordinaten der beiden Punkte wird mit `[[-3,1],[3,-1]]` angegeben.
 
-Für die zweite Gerade $line2$ legen wir zuerst zwei Punkte $p$ und $q$ an und verwenden sie mittels `[p,q]` um die Gerade $line2$ festzulegen.
+Für die zweite Gerade `line2` legen wir zuerst zwei Punkte $p$ und $q$ an und verwenden sie mittels `[p,q]` um die Gerade `line2` festzulegen.
 Hier sehen wir bereits, warum es nützlich ist, Objekte in Variablen abzuspeichern. Wir könnten nun zum Beispiel eine dritte Gerade anlegen,
-die ebenfalls furch $p$ und $q$ verläuft, ohne uns sorgen zu müssen, ob die Koordinaten korrekt sind.
+die ebenfalls durch $p$ und $q$ verläuft, ohne uns sorgen zu müssen, ob die Koordinaten korrekt sind.
 
 _Beachte: In Javascript werden Listen mittel eckiger Klammern **[ ]** angegeben._
 {/lang}

@@ -17,7 +17,7 @@ Body jsou základními a nejjednoduššími objekty v JSXGraph. V tomto příkla
 ## Punkte erzeugen
 
 Punkte gehören zu den grundlegensten Objekten in JSXGraph.
-Wir legen alle Objekte auf die Zeichenfläche (genannt "board"), deshalb verwenden wir für alle Objekte, die auf der dieser Zeichenfläche
+Wir legen alle Objekte auf die Zeichenfläche (genannt "board"), deshalb verwenden wir für alle Objekte, die auf dieser Zeichenfläche
 entstehen sollen, dieselbe Variable `board`.
 {/lang}
 ```JS
@@ -58,7 +58,7 @@ Ukládání objektů do proměnných je dobrou a často nezbytnou praxí. V kons
 Sehen wir uns den Befehl `board.create('point',[-2,1]);` genauer an:
 Wir verwenden die Variable `board` und rufen eine Method *create* auf, die zwei Argumente hat.
 
-Das erste Argument ist der Type des Objekts, das wir anlegen wollen, und das zweite Argument, legt fest wo das Objekt sein soll.
+Das erste Argument ist der Typ des Objekts, das wir anlegen wollen. Das zweite Argument legt fest wo das Objekt sein soll.
 Wenn wir Koordinaten außerhalb der Zeichenfläche angeben, wird das Ojekt zwar existieren, aber nicht sichtbar sein.
 
 Die nächste Programmzeile `var q = board.create('point',[3,0]);` ist der vorhergehenden sehr ähnlich, mit einem wesentlichen Unterschied.
