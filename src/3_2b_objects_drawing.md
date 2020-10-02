@@ -38,7 +38,7 @@ Podívejme se na následující příklad:
 JSXGraph-Objekte besitzen Attribute, durch die sie beschrieben werden.
 Einige dieser Attribute stehen in allen Objekte zur Verfügung (z.B. `color`, `name`, etc.), andere Attribute gibt es nur
 bei speziellen Objekten.
-Zum Beispiel besitzen Punkte das Attribut `shape`, Geraden dagegen besitzen u.a. Attribute, die festlegen, ob die Gerade über die definierenden Punkte hinausgezeichnet wird oder nicht (Attribute `straightForst`und `straightLast`).
+Zum Beispiel besitzen Punkte das Attribut `shape`, Geraden dagegen besitzen u.a. Attribute, die festlegen, ob die Gerade über die definierenden Punkte hinausgezeichnet wird oder nicht (Attribute `straightFirst`und `straightLast`).
 Siehe hierzu auch die [Dokumentation zu Geraden](https://jsxgraph.org/docs/symbols/Line.html).
 
 In der umfangreichen [JSXGraph API Dokumentation](https://jsxgraph.org/docs/index.html) werden
