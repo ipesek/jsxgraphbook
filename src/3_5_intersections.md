@@ -25,8 +25,8 @@ nelze použít.
 {lang=DE}
 ## Schnittpunkte
 
-Hin und wieder wollen wir einige Schnittpunkte unserer Objekte (Geraden und Kreise) auszeichnen.
-Normalerweise müssten wir die Schnittpunkte berechnen, aber JSXGraph stellt das sehr komfortable Objekt
+Hin und wieder wollen wir einige Schnittpunkte unserer Objekte (Geraden und Kreise) anzeigen.
+Normalerweise müssten wir die Schnittpunkte berechnen, aber JSXGraph stellt das recht komfortable Objekt
 [_Intersection_](https://jsxgraph.org/docs/symbols/Intersection.html) dafür bereit.
 Um einen Schnittpunkt zu erzeugen, benötigen wir zwei Geraden / oder Strecken, zwei Kreise oder eine Mischung der beiden.
 Andere Objekte können dafür nicht verwendet werden.
@@ -95,8 +95,10 @@ procházející získanými průsečíky. Z toho je vidět, jak můžeme nově z
 {lang=DE}
 Nachdem wir zwei Punkte und zwei Kreise angelegt haben, können wir zwei _intersection_-Objekte erzeugen.
 
-In `var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});` haben wir als dritte Argument
-`0` angegeben. Das ist von Bedeutung, wenn durch den Schnitt zweier Objekte zwei Schnittpunkte existieren und wir festlegen wollen,
-welchen wir verwenden (durch Angabe der Werte $0$ und $1$).
-Beachte, in der Angabe `{name:'I_2'})` wurde ein Unterstrich verwendet.
-Das ist [$LATEX$](https://www.mathjax.org/)-Notation und kann bei Bezeichner eingestzt werden um schöne Mathematik-Formelschreibweise zu erzeugen.
+In `var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});` haben wir als drittes
+Argument `0` angegeben. Das ist von Bedeutung, wenn durch den Schnitt zweier Objekte zwei Schnittpunkte
+existieren und wir festlegen wollen,
+welchen der beiden wir verwenden (durch Angabe der Werte $0$ und $1$).
+
+Beachte: in der Angabe `{name:'I_2'})` wurde ein Unterstrich verwendet.
+Das ist [$LaTeX$](https://www.mathjax.org/)-Notation und kann bei Bezeichner eingesetzt werden um schöne Mathematik-Formelschreibweise zu erzeugen.
