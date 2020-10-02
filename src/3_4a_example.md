@@ -81,7 +81,7 @@ Here we will deal only with the programming of the illustrative dynamic figure.
 {/lang}
 
 {lang=DE}
-Die Lösung der Aufgabe, d.h. den Beweis der Behauptung, sei dem Leser überlassen.
+Die Lösung der Aufgabe, d.h. der Beweis der Behauptung, sei dem Leser überlassen.
 Hier wollen wir uns nur mit der Programmierung der erläuternden dynamischen Zeichnung widmen.
 {/lang}
 
@@ -104,7 +104,7 @@ Nejprve musíme definovat parametry nákresny:
 First, we define the Bounding box as follows:
 {/lang}
 
-{lang=SI}
+{lang=DE}
 *Programmierung:*
 
 Zuerst geben wir die *bounding box* wie folgt an:
@@ -132,7 +132,7 @@ s čarami obrázku, použijeme volbu [`autoPosition = true`](https://jsxgraph.or
 
 
 {lang=SI}
-There will be eleven points in the diagram, namely vertices of polygons, their centers and a midpoint. 
+There will be eleven points in the diagram, namely vertices of polygons, their centers and a midpoint.
 To set their appearance we use two general options, as follows. First, to get the best possible positions 
 of their labels, with as few overlaps with image lines as possible, we use the [`autoPosition = true`](https://jsxgraph.org/docs/symbols/Label.html#autoPosition) option (it works in v1.1+):
 {/lang}
@@ -140,8 +140,8 @@ of their labels, with as few overlaps with image lines as possible, we use the [
 {lang=DE}
 In der Zeichnung sind elf Punkte enthalten, nämlich die Ecken der Polygone, deren Mittelpunke und ein Strecken-Mittelpunkt.
 Um ihr Aussehen festzulegen, setzen wir zwei Attribute für alle Elemente der Konstruktion.
-Wir setzen [`autoPosition = true`](https://jsxgraph.org/docs/symbols/Label.html#autoPosition) um das Überlappen von Beschriftungen und
-Strecken möglichst zu verhindern (ab Version 1.1.0).
+Wir setzen [`autoPosition = true`](https://jsxgraph.org/docs/symbols/Label.html#autoPosition). Damit wird das Überlappen von Beschriftungen und
+Strecken möglichst zu verhindert (ab Version 1.1.0).
 {/lang}
 
 
@@ -166,7 +166,7 @@ Then, we set the basic point size to 1:
 {/lang}
 
 {lang=DE}
-Ausserdem setzen wir die Standardgröße von Punkte auf den Wert 1:
+Ausserdem setzen wir die Standardgröße der Punkte auf den Wert 1:
 {/lang}
 
 ```JS
@@ -234,7 +234,7 @@ we create the desired hexagon:
 {/lang}
 
 {lang=CZ}
-Poté použijeme tyto body jako vstupní parametry objektu [regularpolygon](https://jsxgraph.org/docs/symbols/RegularPolygon.html) pro vytvoření 
+Poté použijeme tyto body jako vstupní parametry objektu [regularpolygon](https://jsxgraph.org/docs/symbols/RegularPolygon.html) pro vytvoření
 požadovaného šestiúhelníku:
 {/lang}
 
@@ -245,7 +245,7 @@ we create the desired hexagon:
 
 {lang=DE}
 Wir verwenden nun diese Punkte als Eingabeparameter für das [regularpolygon](https://jsxgraph.org/docs/symbols/RegularPolygon.html)-Objekt,
-um das gewünschte Sechseck anzulegen:  
+um das gewünschte reguläre Sechseck anzulegen:  
 {/lang}
 
 
@@ -464,7 +464,7 @@ we can enter the code to display the size of the respective angle:
 
 {lang=DE}
 Falls die symbolische Kennzeichnung des rechten Winkels noch nicht deutlich genug ist,
-können wir noch den Programmcode eingeben um den Wert des Winkels auszugeben:
+können wir noch den Wert des Winkels auszugeben:
 {/lang}
 
 ```JS

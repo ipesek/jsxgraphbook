@@ -19,9 +19,9 @@ JSXGraph poskytuje pohodlný způsob zobrazování grafů funkcí, např. sinu, 
 {lang=DE}
 ## Funktionsgraphen
 
-In vielen Konstruktionen benötigen wir Graphen von mathematische Funktionen, wie z.B. sin, cos, Polynome oder andere bekannte Funktionen.
-JSXgrph stellt eine komfortable Möglichkeit bereit, derartige Funktionen zu zeichnen.
-Wollen wir uns ein Beispiel ansehen.
+In vielen Konstruktionen benötigen wir Graphen von mathematische Funktionen, wie z.B. $\sin$, $\cos$, Polynome oder andere bekannte Funktionen.
+JSXGraph stellt eine komfortable Möglichkeit bereit, derartige Funktionen zu zeichnen.
+Wollen wir uns ein Beispiel ansehen:
 {/lang}
 
 ```JS
@@ -122,10 +122,12 @@ Poznámka: Pro funkci _sinus_ byla použita knihovna [Javascript Math](https://d
 
 {lang=DE}
 In diesem Beispiel wurde zuerst die Größe des `div`-Elementes durch Setzen der Höhe und Breite so verändert, dass es quadratisch ist.
-Denn wir wollten, dass die Funktionsgraphen in der richtigen Proportion gangezeigt werden (eine andere Möglichkeit wäre,
-keepAspectRatio_ in `initBoard()` zu verwenden). Dann werden zwei Funktionen gezeichnet.
+Denn wir wollen, dass die Funktionsgraphen im richtigen Verhältnis angezeigt werden
+(eine andere Möglichkeit wäre,
+_keepAspectRatio_ in `initBoard()` zu verwenden).
 
-Um $\sin (x)$ zu zeichnen, verwenden wir _functiongraph_ als Objekt
+Danach werden zwei Funktionen gezeichnet:
+Um $\sin (x)$ zu zeichnen, verwenden wir _functiongraph_ als Objekttyp
 `var graph1 = board.create('functiongraph', `.  
 Was danach folgt, ist neu.
 Betrachten wir den Ausdruck `[function(x){return Math.sin(x);},-Math.PI,Math.PI]` genauer.
@@ -134,21 +136,22 @@ dass wir eine Funktion in einem gewissen Intervall zeichnen wollen.
 Deshalb müssen wir nun die Funktion angeben, die gezeichnet werden soll. Dies geschieht durch
 `function(x){return Math.sin(x);}`.
 
-Hier nützen wir das JavaScript-Konzept *anonyme Funktion* durch Angabe von `function(x)` mit einem Parameter `x`.
+Hier nützen wir das JavaScript-Konzept einer *anonymen Funktion* durch Angabe von `function(x)` mit einem Parameter `x`.
 Dieser wird von JSXGraph verwendet, um `x`-Werte aus dem Intervall zu übergeben, das wir mit dem zweiten und dritten
 Element der Liste spezifizieren.
-In unsererm Fall sind die Intervallgrenzen daher `-Math.PI, Math.PI`.
+In unserem Fall sind die Intervallgrenzen `-Math.PI, Math.PI`.
 Nun haben wir noch die JavaScript-Funktion zu definieren, die jeweils zu einem
 gegebenem $x$ einen Wert (die $y$-Koordinate) zurückgibt.
-Dies geschieht durch `{return Math.sin(x);}`. Wir verwenden den reservierten Ausdruck `return` gefolgt durch eine Funktion, in unserem Fall
+Dies geschieht durch `{return Math.sin(x);}`. Wir verwenden den reservierten Ausdruck `return` gefolgt durch einen Funktionsausdruck, in unserem Fall
 `Math.sin(x)`. Der Ausdruck wird durch `;}` beendet.
 
 Im zweiten Funktionsgraph _graph2_ zeichnen wir die quadratische Funktion `{return x*x-2;}` im Intervall `-3, 3`. Zudem
-verwenden wir Attribute, die wir aber bereits aus den vorhergehenden Kapiteln kennen.
+verwenden wir wieder Attribute, die wir aber bereits alle aus den vorhergehenden Kapiteln kennen.
 
 Beachte: Für die _Sinus_-Funktion verwenden wir das JavaScript [Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)-Objekt.
 
-Eine Alternative ist, den Funktionsterm als String in der Form
+Da die Verwendung einer JavaScript-Funktion `Math.sin()`nicht besonders komfortabel ist,
+gibt es die Alternative, den Funktionsterm als String in der Form
 `['sin(x)',-Math.PI,Math.PI]` anzugeben. Dann wird die JSXGraph-eigene Sprache *JessieCode* verwendet (siehe das Kapitel zu JessieCode),
 die die übliche Mathematik-Schreibweise "versteht". Ein anderes Beispiel wäre `['x^3',-5,5]` als Alternative zu
 `[function(x){return x*x*x;},-5,5]`.

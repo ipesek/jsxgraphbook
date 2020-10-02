@@ -27,9 +27,9 @@ Dalšími možnostmi zadání vstupních údajů pro zobrazení úhlu jsou *dvě
 Wenn Winkel in unserer Konstruktion gekennzeichnet werden sollen, kann dies mit dem Objekt
 [_Angle_](https://jsxgraph.org/docs/symbols/Angle.html) bewerkstelligt werden.
 Als Eingabe müssen wir drei Punkte $p1, p2, p3$ bereitstellen. Der Winkel wird dann gegen den Uhrzeigersinn
-von $p1$ nach $p3$ um $p2 markiert.
+von $p1$ nach $p3$ um $p2$ markiert.
 
-Andere Möglichkeiten sind, zwei Geraden und eine Richtung (mit +/-1) oder eine Gerade und zwei Koordinaten zu verwenden.
+Andere Möglichkeiten zur Winkelauszeichnung sind, zwei Geraden und zwei Richtungen (mit +/-1) oder eine Gerade und zwei Koordinaten zu verwenden.
 {/lang}
 
 ```JS
@@ -117,7 +117,7 @@ Der erste Winkel wird mittels
 `var angle = board.create('angle',[r, p, q], {radius:2});` unter Verwendung der drei Punkte gezeichnet.
 Wir erinnern uns, bei der Definition des Winkels durch drei Punkte werden diese gegen den Uhrzeigersinn angegeben, wobei der
 Winkel um den zweiten Punkt verläuft.
-Zusätzlich setzen wir das Attribut _radius_ auf $2$, was JSXGraph anweist, wie groß der Kreisbogen eines Winkels sein soll.
+Zusätzlich setzen wir das Attribut _radius_ auf $2$, was JSXGraph anweist, wie groß der Kreisbogen eines Winkels gezeichnet werden soll.
 
 Der zweite Winkel $\beta$ wird durch Angabe zweier Geraden und zweier Richtungen (+/- 1) angelegt:
 `var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});`.

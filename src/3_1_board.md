@@ -88,26 +88,26 @@ Dies geschieht, indem wir folgendes `div`-Element mit einigen Eigenschaften anle
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 ```
 Wenn wir diese Zeile genauer betrachten, sehen wir ein paar Besonderheiten.
-Besonders wichtig ist für unsere Zwecke das Attribut `id="jxgbox"`, das wir nützen um das HTML mit JSXGraph zu verbinden.
+Besonders wichtig ist für unsere Zwecke das Attribut `id="jxgbox"`, das wir nützen um die HTML-Seite mit JSXGraph zu verknüpfen.
 Als nächstes folgt `class="jxgbox"`, womit wir festlegen, wie die Zeichenfläche aussieht.
-Das ist bereits ein Thema für Fortgeschrittenere und wird später diksutiert werden.
+Das ist bereits ein Thema für Fortgeschrittenere und wird später diskutiert werden.
 Das letzte Attribut ist `style="width:500px; height:200px;"`, das die Größe der Zeichenfläche festlegt.  
 _Wichtig: damit legen wir nicht unser Koordinatensystem fest, sondern lediglich die Größe unserer Zeichenfläche._
 
-Wenn wir nun so unsere Zeichenfläche in HTML festgelegt haben, können wir sie mit JSXGraph verbinden.
+Wenn wir nun so unsere Zeichenfläche in HTML festgelegt haben, können wir sie mit JSXGraph verknüpfen.
 Dies machen wir mit der folgenden Zeile, die innerhalb eines `<script></script>`-Befehls stehen muß:
 
 ```JS
 var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
 ```
 
-In dieser Zeile wird die Funktion die Funktion `initBoard` aufgerufen, die ein JSXGraph-Zeichenfläche angelegt.
+In dieser Zeile wird die Funktion initBoard` aufgerufen, die eine JSXGraph-Zeichenfläche anlegt.
 Diese Funktion erwartet mindestens ein Argument, nämlich die *id* des
 HTML-Elements `div`, die in unserem Beispiel den Wert ``jxgbox`` hat.
-Mit dem zweiten Argument ``{boundingbox: [-5, 2, 5, -2]}`` wird in JSXGraph das Koordinatensystem unserer Kornstruktion festgelegt.
+Mit dem zweiten Argument ``{boundingbox: [-5, 2, 5, -2]}`` wird in JSXGraph das Koordinatensystem unserer Konstruktion festgelegt.
 
-Betrachtet wir beide Zeilen, so erkennen wir zwei Größeneinheiten.
+Vergleichen wir beide Zeilen, so erkennen wir zwei Größeneinheiten.
 Mit `div` wurde eine Zeichenfläche angelegt, deren Größe in Pixel angegeben ist.
 Mit `initBoard` haben wir zudem ein Koordinatensystem in unserer Zeichenfläche angelegt, das wir nutzen werden um
-Objekte auf der Zeichnfläche zu positionieren.
+Objekte auf der Zeichenfläche zu positionieren.
 {/lang}

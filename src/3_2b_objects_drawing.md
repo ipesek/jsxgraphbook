@@ -38,8 +38,8 @@ Podívejme se na následující příklad:
 JSXGraph-Objekte besitzen Attribute, durch die sie beschrieben werden.
 Einige dieser Attribute stehen in allen Objekte zur Verfügung (z.B. `color`, `name`, etc.), andere Attribute gibt es nur
 bei speziellen Objekten.
-Zum Beispiel besitzen Punkte das Attribut `shape`, Geraden dagegen besitzen zum Beispiel Attribute, die festlegen, ob die Gerade über die definierenden Punkte hinuasgezeichnet wird oder nicht (Attribute `straightForst`und `straightLast`).
-Siehe hierzu auch [here](https://jsxgraph.org/docs/symbols/Line.html).
+Zum Beispiel besitzen Punkte das Attribut `shape`, Geraden dagegen besitzen u.a. Attribute, die festlegen, ob die Gerade über die definierenden Punkte hinausgezeichnet wird oder nicht (Attribute `straightForst`und `straightLast`).
+Siehe hierzu auch die [Dokumentation zu Geraden](https://jsxgraph.org/docs/symbols/Line.html).
 
 In der umfangreichen [JSXGraph API Dokumentation](https://jsxgraph.org/docs/index.html) werden
 alle Objekte und ihre Attribute detailliert beschrieben.
@@ -187,38 +187,38 @@ __Dokumentace je velkým zdrojem pro poznání všech atributů, které můžeme
 {/lang}
 
 {lang=DE}
-In diesem Beispiel wurden einige Attribute zu den beiden Punkten und der Geraden hinzugefügt.
+In diesem Beispiel werden verschiedene Attribute zu den beiden Punkten und der Geraden hinzugefügt.
 In allen drei Beispielen legen wir die Attribute durch eine Liste, die durch
 geschweifte Klammern `{ }` eingeschlossen ist, fest.
-Für jedes Attribut wird der Name und ein Wert angegeben. Wie bereits erwähnt, haben Objekte sowohl spezifische
+Für jedes Attribut wird sein Name und ein Wert angegeben. Wie bereits erwähnt, haben Objekte sowohl spezifische
 Attribute als auch allgemeinere Objekte, die von anderen Objekten vererbt sind.
 
 In `var p = board.create('point',[-2,-1],{name:"first", size:5, color:"FF0000"});` ist das erste Attribut _name_,
 das vom Element [GeometryElement](https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#name)
 abgeleitet ist.
 Das Attribut _color_ ist ebenfalls von diesem Element abgeleitet und daher in nahezu allen Elementen verfügbar.
-Hingegen das Attribut [_size_](https://jsxgraph.org/docs/symbols/Point.html#size) ist ausschließlich im Objekt
+Das Attribut [_size_](https://jsxgraph.org/docs/symbols/Point.html#size) hingegen ist ausschließlich im Objekt
 Punkt verfügbar.
 
-Aus der Dokumentation: _Size of a point, either in pixel or user coordinates. Means radius resp. half the
+Aus der Dokumentation zum Attribute `size`: _Size of a point, either in pixel or user coordinates. Means radius resp. half the
 width of a point (depending on the face)._
 
 Dem zweiten Punkt im obigen Beispiel werden die interessanten Attribute
 `var q = board.create('point',[3,1],{name:"last",fixed:true, face:"[]"});` zugewiesen.
-Das Attribut _fixed_ legt fest ob das Objekt vom Betrachter bewegt (gezogen) werden kann. Der *Standardwert* für dieses Attribut ist `false`, was heißt, dass we alle Objekte über die Zeichenfläche ziehen können, für die dies nicht explizit
+Das Attribut _fixed_ legt fest, ob das Objekt vom Betrachter bewegt (gezogen) werden kann. Der *Standardwert* für dieses Attribut ist `false`, was heißt, dass wir alle Objekte über die Zeichenfläche ziehen können, für die dies nicht explizit
 mit `fixed:true` unterbunden ist.
 
 Wir habe gerade erstmals den *Standardwert* (*default value*) eines Attributs erwähnt. Dieser wird verwendet,
 wenn nicht explizit ein anderer Wert gesetzt wird. In der Dokumentation wird für jedes Attribut der
 zugehörige *default value* aufgelistet.
 
-Das zweite neue Attribut ist [_face_](https://jsxgraph.org/docs/symbols/Point.html#face)
+Das zweite neue Attribut ist [_face_](https://jsxgraph.org/docs/symbols/Point.html#face),
 mit dem wir eine der möglichen Punktformen gewählt hatten.
 
 Bei der Angabe `var line2 = board.create("line",[p,q],{straightLast:false, dash:"4" });` setzen wir zwei Attribute.
 Mit dem ersten Attribut wird bestimmt, dass die "Gerade" am zweiten Punkt endet (_straightLast_).
-Das zweite Attribut legt fest, wie die Gerade gezeichnet wird (_dash_).
-
+Also wird eine Halbgerade zu sehen sein.
+Das zweite Attribut legt die Linienform der Geraden fest (_dash_): durchgezogen, gestrichelt, etc.
 Wie zuvor kann _dash_  verschiedene Werte annehmen, in der [Dokumentation für das dash-Attribut](https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#dash) sind die möglichen Werte aufgelistet.
 
 Alle Objekte haben Attribute, auch das board-Objekt hat
@@ -226,10 +226,9 @@ Alle Objekte haben Attribute, auch das board-Objekt hat
 Eines dieser Attribute ist _boundingbox_, das bereits im ersten Beispiel verwendet wurde, aber über das noch nichts weiter gesagt wurde.
 
 Wenn zum Beispiel die Navigations-Icons unten rechts ausgeblendet werden sollen, so kann
-das Attribut _showNavigation_ auf `false? gesetzt werden. Versuchen wir es!
+das Board-Attribut _showNavigation_ auf `false` gesetzt werden. Versuchen wir es!
 
 _*Wir sehen, dass wir mit Attributen Feineinstellungen zum Verhalten und Aussehen unserer Konstruktion vornehmen können.*_
 
-__Die Dokumentation ist eine hervorragende Quelle um Attribute zu entdecken. Zudem enthält sie viele Beispiele
-wie Attribute verwendet werden.__
+__[Die Dokumentation](https://jsxgraph.org/docs/) ist eine hervorragende Quelle um Attribute zu entdecken. Zudem enthält sie viele Beispiele, wie Attribute verwendet werden.__
 {/lang}

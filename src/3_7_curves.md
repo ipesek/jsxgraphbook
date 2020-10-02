@@ -24,7 +24,7 @@ tohoto objektu viz [JSXGraph Reference](https://jsxgraph.org/docs/symbols/Curve.
 
 [Kurven](https://jsxgraph.org/docs/symbols/Curve.html) in JSXGraph umfassen nicht nur Graphen von Funktionstermen
 oder Polynomen, sondern auch parametrische Kurven, Polarkurven oder Datenplots.
-In unserem Beispiel zeigen wir wie Datenplots erzeugt werden können, für die anderen Kurventypen verweisen wir auf die
+In unserem Beispiel zeigen wir wie Datenplots erzeugt werden können. Für die anderen Kurventypen verweisen wir auf die
 API-Dokumentation.
 {/lang}
 
@@ -75,9 +75,9 @@ Způsob zobrazení křivky je nastaven pomocí atributu [_curveType_](https://js
 {/lang}
 
 {lang=DE}
-In diesem Beispiel mussten wir die bounding box anpassen, damit alle Daten sichtbar sind.
+In diesem Beispiel passen wir die bounding box an, damit alle Daten sichtbar sind.
 
-Um einen Datenplot zu erstellen benötigen wir zwei Listen für die $x$- und $y$-Koordinaten der
+Um einen Datenplot zu erstellen, benötigen wir zwei Listen für die $x$- und $y$-Koordinaten der
 Datenpunkte. In unserem Fall verwenden wir zwei Listen
 `x` and `y` und füllen diese mit Zahlen.
 Das ist aber nicht die einzige Möglichkeit, Daten zu übergeben, siehe dieses

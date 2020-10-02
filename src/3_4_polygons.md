@@ -26,9 +26,9 @@ Příklad:
 {lang=DE}
 ## Polgyone
 
-Polygone (Vielecke) sind sehr hilfreiche Objekte, die verwendet werden können um eine abgeschlossene
-Fläche mit beliebig vielen Punkten (aber minimal drei) anzulegen.
-Polygone können konvex sein, müssen es aber nicht sein. Dies ist abhängig von den definierenden Punkten.
+Polygone (Vielecke) sind sehr hilfreiche Objekte zur Konstruktion von abgeschlossenen
+Flächen (*Vielecke*) mit beliebig vielen Eckpunkten (aber minimal drei).
+Polygone können konvex sein, müssen es aber nicht. Dies ist abhängig von den definierenden Punkten.
 Auch hier können wir mit verschiedenen [Attributen](https://jsxgraph.org/docs/symbols/Polygon.html)
 das Aussehen und Verhalten ändern.
 
@@ -114,15 +114,15 @@ jedna hodnota, ale seznam dalších atributů s jejich hodnotami. Důvodem je sk
 
 {lang=DE}
 Wie breits erwähnt, benötigen wir mindestens drei Punkte zur Konstruktion eines Polygons.
-In unserem Beispiel haben wir zuerst fünf Punkte angelegt, die dann unser Polgon definieren.
-Wir haben zusätzlich das Attribut _withLabel:true_ angegeben um den Namen des Polygons anzuzeigen.
+In unserem Beispiel haben wir zuerst fünf Punkte angelegt, die dann unser Polgon definieren werden.
+Wir haben zusätzlich das Attribut _withLabel:true_ angegeben, um den Namen des Polygons anzuzeigen.
 
 Zur Konstruktion des zweite Polygons verwenden wir eine Liste von Koordinatenpaaren, sowie einige neue Attribute.
-Das Attribut _hasInnerPoints_ ermöglicht es dem Berachter, das gesamte Poylgon zu verschieben.
-Im Gegensatz dazu kann Polygon 1 nicht komplett verschoben werden, lediglich einzele Punkte oder Kanten
+Das Attribut _hasInnerPoints_ ermöglicht es dem Berachter, das gesamte Polygon zu verschieben.
+Im Gegensatz dazu kann Polygon 1 nicht komplett verschoben werden, lediglich einzelne Punkte oder Kanten
 können verzogen werden.
 Das nächste Attribut _withLines_ teilt JSXGraph mit, ob die Kanten / Ränder des Polygons angezeigt werden sollen oder nicht.
-Das letzte Attribut _vertices_ ist besonders interessant, denn es besitzt keinen einfachen Wert, sondern nach dem `:` folgt
-ein eigenes Attribut-Object, das die Eigenschaften der Polygon-Ecken festlegt. Der Grund ist, dass wir für die Ecken
-mehr als ein Attribut verändern wollen.
+Das letzte Attribut _vertices_ ist wieder besonders interessant, denn es besitzt keinen einfachen Wert.
+Nach dem `:` folgt
+ein eigenes Attribut-Objekt, das die Eigenschaften der Polygon-Ecken festlegt. Der Grund ist, dass wir oft mehr als ein Attribut der Ecken verändern wollen.
 {/lang}

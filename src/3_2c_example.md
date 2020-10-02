@@ -111,8 +111,7 @@ First, we define the bounding box and create two points *A* and *B* with the lin
 {lang=DE}
 *Programmierung:*
 
-Zuerst legen wir die *bounding box* fest und erzeigen zwei Punkte *A* und *B* sowie die Gerade *p* durch die beiden
-Punkte:
+Zuerst legen wir die *bounding box* fest und erzeugen zwei Punkte *A* und *B* sowie die Gerade *p* durch die beiden Punkte:
 {/lang}
 
 ```JS
@@ -139,7 +138,7 @@ Then, we put the point *C* on *p* so that it can move along it:
 {/lang}
 
 {lang=DE}
-Dann legen wir den Punkt *C* auf die Gerade *p*, so dass wir ihn entlang der Geraden ziehen können.
+Dann legen wir den Punkt *C* auf die Gerade *p*, so dass wir ihn nur entlang der Geraden ziehen können.
 $C$ wird *glider* genannt.
 {/lang}
 
