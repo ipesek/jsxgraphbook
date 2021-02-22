@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js">
+<html lang="en" class="sidebar-visible no-js light">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title> JSXGraph book</title>
+        <title>JSXGraph Book</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -36,7 +36,7 @@
 
         
         <!-- MathJax -->
-        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
         <script type="text/x-mathjax-config">
           MathJax.Hub.Config({
               "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
@@ -45,11 +45,11 @@
         </script>
         
     </head>
-    <body class="light">
+    <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -73,8 +73,11 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            document.body.className = theme;
-            document.querySelector('html').className = theme + ' js';
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
@@ -100,14 +103,13 @@
 
             <div class="page">
                 
-                <div id="menu-bar" class="menu-bar">
-                    <div id="menu-bar-sticky-container">
-                        <div class="left-buttons">
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                                <i class="fa fa-bars"></i>
-                            </button>
-
-                            <button id="lang-toggle" class="icon-button" type="button" style="font-weight: bold;color: black" title="Change language" aria-label="Change language" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="lang-toggle" class="icon-button" type="button" style="font-weight: bold;color: black" title="Change language" aria-label="Change language" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list">
                                 EN
                             </button>
                             <ul id="lang-list" class="theme-popup" aria-label="Languages" role="menu">
@@ -116,37 +118,30 @@
                                 <li role="none"><button role="menuitem" class="theme" id="DE">Deutsch</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="SI">Slovenščina</button></li>
                             </ul>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
 
-                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                                <i class="fa fa-paint-brush"></i>
-                            </button>
-                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            </ul>
+                    <h1 class="menu-title" id="menu-title">{lang=EN}JSXGraph Book{/lang}{lang=SI}Knjiga o JSXGraphu{/lang}{lang=CZ}Příručka JSXGraph{/lang}{lang=DE}JSXGraph-Buch{/lang}</h1>
 
-
-
-                            
-                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            
-
-                        </div>
-
-                        <h1 class="menu-title" id="menu-title">{lang=EN}JSXGraph Book{/lang}{lang=SI}Knjiga o JSXGraphu{/lang}{lang=CZ}Příručka JSXGraph{/lang}{lang=DE}JSXGraph-Buch{/lang}</h1>
-
-                        <div class="right-buttons">
-                            <a href="print.html" title="Print this book" aria-label="Print this book">
-                                <i id="print-button" class="fa fa-print"></i>
-                            </a>
-
-                            
-                        </div>
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
                     </div>
                 </div>
 
@@ -175,6 +170,90 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelanglangdespeichern-einer-konstruktion-als-bildlang" id="langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelanglangdespeichern-einer-konstruktion-als-bildlang">{lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Capture the construction as image{/lang}{lang=DE}Speichern einer Konstruktion als Bild{/lang}</a></h1>
+<p>JSXGraph provides several methods to capture the state of a construction in an image.
+The easiest approach is to add the screenshot icon <strong>⌘</strong> to the navigation bar by
+setting <code>showScreenshot:true</code> in the attributes of the board.</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:250px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, showCopyright:false,
+     showNavigation:true, showScreenshot:true});
+ var p = board.create('point', [Math.PI/2,1], {name: 'A'});
+ var f = board.create('functiongraph', ['A.Y() * sin(x)']);
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox1" class="jxgbox" style="width:250px; height:200px;"></div>
+<script>
+(function() {
+ var board = JXG.JSXGraph.initBoard('jxgbox1', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, showCopyright:false,
+     showNavigation:true, showScreenshot:true });
+ var p = board.create('point', [Math.PI/2,1], {name: 'A'});
+ var f = board.create('functiongraph', ['A.Y() * sin(x)']);
+})();
+</script>
+<p>If the user clicks on that icon <strong>⌘</strong>, an image containing a screenshot of the construction
+will be displayed over the construction. By right-clicking on that image, the user can download the screenshot. The size of the image, the symbol and the display of the image can be changed
+by setting the attribute <a href="https://jsxgraph.org/docs/symbols/JXG.Board.html#screenshot"><em>screenshot</em></a> of the board.</p>
+<p>If JSXGraph is integrated into a learning management system, it might be
+useful to store a screenshot of a user manipulated construction in the learning
+management server server.
+For this the method <code>board.renderer.dumpToDataURI()</code> comes in handy.
+This method returns a string which contains an SVG image of the screenshot, encoded with base64.
+This string then can be sent to the server. Usually, the string will have the form</p>
+<pre><code>data:image/svg+xml;base64,PHN2ZyBzdHlsZT0ib3Zlc...aWduT2JqZWN0Pjwvc3ZnPg==
+</code></pre>
+<p>If the string following the prefix <code>data:image/svg+xml;base64,</code> is stored in a file <code>xyz.txt</code>,
+then the SVG code can be retrieved by the command</p>
+<pre><code class="language-SH">base64 -d xyz.txt
+</code></pre>
+<p>The command <code>base64</code> is available on all Linux and Mac systems and can be installed on Windows, too.
+In JavaScript, the data URI in a variable <code>txt</code> can be converted back to SVG with the command
+<code>atob(txt.split(',')[1]);</code>.</p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:250px; height:200px;&quot;&gt;&lt;/div&gt;
+&lt;button onClick=&quot;do_screenshot_base64()&quot;&gt;Screenshot to base64&lt;/button&gt;&lt;br/&gt;
+&lt;button onClick=&quot;do_screenshot()&quot;&gt;Screenshot to SVG&lt;/button&gt;&lt;br/&gt;
+&lt;textarea id=&quot;jxg_output&quot; rows=&quot;10&quot; cols=&quot;50&quot;&gt;&lt;/textarea&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, showCopyright:false});
+ var p = board.create('point', [Math.PI/2,1], {name: 'A'});
+ var f = board.create('functiongraph', ['A.Y() * sin(x)']);
+ function do_screenshot_base64() {
+     var txt = board.renderer.dumpToDataURI();
+     document.getElementById('jxg_output').value = txt;
+ }
+ function do_screenshot() {
+     var txt = board.renderer.dumpToDataURI();
+     txt = atob(txt.split(',')[1]);
+     document.getElementById('jxg_output').value = txt;
+ }
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:250px; height:200px;"></div>
+<button onClick="do_screenshot_base64()">Screenshot to base64</button><br/>
+<button onClick="do_screenshot()">Screenshot to SVG</button><br/>
+<textarea id="jxg_output" rows="10" cols="50"></textarea>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
+     keepAspectRatio:true, showCopyright:false});
+ var p = board.create('point', [Math.PI/2,1], {name: 'A'});
+ var f = board.create('functiongraph', ['A.Y() * sin(x)']);
+ function do_screenshot_base64() {
+     var txt = board.renderer.dumpToDataURI();
+     document.getElementById('jxg_output').value = txt;
+ }
+ function do_screenshot() {
+     var txt = board.renderer.dumpToDataURI();
+     txt = atob(txt.split(',')[1]);
+     document.getElementById('jxg_output').value = txt;
+ }
+</script>
+<p>Beside the two methods to create screenshots described above, there is a
+<a href="https://jsxgraph.org/docs/symbols/JXG.SVGRenderer.html#dumpToCanvas">third method</a>
+whose complexity is somewhat inbetween of these two methods: The method
+the method <code>board.renderer.dumpToCanvas(canvasId)</code>, displays the screenshot of
+construction in a canvas element on the web page.</p>
 
                     </main>
 
@@ -199,13 +278,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="5_1_adding_images.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="5_1_adding_images.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="5_2_jsxoptions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="5_2_jsxoptions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -214,22 +293,11 @@
         </div>
 
         
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
 
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
+        
+        
         
 
         
