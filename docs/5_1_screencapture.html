@@ -170,9 +170,15 @@
                 <div id="content" class="content">
                     <main>
                         <h1><a class="header" href="#langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelanglangdespeichern-einer-konstruktion-als-bildlang" id="langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelanglangdespeichern-einer-konstruktion-als-bildlang">{lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Capture the construction as image{/lang}{lang=DE}Speichern einer Konstruktion als Bild{/lang}</a></h1>
-<p>JSXGraph provides several methods to capture the state of a construction in an image.
-The easiest approach is to add the screenshot icon <strong>⌘</strong> to the navigation bar by
-setting <code>showScreenshot:true</code> in the attributes of the board.</p>
+<p>{lang=EN}
+JSXGraph provides several methods to capture the state of a construction in an image.
+The easiest approach is to show the screenshot icon <strong>⌘</strong> in the navigation bar by
+setting <code>showScreenshot:true</code> in the attributes of the board.
+{/lang}</p>
+<p>{lang=DE}JSXGraph bietet mehrere Möglichkeiten, eine Konstruktion als Bild abzuspeichern.
+Am einfachsten ist es, das Screenshot-Icon <strong>⌘</strong> in der Navigations-Leiste anzuzeigen.
+Dies geschieht durch Setzen des board-Attributs <code>showScreenshot:true</code>.
+{/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:250px; height:200px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
  var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2],
@@ -192,24 +198,33 @@ setting <code>showScreenshot:true</code> in the attributes of the board.</p>
  var f = board.create('functiongraph', ['A.Y() * sin(x)']);
 })();
 </script>
-<p>If the user clicks on that icon <strong>⌘</strong>, an image containing a screenshot of the construction
-will be displayed over the construction. By right-clicking on that image, the user can download the screenshot. The size of the image, the symbol and the display of the image can be changed
+<p>{lang=EN}
+If the user clicks on that icon <strong>⌘</strong> an image containing a screenshot of the construction
+will be displayed over the construction.
+By right-clicking on that image the user can download the screenshot. The size of the image, the symbol and the display of the image can be changed
 by setting the attribute <a href="https://jsxgraph.org/docs/symbols/JXG.Board.html#screenshot"><em>screenshot</em></a> of the board.</p>
-<p>If JSXGraph is integrated into a learning management system, it might be
+<p>If JSXGraph is integrated into a learning management system it might be
 useful to store a screenshot of a user manipulated construction in the learning
-management server server.
-For this the method <code>board.renderer.dumpToDataURI()</code> comes in handy.
-This method returns a string which contains an SVG image of the screenshot, encoded with base64.
-This string then can be sent to the server. Usually, the string will have the form</p>
-<pre><code>data:image/svg+xml;base64,PHN2ZyBzdHlsZT0ib3Zlc...aWduT2JqZWN0Pjwvc3ZnPg==
-</code></pre>
-<p>If the string following the prefix <code>data:image/svg+xml;base64,</code> is stored in a file <code>xyz.txt</code>,
-then the SVG code can be retrieved by the command</p>
-<pre><code class="language-SH">base64 -d xyz.txt
-</code></pre>
-<p>The command <code>base64</code> is available on all Linux and Mac systems and can be installed on Windows, too.
-In JavaScript, the data URI in a variable <code>txt</code> can be converted back to SVG with the command
-<code>atob(txt.split(',')[1]);</code>.</p>
+management server server. An example is to store the solution of an exercise as an image on the server.
+For this, the method <code>board.renderer.dumpToDataURI()</code> comes in handy.
+It returns a string which contains an SVG image of the screenshot, encoded with base64.
+This string then can e.g. be sent to the server.
+{/lang}</p>
+<p>{lang=DE}
+Beim Klicken auf das Icon <strong>⌘</strong> wird ein HTML-Bild, das einen Screenshot der
+JSXGraph-Konstruktion enthält, über die Konstruktion gelegt. Durch Rechts-Klick
+auf dieses Bild kann es heruntergeladen werden.
+Die Größe des Bildes, das Icon-Symbol und die Darstellung des Bildes kann mit Hilfe des board-Attributes
+<a href="https://jsxgraph.org/docs/symbols/JXG.Board.html#screenshot"><em>screenshot</em></a>
+angepasst werden.</p>
+<p>Ist JSXGraph in Learning-Management-System integriert, so kann es hilfreich sein,
+Screenshots der von den Nutzern veränderten Konstruktionen auf dem Server zu speichern.
+Ein Anwendung könnte das Speichern von Lösungen einer Aufgabe sein.
+Dazu ist die Methode <code>board.renderer.dumpToDataURI()</code> vorgesehen.
+Sie gibt einen String zurück, der die Konstruktion als SVG-Bild, codiert im base64-Format,
+enthält.
+Dieser String kann dann zum Beispiel auf dem Server abgespeichert werden.
+{/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:250px; height:200px;&quot;&gt;&lt;/div&gt;
 &lt;button onClick=&quot;do_screenshot_base64()&quot;&gt;Screenshot to base64&lt;/button&gt;&lt;br/&gt;
 &lt;button onClick=&quot;do_screenshot()&quot;&gt;Screenshot to SVG&lt;/button&gt;&lt;br/&gt;
@@ -249,11 +264,49 @@ In JavaScript, the data URI in a variable <code>txt</code> can be converted back
      document.getElementById('jxg_output').value = txt;
  }
 </script>
-<p>Beside the two methods to create screenshots described above, there is a
+<p>{lang=EN}
+Beside the two methods to create screenshots described above, there is a
 <a href="https://jsxgraph.org/docs/symbols/JXG.SVGRenderer.html#dumpToCanvas">third method</a>
 whose complexity is somewhat inbetween of these two methods: The method
-the method <code>board.renderer.dumpToCanvas(canvasId)</code>, displays the screenshot of
-construction in a canvas element on the web page.</p>
+<code>board.renderer.dumpToCanvas(canvasId)</code> displays the screenshot of
+construction in a canvas element on the web page.
+{/lang}</p>
+<p>{lang=DE}Neben den beiden beschriebenen Methoden, Screenshots zu erzeugen,
+gibt es eine <a href="https://jsxgraph.org/docs/symbols/JXG.SVGRenderer.html#dumpToCanvas">dritte Methode</a>,
+deren Komplexität in etwa zwischen den beiden bisherigen Methoden liegt:
+Die Methode <code>board.renderer.dumpToCanvas(canvasId)</code> zeigt den Screenshot
+einer Konstruktion in einem Canvas-Element in der Webseite an.
+{/lang}</p>
+<h3><a class="header" href="#langendecoding-a-base64-stringlanglangsidecoding-a-base64-stringlanglangczdecoding-a-base64-stringlanglangdedecdierung-eines-base64-stringslang" id="langendecoding-a-base64-stringlanglangsidecoding-a-base64-stringlanglangczdecoding-a-base64-stringlanglangdedecdierung-eines-base64-stringslang">{lang=EN}Decoding a base64 string{/lang}{lang=SI}Decoding a base64 string{/lang}{lang=CZ}Decoding a base64 string{/lang}{lang=DE}Decdierung eines base64-Strings{/lang}</a></h3>
+<p>{lang=EN}
+Sometimes it might be necessary to decode the string which has been generated by <code>board.renderer.dumpToDataURI()</code>.
+Usually, the returned string will have the form
+{/lang}</p>
+<p>{lang=DE}
+Unter Umständen kann es nötig sein, den von <code>board.renderer.dumpToDataURI()</code> erzeugten String zu entpacken.
+Normalerweise hat dieser String die folgende Form:
+{/lang}</p>
+<pre><code>data:image/svg+xml;base64,PHN2ZyBzdHlsZT0ib3Zlc...aWduT2JqZWN0Pjwvc3ZnPg==
+</code></pre>
+<p>{lang=EN}
+If the string following the prefix <code>data:image/svg+xml;base64,</code> is stored in e.g. a file <code>xyz.txt</code>,
+then the SVG code can be retrieved by the command
+{/lang}</p>
+<p>{lang=DE}Wird der auf <code>data:image/svg+xml;base64,</code> folgende String etwa in der Datei
+<code>xyz.txt</code> gespeichert, so kann der SVG-Code mit folgendem Kommando ausgegeben werden:{/lang}</p>
+<pre><code class="language-SH">base64 -d xyz.txt
+</code></pre>
+<p>{lang=EN}
+The command <code>base64</code> is available on all Linux and Mac systems and can be installed on Windows, too.</p>
+<p>In JavaScript, the data URI from JSXGraph in a variable <code>txt</code> can be converted back to SVG with the command
+<code>atob(txt.split(',')[1]);</code>, as can be see in the function <code>do_screenshot()</code> in the above example.
+{/lang}</p>
+<p>{lang=DE}Der Befehl <code>base64</code> steht auf allen Linux- und Mac-Systemen zur Verfügung, auf Windows kann
+er nachinstalliert werden.</p>
+<p>Mit JavaScript, kann die data-URI aus JSXGraph in einer Variablen <code>txt</code> mit dem Befehl
+<code>atob(txt.split(',')[1]);</code> in SVG konvertiert werden, wie es auch in der Funktion
+<code>do_screenshot()</code> im obigen Beispiel zu sehen ist.
+{/lang}</p>
 
                     </main>
 
