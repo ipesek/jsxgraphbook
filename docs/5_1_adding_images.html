@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>JSXGraph Book</title>
+        <title> JSXGraph book</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -36,7 +36,7 @@
 
         
         <!-- MathJax -->
-         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
         <script type="text/x-mathjax-config">
           MathJax.Hub.Config({
               "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
@@ -45,11 +45,11 @@
         </script>
         
     </head>
-    <body>
+    <body class="light">
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+            var default_theme = "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -73,11 +73,8 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
-            html.classList.remove('light')
-            html.classList.add(theme);
-            html.classList.add('js');
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
@@ -94,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="1_introduction.html"><strong aria-hidden="true">1.</strong> {lang=EN}Introduction{/lang} {lang=SI}Uvod{/lang} {lang=CZ}Úvod{/lang}</a></li><li class="chapter-item expanded "><a href="2_setup.html"><strong aria-hidden="true">2.</strong> {lang=EN}How to setup{/lang}{lang=SI}How to setup{/lang}{lang=CZ}Jak začít{/lang}</a></li><li class="chapter-item expanded "><a href="3_basics.html"><strong aria-hidden="true">3.</strong> {lang=EN}Basics{/lang}{lang=SI}Basics{/lang}{lang=CZ}Základy{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="3_1_board.html"><strong aria-hidden="true">3.1.</strong> {lang=EN}Drawing area{/lang}{lang=SI}Drawing area{/lang}{lang=CZ}Nákresna{/lang}</a></li><li class="chapter-item expanded "><a href="3_2_basic_objects.html"><strong aria-hidden="true">3.2.</strong> {lang=EN}Creating points{/lang}{lang=SI}Creating points{/lang}{lang=CZ}Vytváření bodů{/lang}</a></li><li class="chapter-item expanded "><a href="3_2a_lines.html"><strong aria-hidden="true">3.3.</strong> {lang=EN}Creating lines{/lang}{lang=SI}Creating lines{/lang}{lang=CZ}Kreslení přímek{/lang}</a></li><li class="chapter-item expanded "><a href="3_2b_objects_drawing.html"><strong aria-hidden="true">3.4.</strong> {lang=EN}Adding attributes to the objects{/lang}{lang=SI}Adding properties to the objects{/lang}{lang=CZ}Nastavení vlastností objektů{/lang}</a></li><li class="chapter-item expanded "><a href="3_2c_example.html"><strong aria-hidden="true">3.5.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang}</a></li><li class="chapter-item expanded "><a href="3_3_circles.html"><strong aria-hidden="true">3.6.</strong> {lang=EN}Circles{/lang}{lang=SI}Circles{/lang}{lang=CZ}Kružnice{/lang}</a></li><li class="chapter-item expanded "><a href="3_4_polygons.html"><strong aria-hidden="true">3.7.</strong> {lang=EN}Polygons{/lang}{lang=SI}Polygons{/lang}{lang=CZ}Mnohoúhelníky{/lang}</a></li><li class="chapter-item expanded "><a href="3_5_intersections.html"><strong aria-hidden="true">3.8.</strong> {lang=EN}Intersections{/lang}{lang=SI}Intersections{/lang}{lang=CZ}Průsečíky{/lang}</a></li><li class="chapter-item expanded "><a href="3_6_angles.html"><strong aria-hidden="true">3.9.</strong> {lang=EN}Angles{/lang}{lang=SI}Angles{/lang}{lang=CZ}Úhly{/lang}</a></li><li class="chapter-item expanded "><a href="3_7_curves.html"><strong aria-hidden="true">3.10.</strong> {lang=EN}Curves{/lang}{lang=SI}Curves{/lang}{lang=CZ}Křivky{/lang}</a></li><li class="chapter-item expanded "><a href="3_8_functions.html"><strong aria-hidden="true">3.11.</strong> {lang=EN}Drawing functions{/lang}{lang=SI}Drawing functions{/lang}{lang=CZ}Zobrazení grafu funkce{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="4_animations.html"><strong aria-hidden="true">4.</strong> {lang=EN}Animating{/lang}{lang=SI}Animating{/lang}{lang=CZ}Animace{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4_1_moving.html"><strong aria-hidden="true">4.1.</strong> {lang=EN}Moving objects{/lang}{lang=SI}Moving objects{/lang}{lang=CZ}Pohybování s objekty{/lang}</a></li><li class="chapter-item expanded "><a href="4_1a_example.html"><strong aria-hidden="true">4.2.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang}</a></li><li class="chapter-item expanded "><a href="4_2_sliders.html"><strong aria-hidden="true">4.3.</strong> {lang=EN}Sliders{/lang}{lang=SI}Sliders{/lang}{lang=CZ}Posuvníky{/lang}</a></li><li class="chapter-item expanded "><a href="4_3_animation_sliders.html"><strong aria-hidden="true">4.4.</strong> {lang=EN}Animating with sliders{/lang}{lang=SI}Animating with sliders{/lang}{lang=CZ}Animating with sliders{/lang}</a></li><li class="chapter-item expanded "><a href="4_3a_example.html"><strong aria-hidden="true">4.5.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Example{/lang}</a></li><li class="chapter-item expanded "><a href="4_4_transformations.html"><strong aria-hidden="true">4.6.</strong> {lang=EN}Transformations{/lang}{lang=SI}Transformations{/lang}{lang=CZ}Transformations{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="5_advanced.html"><strong aria-hidden="true">5.</strong> {lang=EN}Advanced topics{/lang}{lang=SI}Advanced topics{/lang}{lang=CZ}Advanced topics{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5_1_adding_images.html" class="active"><strong aria-hidden="true">5.1.</strong> {lang=EN}Adding images{/lang}{lang=SI}Adding images{/lang}{lang=CZ}Adding images{/lang}</a></li><li class="chapter-item expanded "><a href="5_1_screencapture.html"><strong aria-hidden="true">5.2.</strong> {lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Capture the construction as image{/lang}</a></li><li class="chapter-item expanded "><a href="5_2_jsxoptions.html"><strong aria-hidden="true">5.3.</strong> {lang=EN}JSXGraph options{/lang}{lang=SI}JSXGraph options{/lang}{lang=CZ}JSXGraph options{/lang}</a></li><li class="chapter-item expanded "><a href="5_3_trigers.html"><strong aria-hidden="true">5.4.</strong> {lang=EN}Events{/lang}{lang=SI}Events{/lang}{lang=CZ}Events{/lang}</a></li><li class="chapter-item expanded "><a href="5_4_user_actions.html"><strong aria-hidden="true">5.5.</strong> {lang=EN}Saving user actions{/lang}{lang=SI}Saving user actions{/lang}{lang=CZ}Saving user actions{/lang}</a></li><li class="chapter-item expanded "><a href="5_5_jessie_code.html"><strong aria-hidden="true">5.6.</strong> {lang=EN}Jessie Code{/lang}{lang=SI}Jessie Code{/lang}{lang=CZ}Jessie Code{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="6_moodle.html"><strong aria-hidden="true">6.</strong> {lang=EN}JSXGraph and Moodle{/lang}{lang=SI}JSXGraph and Moodle{/lang}{lang=CZ}JSXGraph and Moodle{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="6_1_jsxfilter.html"><strong aria-hidden="true">6.1.</strong> {lang=EN}JSXGraph as a Moodle Filter{/lang}{lang=SI}JSXGraph as a Moodle Filter{/lang}{lang=CZ}JSXGraph as a Moodle Filter{/lang}</a></li><li class="chapter-item expanded "><a href="6_2_formulas.html"><strong aria-hidden="true">6.2.</strong> {lang=EN}JSXGraph and Moodle Formulas{/lang}{lang=SI}JSXGraph and Moodle Formulas{/lang}{lang=CZ}JSXGraph and Moodle Formulas{/lang}</a></li><li class="chapter-item expanded "><a href="6_3_stack.html"><strong aria-hidden="true">6.3.</strong> {lang=EN}JSXGraph and Stack{/lang}{lang=SI}JSXGraph and Stack{/lang}{lang=CZ}JSXGraph and Stack{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="7_templates.html"><strong aria-hidden="true">7.</strong> {lang=EN}Templates{/lang}{lang=SI}Templates{/lang}{lang=CZ}Templates{/lang}</a></li><li class="chapter-item expanded "><a href="8_gui.html"><strong aria-hidden="true">8.</strong> {lang=EN}JSX Gui{/lang}{lang=SI}JSX Gui{/lang}{lang=CZ}JSX Gui{/lang}</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="contributors.html">{lang=EN}Contributors{/lang}{lang=SI}Contributors{/lang}{lang=CZ}Contributors{/lang}</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1_introduction.html"><strong aria-hidden="true">1.</strong> {lang=EN}Introduction{/lang} {lang=SI}Uvod{/lang} {lang=CZ}Úvod{/lang} {lang=DE}Einführung{/lang}</a></li><li class="chapter-item expanded "><a href="2_setup.html"><strong aria-hidden="true">2.</strong> {lang=EN}How to setup{/lang}{lang=SI}How to setup{/lang}{lang=CZ}Jak začít{/lang} {lang=DE}Vorbereitung{/lang}</a></li><li class="chapter-item expanded "><a href="3_basics.html"><strong aria-hidden="true">3.</strong> {lang=EN}Basics{/lang}{lang=SI}Basics{/lang}{lang=CZ}Základy{/lang} {lang=DE}Grundlagen{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="3_1_board.html"><strong aria-hidden="true">3.1.</strong> {lang=EN}Drawing area{/lang}{lang=SI}Drawing area{/lang}{lang=CZ}Nákresna{/lang} {lang=DE}Zeichenbereich{/lang}</a></li><li class="chapter-item expanded "><a href="3_2_basic_objects.html"><strong aria-hidden="true">3.2.</strong> {lang=EN}Creating points{/lang}{lang=SI}Creating points{/lang}{lang=CZ}Vytváření bodů{/lang} {lang=DE}Punkte erzeugen{/lang}</a></li><li class="chapter-item expanded "><a href="3_2a_lines.html"><strong aria-hidden="true">3.3.</strong> {lang=EN}Creating lines{/lang}{lang=SI}Creating lines{/lang}{lang=CZ}Kreslení přímek{/lang} {lang=DE}Geraden erzeugen{/lang}</a></li><li class="chapter-item expanded "><a href="3_2b_objects_drawing.html"><strong aria-hidden="true">3.4.</strong> {lang=EN}Adding attributes to the objects{/lang}{lang=SI}Adding properties to the objects{/lang}{lang=CZ}Nastavení vlastností objektů{/lang} {lang=DE}Attribute zu Objekten hinzufügen{/lang}</a></li><li class="chapter-item expanded "><a href="3_2c_example.html"><strong aria-hidden="true">3.5.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang} {lang=DE}Beispiel{/lang}</a></li><li class="chapter-item expanded "><a href="3_3_circles.html"><strong aria-hidden="true">3.6.</strong> {lang=EN}Circles{/lang}{lang=SI}Circles{/lang}{lang=CZ}Kružnice{/lang} {lang=DE}Kreise{/lang}</a></li><li class="chapter-item expanded "><a href="3_4_polygons.html"><strong aria-hidden="true">3.7.</strong> {lang=EN}Polygons{/lang}{lang=SI}Polygons{/lang}{lang=CZ}Mnohoúhelníky{/lang} {lang=DE}Polygone{/lang}</a></li><li class="chapter-item expanded "><a href="3_4a_example.html"><strong aria-hidden="true">3.8.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang} {lang=DE}Beispiel{/lang}</a></li><li class="chapter-item expanded "><a href="3_5_intersections.html"><strong aria-hidden="true">3.9.</strong> {lang=EN}Intersections{/lang}{lang=SI}Intersections{/lang}{lang=CZ}Průsečíky{/lang} {lang=DE}Schnittpunkte{/lang}</a></li><li class="chapter-item expanded "><a href="3_6_angles.html"><strong aria-hidden="true">3.10.</strong> {lang=EN}Angles{/lang}{lang=SI}Angles{/lang}{lang=CZ}Úhly{/lang} {lang=DE}Winkel{/lang}</a></li><li class="chapter-item expanded "><a href="3_7_curves.html"><strong aria-hidden="true">3.11.</strong> {lang=EN}Curves{/lang}{lang=SI}Curves{/lang}{lang=CZ}Křivky{/lang} {lang=DE}Kurven{/lang}</a></li><li class="chapter-item expanded "><a href="3_8_functions.html"><strong aria-hidden="true">3.12.</strong> {lang=EN}Drawing functions{/lang}{lang=SI}Drawing functions{/lang}{lang=CZ}Zobrazení grafu funkce{/lang} {lang=DE}Funktionsgraphen{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="4_animations.html"><strong aria-hidden="true">4.</strong> {lang=EN}Animating{/lang}{lang=SI}Animating{/lang}{lang=CZ}Animace{/lang} {lang=DE}Animationen{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4_1_moving.html"><strong aria-hidden="true">4.1.</strong> {lang=EN}Moving objects{/lang}{lang=SI}Moving objects{/lang}{lang=CZ}Pohybování s objekty{/lang} {lang=DE}Objekte bewegen{/lang}</a></li><li class="chapter-item expanded "><a href="4_1a_example.html"><strong aria-hidden="true">4.2.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang} {lang=DE}Beispiel{/lang}</a></li><li class="chapter-item expanded "><a href="4_2_sliders.html"><strong aria-hidden="true">4.3.</strong> {lang=EN}Sliders{/lang}{lang=SI}Sliders{/lang}{lang=CZ}Posuvníky{/lang} {lang=DE}Schieberegler{/lang}</a></li><li class="chapter-item expanded "><a href="4_3_animation_sliders.html"><strong aria-hidden="true">4.4.</strong> {lang=EN}Animating with sliders{/lang}{lang=SI}Animating with sliders{/lang}{lang=CZ}Animace s posuvníky{/lang} {lang=DE}Animationen mit Schiebereglern{/lang}</a></li><li class="chapter-item expanded "><a href="4_3a_example.html"><strong aria-hidden="true">4.5.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang} {lang=DE}Beispiel{/lang}</a></li><li class="chapter-item expanded "><a href="4_4_transformations.html"><strong aria-hidden="true">4.6.</strong> {lang=EN}Transformations{/lang}{lang=SI}Transformations{/lang}{lang=CZ}Transformace{/lang} {lang=DE}Transformationen{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="5_advanced.html"><strong aria-hidden="true">5.</strong> {lang=EN}Advanced topics{/lang}{lang=SI}Advanced topics{/lang}{lang=CZ}Pokročilá témata{/lang} {lang=DE}Fortgeschrittene Themen{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5_1_adding_images.html" class="active"><strong aria-hidden="true">5.1.</strong> {lang=EN}Adding images{/lang}{lang=SI}Adding images{/lang}{lang=CZ}Vkládání obrázků{/lang} {lang=DE}Bilder einbinden{/lang}</a></li><li class="chapter-item expanded "><a href="5_1_screencapture.html"><strong aria-hidden="true">5.2.</strong> {lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Zachycení konstrukce jako obrázku{/lang} {lang=DE}Speichern einer Konstruktion als Bild{/lang}</a></li><li class="chapter-item expanded "><a href="5_2_jsxoptions.html"><strong aria-hidden="true">5.3.</strong> {lang=EN}JSXGraph options{/lang}{lang=SI}JSXGraph options{/lang}{lang=CZ}Volby JSXGraphu{/lang} {lang=DE}JSXGraph-Optionen{/lang}</a></li><li class="chapter-item expanded "><a href="5_3_trigers.html"><strong aria-hidden="true">5.4.</strong> {lang=EN}Events{/lang}{lang=SI}Events{/lang}{lang=CZ}Události{/lang} {lang=DE}Ereignisbehandlung{/lang}</a></li><li class="chapter-item expanded "><a href="5_4_user_actions.html"><strong aria-hidden="true">5.5.</strong> {lang=EN}Saving user actions{/lang}{lang=SI}Saving user actions{/lang}{lang=CZ}Uložení uživatelských akcí{/lang} {lang=DE}Nutzeraktionen abspeichern{/lang}</a></li><li class="chapter-item expanded "><a href="5_5_jessie_code.html"><strong aria-hidden="true">5.6.</strong> {lang=EN}Jessie Code{/lang}{lang=SI}Jessie Code{/lang}{lang=CZ}Jessie Code{/lang} {lang=DE}JessieCode{/lang}</a></li><li class="chapter-item expanded "><a href="6_moodle.html"><strong aria-hidden="true">5.7.</strong> {lang=EN}JSXGraph and Moodle{/lang}{lang=SI}JSXGraph and Moodle{/lang}{lang=CZ}JSXGraph a Moodle{/lang} {lang=DE}JSXGraph und Moodle{/lang}</a></li><li class="chapter-item expanded "><a href="6_1_jsxfilter.html"><strong aria-hidden="true">5.8.</strong> {lang=EN}JSXGraph as a Moodle Filter{/lang}{lang=SI}JSXGraph as a Moodle Filter{/lang}{lang=CZ}JSXGraph jako filtr v Moodlu{/lang} {lang=DE}JSGraph als Moodle-Filter{/lang}</a></li><li class="chapter-item expanded "><a href="6_2_formulas.html"><strong aria-hidden="true">5.9.</strong> {lang=EN}JSXGraph and Moodle Formulas{/lang}{lang=SI}JSXGraph and Moodle Formulas{/lang}{lang=CZ}JSXGraph a Moodle Formulas{/lang} {lang=DE}JSXGraph und Moodle-Formulas{/lang}</a></li><li class="chapter-item expanded "><a href="6_3_stack.html"><strong aria-hidden="true">5.10.</strong> {lang=EN}JSXGraph and Stack{/lang}{lang=SI}JSXGraph and Stack{/lang}{lang=CZ}JSXGraph a Stack{/lang} {lang=DE}JSXGraph und STACK{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="7_templates.html"><strong aria-hidden="true">6.</strong> {lang=EN}Templates{/lang}{lang=SI}Templates{/lang}{lang=CZ}Šablony{/lang} {lang=DE}Vorlagen{/lang}</a></li><li class="chapter-item expanded "><a href="8_gui.html"><strong aria-hidden="true">7.</strong> {lang=EN}JSX Gui{/lang}{lang=SI}JSX Gui{/lang}{lang=CZ}JSX GUI{/lang} {lang=DE}JSXGraph-Oberfläche{/lang}</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="contributors.html">{lang=EN}Contributors{/lang}{lang=SI}Contributors{/lang}{lang=CZ}Přispěvatelé{/lang} {lang=DE}Mitwirkende{/lang}</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -103,44 +100,53 @@
 
             <div class="page">
                 
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
-                    <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="lang-toggle" class="icon-button" type="button" style="font-weight: bold;color: black" title="Change language" aria-label="Change language" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list">
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+
+                            <button id="lang-toggle" class="icon-button" type="button" style="font-weight: bold;color: black" title="Change language" aria-label="Change language" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list">
                                 EN
                             </button>
                             <ul id="lang-list" class="theme-popup" aria-label="Languages" role="menu">
                                 <li role="none"><button role="menuitem" class="theme" id="EN">English</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="CZ">Čeština</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="DE">Deutsch</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="SI">Slovenščina</button></li>
                             </ul>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                        </ul>
-                        
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
-                        </button>
-                        
-                    </div>
 
-                    <h1 class="menu-title" id="menu-title">{lang=EN}JSXGraph Book{/lang}{lang=SI}Knjiga o JSXGraphu{/lang}{lang=CZ}Příručka JSXGraph{/lang}</h1>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
 
-                    <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
-                        
+
+
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+
+                        </div>
+
+                        <h1 class="menu-title" id="menu-title">{lang=EN}JSXGraph Book{/lang}{lang=SI}Knjiga o JSXGraphu{/lang}{lang=CZ}Příručka JSXGraph{/lang}{lang=DE}JSXGraph-Buch{/lang}</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+
+                            
+                        </div>
                     </div>
                 </div>
 
@@ -168,7 +174,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#langenadding-imageslanglangsifunctions-drawinglanglangczfunctions-drawinglang" id="langenadding-imageslanglangsifunctions-drawinglanglangczfunctions-drawinglang">{lang=EN}Adding images{/lang}{lang=SI}Functions drawing{/lang}{lang=CZ}Functions drawing{/lang}</a></h1>
+                        <h1><a class="header" href="#langenadding-imageslanglangsiadding-imageslanglangczadding-imageslanglangdebilder-einbindenlang" id="langenadding-imageslanglangsiadding-imageslanglangczadding-imageslanglangdebilder-einbindenlang">{lang=EN}Adding images{/lang}{lang=SI}Adding images{/lang}{lang=CZ}Adding images{/lang}{lang=DE}Bilder einbinden{/lang}</a></h1>
 
                     </main>
 
@@ -193,13 +199,13 @@
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="5_advanced.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="5_advanced.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="5_1_screencapture.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="5_1_screencapture.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -208,15 +214,22 @@
         </div>
 
         
-
-        
-
-        
-        
-        
+        <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            window.playpen_copyable = true;
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
         </script>
+        
+
         
 
         

@@ -40,7 +40,7 @@
 /**
  * UTF-8 Decoder by Bjoern Hoehrmann
  *
- * Copyright (c) 2008-2009 Bjoern Hoehrmann <bjoern@hoehrmann.>
+ * Copyright (c) 2008-2009 Bjoern Hoehrmann <bjoern@hoehrmann.de>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this
  * software and associated documentation files (the "Software"), to deal in the Software

@@ -46,7 +46,7 @@ two new commands.
 
 Let us focus first on the second command: `q.visit([3, -2], 1800, 2)`. Until now we always 
 used only one method _create()_ which we provided with parameters to create points, etc. on the board. Now we introduce 
-a new method for the point which is called [_visit()_](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.CoordsElement.html#visit).
+a new method for the point which is called [_visit()_](https://jsxgraph.org/docs/symbols/JXG.CoordsElement.html#visit).
 Its syntax is __visit(where, time, options)__ with three parameters,
  * _where_ coordinates of our destination e.g. `[3, -2]`,
  * _time_ how long should it take e.g. `1800`,
@@ -73,7 +73,7 @@ dva nové příkazy.
 
 Pojďme se nejprve zaměřit na příkaz: `q.visit([3, -2], 1800, 2)`. Dosud jsme používali jenom metodu _create()_,
 kterou jsme doplnili náležitými parametry pro zobrazení bodů apod. na nákresnu. Nyní představujeme novou metodu
-pro nakládání s bodem, která se nazývá [_visit()_](https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.CoordsElement.html#visit).
+pro nakládání s bodem, která se nazývá [_visit()_](https://jsxgraph.org/docs/symbols/JXG.CoordsElement.html#visit).
 Její syntaxe je __visit(místo, doba trvání, volby)__ s těmito třemi parametry:
  * _místo_ (_where_) souřadnice cíle pohybu, např. `[3, -2]`,
  * _doba trvání_ (_time_) jak dlouho, v milisekundách, to bude trvat, např. `1800`,

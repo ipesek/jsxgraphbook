@@ -1,9 +1,9 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="sidebar-visible no-js">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>JSXGraph Book</title>
+        <title> JSXGraph book</title>
         
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -36,7 +36,7 @@
 
         
         <!-- MathJax -->
-         <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
         <script type="text/x-mathjax-config">
           MathJax.Hub.Config({
               "HTML-CSS": {availableFonts: ["TeX"],scale: 90},
@@ -45,11 +45,11 @@
         </script>
         
     </head>
-    <body>
+    <body class="light">
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+            var default_theme = "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -73,11 +73,8 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
-            html.classList.remove('light')
-            html.classList.add(theme);
-            html.classList.add('js');
+            document.body.className = theme;
+            document.querySelector('html').className = theme + ' js';
         </script>
 
         <!-- Hide / unhide sidebar before it is displayed -->
@@ -94,7 +91,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="1_introduction.html"><strong aria-hidden="true">1.</strong> {lang=EN}Introduction{/lang} {lang=SI}Uvod{/lang} {lang=CZ}Úvod{/lang}</a></li><li class="chapter-item expanded "><a href="2_setup.html"><strong aria-hidden="true">2.</strong> {lang=EN}How to setup{/lang}{lang=SI}How to setup{/lang}{lang=CZ}Jak začít{/lang}</a></li><li class="chapter-item expanded "><a href="3_basics.html"><strong aria-hidden="true">3.</strong> {lang=EN}Basics{/lang}{lang=SI}Basics{/lang}{lang=CZ}Základy{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="3_1_board.html"><strong aria-hidden="true">3.1.</strong> {lang=EN}Drawing area{/lang}{lang=SI}Drawing area{/lang}{lang=CZ}Nákresna{/lang}</a></li><li class="chapter-item expanded "><a href="3_2_basic_objects.html"><strong aria-hidden="true">3.2.</strong> {lang=EN}Creating points{/lang}{lang=SI}Creating points{/lang}{lang=CZ}Vytváření bodů{/lang}</a></li><li class="chapter-item expanded "><a href="3_2a_lines.html"><strong aria-hidden="true">3.3.</strong> {lang=EN}Creating lines{/lang}{lang=SI}Creating lines{/lang}{lang=CZ}Kreslení přímek{/lang}</a></li><li class="chapter-item expanded "><a href="3_2b_objects_drawing.html" class="active"><strong aria-hidden="true">3.4.</strong> {lang=EN}Adding attributes to the objects{/lang}{lang=SI}Adding properties to the objects{/lang}{lang=CZ}Nastavení vlastností objektů{/lang}</a></li><li class="chapter-item expanded "><a href="3_2c_example.html"><strong aria-hidden="true">3.5.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang}</a></li><li class="chapter-item expanded "><a href="3_3_circles.html"><strong aria-hidden="true">3.6.</strong> {lang=EN}Circles{/lang}{lang=SI}Circles{/lang}{lang=CZ}Kružnice{/lang}</a></li><li class="chapter-item expanded "><a href="3_4_polygons.html"><strong aria-hidden="true">3.7.</strong> {lang=EN}Polygons{/lang}{lang=SI}Polygons{/lang}{lang=CZ}Mnohoúhelníky{/lang}</a></li><li class="chapter-item expanded "><a href="3_5_intersections.html"><strong aria-hidden="true">3.8.</strong> {lang=EN}Intersections{/lang}{lang=SI}Intersections{/lang}{lang=CZ}Průsečíky{/lang}</a></li><li class="chapter-item expanded "><a href="3_6_angles.html"><strong aria-hidden="true">3.9.</strong> {lang=EN}Angles{/lang}{lang=SI}Angles{/lang}{lang=CZ}Úhly{/lang}</a></li><li class="chapter-item expanded "><a href="3_7_curves.html"><strong aria-hidden="true">3.10.</strong> {lang=EN}Curves{/lang}{lang=SI}Curves{/lang}{lang=CZ}Křivky{/lang}</a></li><li class="chapter-item expanded "><a href="3_8_functions.html"><strong aria-hidden="true">3.11.</strong> {lang=EN}Drawing functions{/lang}{lang=SI}Drawing functions{/lang}{lang=CZ}Zobrazení grafu funkce{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="4_animations.html"><strong aria-hidden="true">4.</strong> {lang=EN}Animating{/lang}{lang=SI}Animating{/lang}{lang=CZ}Animace{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4_1_moving.html"><strong aria-hidden="true">4.1.</strong> {lang=EN}Moving objects{/lang}{lang=SI}Moving objects{/lang}{lang=CZ}Pohybování s objekty{/lang}</a></li><li class="chapter-item expanded "><a href="4_1a_example.html"><strong aria-hidden="true">4.2.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang}</a></li><li class="chapter-item expanded "><a href="4_2_sliders.html"><strong aria-hidden="true">4.3.</strong> {lang=EN}Sliders{/lang}{lang=SI}Sliders{/lang}{lang=CZ}Posuvníky{/lang}</a></li><li class="chapter-item expanded "><a href="4_3_animation_sliders.html"><strong aria-hidden="true">4.4.</strong> {lang=EN}Animating with sliders{/lang}{lang=SI}Animating with sliders{/lang}{lang=CZ}Animating with sliders{/lang}</a></li><li class="chapter-item expanded "><a href="4_3a_example.html"><strong aria-hidden="true">4.5.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Example{/lang}</a></li><li class="chapter-item expanded "><a href="4_4_transformations.html"><strong aria-hidden="true">4.6.</strong> {lang=EN}Transformations{/lang}{lang=SI}Transformations{/lang}{lang=CZ}Transformations{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="5_advanced.html"><strong aria-hidden="true">5.</strong> {lang=EN}Advanced topics{/lang}{lang=SI}Advanced topics{/lang}{lang=CZ}Advanced topics{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5_1_adding_images.html"><strong aria-hidden="true">5.1.</strong> {lang=EN}Adding images{/lang}{lang=SI}Adding images{/lang}{lang=CZ}Adding images{/lang}</a></li><li class="chapter-item expanded "><a href="5_1_screencapture.html"><strong aria-hidden="true">5.2.</strong> {lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Capture the construction as image{/lang}</a></li><li class="chapter-item expanded "><a href="5_2_jsxoptions.html"><strong aria-hidden="true">5.3.</strong> {lang=EN}JSXGraph options{/lang}{lang=SI}JSXGraph options{/lang}{lang=CZ}JSXGraph options{/lang}</a></li><li class="chapter-item expanded "><a href="5_3_trigers.html"><strong aria-hidden="true">5.4.</strong> {lang=EN}Events{/lang}{lang=SI}Events{/lang}{lang=CZ}Events{/lang}</a></li><li class="chapter-item expanded "><a href="5_4_user_actions.html"><strong aria-hidden="true">5.5.</strong> {lang=EN}Saving user actions{/lang}{lang=SI}Saving user actions{/lang}{lang=CZ}Saving user actions{/lang}</a></li><li class="chapter-item expanded "><a href="5_5_jessie_code.html"><strong aria-hidden="true">5.6.</strong> {lang=EN}Jessie Code{/lang}{lang=SI}Jessie Code{/lang}{lang=CZ}Jessie Code{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="6_moodle.html"><strong aria-hidden="true">6.</strong> {lang=EN}JSXGraph and Moodle{/lang}{lang=SI}JSXGraph and Moodle{/lang}{lang=CZ}JSXGraph and Moodle{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="6_1_jsxfilter.html"><strong aria-hidden="true">6.1.</strong> {lang=EN}JSXGraph as a Moodle Filter{/lang}{lang=SI}JSXGraph as a Moodle Filter{/lang}{lang=CZ}JSXGraph as a Moodle Filter{/lang}</a></li><li class="chapter-item expanded "><a href="6_2_formulas.html"><strong aria-hidden="true">6.2.</strong> {lang=EN}JSXGraph and Moodle Formulas{/lang}{lang=SI}JSXGraph and Moodle Formulas{/lang}{lang=CZ}JSXGraph and Moodle Formulas{/lang}</a></li><li class="chapter-item expanded "><a href="6_3_stack.html"><strong aria-hidden="true">6.3.</strong> {lang=EN}JSXGraph and Stack{/lang}{lang=SI}JSXGraph and Stack{/lang}{lang=CZ}JSXGraph and Stack{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="7_templates.html"><strong aria-hidden="true">7.</strong> {lang=EN}Templates{/lang}{lang=SI}Templates{/lang}{lang=CZ}Templates{/lang}</a></li><li class="chapter-item expanded "><a href="8_gui.html"><strong aria-hidden="true">8.</strong> {lang=EN}JSX Gui{/lang}{lang=SI}JSX Gui{/lang}{lang=CZ}JSX Gui{/lang}</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="contributors.html">{lang=EN}Contributors{/lang}{lang=SI}Contributors{/lang}{lang=CZ}Contributors{/lang}</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1_introduction.html"><strong aria-hidden="true">1.</strong> {lang=EN}Introduction{/lang} {lang=SI}Uvod{/lang} {lang=CZ}Úvod{/lang} {lang=DE}Einführung{/lang}</a></li><li class="chapter-item expanded "><a href="2_setup.html"><strong aria-hidden="true">2.</strong> {lang=EN}How to setup{/lang}{lang=SI}How to setup{/lang}{lang=CZ}Jak začít{/lang} {lang=DE}Vorbereitung{/lang}</a></li><li class="chapter-item expanded "><a href="3_basics.html"><strong aria-hidden="true">3.</strong> {lang=EN}Basics{/lang}{lang=SI}Basics{/lang}{lang=CZ}Základy{/lang} {lang=DE}Grundlagen{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="3_1_board.html"><strong aria-hidden="true">3.1.</strong> {lang=EN}Drawing area{/lang}{lang=SI}Drawing area{/lang}{lang=CZ}Nákresna{/lang} {lang=DE}Zeichenbereich{/lang}</a></li><li class="chapter-item expanded "><a href="3_2_basic_objects.html"><strong aria-hidden="true">3.2.</strong> {lang=EN}Creating points{/lang}{lang=SI}Creating points{/lang}{lang=CZ}Vytváření bodů{/lang} {lang=DE}Punkte erzeugen{/lang}</a></li><li class="chapter-item expanded "><a href="3_2a_lines.html"><strong aria-hidden="true">3.3.</strong> {lang=EN}Creating lines{/lang}{lang=SI}Creating lines{/lang}{lang=CZ}Kreslení přímek{/lang} {lang=DE}Geraden erzeugen{/lang}</a></li><li class="chapter-item expanded "><a href="3_2b_objects_drawing.html" class="active"><strong aria-hidden="true">3.4.</strong> {lang=EN}Adding attributes to the objects{/lang}{lang=SI}Adding properties to the objects{/lang}{lang=CZ}Nastavení vlastností objektů{/lang} {lang=DE}Attribute zu Objekten hinzufügen{/lang}</a></li><li class="chapter-item expanded "><a href="3_2c_example.html"><strong aria-hidden="true">3.5.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang} {lang=DE}Beispiel{/lang}</a></li><li class="chapter-item expanded "><a href="3_3_circles.html"><strong aria-hidden="true">3.6.</strong> {lang=EN}Circles{/lang}{lang=SI}Circles{/lang}{lang=CZ}Kružnice{/lang} {lang=DE}Kreise{/lang}</a></li><li class="chapter-item expanded "><a href="3_4_polygons.html"><strong aria-hidden="true">3.7.</strong> {lang=EN}Polygons{/lang}{lang=SI}Polygons{/lang}{lang=CZ}Mnohoúhelníky{/lang} {lang=DE}Polygone{/lang}</a></li><li class="chapter-item expanded "><a href="3_4a_example.html"><strong aria-hidden="true">3.8.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang} {lang=DE}Beispiel{/lang}</a></li><li class="chapter-item expanded "><a href="3_5_intersections.html"><strong aria-hidden="true">3.9.</strong> {lang=EN}Intersections{/lang}{lang=SI}Intersections{/lang}{lang=CZ}Průsečíky{/lang} {lang=DE}Schnittpunkte{/lang}</a></li><li class="chapter-item expanded "><a href="3_6_angles.html"><strong aria-hidden="true">3.10.</strong> {lang=EN}Angles{/lang}{lang=SI}Angles{/lang}{lang=CZ}Úhly{/lang} {lang=DE}Winkel{/lang}</a></li><li class="chapter-item expanded "><a href="3_7_curves.html"><strong aria-hidden="true">3.11.</strong> {lang=EN}Curves{/lang}{lang=SI}Curves{/lang}{lang=CZ}Křivky{/lang} {lang=DE}Kurven{/lang}</a></li><li class="chapter-item expanded "><a href="3_8_functions.html"><strong aria-hidden="true">3.12.</strong> {lang=EN}Drawing functions{/lang}{lang=SI}Drawing functions{/lang}{lang=CZ}Zobrazení grafu funkce{/lang} {lang=DE}Funktionsgraphen{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="4_animations.html"><strong aria-hidden="true">4.</strong> {lang=EN}Animating{/lang}{lang=SI}Animating{/lang}{lang=CZ}Animace{/lang} {lang=DE}Animationen{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="4_1_moving.html"><strong aria-hidden="true">4.1.</strong> {lang=EN}Moving objects{/lang}{lang=SI}Moving objects{/lang}{lang=CZ}Pohybování s objekty{/lang} {lang=DE}Objekte bewegen{/lang}</a></li><li class="chapter-item expanded "><a href="4_1a_example.html"><strong aria-hidden="true">4.2.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang} {lang=DE}Beispiel{/lang}</a></li><li class="chapter-item expanded "><a href="4_2_sliders.html"><strong aria-hidden="true">4.3.</strong> {lang=EN}Sliders{/lang}{lang=SI}Sliders{/lang}{lang=CZ}Posuvníky{/lang} {lang=DE}Schieberegler{/lang}</a></li><li class="chapter-item expanded "><a href="4_3_animation_sliders.html"><strong aria-hidden="true">4.4.</strong> {lang=EN}Animating with sliders{/lang}{lang=SI}Animating with sliders{/lang}{lang=CZ}Animace s posuvníky{/lang} {lang=DE}Animationen mit Schiebereglern{/lang}</a></li><li class="chapter-item expanded "><a href="4_3a_example.html"><strong aria-hidden="true">4.5.</strong> {lang=EN}Example{/lang}{lang=SI}Example{/lang}{lang=CZ}Příklad{/lang} {lang=DE}Beispiel{/lang}</a></li><li class="chapter-item expanded "><a href="4_4_transformations.html"><strong aria-hidden="true">4.6.</strong> {lang=EN}Transformations{/lang}{lang=SI}Transformations{/lang}{lang=CZ}Transformace{/lang} {lang=DE}Transformationen{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="5_advanced.html"><strong aria-hidden="true">5.</strong> {lang=EN}Advanced topics{/lang}{lang=SI}Advanced topics{/lang}{lang=CZ}Pokročilá témata{/lang} {lang=DE}Fortgeschrittene Themen{/lang}</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="5_1_adding_images.html"><strong aria-hidden="true">5.1.</strong> {lang=EN}Adding images{/lang}{lang=SI}Adding images{/lang}{lang=CZ}Vkládání obrázků{/lang} {lang=DE}Bilder einbinden{/lang}</a></li><li class="chapter-item expanded "><a href="5_1_screencapture.html"><strong aria-hidden="true">5.2.</strong> {lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Zachycení konstrukce jako obrázku{/lang} {lang=DE}Speichern einer Konstruktion als Bild{/lang}</a></li><li class="chapter-item expanded "><a href="5_2_jsxoptions.html"><strong aria-hidden="true">5.3.</strong> {lang=EN}JSXGraph options{/lang}{lang=SI}JSXGraph options{/lang}{lang=CZ}Volby JSXGraphu{/lang} {lang=DE}JSXGraph-Optionen{/lang}</a></li><li class="chapter-item expanded "><a href="5_3_trigers.html"><strong aria-hidden="true">5.4.</strong> {lang=EN}Events{/lang}{lang=SI}Events{/lang}{lang=CZ}Události{/lang} {lang=DE}Ereignisbehandlung{/lang}</a></li><li class="chapter-item expanded "><a href="5_4_user_actions.html"><strong aria-hidden="true">5.5.</strong> {lang=EN}Saving user actions{/lang}{lang=SI}Saving user actions{/lang}{lang=CZ}Uložení uživatelských akcí{/lang} {lang=DE}Nutzeraktionen abspeichern{/lang}</a></li><li class="chapter-item expanded "><a href="5_5_jessie_code.html"><strong aria-hidden="true">5.6.</strong> {lang=EN}Jessie Code{/lang}{lang=SI}Jessie Code{/lang}{lang=CZ}Jessie Code{/lang} {lang=DE}JessieCode{/lang}</a></li><li class="chapter-item expanded "><a href="6_moodle.html"><strong aria-hidden="true">5.7.</strong> {lang=EN}JSXGraph and Moodle{/lang}{lang=SI}JSXGraph and Moodle{/lang}{lang=CZ}JSXGraph a Moodle{/lang} {lang=DE}JSXGraph und Moodle{/lang}</a></li><li class="chapter-item expanded "><a href="6_1_jsxfilter.html"><strong aria-hidden="true">5.8.</strong> {lang=EN}JSXGraph as a Moodle Filter{/lang}{lang=SI}JSXGraph as a Moodle Filter{/lang}{lang=CZ}JSXGraph jako filtr v Moodlu{/lang} {lang=DE}JSGraph als Moodle-Filter{/lang}</a></li><li class="chapter-item expanded "><a href="6_2_formulas.html"><strong aria-hidden="true">5.9.</strong> {lang=EN}JSXGraph and Moodle Formulas{/lang}{lang=SI}JSXGraph and Moodle Formulas{/lang}{lang=CZ}JSXGraph a Moodle Formulas{/lang} {lang=DE}JSXGraph und Moodle-Formulas{/lang}</a></li><li class="chapter-item expanded "><a href="6_3_stack.html"><strong aria-hidden="true">5.10.</strong> {lang=EN}JSXGraph and Stack{/lang}{lang=SI}JSXGraph and Stack{/lang}{lang=CZ}JSXGraph a Stack{/lang} {lang=DE}JSXGraph und STACK{/lang}</a></li></ol></li><li class="chapter-item expanded "><a href="7_templates.html"><strong aria-hidden="true">6.</strong> {lang=EN}Templates{/lang}{lang=SI}Templates{/lang}{lang=CZ}Šablony{/lang} {lang=DE}Vorlagen{/lang}</a></li><li class="chapter-item expanded "><a href="8_gui.html"><strong aria-hidden="true">7.</strong> {lang=EN}JSX Gui{/lang}{lang=SI}JSX Gui{/lang}{lang=CZ}JSX GUI{/lang} {lang=DE}JSXGraph-Oberfläche{/lang}</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="contributors.html">{lang=EN}Contributors{/lang}{lang=SI}Contributors{/lang}{lang=CZ}Přispěvatelé{/lang} {lang=DE}Mitwirkende{/lang}</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -103,44 +100,53 @@
 
             <div class="page">
                 
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
-                    <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="lang-toggle" class="icon-button" type="button" style="font-weight: bold;color: black" title="Change language" aria-label="Change language" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list">
+                <div id="menu-bar" class="menu-bar">
+                    <div id="menu-bar-sticky-container">
+                        <div class="left-buttons">
+                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                                <i class="fa fa-bars"></i>
+                            </button>
+
+                            <button id="lang-toggle" class="icon-button" type="button" style="font-weight: bold;color: black" title="Change language" aria-label="Change language" aria-haspopup="true" aria-expanded="false" aria-controls="lang-list">
                                 EN
                             </button>
                             <ul id="lang-list" class="theme-popup" aria-label="Languages" role="menu">
                                 <li role="none"><button role="menuitem" class="theme" id="EN">English</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="CZ">Čeština</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="DE">Deutsch</button></li>
                                 <li role="none"><button role="menuitem" class="theme" id="SI">Slovenščina</button></li>
                             </ul>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                        </ul>
-                        
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
-                        </button>
-                        
-                    </div>
 
-                    <h1 class="menu-title" id="menu-title">{lang=EN}JSXGraph Book{/lang}{lang=SI}Knjiga o JSXGraphu{/lang}{lang=CZ}Příručka JSXGraph{/lang}</h1>
+                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                                <i class="fa fa-paint-brush"></i>
+                            </button>
+                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                            </ul>
 
-                    <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
-                        
+
+
+                            
+                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            
+
+                        </div>
+
+                        <h1 class="menu-title" id="menu-title">{lang=EN}JSXGraph Book{/lang}{lang=SI}Knjiga o JSXGraphu{/lang}{lang=CZ}Příručka JSXGraph{/lang}{lang=DE}JSXGraph-Buch{/lang}</h1>
+
+                        <div class="right-buttons">
+                            <a href="print.html" title="Print this book" aria-label="Print this book">
+                                <i id="print-button" class="fa fa-print"></i>
+                            </a>
+
+                            
+                        </div>
                     </div>
                 </div>
 
@@ -170,19 +176,19 @@
                     <main>
                         <p>{lang=EN}</p>
 <h2><a class="header" href="#adding-attributes-to-the-objects" id="adding-attributes-to-the-objects">Adding attributes to the objects</a></h2>
-<p>Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are 
-more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and 
-how line ends at the second point (more <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html">here</a>). 
-We can always look at the <a href="https://jsxgraph.uni-bayreuth.de/docs/index.html">JSXGraph API documentation</a>, which describes 
-all the objects and their attributes. </p>
-<p>Let us look now at the example. 
+<p>Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are
+more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and
+how line ends at the second point (more <a href="https://jsxgraph.org/docs/symbols/Line.html">here</a>).
+We can always look at the <a href="https://jsxgraph.org/docs/index.html">JSXGraph API documentation</a>, which describes
+all the objects and their attributes.</p>
+<p>Let us look now at the example.
 {/lang}</p>
 <p>{lang=SI}</p>
 <h2><a class="header" href="#adding-attributes-to-the-objects-1" id="adding-attributes-to-the-objects-1">Adding attributes to the objects</a></h2>
 <p>Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are 
 more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and 
-how line ends at the second point (more <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html">here</a>). 
-We can always look at the <a href="https://jsxgraph.uni-bayreuth.de/docs/index.html">JSXGraph API documentation</a>, which describes 
+how line ends at the second point (more <a href="https://jsxgraph.org/docs/symbols/Line.html">here</a>). 
+We can always look at the <a href="https://jsxgraph.org/docs/index.html">JSXGraph API documentation</a>, which describes 
 all the objects and their attributes. </p>
 <p>Let us look now at the example. 
 {/lang}</p>
@@ -191,9 +197,20 @@ all the objects and their attributes. </p>
 <p>Objekty v JSXGraphu mají atributy, které je charakterizují. Některé z nich jsou společné všem 
 (jako barva, jméno apod.), některé jsou typické pro objekty konkrétního druhu. 
 Body mají například různé tvary, u přímky pak lze např. stanovit, zda bude končit v druhém ze svých určujících bodů
-(atribut <em>straightLast</em>) a jak v něm bude končit (více <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Line.html">zde</a>). </p>
-<p>Popisy všech atributů objektů JSXGraphu jsou uvedeny v dokumentaci <a href="https://jsxgraph.uni-bayreuth.de/docs/index.html">JSXGraph Reference</a>. </p>
+(atribut <em>straightLast</em>) a jak v něm bude končit (více <a href="https://jsxgraph.org/docs/symbols/Line.html">zde</a>). </p>
+<p>Popisy všech atributů objektů JSXGraphu jsou uvedeny v dokumentaci <a href="https://jsxgraph.org/docs/index.html">JSXGraph Reference</a>. </p>
 <p>Podívejme se na následující příklad: 
+{/lang}</p>
+<p>{lang=DE}</p>
+<h2><a class="header" href="#attribute-zu-objekten-hinzufügen" id="attribute-zu-objekten-hinzufügen">Attribute zu Objekten hinzufügen</a></h2>
+<p>JSXGraph-Objekte besitzen Attribute, durch die sie beschrieben werden.
+Einige dieser Attribute stehen in allen Objekte zur Verfügung (z.B. <code>color</code>, <code>name</code>, etc.), andere Attribute gibt es nur
+bei speziellen Objekten.
+Zum Beispiel besitzen Punkte das Attribut <code>shape</code>, Geraden dagegen besitzen u.a. Attribute, die festlegen, ob die Gerade über die definierenden Punkte hinausgezeichnet wird oder nicht (Attribute <code>straightFirst</code>und <code>straightLast</code>).
+Siehe hierzu auch die <a href="https://jsxgraph.org/docs/symbols/Line.html">Dokumentation zu Geraden</a>.</p>
+<p>In der umfangreichen <a href="https://jsxgraph.org/docs/index.html">JSXGraph API Dokumentation</a> werden
+alle Objekte und ihre Attribute detailliert beschrieben.</p>
+<p>Betrachten wir folgendes Beispiel.
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -214,6 +231,9 @@ Result:
 <p>{lang=CZ}
 Výsledek:
 {/lang}</p>
+<p>{lang=DE}
+Resultat:
+{/lang}</p>
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
  var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
@@ -222,27 +242,27 @@ Výsledek:
  var line2 = board.create("line",[p,q],{straightLast:false, dash:"4" });
 </script>
 <p>{lang=EN}
-In this example we added some attributes to the both points and to the line. 
+In this example we added some attributes to the both points and to the line.
 In all three examples we defined attributes as a list written between <code>{ }</code>. For each attribute we must write its name
-and a value. As we mentioned earlier, objects can have specific attributes and also more general borrowed (inherited) 
+and a value. As we mentioned earlier, objects can have specific attributes and also more general borrowed (inherited)
 from other objects.</p>
-<p>In <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> first attribute is <em>name</em> which is borrowed 
-from <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>, attribute <em>color</em> is also 
-borowed, where attribute <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#size"><em>size</em></a> is not borrowed but belongs to object Point.
-We can read from the documentation: <em>Size of a point, either in pixel or user coordinates. Means radius resp. half the 
+<p>In <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> first attribute is <em>name</em> which is borrowed
+from <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>, attribute <em>color</em> is also
+borrowed, where attribute <a href="https://jsxgraph.org/docs/symbols/Point.html#size"><em>size</em></a> is not borrowed but belongs to object Point.
+We can read from the documentation: <em>Size of a point, either in pixel or user coordinates. Means radius resp. half the
 width of a point (depending on the face).</em></p>
 <p>Second point has some interesting attributes <code>var q = board.create('point',[3,1],{name:&quot;last&quot;,fixed:true, face:&quot;[]&quot;});</code>
 First is the attribute <em>fixed</em> which defines whether objects can be moved (dragged) on the board. <em>Default</em> value for this
 attribute is false, which means we can move all objects on the board if they are not explicitly fixed. Now we first mentioned
-<em>default value</em>, which is used when do not explicitly set another value for some attribute. In the documentation for each 
-attribute default value is also presented. The second new attribute is <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#face"><em>face</em></a>
-where we used one of the possible shapes of a point. </p>
+<em>default value</em>, which is used when do not explicitly set another value for some attribute. In the documentation for each
+attribute default value is also presented. The second new attribute is <a href="https://jsxgraph.org/docs/symbols/Point.html#face"><em>face</em></a>
+where we used one of the possible shapes of a point.</p>
 <p>When we defined <code>var line2 = board.create(&quot;line&quot;,[p,q],{straightLast:false, dash:&quot;4&quot; });</code>, we used two attributes,
 first defining how line will end at second point (<em>straightLast</em>) and second defining how the line will be drawn (<em>dash</em>).
-Again, <em>dash</em>  can have different values, <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#dash">documentation for dash attribute</a> 
+Again, <em>dash</em>  can have different values, <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#dash">documentation for dash attribute</a>
 tells us which are possible values.</p>
-<p>All objects have attributes, also Board object has <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html">them</a>. 
-One of the attributes is <em>boundingbox</em>, which we used from first example, but didn't talk about it until now. 
+<p>All objects have attributes, also Board object has <a href="https://jsxgraph.org/docs/symbols/JXG.Board.html">them</a>.
+One of the attributes is <em>boundingbox</em>, which we used from first example, but didn't talk about it until now.
 E.g. if you don't like the navigation (bottom right), then you can add attribute <em>showNavigation</em> and set it to false. Try it!</p>
 <p><em><em>We can see that we can use attributes to fine tune on how our construction will behave and look.</em></em></p>
 <p><strong>Documentation is a great resource for discovering attributes and also has some
@@ -254,21 +274,21 @@ In all three examples we defined attributes as a list written between <code>{ }<
 and a value. As we mentioned earlier, objects can have specific attributes and also more general borrowed (inherited) 
 from other objects.</p>
 <p>In <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> first attribute is <em>name</em> which is borrowed 
-from <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>, attribute <em>color</em> is also 
-borowed, where attribute <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#size"><em>size</em></a> is not borrowed but belongs to object Point.
+from <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>, attribute <em>color</em> is also 
+borrowed, where attribute <a href="https://jsxgraph.org/docs/symbols/Point.html#size"><em>size</em></a> is not borrowed but belongs to object Point.
 We can read from the documentation: <em>Size of a point, either in pixel or user coordinates. Means radius resp. half the 
 width of a point (depending on the face).</em></p>
 <p>Second point has some interesting attributes <code>var q = board.create('point',[3,1],{name:&quot;last&quot;,fixed:true, face:&quot;[]&quot;});</code>
 First is the attribute <em>fixed</em> which defines whether objects can be moved (dragged) on the board. <em>Default</em> value for this
 attribute is false, which means we can move all objects on the board if they are not explicitly fixed. Now we first mentioned
 <em>default value</em>, which is used when do not explicitly set another value for some attribute. In the documentation for each 
-attribute default value is also presented. The second new attribute is <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#face"><em>face</em></a>
+attribute default value is also presented. The second new attribute is <a href="https://jsxgraph.org/docs/symbols/Point.html#face"><em>face</em></a>
 where we used one of the possible shapes of a point. </p>
 <p>When we defined <code>var line2 = board.create(&quot;line&quot;,[p,q],{straightLast:false, dash:&quot;4&quot; });</code>, we used two attributes,
 first defining how line will end at second point (<em>straightLast</em>) and second defining how the line will be drawn (<em>dash</em>).
-Again, <em>dash</em>  can have different values, <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#dash">documentation for dash attribute</a> 
+Again, <em>dash</em>  can have different values, <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#dash">documentation for dash attribute</a> 
 tells us which are possible values.</p>
-<p>All objects have attributes, also Board object has <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html">them</a>. 
+<p>All objects have attributes, also Board object has <a href="https://jsxgraph.org/docs/symbols/JXG.Board.html">them</a>. 
 One of the attributes is <em>boundingbox</em>, which we used from first example, but didn't talk about it until now. 
 E.g. if you don't like the navigation (bottom right), then you can add attribute <em>showNavigation</em> and set it to false. Try it!</p>
 <p><em><em>We can see that we can use attributes to fine tune on how our construction will behave and look.</em></em></p>
@@ -281,8 +301,8 @@ Ve všech třech případech jsme definovali vlastnosti objektů pomocí seznamu
 Pro každý atribut musíme napsat jeho jméno a hodnotu. Jak již bylo uvedeno dříve, objekty mohou mít jak specifické atributy,
 tak i atributy obecné, sdílené s více objekty. </p>
 <p>V kódu <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> 
-je prvním atributem jméno objektu <em>name</em>, které je společné třídě <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>, 
-atribut barvy <em>color</em> je také společný, zatímco atribut velikosti <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#size"><em>size</em></a> 
+je prvním atributem jméno objektu <em>name</em>, které je společné třídě <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>, 
+atribut barvy <em>color</em> je také společný, zatímco atribut velikosti <a href="https://jsxgraph.org/docs/symbols/Point.html#size"><em>size</em></a> 
 není obecný, ale je typický pro objekt <em>Point</em> (bod).
 V dokumentaci se dočteme: <em>Velikost bodu, buď v pixelech nebo v jednotkách určených uživatelem. Znamená poloměr nebo polovinu
 šířky bodu (v závislosti na jeho vzhledu).</em></p>
@@ -291,16 +311,52 @@ obsahuje další zajímavé atributy. První z nich je atribut <em>fixed</em>, k
 po nákresně. <em>Nastavená</em> (<em>Default</em>) hodnota pro tento atribut je <em>false</em>, což znamená, že pokud objekty nejsou explicitně fixovány,
 můžeme s nimi hýbat po nákresně. <em>Nastavená hodnota</em> (<em>default value</em>) je použita vždy, když není pro daný atribut explicitně zadána jiná hodnota. 
 V dokumentaci jsou uvedeny nastavené hodnoty pro všechny atributy. Druhým novým atributem v uvedeném kódu je
-<a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/Point.html#face"><em>face</em></a>, kterým nastavíme jeden z možných tvarů bodu. </p>
+<a href="https://jsxgraph.org/docs/symbols/Point.html#face"><em>face</em></a>, kterým nastavíme jeden z možných tvarů bodu. </p>
 <p>V kódu <code>var line2 = board.create(&quot;line&quot;,[p,q],{straightLast:false, dash:&quot;4&quot; });</code> definice přímky byly použity dva
 atributy, první z nich <em>straightLast</em> určuje, že přímka skončí ve druhém z určujících bodů, druhý <em>dash</em> potom určuje, jak bude čára nakreslena.
-Parametr <em>dash</em> může nabývat různých hodnot, jejich přehled viz <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.GeometryElement.html#dash">dokumentace pro atribut &quot;dash&quot;</a>.</p>
-<p>Tak jako v3echny objekty i nákresna (<em>Board</em>) má své <a href="https://jsxgraph.uni-bayreuth.de/docs/symbols/JXG.Board.html">atributy</a>. 
+Parametr <em>dash</em> může nabývat různých hodnot, jejich přehled viz <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#dash">dokumentace pro atribut &quot;dash&quot;</a>.</p>
+<p>Tak jako všechny objekty i nákresna (<em>Board</em>) má své <a href="https://jsxgraph.org/docs/symbols/JXG.Board.html">atributy</a>. 
 Jedním z nich je <em>boundingbox</em>, který používáme již od první ukázky kódu nákresny, ale ještě jsme ho nekomentovali. 
 Dalším atributem nákresny je <em>showNavigation</em>, který nám dovoluje skrýt navigační tlačítka v pravém dolním rohu nákresny,
 pokud mu nastavíme hodnotu <em>false</em>. Vyzkoušejte to!</p>
 <p><em><em>Vidíme, že pomocí nastavení hodnot atributů můžeme vyladit chování i vzhled naší konstrukce.</em></em></p>
 <p><strong>Dokumentace je velkým zdrojem pro poznání všech atributů, které můžeme použít. Obsahuje také konkrétní příklady jejich použití.</strong>
+{/lang}</p>
+<p>{lang=DE}
+In diesem Beispiel werden verschiedene Attribute zu den beiden Punkten und der Geraden hinzugefügt.
+In allen drei Beispielen legen wir die Attribute durch eine Liste, die durch
+geschweifte Klammern <code>{ }</code> eingeschlossen ist, fest.
+Für jedes Attribut wird sein Name und ein Wert angegeben. Wie bereits erwähnt, haben Objekte sowohl spezifische
+Attribute als auch allgemeinere Objekte, die von anderen Objekten vererbt sind.</p>
+<p>In <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> ist das erste Attribut <em>name</em>,
+das vom Element <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>
+abgeleitet ist.
+Das Attribut <em>color</em> ist ebenfalls von diesem Element abgeleitet und daher in nahezu allen Elementen verfügbar.
+Das Attribut <a href="https://jsxgraph.org/docs/symbols/Point.html#size"><em>size</em></a> hingegen ist ausschließlich im Objekt
+Punkt verfügbar.</p>
+<p>Aus der Dokumentation zum Attribute <code>size</code>: <em>Size of a point, either in pixel or user coordinates. Means radius resp. half the
+width of a point (depending on the face).</em></p>
+<p>Dem zweiten Punkt im obigen Beispiel werden die interessanten Attribute
+<code>var q = board.create('point',[3,1],{name:&quot;last&quot;,fixed:true, face:&quot;[]&quot;});</code> zugewiesen.
+Das Attribut <em>fixed</em> legt fest, ob das Objekt vom Betrachter bewegt (gezogen) werden kann. Der <em>Standardwert</em> für dieses Attribut ist <code>false</code>, was heißt, dass wir alle Objekte über die Zeichenfläche ziehen können, für die dies nicht explizit
+mit <code>fixed:true</code> unterbunden ist.</p>
+<p>Wir habe gerade erstmals den <em>Standardwert</em> (<em>default value</em>) eines Attributs erwähnt. Dieser wird verwendet,
+wenn nicht explizit ein anderer Wert gesetzt wird. In der Dokumentation wird für jedes Attribut der
+zugehörige <em>default value</em> aufgelistet.</p>
+<p>Das zweite neue Attribut ist <a href="https://jsxgraph.org/docs/symbols/Point.html#face"><em>face</em></a>,
+mit dem wir eine der möglichen Punktformen gewählt hatten.</p>
+<p>Bei der Angabe <code>var line2 = board.create(&quot;line&quot;,[p,q],{straightLast:false, dash:&quot;4&quot; });</code> setzen wir zwei Attribute.
+Mit dem ersten Attribut wird bestimmt, dass die &quot;Gerade&quot; am zweiten Punkt endet (<em>straightLast</em>).
+Also wird eine Halbgerade zu sehen sein.
+Das zweite Attribut legt die Linienform der Geraden fest (<em>dash</em>): durchgezogen, gestrichelt, etc.
+Wie zuvor kann <em>dash</em>  verschiedene Werte annehmen, in der <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#dash">Dokumentation für das dash-Attribut</a> sind die möglichen Werte aufgelistet.</p>
+<p>Alle Objekte haben Attribute, auch das board-Objekt hat
+<a href="https://jsxgraph.org/docs/symbols/JXG.Board.html">Attribute</a>.
+Eines dieser Attribute ist <em>boundingbox</em>, das bereits im ersten Beispiel verwendet wurde, aber über das noch nichts weiter gesagt wurde.</p>
+<p>Wenn zum Beispiel die Navigations-Icons unten rechts ausgeblendet werden sollen, so kann
+das Board-Attribut <em>showNavigation</em> auf <code>false</code> gesetzt werden. Versuchen wir es!</p>
+<p><em><em>Wir sehen, dass wir mit Attributen Feineinstellungen zum Verhalten und Aussehen unserer Konstruktion vornehmen können.</em></em></p>
+<p><strong><a href="https://jsxgraph.org/docs/">Die Dokumentation</a> ist eine hervorragende Quelle um Attribute zu entdecken. Zudem enthält sie viele Beispiele, wie Attribute verwendet werden.</strong>
 {/lang}</p>
 
                     </main>
@@ -326,13 +382,13 @@ pokud mu nastavíme hodnotu <em>false</em>. Vyzkoušejte to!</p>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a rel="prev" href="3_2a_lines.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a href="3_2a_lines.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a rel="next" href="3_2c_example.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a href="3_2c_example.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -341,15 +397,22 @@ pokud mu nastavíme hodnotu <em>false</em>. Vyzkoušejte to!</p>
         </div>
 
         
-
-        
-
-        
-        
-        
+        <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            window.playpen_copyable = true;
+            var socket = new WebSocket("ws://localhost:3001");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload(true); // force reload from server (not from cache)
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
         </script>
+        
+
         
 
         
