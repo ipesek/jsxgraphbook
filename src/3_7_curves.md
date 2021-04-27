@@ -3,7 +3,7 @@
 
 [Curves](https://jsxgraph.org/docs/symbols/Curve.html) in JSXGraph does not mean just curves from functions
 or polynomials, but also parametric curves, polar curves or data plots. In our example we will show how to use data
-for data plotting, for other uses please check API documentation.
+for data plotting, for other uses please check the API documentation.
 {/lang}
 
 {lang=SI}
@@ -50,9 +50,9 @@ API-Dokumentation.
 In this example we had to change the bounding box of the board in order to accommodate the data. Otherwise not all points
 will be visible.  
 
-To draw a data plot we need first two lists of data. In our case we used two lists `x` and `y` and filled them with numbers.
-But is not the only way how to obtain the data (e.g. see this [example](https://jsxgraph.org/wiki/index.php/Data_plot)).
-As last we had to set the type of curve using attribute [_curveType_](https://jsxgraph.org/docs/symbols/Curve.html#curveType).
+To draw a data plot we first need two lists of data. In our case we used two lists `x` and `y` and filled them with numbers.
+But it is not the only way to obtain the data (e.g. see this [example](https://jsxgraph.org/wiki/index.php/Data_plot)).
+Finally we had to set the type of curve using attribute [_curveType_](https://jsxgraph.org/docs/symbols/Curve.html#curveType).
 {/lang}
 
 {lang=SI}

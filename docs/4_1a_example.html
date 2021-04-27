@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,21 +175,21 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#example-proof-without-words" id="example-proof-without-words">Example: Proof without words</a></h2>
+<h2 id="example-proof-without-words"><a class="header" href="#example-proof-without-words">Example: Proof without words</a></h2>
 <p><strong>Area of a parallelogram.</strong> The area of a parallelogram equals its base multiplied by its height. Prove it!</p>
 <p>To solve the example we will use a dynamic <a href="https://en.wikipedia.org/wiki/Proof_without_words">proof without words</a>, 
 see figure below. By this means we will show that the area of a parallelogram equals the area of a rectangle whose 
 base and height are the same as that of the parallelogram. 
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#example-proof-without-words-1" id="example-proof-without-words-1">Example: Proof without words</a></h2>
+<h2 id="example-proof-without-words-1"><a class="header" href="#example-proof-without-words-1">Example: Proof without words</a></h2>
 <p><strong>Area of a parallelogram.</strong> The area of a parallelogram equals its base multiplied by its height. Prove it!</p>
 <p>To solve the example we will use a dynamic <a href="https://en.wikipedia.org/wiki/Proof_without_words">proof without words</a>, 
 see figure below. By this means we will show that the area of a parallelogram equals the area of a rectangle whose 
 base and height are the same as that of the parallelogram. 
 {/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#příklad-důkaz-beze-slov" id="příklad-důkaz-beze-slov">Příklad: Důkaz beze slov</a></h2>
+<h2 id="příklad-důkaz-beze-slov"><a class="header" href="#příklad-důkaz-beze-slov">Příklad: Důkaz beze slov</a></h2>
 <p><strong>Obsah rovnoběžníku.</strong> Obsah rovnoběžníku je roven součinu velikostí jeho základny a výšky na tuto základnu. Dokažte!</p>
 <p>Úkol vyřešíme předložením dynamického <a href="https://en.wikipedia.org/wiki/Proof_without_words">důkazu beze slov</a>, 
 viz obrázek níže. Jeho prostřednictvím prokážeme, že obsah rovnoběžníku je stejný jako obsah obdélníku, jehož 
@@ -415,7 +415,7 @@ Kód řešení úlohy je nyní kompletní.
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

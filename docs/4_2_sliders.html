@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,15 +175,15 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#sliders" id="sliders">Sliders</a></h2>
-<p>Sliders can be used in various settings, where we want that users try or tinker with the values of some variable. In our example
-we will upgrade example with the quadratic function.
+<h2 id="sliders"><a class="header" href="#sliders">Sliders</a></h2>
+<p>Sliders can be used in various settings, where we want the users to tinker with the values of some variable. In our example
+we will use a quadratic function.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#sliders-1" id="sliders-1">Sliders</a></h2>
+<h2 id="sliders-1"><a class="header" href="#sliders-1">Sliders</a></h2>
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#posuvníky" id="posuvníky">Posuvníky</a></h2>
+<h2 id="posuvníky"><a class="header" href="#posuvníky">Posuvníky</a></h2>
 <p>Posuvník (<em>slider</em>) můžeme použít v různých situacích, ve kterých chceme, aby měl uživatel možnost bezprostředně měnit 
 hodnotu nějaké proměnné. Pro ukázku použití posuvníků jsme zvolili náležitou úpravu dříve uvedeného příkladu s kvadratickou funkcí.
 {/lang}</p>
@@ -275,7 +275,7 @@ Vidíme zde, že pro získání okamžité hodnoty posuvníku použijeme spojen�
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

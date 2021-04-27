@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,17 +175,17 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#polygons" id="polygons">Polygons</a></h2>
-<p>Polygons are very useful objects which can be used to construct a closed area with arbitrary many points (minimum is three).
+<h2 id="polygons"><a class="header" href="#polygons">Polygons</a></h2>
+<p>Polygons are very useful objects which can be used to construct a closed area with arbitraryly many points (minimum is three).
 Polygons can be convex or concave, depending on the input points. We can again define different <a href="https://jsxgraph.org/docs/symbols/Polygon.html">attributes</a>
 to the object.</p>
 <p>Example:
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#polygons-1" id="polygons-1">Polygons</a></h2>
+<h2 id="polygons-1"><a class="header" href="#polygons-1">Polygons</a></h2>
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#mnohoúhelníky" id="mnohoúhelníky">Mnohoúhelníky</a></h2>
+<h2 id="mnohoúhelníky"><a class="header" href="#mnohoúhelníky">Mnohoúhelníky</a></h2>
 <p>Mnohoúhelníky jsou v geometrii velmi frekventované objekty. Můžeme je chápat jako části roviny ohraničené uzavřenou
 lomenou čarou s libovolným počtem vrcholů (minimum jsou tři). Mnohoúhelník může být <em>konvexní</em> nebo <em>konkávní</em> (říkáme též <em>nekonvexní</em>),
 v závislosti na rozložení určujících bodů (vrcholů). Stejně jako jiným objektům i mnohoúhelníkům můžeme přiřadit různé
@@ -193,7 +193,7 @@ v závislosti na rozložení určujících bodů (vrcholů). Stejně jako jiným
 <p>Příklad:
 {/lang}</p>
 <p>{lang=DE}</p>
-<h2><a class="header" href="#polgyone" id="polgyone">Polgyone</a></h2>
+<h2 id="polgyone"><a class="header" href="#polgyone">Polgyone</a></h2>
 <p>Polygone (Vielecke) sind sehr hilfreiche Objekte zur Konstruktion von abgeschlossenen
 Flächen (<em>Vielecke</em>) mit beliebig vielen Eckpunkten (aber minimal drei).
 Polygone können konvex sein, müssen es aber nicht. Dies ist abhängig von den definierenden Punkten.
@@ -232,13 +232,13 @@ das Aussehen und Verhalten ändern.</p>
  var poly2 = board.create('polygon',points,{name:"Polygon 2",withLabel:true,hasInnerPoints:true, withLines:false, vertices:{visible:false}});
 </script>
 <p>{lang=EN}
-As we mentioned earlier we need at least three points to make a polygon. In our example we created five points which then used
+As we mentioned earlier we need at least three points to make a polygon. In our example we created five points which were then used
 to create a polygon. We used an attribute <em>withLabel</em> which tells JSXGraph to show the name of the polygon.</p>
-<p>For the second polygon we created a list of points, which is another approach to create a polygon. Here we again few new
-attributes. Attribute <em>hasInnerPoints</em> enables user to move entire polygon. For example, moving Polygon 1 is not possible,
+<p>For the second polygon we created a list of points, which is another approach to creating a polygon. Here we have a few new
+attributes. Attribute <em>hasInnerPoints</em> enables the user to move the entire polygon. For example, moving Polygon 1 is not possible,
 only its points can be moved. Adding this attribute will enable moving the polygon.
 Next attribute, <em>withLines</em> tells JSXGraph whether to draw borders of the polygon or not. The last attribute <em>vertices</em> is
-particularly interesting, because it does not have just a value, but a dictionary on the right side of <code>:</code>. The reason behind
+particularly interesting, because it does not have just a value, but a dictionary on the right side of <code>:</code>. The reason behind it
 is that we can control the vertices with more than one attribute.
 {/lang}</p>
 <p>{lang=SI}
@@ -319,7 +319,7 @@ ein eigenes Attribut-Objekt, das die Eigenschaften der Polygon-Ecken festlegt. D
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

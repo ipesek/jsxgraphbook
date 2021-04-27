@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,7 +175,7 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#how-to-setup" id="how-to-setup">How to setup</a></h2>
+<h2 id="how-to-setup"><a class="header" href="#how-to-setup">How to setup</a></h2>
 <p>When we prepare JSX construction it is most convenient to prepare it locally. For that we have to create some file (eg.
 <code>example.htm</code>), copy paste template provided below and we can start constructing. After we save the program, we can open it in our
 favorite browser (Firefox, Chrome, etc).
@@ -183,7 +183,7 @@ We can repeat following: edit the file, save it and refresh it (<em>(F5)</em> in
 <p>Basic template for building and testing is below
 {/lang}
 {lang=CZ}</p>
-<h2><a class="header" href="#jak-začít" id="jak-začít">Jak začít</a></h2>
+<h2 id="jak-začít"><a class="header" href="#jak-začít">Jak začít</a></h2>
 <p>Když chceme vytvořit novou konstrukci v JSXGraphu, nejlepší je připravit si ji lokálně, ve svém počítači. 
 Není nutné ji nahrávat na nějaký server, stačí, když ji uložíme formou HTML souboru do svého počítače a následně otevřeme v našem oblíbeném prohlížeči.</p>
 <p>Níže je uveden vzor obsahu HTML souboru webové stránky pro tvorbu a testování JSX appletu. 
@@ -197,7 +197,7 @@ we just need to save it and refresh the page <em>(F5)</em> in browser.
 Very simple template for building and testing is below
 {/lang}
 {lang=DE}</p>
-<h2><a class="header" href="#vorbereitung" id="vorbereitung">Vorbereitung</a></h2>
+<h2 id="vorbereitung"><a class="header" href="#vorbereitung">Vorbereitung</a></h2>
 <p>Eine JSXGraph-Konstruktion kann am bequemsten lokal mit einem Text-Editor auf einem Computer erstellt werden.
 Dazu legen wir eine leere HTML-Datei an (z.B. <code>example.htm</code>) und kopieren die untenstehende Vorlage in die Datei.
 Danach können wir mit dem Konstruieren beginnen.
@@ -295,7 +295,7 @@ dem Resultat zufrieden sind.</p>
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

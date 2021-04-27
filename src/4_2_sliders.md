@@ -1,8 +1,8 @@
 {lang=EN}
 ## Sliders
 
-Sliders can be used in various settings, where we want that users try or tinker with the values of some variable. In our example
-we will upgrade example with the quadratic function.
+Sliders can be used in various settings, where we want the users to tinker with the values of some variable. In our example
+we will use a quadratic function.
 {/lang}
 
 {lang=SI}

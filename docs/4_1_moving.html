@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,16 +175,16 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#moving-objects" id="moving-objects">Moving objects</a></h2>
-<p>Sometimes we want to move points to explain or present some concept. We can use this to animate the point by moving to 
+<h2 id="moving-objects"><a class="header" href="#moving-objects">Moving objects</a></h2>
+<p>Sometimes we want to move points to explain or present some concept. We can use this to animate the point by moving to a
 final point (using method moveTo()) or only visiting some point and returning back to the start.
-We will use both methods in next example.
+We will use both methods in the next example.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#moving-objects-1" id="moving-objects-1">Moving objects</a></h2>
+<h2 id="moving-objects-1"><a class="header" href="#moving-objects-1">Moving objects</a></h2>
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#pohybování-s-objekty" id="pohybování-s-objekty">Pohybování s objekty</a></h2>
+<h2 id="pohybování-s-objekty"><a class="header" href="#pohybování-s-objekty">Pohybování s objekty</a></h2>
 <p>Pro ilustraci nebo vysvětlení některých jevů potřebujeme mít někdy možnost cíleně pohybovat s vybranými body obrázku. 
 Můžeme například bod jednoduše přemístit do daného cílového místa (použitím metody <em>moveTo()</em>), nebo ho někam pošleme, aby se 
 potom vrátil zpět do výchozího místa.
@@ -210,7 +210,7 @@ V následujícím příkladu použijeme oba tyto režimy pohybu.
 <p>{lang=EN}
 First three lines are usual, but in the next line <code>var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);</code> we use 
 two new commands. </p>
-<p>Let us focus first on the second command: <code>q.visit([3, -2], 1800, 2)</code>. Until now we always 
+<p>Let us focus first on the second command: <code>q.visit([3, -2], 1800, 2)</code>. Until now we have always 
 used only one method <em>create()</em> which we provided with parameters to create points, etc. on the board. Now we introduce 
 a new method for the point which is called <a href="https://jsxgraph.org/docs/symbols/JXG.CoordsElement.html#visit"><em>visit()</em></a>.
 Its syntax is <strong>visit(where, time, options)</strong> with three parameters,</p>
@@ -223,14 +223,14 @@ Its syntax is <strong>visit(where, time, options)</strong> with three parameters
 <strong>[x-coordinate, y-coordinate, title on the button, action]</strong>. In our case the action was anonymous function with the 
 <em>visit</em> method on point <em>q</em>.</p>
 <p>The second button is created in next line, but let us now look at the action more closely which is <code>p.moveTo([Math.random()*8-4,Math.random()*8-4],500);</code>.
-Here we use on the point <em>q</em> new method <em>moveTo</em> which takes only two parameters</p>
+Here a new method <em>moveTo</em> is used on the point <code>q</code>, which takes only two parameters</p>
 <ul>
 <li>destination coordinates as a list of two elements e.g  <code>[Math.random()*8-4,Math.random()*8-4]</code></li>
 <li>animation time in miliseconds, e.g <code>500</code>.</li>
 </ul>
-<p>For the coordinates we use <em>Math.random</em> method, which every time we click on the button creates new random number between 0 and 1 
-which we multiply by $8$ and subtract by $4$, result then will be between $-4$ and $4$m which are also limits of our bounding box.
-We do the same for both coordinates. As a result our point p (<code>&quot;A&quot;</code>) moves across the board randomly. 
+<p>For the coordinates we use <em>Math.random</em> method, which  creates new random number between 0 and 1 every time we click on the button,
+then we multiply it by $8$ and subtract $4$. The result will be a number between $-4$ and $4$m which are also the limits of our bounding box.
+We do the same for both coordinates. As a result our point <code>p</code> (<code>&quot;A&quot;</code>) moves across the board randomly. 
 {/lang}</p>
 <p>{lang=CZ}
 Význam prvích tří řádků (za značkou &lt;script&gt;) už známe, další řádek <code>var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);</code> ale přináší 
@@ -300,7 +300,7 @@ Tímto způsobem definujeme obě souřadnice cíle pohybu. Výsledným efektem j
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

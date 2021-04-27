@@ -3,8 +3,8 @@
 
 In JSXGraph we don't have only points and lines. In this section we will learn about circles. They can be constructed
 with different [methods](https://jsxgraph.org/docs/symbols/JXG.Circle.html#method), here we will present how to
- create with two points and a point and a radius.
-Let us now look at the example.
+ create a circle with either two points, or a point and a radius.
+Let us look at the example.
 {/lang}
 
 {lang=SI}##Circles{/lang}
@@ -54,12 +54,12 @@ Betrachten wir ein Beispiel:
 </script>
 
 {lang=EN}
-First what we notice is, that when we initialized the board with a new argument `keepAspectRatio:true` which we use
-to tell JSXGraph that we want that html object and drawing board keep the aspect ratio between $x$ and $y$ axis. Setting this to
+The first thing what we notice is, that we initialized the board with a new argument `keepAspectRatio:true` which we use
+to tell JSXGraph that we want our drawing board to keep the aspect ratio between the $x$ and $y$ axis. Setting this to
 true is necessary if circles should look like circles and not like ellipses.
 
 After creating both points we create two circles. _Circle1_ is created with `var circle1 = board.create("circle",[p,q],{strokecolor:"red", strokeWidth:4});`.
-We can see, that here we created circle with two points which is default method for creating the circles. We used
+We can see that here we created circle with two points which is default method for creating the circles. We used
 two additional attributes which we used to set the color and width of the stroke. Color here was not defined with
 RGB system, but with the [color name](https://en.wikipedia.org/wiki/Web_colors).
 

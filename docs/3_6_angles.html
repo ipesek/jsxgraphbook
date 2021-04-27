@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,16 +175,16 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#angles" id="angles">Angles</a></h2>
-<p>When we need to emphasise some angle in our construction, we can do this with object <a href="https://jsxgraph.org/docs/symbols/Angle.html"><em>Angle</em></a>.
+<h2 id="angles"><a class="header" href="#angles">Angles</a></h2>
+<p>When we need to emphasise a specific angle in our construction, we can do this with object <a href="https://jsxgraph.org/docs/symbols/Angle.html"><em>Angle</em></a>.
 As an input we need to provide three points $p1, p2, p3$ and the angle is drawn counterclockwise from $p1$ to $p3$ around $p2$.
-Other combinations include two lines and two directions (by +/- 1) or line and two coordinates.
+Other combinations include two lines and two directions (by +/- 1) or a line and two coordinates.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#angles-1" id="angles-1">Angles</a></h2>
+<h2 id="angles-1"><a class="header" href="#angles-1">Angles</a></h2>
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#Úhly" id="Úhly">Úhly</a></h2>
+<h2 id="Úhly"><a class="header" href="#Úhly">Úhly</a></h2>
 <p>Pro zvýraznění konkrétních úhlů v konstrukci nabízí JSXGraph objekt <a href="https://jsxgraph.org/docs/symbols/Angle.html"><em>Angle</em></a> (<em>Úhel</em>).
 Jako vstupní údaje je třeba zadat tři body $p1, p2, p3$, úhel je pak vykreslen v kladném smyslu (tj. proti směru pohybu hodinových ručiček)
 od bodu $p1$ (bod na počátečním rameni) do bodu $p3$ (bod na koncovém rameni), kolem $p2$ (vrchol).</p>
@@ -192,7 +192,7 @@ od bodu $p1$ (bod na počátečním rameni) do bodu $p3$ (bod na koncovém ramen
 (kolmý průmět každého z těchto bodů na jemu příslušnou přímku, dle pořadí v zápisu, určuje polopřímku, která je ramenem úhlu).
 {/lang}</p>
 <p>{lang=DE}</p>
-<h2><a class="header" href="#winkel" id="winkel">Winkel</a></h2>
+<h2 id="winkel"><a class="header" href="#winkel">Winkel</a></h2>
 <p>Wenn Winkel in unserer Konstruktion gekennzeichnet werden sollen, kann dies mit dem Objekt
 <a href="https://jsxgraph.org/docs/symbols/Angle.html"><em>Angle</em></a> bewerkstelligt werden.
 Als Eingabe müssen wir drei Punkte $p1, p2, p3$ bereitstellen. Der Winkel wird dann gegen den Uhrzeigersinn
@@ -232,7 +232,7 @@ when defining angle with three points we have to provide them in counterclockwis
 <p>Then the second angle $\beta$ was created using two lines and two directions (+/- 1) with following line
 <code>var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});</code>. This line presents another possible
 method to input the parameters of an angle. We can combine them differently to get different angles at the intersection point $A$.</p>
-<p>Last angle is only a variation of <code>angle2</code> which different directions and as a result we can see that <code>angle1</code> and <code>angle3</code>
+<p>Last angle is only a variation of <code>angle2</code> with different directions and as a result we can see that <code>angle1</code> and <code>angle3</code>
 describe the same angle but with different input parameters.
 {/lang}</p>
 <p>{lang=SI}
@@ -243,7 +243,7 @@ when defining angle with three points we have to provide them in counterclockwis
 <p>Then the second angle $\beta$ was created using two lines and two directions (+/- 1) with following line
 <code>var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});</code>. This line presents another possible 
 method to input the parameters of an angle. We can combine them differently to get different angles at the intersection point $A$.</p>
-<p>Last angle is only a variation of <code>angle2</code> which different directions and as a result we can see that <code>angle1</code> and <code>angle3</code> 
+<p>Last angle is only a variation of <code>angle2</code> with different directions and as a result we can see that <code>angle1</code> and <code>angle3</code> 
 describe the same angle but with different input parameters.</p>
 <p>{/lang}</p>
 <p>{lang=CZ}
@@ -313,7 +313,7 @@ den gleichen Winkel kennzeichnen, aber unterschiedliche Eingabeparameter verwend
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,7 +175,7 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#example" id="example">Example</a></h2>
+<h2 id="example"><a class="header" href="#example">Example</a></h2>
 <p><strong>Harmonic conjugate points.</strong> Given three collinear points <em>A</em>, <em>B</em> and <em>C</em>; <em>C</em> being outside the line segment <em>AB</em>.
 Determine the point <em>D</em> of the segment <em>AB</em> so that the ratio of its distances to <em>A</em> and <em>B</em>, respectively, is equal to the
 ratio of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>.</p>
@@ -183,7 +183,7 @@ ratio of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, 
 form the so called <em>harmonic quadruple</em>.
 {/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#příklad" id="příklad">Příklad</a></h2>
+<h2 id="příklad"><a class="header" href="#příklad">Příklad</a></h2>
 <p><strong>Harmonická čtveřice bodů.</strong> Jsou dány tři kolineární body <em>A</em>, <em>B</em> a <em>C</em>; <em>C</em> leží vně úsečky <em>AB</em>.
 Určete bod <em>D</em> úsečky <em>AB</em> takový, že poměr jeho vzdáleností od bodů <em>A</em> a <em>B</em>, v daném pořadí, je roven poměru
 vzdáleností bodu <em>C</em> od bodů <em>A</em> a <em>B</em>, tj. <em>|AD|/|BD|=|AC|/|BC|</em>.</p>
@@ -191,7 +191,7 @@ vzdáleností bodu <em>C</em> od bodů <em>A</em> a <em>B</em>, tj. <em>|AD|/|BD
 vytváří tzv. <em>harmonickou čtveřici</em>.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#example-1" id="example-1">Example</a></h2>
+<h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
 <p><strong>Harmonic conjugate points.</strong> Given three collinear points <em>A</em>, <em>B</em> and <em>C</em>; <em>C</em> being outside the line segment <em>AB</em>.
 Determine the point <em>D</em> of the segment <em>AB</em> so that the ratio of its distances to <em>A</em> and <em>B</em>, respectively, is equal to the
 ratio of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>.</p>
@@ -199,7 +199,7 @@ ratio of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, 
 form the so called <em>harmonic quadruple</em>.
 {/lang}</p>
 <p>{lang=DE}</p>
-<h2><a class="header" href="#beispiel" id="beispiel">Beispiel</a></h2>
+<h2 id="beispiel"><a class="header" href="#beispiel">Beispiel</a></h2>
 <p><strong>Harmonische Teilung.</strong> Gegeben sind drei kollineare Punkte <em>A</em>, <em>B</em> und <em>C</em> (d.h. sie liegen auf einer Geraden),
 wobei <em>C</em> ausserhalb der Strecke <em>AB</em> liege.
 Bestimme einen Punkt <em>D</em> auf der Strecke <em>AB</em> so, dass das Verhältnis seiner Abstände zu den Punkten <em>A</em> und <em>B</em>
@@ -430,7 +430,7 @@ der Geraden <em>v</em> und <em>p</em>:
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

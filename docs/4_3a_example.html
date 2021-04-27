@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,7 +175,7 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#example-animation-with-slider" id="example-animation-with-slider">Example: Animation with slider</a></h2>
+<h2 id="example-animation-with-slider"><a class="header" href="#example-animation-with-slider">Example: Animation with slider</a></h2>
 <p><strong>Cycloids.</strong> Rolling a circle along a straight line a point firmly connected to its rim draws a curve 
 called a <a href="https://mathworld.wolfram.com/Cycloid.html">cycloid</a>. If the point is closer to the center a 
 curve drawn by it is called a <em>curtate cycloid</em>. If the point is further from the center than the rim, 
@@ -183,7 +183,7 @@ the resulting curve is called a <em>prolate cycloid</em>, see figure below. Crea
 given situation, movement of the circle controlled by the slider.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#example-animation-with-slider-1" id="example-animation-with-slider-1">Example: Animation with slider</a></h2>
+<h2 id="example-animation-with-slider-1"><a class="header" href="#example-animation-with-slider-1">Example: Animation with slider</a></h2>
 <p><strong>Cycloids.</strong> Rolling a circle along a straight line a point firmly connected to its rim draws a curve 
 called a <a href="https://mathworld.wolfram.com/Cycloid.html">cycloid</a>. If the point is closer to the center a 
 curve drawn by it is called a <em>curtate cycloid</em>. If the point is further from the center than the rim, 
@@ -191,7 +191,7 @@ the resulting curve is called a <em>prolate cycloid</em>, see figure below. Crea
 given situation, movement of the circle controlled by the slider.
 {/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#příklad-animace-užitím-posuvníku" id="příklad-animace-užitím-posuvníku">Příklad: Animace užitím posuvníku</a></h2>
+<h2 id="příklad-animace-užitím-posuvníku"><a class="header" href="#příklad-animace-užitím-posuvníku">Příklad: Animace užitím posuvníku</a></h2>
 <p><strong>Cykloidy.</strong> Při odvalování kruhu podél přímky vykresluje bod pevně spojený s jeho okrajem křivku
 zvanou <a href="https://mathworld.wolfram.com/Cycloid.html">cykloida</a>. Pokud je uvažovaný bod blíže ke středu kruhu, než je jeho okraj,
 jeho trajektorií je křivka zvaná <em>zkrácená cykloida</em> (<em>curtate cycloid</em>). Pokud je předmětný bod 
@@ -262,8 +262,8 @@ definujeme rozsahy souřadnicových os zavedených v nákresně:
 </code></pre>
 <p>{lang=EN}
 Note the attribute <code>showClearTraces</code> used above. Setting its value to <code>true</code> displays the button for deleting 
-the traces of points, see the circled times at the bottom of the bounding box.</p>
-<p>As the first of construction, we draw a straight line <em>MN</em>, a path for the circle:
+the traces of points, see the circled <em>x</em> at the bottom of the bounding box.</p>
+<p>As the first construction, we draw a straight line <em>MN</em>, a path for the circle:
 {/lang}</p>
 <p>{lang=SI}
 Note the attribute <code>showClearTraces</code> used above. Setting its value to <code>true</code> displays the button for deleting 
@@ -446,7 +446,7 @@ Kód řešení úlohy je nyní kompletní.
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

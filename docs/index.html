@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,8 +175,8 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#this-is-a-manual-about-the-a-hrefhttpsjsxgraphorgjsxgrapha" id="this-is-a-manual-about-the-a-hrefhttpsjsxgraphorgjsxgrapha">This is a manual about the <a href="https://jsxgraph.org/">JSXGraph</a>.</a></h2>
-<h4><a class="header" href="#work-in-progress" id="work-in-progress">(Work in progress)</a></h4>
+<h2 id="this-is-a-manual-about-the-a-hrefhttpsjsxgraphorgjsxgrapha"><a class="header" href="#this-is-a-manual-about-the-a-hrefhttpsjsxgraphorgjsxgrapha">This is a manual about the <a href="https://jsxgraph.org/">JSXGraph</a>.</a></h2>
+<h4 id="work-in-progress"><a class="header" href="#work-in-progress">(Work in progress)</a></h4>
 <p>JSXGraph is a cross-browser JavaScript library for interactive geometry, function plotting, charting, and data visualization in the web browser.</p>
 <p>This book covers the basics, how to build simple constructions and also some advanced topics on how to include JSXGraph in Moodle.</p>
 <p><strong><em>To build JSXGraph constructions you don't need to be programmer (although it helps), but is rather more like
@@ -186,8 +186,8 @@ elements of the construction.</em></strong></p>
 <em>Hint: Move the dot and observe.</em>
 {/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#příručka-pro-práci-v-a-hrefhttpsjsxgraphorgjsxgraphua" id="příručka-pro-práci-v-a-hrefhttpsjsxgraphorgjsxgraphua">Příručka pro práci v <a href="https://jsxgraph.org/">JSXGraphu</a>.</a></h2>
-<h4><a class="header" href="#na-tomto-díle-se-stále-pracuje" id="na-tomto-díle-se-stále-pracuje">(Na tomto díle se stále pracuje)</a></h4>
+<h2 id="příručka-pro-práci-v-a-hrefhttpsjsxgraphorgjsxgraphua"><a class="header" href="#příručka-pro-práci-v-a-hrefhttpsjsxgraphorgjsxgraphua">Příručka pro práci v <a href="https://jsxgraph.org/">JSXGraphu</a>.</a></h2>
+<h4 id="na-tomto-díle-se-stále-pracuje"><a class="header" href="#na-tomto-díle-se-stále-pracuje">(Na tomto díle se stále pracuje)</a></h4>
 <p>JSXGraph je knihovna JavaScriptu pro realizaci dynamické interaktivní geometrie, vykreslování funkcí, grafů a další vizualizace dat přímo ve webovém prohlížeči, nezávisle na jeho typu.</p>
 <p>Tato příručka je věnována především úvodu do základních konstrukcí v JSXGraphu, nevyhýbá se však ani pokročilejším tématům, především v souvislosti se začleněním JSXGraphu do Moodle.</p>
 <p><strong><em>Chcete-li tvořit dynamické materiály v JSXGraphu, nemusíte být nutně programátorem (i když by Vám to samozřejmě pomohlo), ve většině případů práce připomíná spíše skládání prvků stavebnice.</em></strong></p>
@@ -203,8 +203,8 @@ To je priročnik o JSXGraphu.</p>
 Namig: premaknite piko in opazujte.
 {/lang}</p>
 <p>{lang=DE}</p>
-<h2><a class="header" href="#dies-ist-ein-handbuch-zu-a-hrefhttpsjsxgraphorgjsxgrapha" id="dies-ist-ein-handbuch-zu-a-hrefhttpsjsxgraphorgjsxgrapha">Dies ist ein Handbuch zu <a href="https://jsxgraph.org/">JSXGraph</a>.</a></h2>
-<h4><a class="header" href="#in-entstehung" id="in-entstehung">(In Entstehung)</a></h4>
+<h2 id="dies-ist-ein-handbuch-zu-a-hrefhttpsjsxgraphorgjsxgrapha"><a class="header" href="#dies-ist-ein-handbuch-zu-a-hrefhttpsjsxgraphorgjsxgrapha">Dies ist ein Handbuch zu <a href="https://jsxgraph.org/">JSXGraph</a>.</a></h2>
+<h4 id="in-entstehung"><a class="header" href="#in-entstehung">(In Entstehung)</a></h4>
 <p>JSXGraph ist eine browser-unabhängige JavaScript-Bibliothek zu interaktiver Geometrie, Funktionsgraphen, Diagrammen und Daten-Visualisierung im Web-Browser.</p>
 <p>Dieses Handbuch beschreibt die Grundlagen, wie einfache Konstruktionen erstellt werden können, sowie einige fortgeschrittenere Themen, zum Beispiel
 die Einbindung von JSXGraph in Moodle.</p>
@@ -345,7 +345,7 @@ die Einbindung von JSXGraph in Moodle.</p>
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

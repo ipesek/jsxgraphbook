@@ -1,9 +1,9 @@
 {lang=EN}
 ## Moving objects
 
-Sometimes we want to move points to explain or present some concept. We can use this to animate the point by moving to 
+Sometimes we want to move points to explain or present some concept. We can use this to animate the point by moving to a
 final point (using method moveTo()) or only visiting some point and returning back to the start.
-We will use both methods in next example.
+We will use both methods in the next example.
 {/lang}
 
 {lang=SI}
@@ -44,7 +44,7 @@ V&nbsp;následujícím příkladu použijeme oba tyto režimy pohybu.
 First three lines are usual, but in the next line `var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);` we use 
 two new commands. 
 
-Let us focus first on the second command: `q.visit([3, -2], 1800, 2)`. Until now we always 
+Let us focus first on the second command: `q.visit([3, -2], 1800, 2)`. Until now we have always 
 used only one method _create()_ which we provided with parameters to create points, etc. on the board. Now we introduce 
 a new method for the point which is called [_visit()_](https://jsxgraph.org/docs/symbols/JXG.CoordsElement.html#visit).
 Its syntax is __visit(where, time, options)__ with three parameters,
@@ -57,13 +57,13 @@ Its syntax is __visit(where, time, options)__ with three parameters,
  _visit_ method on point _q_.
  
  The second button is created in next line, but let us now look at the action more closely which is `p.moveTo([Math.random()*8-4,Math.random()*8-4],500);`.
- Here we use on the point _q_ new method _moveTo_ which takes only two parameters
+ Here a new method _moveTo_ is used on the point `q`, which takes only two parameters
 * destination coordinates as a list of two elements e.g  `[Math.random()*8-4,Math.random()*8-4]`
 * animation time in miliseconds, e.g `500`.
 
-For the coordinates we use _Math.random_ method, which every time we click on the button creates new random number between 0 and 1 
-which we multiply by $8$ and subtract by $4$, result then will be between $-4$ and $4$m which are also limits of our bounding box.
-We do the same for both coordinates. As a result our point p (`"A"`) moves across the board randomly. 
+For the coordinates we use _Math.random_ method, which  creates new random number between 0 and 1 every time we click on the button,
+then we multiply it by $8$ and subtract $4$. The result will be a number between $-4$ and $4$m which are also the limits of our bounding box.
+We do the same for both coordinates. As a result our point `p` (`"A"`) moves across the board randomly. 
 {/lang}
 
  

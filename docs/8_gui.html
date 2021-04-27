@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -174,7 +174,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#langenjsx-guilanglangsijsx-guilanglangczjsx-guilang" id="langenjsx-guilanglangsijsx-guilanglangczjsx-guilang">{lang=EN}JSX Gui{/lang}{lang=SI}JSX Gui{/lang}{lang=CZ}JSX Gui{/lang}</a></h1>
+                        <h1 id="langenjsx-guilanglangsijsx-guilanglangczjsx-guilang"><a class="header" href="#langenjsx-guilanglangsijsx-guilanglangczjsx-guilang">{lang=EN}JSX Gui{/lang}{lang=SI}JSX Gui{/lang}{lang=CZ}JSX Gui{/lang}</a></h1>
 
                     </main>
 
@@ -216,7 +216,7 @@
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,7 +175,7 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#basics" id="basics">Basics</a></h2>
+<h2 id="basics"><a class="header" href="#basics">Basics</a></h2>
 <p>JSXGraph construction is composed from:</p>
 <ul>
 <li>drawing board</li>
@@ -186,7 +186,7 @@
 <p>In this section we will cover how to create drawing board, objects and use them to construct some simple examples.</p>
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#základy" id="základy">Základy</a></h2>
+<h2 id="základy"><a class="header" href="#základy">Základy</a></h2>
 <p>Konstrukce v JSXGraphu má tyto základní prvky:</p>
 <ul>
 <li>nákresna</li>
@@ -198,7 +198,7 @@
 prostřednictvím jednoduchých příkladů.</p>
 <p>{/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#basics-1" id="basics-1">Basics</a></h2>
+<h2 id="basics-1"><a class="header" href="#basics-1">Basics</a></h2>
 <p>JSXGraph construction is composed from:</p>
 <ul>
 <li>drawing board</li>
@@ -209,7 +209,7 @@ prostřednictvím jednoduchých příkladů.</p>
 <p>In this section we will cover how to create drawing board, objects and use them to construct some simple examples.</p>
 <p>{/lang}</p>
 <p>{lang=DE}</p>
-<h2><a class="header" href="#grundlagen" id="grundlagen">Grundlagen</a></h2>
+<h2 id="grundlagen"><a class="header" href="#grundlagen">Grundlagen</a></h2>
 <p>Jede JSXGraph-Konstruktion setzt sich zusammen aus:</p>
 <ul>
 <li>Zeichenfläche</li>
@@ -261,7 +261,7 @@ Beispiele genutzt werden kann.</p>
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

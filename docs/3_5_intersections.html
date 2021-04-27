@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,24 +175,24 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#intersections" id="intersections">Intersections</a></h2>
+<h2 id="intersections"><a class="header" href="#intersections">Intersections</a></h2>
 <p>Sometimes we want to distinguish some intersections of our objects (lines and circles). Usually we have to compute the
 intersections, but JSXGraph has very convenient objects <a href="https://jsxgraph.org/docs/symbols/Intersection.html"><em>Intersection</em></a>
 which we can use, to do just that. In order to create an intersection, we need to use two lines, two circles or mix of them.
 We cannot use other objects to create this object.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#intersections-1" id="intersections-1">Intersections</a></h2>
+<h2 id="intersections-1"><a class="header" href="#intersections-1">Intersections</a></h2>
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#průsečíky" id="průsečíky">Průsečíky</a></h2>
+<h2 id="průsečíky"><a class="header" href="#průsečíky">Průsečíky</a></h2>
 <p>Pro určení průsečíků přímek a kružnic můžeme v JSXGraphu použít přímo objekt
 <a href="https://jsxgraph.org/docs/symbols/Intersection.html"><em>Intersection</em></a> (<em>průsečík</em>), nemusíme tyto průsečíky počítat.
 Pro jeho zadání potřebujeme dvě  přímky, dvě kružnice nebo jednu přímku a jednu kružnici. Jiné objekty pro určení jejich průsečíku
 nelze použít.</p>
 <p>{/lang}</p>
 <p>{lang=DE}</p>
-<h2><a class="header" href="#schnittpunkte" id="schnittpunkte">Schnittpunkte</a></h2>
+<h2 id="schnittpunkte"><a class="header" href="#schnittpunkte">Schnittpunkte</a></h2>
 <p>Hin und wieder wollen wir einige Schnittpunkte unserer Objekte (Geraden und Kreise) anzeigen.
 Normalerweise müssten wir die Schnittpunkte berechnen, aber JSXGraph stellt das recht komfortable Objekt
 <a href="https://jsxgraph.org/docs/symbols/Intersection.html"><em>Intersection</em></a> dafür bereit.
@@ -295,7 +295,7 @@ Das ist <a href="https://www.mathjax.org/">$LaTeX$</a>-Notation und kann bei Bez
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

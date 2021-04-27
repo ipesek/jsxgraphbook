@@ -1,8 +1,8 @@
 {lang=EN}
 ## Animating
 
-Although creating points and lines and also drawing can be very useful, the power of JSXGraph lies when we want that
-our construction are not fixed, but can be used to simulate or demonstrate something.
+Although creating points, lines and also drawing can be very useful, the power of JSXGraph shows when we want our
+construction to not be fixed, but used to simulate or demonstrate something with movement or animation.
 In this chapter we will learn
 * how to move objects
 * how to "glue" objects to other objects (e.g points on the lines)

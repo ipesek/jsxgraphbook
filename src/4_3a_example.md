@@ -106,9 +106,9 @@ definujeme rozsahy souřadnicových os zavedených v nákresně:
 
 {lang=EN}
 Note the attribute ``showClearTraces`` used above. Setting its value to ``true`` displays the button for deleting 
-the traces of points, see the circled times at the bottom of the bounding box.
+the traces of points, see the circled *x* at the bottom of the bounding box.
 
-As the first of construction, we draw a straight line *MN*, a path for the circle:
+As the first construction, we draw a straight line *MN*, a path for the circle:
 {/lang}
 
 {lang=SI}

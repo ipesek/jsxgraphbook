@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,9 +175,9 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#animating" id="animating">Animating</a></h2>
-<p>Although creating points and lines and also drawing can be very useful, the power of JSXGraph lies when we want that
-our construction are not fixed, but can be used to simulate or demonstrate something.
+<h2 id="animating"><a class="header" href="#animating">Animating</a></h2>
+<p>Although creating points, lines and also drawing can be very useful, the power of JSXGraph shows when we want our
+construction to not be fixed, but used to simulate or demonstrate something with movement or animation.
 In this chapter we will learn</p>
 <ul>
 <li>how to move objects</li>
@@ -187,10 +187,10 @@ In this chapter we will learn</p>
 {/lang}</li>
 </ul>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#animating-1" id="animating-1">Animating</a></h2>
+<h2 id="animating-1"><a class="header" href="#animating-1">Animating</a></h2>
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#animace" id="animace">Animace</a></h2>
+<h2 id="animace"><a class="header" href="#animace">Animace</a></h2>
 <p>I když kreslení bodů, přímek a dalších objektů, spolu s jejich spojováním do dynamických konstrukcí, je užitečné, skutečná síla
 JSXGraphu se projeví v dynamických konstrukcích, v nichž simulujeme nebo demonstrujeme nějaký jev.<br />
 V této kapitole se naučíme </p>
@@ -202,7 +202,7 @@ V této kapitole se naučíme </p>
 {/lang}</li>
 </ul>
 <p>{lang=DE}</p>
-<h2><a class="header" href="#animationen" id="animationen">Animationen</a></h2>
+<h2 id="animationen"><a class="header" href="#animationen">Animationen</a></h2>
 <p>Although creating points and lines and also drawing can be very useful, the power of JSXGraph lies when we want that
 our construction are not fixed, but can be used to simulate or demonstrate something.
 In this chapter we will learn</p>
@@ -254,7 +254,7 @@ In this chapter we will learn</p>
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,19 +175,19 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#creating-points" id="creating-points">Creating points</a></h2>
+<h2 id="creating-points"><a class="header" href="#creating-points">Creating points</a></h2>
 <p>Points are one of the most basic objects in JSXGraph. We always create objects on the JSXGraph board, therefore we must use same
 board variable for the construction of all objects that will be on board.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#risanje-točk" id="risanje-točk">Risanje točk</a></h2>
+<h2 id="risanje-točk"><a class="header" href="#risanje-točk">Risanje točk</a></h2>
 <p>{/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#vytváření-bodů" id="vytváření-bodů">Vytváření bodů</a></h2>
+<h2 id="vytváření-bodů"><a class="header" href="#vytváření-bodů">Vytváření bodů</a></h2>
 <p>Body jsou základními a nejjednoduššími objekty v JSXGraph. V tomto příkladu zakreslíme do nákresny dva body. 
 {/lang}</p>
 <p>{lang=DE}</p>
-<h2><a class="header" href="#punkte-erzeugen" id="punkte-erzeugen">Punkte erzeugen</a></h2>
+<h2 id="punkte-erzeugen"><a class="header" href="#punkte-erzeugen">Punkte erzeugen</a></h2>
 <p>Punkte gehören zu den grundlegensten Objekten in JSXGraph.
 Wir legen alle Objekte auf die Zeichenfläche (genannt &quot;board&quot;), deshalb verwenden wir für alle Objekte, die auf dieser Zeichenfläche
 entstehen sollen, dieselbe Variable <code>board</code>.
@@ -272,7 +272,7 @@ Dies wird auf den folgenden Seiten klarer werden.
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

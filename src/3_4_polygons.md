@@ -1,7 +1,7 @@
 {lang=EN}
 ## Polygons
 
-Polygons are very useful objects which can be used to construct a closed area with arbitrary many points (minimum is three).
+Polygons are very useful objects which can be used to construct a closed area with arbitraryly many points (minimum is three).
 Polygons can be convex or concave, depending on the input points. We can again define different [attributes](https://jsxgraph.org/docs/symbols/Polygon.html)
 to the object.
 
@@ -70,14 +70,14 @@ Beispiel:
 </script>
 
 {lang=EN}
-As we mentioned earlier we need at least three points to make a polygon. In our example we created five points which then used
+As we mentioned earlier we need at least three points to make a polygon. In our example we created five points which were then used
 to create a polygon. We used an attribute _withLabel_ which tells JSXGraph to show the name of the polygon.
 
-For the second polygon we created a list of points, which is another approach to create a polygon. Here we again few new
-attributes. Attribute _hasInnerPoints_ enables user to move entire polygon. For example, moving Polygon 1 is not possible,
+For the second polygon we created a list of points, which is another approach to creating a polygon. Here we have a few new
+attributes. Attribute _hasInnerPoints_ enables the user to move the entire polygon. For example, moving Polygon 1 is not possible,
 only its points can be moved. Adding this attribute will enable moving the polygon.
 Next attribute, _withLines_ tells JSXGraph whether to draw borders of the polygon or not. The last attribute _vertices_ is
-particularly interesting, because it does not have just a value, but a dictionary on the right side of `:`. The reason behind
+particularly interesting, because it does not have just a value, but a dictionary on the right side of `:`. The reason behind it
 is that we can control the vertices with more than one attribute.
 {/lang}
 

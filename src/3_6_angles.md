@@ -1,9 +1,9 @@
 {lang=EN}
 ## Angles
 
-When we need to emphasise some angle in our construction, we can do this with object [_Angle_](https://jsxgraph.org/docs/symbols/Angle.html).
+When we need to emphasise a specific angle in our construction, we can do this with object [_Angle_](https://jsxgraph.org/docs/symbols/Angle.html).
 As an input we need to provide three points $p1, p2, p3$ and the angle is drawn counterclockwise from $p1$ to $p3$ around $p2$.
-Other combinations include two lines and two directions (by +/- 1) or line and two coordinates.
+Other combinations include two lines and two directions (by +/- 1) or a line and two coordinates.
 {/lang}
 
 {lang=SI}
@@ -72,7 +72,7 @@ Then the second angle $\beta$ was created using two lines and two directions (+/
 `var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});`. This line presents another possible
 method to input the parameters of an angle. We can combine them differently to get different angles at the intersection point $A$.
 
-Last angle is only a variation of `angle2` which different directions and as a result we can see that `angle1` and `angle3`
+Last angle is only a variation of `angle2` with different directions and as a result we can see that `angle1` and `angle3`
 describe the same angle but with different input parameters.
 {/lang}
 
@@ -87,7 +87,7 @@ Then the second angle $\beta$ was created using two lines and two directions (+/
 `var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});`. This line presents another possible 
 method to input the parameters of an angle. We can combine them differently to get different angles at the intersection point $A$.
 
-Last angle is only a variation of `angle2` which different directions and as a result we can see that `angle1` and `angle3` 
+Last angle is only a variation of `angle2` with different directions and as a result we can see that `angle1` and `angle3` 
 describe the same angle but with different input parameters.
 
 {/lang}

@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,14 +175,14 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#example-regular-polygons" id="example-regular-polygons">Example: Regular polygons</a></h2>
+<h2 id="example-regular-polygons"><a class="header" href="#example-regular-polygons">Example: Regular polygons</a></h2>
 <p><strong>A Hexagon-Triangle Hinge.</strong> In the diagram below, <em>Q</em> is the center of a regular hexagon with a vertex <em>B</em> at which it touches
 an equilateral triangle with center <em>R</em>. Let <em>P</em> be the midpoint of <em>AG</em>. Show that <em>RPQ</em> is a right angle.</p>
 <p>(Source: <em>Konhauser, J. D. E., Velleman, D., Wagon, S. Which Way Did the Bicycle Go? … and Other Intriguing Mathematical Mysteries.
 The Mathematical association of America, Dolciani Mathematical Expositions – No. 18. 1996.</em>)
 {/lang}</p>
 <p>{lang=CZ}</p>
-<h2><a class="header" href="#příklad-pravidelné-mnohoúhelníky" id="příklad-pravidelné-mnohoúhelníky">Příklad: Pravidelné mnohoúhelníky</a></h2>
+<h2 id="příklad-pravidelné-mnohoúhelníky"><a class="header" href="#příklad-pravidelné-mnohoúhelníky">Příklad: Pravidelné mnohoúhelníky</a></h2>
 <p><strong>Pravidelný šestiúhelník a rovnostranný trojúhelník se společným vrcholem.</strong> Na obrázku níže je bod <em>Q</em> středem 
 pravidelného šestiúhelníku, který svůj vrchol <em>B</em> sdílí s rovnostranným trojúhelníkem, jehož středem je bod <em>R</em>. 
 Středem úsečky <em>AG</em> je bod <em>P</em>. Dokažte, že úhel <em>RPQ</em> je pravý.</p>
@@ -190,14 +190,14 @@ Středem úsečky <em>AG</em> je bod <em>P</em>. Dokažte, že úhel <em>RPQ</em
 The Mathematical association of America, Dolciani Mathematical Expositions – No. 18. 1996.</em>)
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2><a class="header" href="#example-regular-polygons-1" id="example-regular-polygons-1">Example: Regular polygons</a></h2>
+<h2 id="example-regular-polygons-1"><a class="header" href="#example-regular-polygons-1">Example: Regular polygons</a></h2>
 <p><strong>A Hexagon-Triangle Hinge.</strong> In the diagram below, <em>Q</em> is the center of a regular hexagon with a vertex <em>B</em> at which it touches
 an equilateral triangle with center <em>R</em>. Let <em>P</em> be the midpoint of <em>AG</em>. Show that <em>RPQ</em> is a right angle.</p>
 <p>(Source: <em>Konhauser, J. D. E., Velleman, D., Wagon, S. Which Way Did the Bicycle Go? … and Other Intriguing Mathematical Mysteries. 
 The Mathematical association of America, Dolciani Mathematical Expositions – No. 18. 1996.</em>)
 {/lang}</p>
 <p>{lang=DE}</p>
-<h2><a class="header" href="#beispiel-reguläre-polygone" id="beispiel-reguläre-polygone">Beispiel: Reguläre Polygone</a></h2>
+<h2 id="beispiel-reguläre-polygone"><a class="header" href="#beispiel-reguläre-polygone">Beispiel: Reguläre Polygone</a></h2>
 <p><strong>Ein Sechseck-Dreiecks-Gelenk.</strong>
 In der folgenden Konstruktion sei <em>Q</em> der Mittelpunkt eines regulären Sechsecks, das eine Ecke <em>B</em> besitzt, mit der
 es ein gleichseitiges Dreieck mit Mittelpunkt <em>R</em> berührt.
@@ -625,7 +625,7 @@ Damit ist die Zeichnung fertiggestellt.
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();
