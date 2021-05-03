@@ -63,7 +63,7 @@ We can see that here we created circle with two points which is default method f
 two additional attributes which we used to set the color and width of the stroke. Color here was not defined with
 RGB system, but with the [color name](https://en.wikipedia.org/wiki/Web_colors).
 
-_Circle2_ is more interesting `var circle2 = board.create("circle",["B",1.5],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`
+_Circle2_ is more interesting `var circle2 = board.create("circle",["B",1.8],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`
 since we created it with the point and radius method. We explicitly set this as a attribute.
 Also instead of using variable name for the point, we used name of the point `"B"`, which can be very useful when having
 many objects in the construction (and generating objects dynamically). We also used two attributes for filling the area of circle,
@@ -80,7 +80,7 @@ We can see, that here we created circle with two points which is default method 
 two additional attributes which we used to set the color and width of the stroke. Color here was not defined with
 RGB system, but with the [color name](https://en.wikipedia.org/wiki/Web_colors).
 
-_Circle2_ is more interesting `var circle2 = board.create("circle",["B",1.5],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`
+_Circle2_ is more interesting `var circle2 = board.create("circle",["B",1.8],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`
 since we created it with the point and radius method. We explicitly set this as a attribute.
 Also instead of using variable name for the point, we used name of the point `"B"`, which can be very useful when having
 many objects in the construction (and generating objects dynamically). We also used two attributes for filling the area of circle,
@@ -121,7 +121,7 @@ Die Farbe wird in diesem Fall nicht im RGB-System angegeben, sondern durch einen
 
 _circle2_ ist noch interessanter:
 
-`var circle2 = board.create("circle",["B",1.5],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`
+`var circle2 = board.create("circle",["B",1.8],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`
 
 Dieser Kreis wird mit der Punkt-Radius-Methode erzeugt. Wir geben diese Methode explizit als Attribut an.
 Das ist zwar nicht unbedingt nötig, aber sicher ist sicher.
