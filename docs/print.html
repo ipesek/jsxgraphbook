@@ -2428,7 +2428,48 @@ podobným způsobem, kromě toho, že jsme atributu <em>snapWidth</em> přiřadi
 Vidíme zde, že pro získání okamžité hodnoty posuvníku použijeme spojení jména proměnné a metody <em>Value()</em> takto <code>a.Value()</code>. </p>
 <p>Předpis kvadratické funkce tak už není neměnný, díky posuvníkům může být jeho podoba uživatelem dynamicky měněna.
 {/lang}</p>
-<h1 id="langenanimating-with-sliderslanglangsianimating-with-sliderslanglangczanimating-with-sliderslang"><a class="header" href="#langenanimating-with-sliderslanglangsianimating-with-sliderslanglangczanimating-with-sliderslang">{lang=EN}Animating with sliders{/lang}{lang=SI}Animating with sliders{/lang}{lang=CZ}Animating with sliders{/lang}</a></h1>
+<p>{lang=EN}</p>
+<h2 id="animating-with-sliders"><a class="header" href="#animating-with-sliders">Animating with sliders</a></h2>
+<p>One great use of a slider is animation. Instead of moving the slider by hand, JSXGraph has a function that can move the slider by itself. In this example
+we will create a slider and two buttons that can start and stop the animation of an increasing and decreasing circle. </p>
+<pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:500px;&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-3, 3, 3, -3],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var r = board.create('slider',[[-2,-2],[2,-2],[0,1,2]],{name:'r'});
+ var A = board.create('point',[0,0.5], {visible:false});
+ var button1 = board.create('button', [-2, -2.3, 'Start increasing',function(){r.startAnimation(1, 40, 30)}]);
+ var button2 = board.create('button', [-2, -2.6, 'Start decreasing',function(){r.startAnimation(-1, 40, 30)}]);
+ var button3 = board.create('button', [0.5, -2.5, 'Stop animation',function(){r.stopAnimation()}]);
+ var c = board.create('circle',['A',function(){return r.Value();}]);
+&lt;/script&gt;
+</code></pre>
+<div id="jxgbox" class="jxgbox" style="width:500px; height:500px;"></div>
+<script>
+ var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-3, 3, 3, -3],keepAspectRatio:true, showCopyright:false, showNavigation:false });
+ var r = board.create('slider',[[-2,-2],[2,-2],[0,1,2]],{name:'r'});
+ var A = board.create('point',[0,0.5], {visible:false});
+ var button1 = board.create('button', [-2, -2.3, 'Start increasing',function(){r.startAnimation(1, 40, 30)}]);
+ var button2 = board.create('button', [-2, -2.6, 'Start decreasing',function(){r.startAnimation(-1, 40, 30)}]);
+ var button3 = board.create('button', [0.5, -2.5, 'Stop animation',function(){r.stopAnimation()}]);
+ var c = board.create('circle',['A',function(){return r.Value();}]);
+</script>
+<p>{/lang}</p>
+<p>{lang=SI}Animating with sliders{/lang}
+{lang=CZ}Animating with sliders{/lang}</p>
+<p>{lang=EN}
+Once again we create a board, and add to it a slider named <code>'r'</code>. This will be the radius of our circle. Then we create point <code>A</code> for the centre. We have already 
+shown how to create a button, we do this with <code>var button1 = board.create('button', [-2, -2.3, 'Start increasing',function(){s.startAnimation(1, 50, 30)}]);</code>. 
+First are the coordinates for the button, then the text on it and lastly is the command. With <code>function(){s.startAnimation(1, 50, 30)}</code>, we start the animation
+of the slider. This function has 3 parameters:</p>
+<ul>
+<li>direction </li>
+<li>step count </li>
+<li>delay (in miliseconds)</li>
+</ul>
+<p>Direction is either +1 or -1, we used one for increasing and the other for decreasing the radius. Step count is in our case 40, this means that the slider
+is separated into 40 subsections - the bigger the number, the smoother the animation. And lastly the delay is 30 miliseconds, that is how much time passes between moving to the next subsection of the slider. 
+The smaller the number, the faster it moves. Then we just have to create a cirle with center <code>A</code> and the radius given by the slider. 
+{/lang}</p>
 <p>{lang=EN}</p>
 <h2 id="example-animation-with-slider"><a class="header" href="#example-animation-with-slider">Example: Animation with slider</a></h2>
 <p><strong>Cycloids.</strong> Rolling a circle along a straight line a point firmly connected to its rim draws a curve 
@@ -2700,11 +2741,34 @@ demonstrate some of their uses by constructing a square that can rotate around o
  var sq = board.create('polygon', [A,B,C,D]);
  var rot = board.create('transform', [function(){return s.Value();},A], {type:'rotate'});
  rot.bindTo([B,C,D]);
- tScale.bindTo(sq);
 </script>
 {/lang}
 <p>{lang=SI}Functions drawing{/lang}
 {lang=CZ}Functions drawing{/lang}</p>
+<p>{lang=EN}
+Let's now look at the code. The first steps are standard, we create a board and a a slider named 'angle' with values from 0 to 2$\pi$, that we can later use to
+rotate the square by 360°. Then we create a point called 'Drag me', from which we will construct the other three points of a square. </p>
+<p>The next two lines <code>var right = board.create('transform', [2,0], {type:'translate'});</code> and <code>var up = board.create('transform', [0,2], {type:'translate'});</code>
+create our first transformations. The first parameter of any thansformation is the text <code>'transform'</code> and the last parameter is always <code>{type:''}</code>. The
+second parameter is based on the type of our transformation. In the case of a translation, we need to input a vector <code>[x,y]</code> with either constants or functions as the 
+input. We defined ours with directions <code>[0,2]</code>, meaning movement of a point 2 units to the right, and <code>[2,0]</code>; moving 2 units up. Now we can construct the
+rest of our square:</p>
+<p><code>var B = board.create('point', [A,right], {name: 'B', style:7});</code><br />
+<code>var C = board.create('point', [A,[right,up]], {name: 'C', style:7});</code><br />
+<code>var D = board.create('point', [A,up], {name: 'D', style:7});</code></p>
+<p>We can see that all three points are constructed from the starting point <code>A</code> using the <code>up</code> and <code>right</code> translations. We do this with <code>[A, up]</code> or <code>[A, right]</code>.
+So to create a new point, we have to input the starting position and then the desired transformation. If we use more that one transformation, we can do this 
+with <code>[A,[right,up]]</code>. We have created 4 points that form a square with the side length 2. Now we just create a polygon <code>var sq</code> using those points. </p>
+<p>Next we need to create a rotation. We do this with <code>var rot = board.create('transform', [function(){return s.Value();},A], {type:'rotate'});</code>. 
+We can see that the first and last parameters are similar to the translations, the only difference is of course the <code>type</code>. Since this is a rotation, we 
+have to input the angle and center of the rotation. The input is always in the form of <code>[angle, point]</code>. We do this with <code>[function(){return s.Value();},A]</code>. 
+Notice, that the first parameter is not a constant, but rather a function returning the value of our slider. This way we can influence the angle of the rotation, 
+and the center of the rotation is point <code>A</code>. </p>
+<p>Lastly we have to connect our rotation to the square. This will ensure that all point of the square are moving at the same time and at the same angle. We do this 
+with the command <code>rot.bindTo([B,C,D]);</code>. Our transformation is now bound to the points <code>B,C,D</code> (since <code>A</code> is the center of the rotation it does not move, so we 
+dont need to bind it). </p>
+<p>For information on other transformations see <a href="https://jsxgraph.org/docs/symbols/Transformation.html"><em>here</em></a>.
+{/lang}</p>
 <h1 id="langenadvanced-topicslanglangsiadvanced-topicslanglangczadvanced-topicslang"><a class="header" href="#langenadvanced-topicslanglangsiadvanced-topicslanglangczadvanced-topicslang">{lang=EN}Advanced topics{/lang}{lang=SI}Advanced topics{/lang}{lang=CZ}Advanced topics{/lang}</a></h1>
 <h1 id="langenadding-imageslanglangsiadding-imageslanglangczadding-imageslanglangdebilder-einbindenlang"><a class="header" href="#langenadding-imageslanglangsiadding-imageslanglangczadding-imageslanglangdebilder-einbindenlang">{lang=EN}Adding images{/lang}{lang=SI}Adding images{/lang}{lang=CZ}Adding images{/lang}{lang=DE}Bilder einbinden{/lang}</a></h1>
 <h1 id="langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelanglangdespeichern-einer-konstruktion-als-bildlang"><a class="header" href="#langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelanglangdespeichern-einer-konstruktion-als-bildlang">{lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Capture the construction as image{/lang}{lang=DE}Speichern einer Konstruktion als Bild{/lang}</a></h1>

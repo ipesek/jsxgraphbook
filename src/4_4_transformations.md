@@ -40,11 +40,41 @@ demonstrate some of their uses by constructing a square that can rotate around o
  var sq = board.create('polygon', [A,B,C,D]);
  var rot = board.create('transform', [function(){return s.Value();},A], {type:'rotate'});
  rot.bindTo([B,C,D]);
- tScale.bindTo(sq);
 </script>
 {/lang}
 
 {lang=SI}Functions drawing{/lang}
 {lang=CZ}Functions drawing{/lang}
+
+{lang=EN}
+Let's now look at the code. The first steps are standard, we create a board and a a slider named 'angle' with values from 0 to 2$\pi$, that we can later use to
+rotate the square by 360°. Then we create a point called 'Drag me', from which we will construct the other three points of a square. 
+
+The next two lines `var right = board.create('transform', [2,0], {type:'translate'});` and `var up = board.create('transform', [0,2], {type:'translate'});`
+create our first transformations. The first parameter of any thansformation is the text `'transform'` and the last parameter is always `{type:''}`. The
+second parameter is based on the type of our transformation. In the case of a translation, we need to input a vector `[x,y]` with either constants or functions as the 
+input. We defined ours with directions `[0,2]`, meaning movement of a point 2 units to the right, and `[2,0]`; moving 2 units up. Now we can construct the
+rest of our square:
+
+`var B = board.create('point', [A,right], {name: 'B', style:7});`\
+`var C = board.create('point', [A,[right,up]], {name: 'C', style:7});`\
+`var D = board.create('point', [A,up], {name: 'D', style:7});`
+
+We can see that all three points are constructed from the starting point `A` using the `up` and `right` translations. We do this with `[A, up]` or `[A, right]`.
+So to create a new point, we have to input the starting position and then the desired transformation. If we use more that one transformation, we can do this 
+with `[A,[right,up]]`. We have created 4 points that form a square with the side length 2. Now we just create a polygon `var sq` using those points. 
+
+Next we need to create a rotation. We do this with `var rot = board.create('transform', [function(){return s.Value();},A], {type:'rotate'});`. 
+We can see that the first and last parameters are similar to the translations, the only difference is of course the `type`. Since this is a rotation, we 
+have to input the angle and center of the rotation. The input is always in the form of `[angle, point]`. We do this with `[function(){return s.Value();},A]`. 
+Notice, that the first parameter is not a constant, but rather a function returning the value of our slider. This way we can influence the angle of the rotation, 
+and the center of the rotation is point `A`. 
+
+Lastly we have to connect our rotation to the square. This will ensure that all point of the square are moving at the same time and at the same angle. We do this 
+with the command `rot.bindTo([B,C,D]);`. Our transformation is now bound to the points `B,C,D` (since `A` is the center of the rotation it does not move, so we 
+dont need to bind it). 
+
+For information on other transformations see [_here_](https://jsxgraph.org/docs/symbols/Transformation.html).
+{/lang}
 
 
