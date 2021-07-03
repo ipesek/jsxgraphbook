@@ -182,8 +182,10 @@ to the object.</p>
 <p>Example:
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="polygons-1"><a class="header" href="#polygons-1">Polygons</a></h2>
-<p>{/lang}</p>
+<h2 id="poligoni"><a class="header" href="#poligoni">Poligoni</a></h2>
+<p>Poligoni ali n-kotniki so objekti, s katerimi rišemo zaprta območja omejena s poljubno mnogo točkami (najmanj tremi). Lahko so konveksni ali konkavni,
+odvisno od podanih točk. Spet lahko definiramo različne <a href="https://jsxgraph.org/docs/symbols/Polygon.html">atribute</a>. Poglejmo primer:
+{/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="mnohoúhelníky"><a class="header" href="#mnohoúhelníky">Mnohoúhelníky</a></h2>
 <p>Mnohoúhelníky jsou v geometrii velmi frekventované objekty. Můžeme je chápat jako části roviny ohraničené uzavřenou
@@ -242,14 +244,12 @@ particularly interesting, because it does not have just a value, but a dictionar
 is that we can control the vertices with more than one attribute.
 {/lang}</p>
 <p>{lang=SI}
-As we mentioned earlier we need at least three points to make a polygon. In our example we created five points which then used
-to create a polygon. We used an attribute <em>withLabel</em> which tells JSXGraph to show the name of the polygon.</p>
-<p>For the second polygon we created a list of points, which is another approach to create a polygon. Here we again few new
-attributes. Attribute <em>hasInnerPoints</em> enables user to move entire polygon. For example, moving Polygon 1 is not possible,
-only its points can be moved. Adding this attribute will enable moving the polygon.
-Next attribute, <em>withLines</em> tells JSXGraph whether to draw borders of the polygon or not. The last attribute <em>vertices</em> is
-particularly interesting, because it does not have just a value, but a dictionary on the right side of <code>:</code>. The reason behind
-is that we can control the vertices with more than one attribute.
+Kot smo že omenili, potrebujemo za definicijo poligona vsaj tri točke. V našem primeru smo ustvarili 5 točk in nad njimi definirali poligon. Uporabili smo 
+atribut <em>withLabel</em>, ki pove, da naj bo na sliki označeno ime poligona. </p>
+<p>V drugem primeru pa smo ustvarili seznam točk in s pomočjo seznama definirali 4-kotnik. Tukaj imamo ponovno nekaj novih atributov.
+Atribut <em>hasInnerPoints</em> omogoča uporabniku, da premika celoten objekt. Pri prvem poligonu to ni mogoče, lahko premikamo samo njegove robne točke. 
+Naslednji atribut <em>withLines</em> pove JSXGraphu, da naj nariše robove poligona. Zadnji atribut <em>vertices</em> je posebej zanimiv, saj nima samo vrednosti,
+ampak ima slovar na desni strani dvopičja. Razlog za to je v tem, da lahko oglišča nadzorujemo z več kot eno lastnostjo. 
 {/lang}</p>
 <p>{lang=CZ}
 Jak je zřejmé z geometrické podstaty mnohoúhelníku, pro jeho vytvoření potřebujeme alespoň tři body.

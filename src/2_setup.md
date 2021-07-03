@@ -5,7 +5,7 @@
 When we prepare JSX construction it is most convenient to prepare it locally. For that we have to create some file (eg.
 `example.htm`), copy paste template provided below and we can start constructing. After we save the program, we can open it in our
 favorite browser (Firefox, Chrome, etc).
-We can repeat following: edit the file, save it and refresh it (_(F5)_ in a browser) until we're satisfied with result.
+We can repeat the following: edit the file, save it and refresh it (_(F5)_ in a browser) until we're satisfied with result.
 
 Basic template for building and testing is below
 {/lang}
@@ -21,9 +21,10 @@ měnit, je pasáž mezi tagy _\<script\>, \</script\>_.
 Dokud nejsme spokojeni s podobou appletu, opakujeme následující akce: editace souboru, jeho uložení a prohlédnutí prohlížečem (zobrazení stránky v prohlížeči aktualizujeme stisknutím _(F5)_).
 {/lang}
 {lang=SI}
-When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server,
-we just need to save it and refresh the page _(F5)_ in browser. 
-Very simple template for building and testing is below
+## Namestitev
+Ko pripravljamo JSX konstrukcijo, je najbolje, da jo shranimo lokalno. Za to ustvarimo nek dokument (npr `primer.html`), kopiramo in prilepimo spodnjo predlogo 
+in začnemo s konstrukcijami. Ko dokument shranimo, ga odpremo v brskalniku (Firefox, Chrome, ...). Potem samo ponavljamo postopek: uredi, shrani, osveži spletno stran. 
+Spodaj je predloga dokumenta za testiranje. 
 {/lang}
 {lang=DE}
 ## Vorbereitung
@@ -84,7 +85,7 @@ _These scripts are all downloaded from the internet, therefore we need an consta
 _Všechny použité skripty jsou nahrávány z internetu, proto je třeba mít trvalé internetové připojení._
 {/lang}
 {lang=SI}
-_These scripts are all downloaded from the internet, therefore we need an constant internet connection._
+_Ker so skripte prenesene z interneta, potrebujemo konstantno internetno povezavo._
 {/lang}
 {lang=DE}
 _Diese Zusatzdateien werden alle aus dem Internet heruntergeladen, deshalb benötigen wir eine Internetverbindung._

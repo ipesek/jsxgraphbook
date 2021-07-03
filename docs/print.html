@@ -196,8 +196,8 @@ elements of the construction.</em></strong></p>
 <p>Níže je uvedena ukázka možností JSXGraphu 
 (Návod: Pohybujte posuvníkem - bodem na úsečce při dolním okraji okna a sledujte, co se děje).
 {/lang}</p>
-<p>{lang=SI}
-To je priročnik o JSXGraphu.</p>
+<p>{lang=SI}</p>
+<h2 id="to-je-priročnik-o-a-hrefhttpsjsxgraphorgjsxgraphua"><a class="header" href="#to-je-priročnik-o-a-hrefhttpsjsxgraphorgjsxgraphua">To je priročnik o <a href="https://jsxgraph.org/">JSXGraphu</a>.</a></h2>
 <p>JSXGraph je knjižnica JavaScript v brskalniku za interaktivno geometrijo, risanje funkcij, grafikone in vizualizacijo podatkov v spletnem brskalniku.</p>
 <p>Ta knjiga zajema osnove, kako zgraditi preproste konstrukcije in tudi nekatere napredne teme o tem, kako vključiti JSXGraph v Moodle.</p>
 <p>Če želite zgraditi JSXGraph konstrukcije, vam ni treba biti programer (čeprav pomaga), ampak je bolj podoben sestavljanju elementov konstrukcije.</p>
@@ -319,7 +319,7 @@ die Einbindung von JSXGraph in Moodle.</p>
 <p>When we prepare JSX construction it is most convenient to prepare it locally. For that we have to create some file (eg.
 <code>example.htm</code>), copy paste template provided below and we can start constructing. After we save the program, we can open it in our
 favorite browser (Firefox, Chrome, etc).
-We can repeat following: edit the file, save it and refresh it (<em>(F5)</em> in a browser) until we're satisfied with result.</p>
+We can repeat the following: edit the file, save it and refresh it (<em>(F5)</em> in a browser) until we're satisfied with result.</p>
 <p>Basic template for building and testing is below
 {/lang}
 {lang=CZ}</p>
@@ -331,10 +331,11 @@ Stačí jednoduše vytvořit soubor, řekněme s názvem <em>priklad.html</em>, 
 měnit, je pasáž mezi tagy <em>&lt;script&gt;, &lt;/script&gt;</em>.</p>
 <p>Dokud nejsme spokojeni s podobou appletu, opakujeme následující akce: editace souboru, jeho uložení a prohlédnutí prohlížečem (zobrazení stránky v prohlížeči aktualizujeme stisknutím <em>(F5)</em>).
 {/lang}
-{lang=SI}
-When we prepare JSX construction it is most convenient to prepare it locally. We don't need to upload it to some server,
-we just need to save it and refresh the page <em>(F5)</em> in browser. 
-Very simple template for building and testing is below
+{lang=SI}</p>
+<h2 id="namestitev"><a class="header" href="#namestitev">Namestitev</a></h2>
+<p>Ko pripravljamo JSX konstrukcijo, je najbolje, da jo shranimo lokalno. Za to ustvarimo nek dokument (npr <code>primer.html</code>), kopiramo in prilepimo spodnjo predlogo 
+in začnemo s konstrukcijami. Ko dokument shranimo, ga odpremo v brskalniku (Firefox, Chrome, ...). Potem samo ponavljamo postopek: uredi, shrani, osveži spletno stran. 
+Spodaj je predloga dokumenta za testiranje. 
 {/lang}
 {lang=DE}</p>
 <h2 id="vorbereitung"><a class="header" href="#vorbereitung">Vorbereitung</a></h2>
@@ -389,7 +390,7 @@ dem Resultat zufrieden sind.</p>
 <em>Všechny použité skripty jsou nahrávány z internetu, proto je třeba mít trvalé internetové připojení.</em>
 {/lang}
 {lang=SI}
-<em>These scripts are all downloaded from the internet, therefore we need an constant internet connection.</em>
+<em>Ker so skripte prenesene z interneta, potrebujemo konstantno internetno povezavo.</em>
 {/lang}
 {lang=DE}
 <em>Diese Zusatzdateien werden alle aus dem Internet heruntergeladen, deshalb benötigen wir eine Internetverbindung.</em>
@@ -418,15 +419,15 @@ dem Resultat zufrieden sind.</p>
 prostřednictvím jednoduchých příkladů.</p>
 <p>{/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="basics-1"><a class="header" href="#basics-1">Basics</a></h2>
-<p>JSXGraph construction is composed from:</p>
+<h2 id="osnove"><a class="header" href="#osnove">Osnove</a></h2>
+<p>JSXGraph kostrukcijo sestavljajo:</p>
 <ul>
-<li>drawing board</li>
-<li>objects (points, lines, etc.)</li>
-<li>relations between objects (optional, if we want some dynamics in the construction)</li>
-<li>events (optional, if we want some additional actions to be triggered)</li>
+<li>risalna povšina</li>
+<li>objekti (točke, črte, itd.)</li>
+<li>relacije med objekti (če želimo dinamiko med objekti)</li>
+<li>dogodki (če želimo sprožiti kakšne dodatne akcije)</li>
 </ul>
-<p>In this section we will cover how to create drawing board, objects and use them to construct some simple examples.</p>
+<p>V tem poglavju bomo opisali, kako konstruirati risalno površino in točke na njej ter kako jih uporabiti za preproste konstrukcije. </p>
 <p>{/lang}</p>
 <p>{lang=DE}</p>
 <h2 id="grundlagen"><a class="header" href="#grundlagen">Grundlagen</a></h2>
@@ -461,22 +462,23 @@ for the coordinate system of our construction.</p>
 <p>Observing both lines we see, that we have two measures for size. With <code>div</code> we created a canvas with the size in pixels.
 Then we declared a coordinate system and its size, which we will use to place objects on the board.
 {/lang}</p>
-<p>{lang=SI}
-JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
-HTML which we will tell Javascript to use as canvas. This is done like this</p>
+<p>{lang=SI}</p>
+<h2 id="risalna-površina"><a class="header" href="#risalna-površina">Risalna površina</a></h2>
+<p>JSXGraph potrebuje platno kot prostor, kamor postavljamo našo konstrukcijo. Ker uporabljamo HTML in Javascript, potrebujemo element v HTML, ki pove Javascriptu, 
+da uporabljamo platno. To storimo na naslednji način</p>
 <pre><code class="language-HTML">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:200px;&quot;&gt;&lt;/div&gt;
 </code></pre>
-<p>If look at the line closely we see a few properties. For us it is important <code>id=&quot;jxgbox&quot;</code> which we use to connect with JSXGraph.
-Next is <code>class=&quot;jxgbox&quot;</code> where we can specify how our board will look like. This is more advanced topic and will be discussed later.
-Last property is <code>style=&quot;width:500px; height:200px;&quot;</code> where we define size of our drawing board.<br />
-<em>Important: here we do not define our coordinate system, but only the size of our canvas.</em></p>
-<p>When we have defined our canvas, we have to connect them with JSXGraph. This is done with the following line, which should be put inside</p>
+<p>Opazimo lahko nekaj lastnosti. Za nas so pomembni <code>id=&quot;jxgbox&quot;</code>, s katerim se povežemo z JSXGraph. Naslednji je <code>class=&quot;jxgbox&quot;</code>, kjer določimo, kako bo 
+naša površina izgledala. Gre za malo naprednješo temo in bo v podrobnosti opisana kasneje. Nazadnje imamo <code>style=&quot;width:500px; height:200px;&quot;</code>, s tem določimo 
+velikost naše površine v pikslih. </p>
+<p><em>Pomembno: tukaj ne definiramo koordinatnega sistema, ampak samo velikost platna.</em></p>
+<p>Sedaj ga lahko povežemo z JSXGraph z naslednjo vrstico, ki jo moramo zapisati med simbola <code>&lt;script&gt; &lt;/script&gt;</code></p>
 <pre><code class="language-JS">var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
 </code></pre>
-<p>We can see we called function <code>initBoard</code>, which constructs our drawing board . This function need at least one argument,
-which is the name of id we defined earlier for div in our example <code>jxgbox</code>. <code>boundingbox: [-5, 2, 5, -2]</code> tells
-JSXGraph the coordinate system of our construction.</p>
-<p>Code of whole example is then following:{/lang}</p>
+<p>Vidimo, da kličemo funkcijo z imenom <code>initBoard</code>, ki konstruira risalno površino. Ta funkcija potrebuje vsaj en argument, ki je ime oziroma identiteta <code>id</code>
+prej definiranega platna. V našem primeru je to <code>jxgbox</code>. V tem primeru smo uporabili še en agrument, to je <code>boundingbox: [-5, 2, 5, -2]</code>, ki našemu platnu določi
+meje koordinatnega sistema. </p>
+<p>{/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="nákresna"><a class="header" href="#nákresna">Nákresna</a></h2>
 <p>JSXGraph potřebuje nějakou zobrazovací plochu, nákresnu, na kterou může vykreslovat konstrukce. Jelikož využíváme HTML a Javascript, potřebujeme vytvořit prvek v HTML, který bude Javascript používat jako své plátno. Nejprve vybereme v HTML místo, kde bude naše konstrukce umístěna. K tomu využijeme blokový prvek <code>&lt;div&gt;</code>, kterému nastavíme potřebné atributy.</p>
@@ -522,7 +524,8 @@ board variable for the construction of all objects that will be on board.
 {/lang}</p>
 <p>{lang=SI}</p>
 <h2 id="risanje-točk"><a class="header" href="#risanje-točk">Risanje točk</a></h2>
-<p>{/lang}</p>
+<p>Točke so eni izmed najbolj osnovnih objektov v JSXGraphu. Objekte vedno ustvarimo na risalni površini. 
+{/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="vytváření-bodů"><a class="header" href="#vytváření-bodů">Vytváření bodů</a></h2>
 <p>Body jsou základními a nejjednoduššími objekty v JSXGraph. V tomto příkladu zakreslíme do nákresny dva body. 
@@ -554,8 +557,16 @@ area of our drawing board.</p>
 <p>Next line <code>var q = board.create('point',[3,0]);</code> is very similar to the previous line, with only one diference. We start
 the line with <code>var q = </code> which we use to store this object in variable <em>q</em>. This is good and necessary practice, because
 in the constructions we often reference different object and define their relationships, which will be more apparent in following pages.</p>
-<p>{/lang}
-{lang=CZ}
+<p>{/lang}</p>
+<p>{lang=SI}</p>
+<p>Opazujmo zapis <code>board.create('point',[-2,1]);</code>. Tukaj uporabimo spremenljivko <code>board</code> in kličemo metodo <em>create</em>, ki potrebuje dva argumenta.
+Prvi je tip objekta, drugi pa položaj, kjer se naj ta objekt nahaja. Če definiramo položaj, ki je izven našega koordinatnega sistema, bo objekt sicer obstajal,
+vendar ne bo viden na sliki. </p>
+<p>Naslednja vrstica <code>var q = board.create('point',[3,0]);</code> je podobna prejšnji, z eno razliko. Zapis smo začeli z <code>var q = </code>, kar pomeni,
+da shranimo objekt v neko spremenljivko z imenom <em>q</em>. To je dobra praksa, saj se velikokrat v konstukcijah navezujemo na že prej definirane objekte, 
+kar lahko storimo samo, če jih prej shranimo v spremenljivko. Primer te uporabe bo razložen v naslednjem poglavju. </p>
+<p>{/lang}</p>
+<p>{lang=CZ}
 Zaměřme se nyní na <code>board.create('point',[-2,1]);</code>. Zde využíváme proměnnou <em>board</em> a metodu <em>create</em>, která vyžaduje dva argumenty. Prvním argumentem určujeme, jaký typ objekt se má v nákresně vytvořit, což je v našem případě bod, <em>point</em>. Druhý argument určuje souřadnice, na kterých bude bod v nákresně sestrojen. Pokud použijeme souřadnice, které leží mimo námi nadefinovaný systém souřadnic, tak se bod stejně sestrojí. Vytvořený bod ale nebude na naší nákresně viditelný, neboť bude sestrojen mimo zobrazovanou plochu. Pohybem po nákresně pomocí zoomu a šipek v jejím pravém dolním rohu je však možné sestrojený bod objevit.</p>
 <p>Další řádek <code>var q = board.create('point',[3,0]);</code> je velice podobný předchozí konstrukci pouze s jedním rozdílem. Naší konstrukci začínáme <code>var q = </code>. Toto přiřazení slouží obecně k ukládání objektů do proměnných. V naší ukázce sestrojený bod ukládáme do proměnné <em>q</em>.</p>
 <p>Ukládání objektů do proměnných je dobrou a často nezbytnou praxí. V konstrukcích se budeme často odkazovat na existující objekty a definovat mezi nimi vztahy a to právě pomocí proměnných. Toto bude patrnější na následujících stránkách.
@@ -576,11 +587,12 @@ Dies wird auf den folgenden Seiten klarer werden.
 <h2 id="creating-lines"><a class="header" href="#creating-lines">Creating lines</a></h2>
 <p>Lines are the next type of objects that we will learn. Line is defined by two points through which a line is drawn.
 Here is an example of a board with two lines.
-{/lang}
-{lang=SI}
-Creating basic objects
-{/lang}
-{lang=CZ}</p>
+{/lang}</p>
+<p>{lang=SI}</p>
+<h2 id="ustvarjanje-premic"><a class="header" href="#ustvarjanje-premic">Ustvarjanje premic</a></h2>
+<p>Premice so naslednji objekti, ki se jih bomo naučili. Premico definiramo z dvema točkama, skozi kateri poteka ravna črta. Tukaj je primer platna z dvema premicama.
+{/lang}</p>
+<p>{lang=CZ}</p>
 <h2 id="kreslení-přímek"><a class="header" href="#kreslení-přímek">Kreslení přímek</a></h2>
 <p>Dalším objektem, s jehož konstrukcí se seznámíme, je přímka.
 Ta je v JSXGraphu definována dvěma body, kterými prochází. </p>
@@ -613,6 +625,9 @@ Výsledek:
 <p>{lang=DE}
 Resultat:
 {/lang}</p>
+<p>{lang=SI}
+Rezultat:
+{/lang}</p>
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
  var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
@@ -629,6 +644,15 @@ we enclose both points in square brackets, therefore the list of two points is <
 see why it is useful to store objects in variables, because now we could define another line, that could also go through point $p$ or $q$
 and we don't need to worry if coordinates are correct.</p>
 <p><em>Note: In Javascript lists are written in square brackets <strong>[ ]</strong>.</em>
+{/lang}</p>
+<p>{lang=SI}
+Premici smo ustvarili na dva načina. Vrstica <code>var line1 = board.create(&quot;line&quot;,[[-3,1],[3,-1]]);</code> ustvari črto z imenom $line1$ skozi dve točki s koordinatama
+<code>[-3,1]</code> in <code>[3,-1]</code>. Ker potrebujemo dva podatka, oziroma dve točki, moramo podatke našteti v seznamu, torej med oglate oklepaje []. 
+Zato dobimo zapis <code>[[-3,1],[3,-1]]</code>.</p>
+<p>Za drugo premico $line2$ smo najprej definirali dve točki $p$ in $q$ in uporabili seznam <code>[p,q]</code> za definicijo $line2$. Tukaj lahko opazimo, zakaj je koristno 
+shranjevati objekte v spremenljivke. Če želimo zapisati več različnih premic, ki grejo skozi eno izmed točk $p$ ali $q$, ne rabimo vsakič znova zapisovat koordinat 
+teh dveh točk, saj sta točki že prej definirani. </p>
+<p><em>Opomba: V Javascriptu se seznami pišejo v oglate oklepaje <strong>[ ]</strong>.</em>
 {/lang}</p>
 <p>{lang=CZ}
 Řádek s kódem <code>var line1 = board.create(&quot;line&quot;,[[-3,1],[3,-1]]);</code> vytváří přímku $line1$, která prochází 
@@ -661,13 +685,11 @@ all the objects and their attributes.</p>
 <p>Let us look now at the example.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="adding-attributes-to-the-objects-1"><a class="header" href="#adding-attributes-to-the-objects-1">Adding attributes to the objects</a></h2>
-<p>Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are 
-more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and 
-how line ends at the second point (more <a href="https://jsxgraph.org/docs/symbols/Line.html">here</a>). 
-We can always look at the <a href="https://jsxgraph.org/docs/index.html">JSXGraph API documentation</a>, which describes 
-all the objects and their attributes. </p>
-<p>Let us look now at the example. 
+<h2 id="dodajanje-atributov-k-objektom"><a class="header" href="#dodajanje-atributov-k-objektom">Dodajanje atributov k objektom</a></h2>
+<p>Objekti v JSXGraphu lahko imajo atribute, ki jih opisujejo. Nekateri so pogosti (npr. barva, ime, velikost), drugi bolj specifični. 
+Različni objekti imajo lahko različne atribute. Vedno si lahko pomagamo z <a href="https://jsxgraph.org/docs/index.html">JSXGraph API dokumentacijo</a>, ki opisuje
+vse objekte in vse njihove atribute. </p>
+<p>Poglejmo primer.
 {/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="nastavení-vlastností-objektů"><a class="header" href="#nastavení-vlastností-objektů">Nastavení vlastností objektů</a></h2>
@@ -703,7 +725,7 @@ alle Objekte und ihre Attribute detailliert beschrieben.</p>
 Result:
 {/lang}</p>
 <p>{lang=SI}
-Result:
+Rezultat:
 {/lang}</p>
 <p>{lang=CZ}
 Výsledek:
@@ -746,31 +768,23 @@ E.g. if you don't like the navigation (bottom right), then you can add attribute
 examples of their usage.</strong>
 {/lang}</p>
 <p>{lang=SI}
-In this example we added some attributes to the both points and to the line. 
-In all three examples we defined attributes as a list written between <code>{ }</code>. For each attribute we must write its name
-and a value. As we mentioned earlier, objects can have specific attributes and also more general borrowed (inherited) 
-from other objects.</p>
-<p>In <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> first attribute is <em>name</em> which is borrowed 
-from <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>, attribute <em>color</em> is also 
-borrowed, where attribute <a href="https://jsxgraph.org/docs/symbols/Point.html#size"><em>size</em></a> is not borrowed but belongs to object Point.
-We can read from the documentation: <em>Size of a point, either in pixel or user coordinates. Means radius resp. half the 
-width of a point (depending on the face).</em></p>
-<p>Second point has some interesting attributes <code>var q = board.create('point',[3,1],{name:&quot;last&quot;,fixed:true, face:&quot;[]&quot;});</code>
-First is the attribute <em>fixed</em> which defines whether objects can be moved (dragged) on the board. <em>Default</em> value for this
-attribute is false, which means we can move all objects on the board if they are not explicitly fixed. Now we first mentioned
-<em>default value</em>, which is used when do not explicitly set another value for some attribute. In the documentation for each 
-attribute default value is also presented. The second new attribute is <a href="https://jsxgraph.org/docs/symbols/Point.html#face"><em>face</em></a>
-where we used one of the possible shapes of a point. </p>
-<p>When we defined <code>var line2 = board.create(&quot;line&quot;,[p,q],{straightLast:false, dash:&quot;4&quot; });</code>, we used two attributes,
-first defining how line will end at second point (<em>straightLast</em>) and second defining how the line will be drawn (<em>dash</em>).
-Again, <em>dash</em>  can have different values, <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#dash">documentation for dash attribute</a> 
-tells us which are possible values.</p>
-<p>All objects have attributes, also Board object has <a href="https://jsxgraph.org/docs/symbols/JXG.Board.html">them</a>. 
-One of the attributes is <em>boundingbox</em>, which we used from first example, but didn't talk about it until now. 
-E.g. if you don't like the navigation (bottom right), then you can add attribute <em>showNavigation</em> and set it to false. Try it!</p>
-<p><em><em>We can see that we can use attributes to fine tune on how our construction will behave and look.</em></em></p>
-<p><strong>Documentation is a great resource for discovering attributes and also has some
-examples of their usage.</strong>
+V primeru smo dodali nekaj atributov k točkama in premici. 
+V vseh situacijah smo morali atribute našteti med oklepaje <code>{ }</code>. Za vsak atribut je potrebno zapisati njegovo ime in vednost. Kot smo že povedali imajo lahko 
+objekti specifične atribute, lahko pa imajo sposojene (podedovane) od drugih objektov.</p>
+<p>V vrstici <code>var p = board.create('point',[-2,-1],{name:&quot;first&quot;, size:5, color:&quot;FF0000&quot;});</code> je prvi atribut <em>name</em>, ki je sposojen iz
+<a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#name">GeometryElement</a>.  Atribut <em>color</em> je tudi sposojen, med tem ko 
+<a href="https://jsxgraph.org/docs/symbols/Point.html#size"><em>size</em></a> pripada objektu Point. </p>
+<p>Za drugo točko uporabimo nekaj zanimivih lastnosti <code>var q = board.create('point',[3,1],{name:&quot;last&quot;,fixed:true, face:&quot;[]&quot;});</code>
+Prvi atribut je <em>fixed</em>, ki pove, če lahko objekt premikamo po risalni površini. Če tega atributa ne zapišemo sami, je vedno privzeta vrednost false,
+torej lahko objekt premikamo. Privzeta vrednost je vrednost, ki jo atribut zavzame, če ga sami ne zapišemo. V dokumentaciji objektov so zapisane tudi vse
+privzete vrednosti atributov. Naslednja nova lastnost je <a href="https://jsxgraph.org/docs/symbols/Point.html#face"><em>face</em></a>, s katero določimo obliko objekta.</p>
+<p>Pri definicij premice <code>var line2 = board.create(&quot;line&quot;,[p,q],{straightLast:false, dash:&quot;4&quot; });</code>, smo uporabili dva atributa.
+Prvi nam pove, na kak način se zaključi črta pri drugi točki (<em>straightLast</em>), drugi pa nam pove, kako bo črta narisana (<em>dash</em>).
+Ta atribut ima spet lahko več vrednosti, kar si lahko pogledamo v <a href="https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#dash">dokumentaciji za dash</a> .</p>
+<p>Vsi objekti imajo atribute, tudi objekt <a href="https://jsxgraph.org/docs/symbols/JXG.Board.html">Board</a>. 
+Eden izmed teh je <em>boundingbox</em>, ki smo ga uporabili v prvem primeru. Če ne želimo imeti navigacije v spodnjem desnem kotu platna, lahko to storimo z atributom 
+<em>showNavigation</em>, ki mu določimo vrednost false. </p>
+<p><strong>Dokumentacija je odličen vir za preučevanje atributov in njihovih vrednosti, ki nam pokaže tudi kakšen primer njihove uporabe.</strong>
 {/lang}</p>
 <p>{lang=CZ}
 V tomto příkladu jsme přidali některé atributy jak k bodům, tak i k přímce.
@@ -852,12 +866,10 @@ vzdáleností bodu <em>C</em> od bodů <em>A</em> a <em>B</em>, tj. <em>|AD|/|BD
 vytváří tzv. <em>harmonickou čtveřici</em>.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
-<p><strong>Harmonic conjugate points.</strong> Given three collinear points <em>A</em>, <em>B</em> and <em>C</em>; <em>C</em> being outside the line segment <em>AB</em>.
-Determine the point <em>D</em> of the segment <em>AB</em> so that the ratio of its distances to <em>A</em> and <em>B</em>, respectively, is equal to the
-ratio of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>.</p>
-<p>This point <em>D</em> is called the <em>harmonic conjugate of C with respect to A and B</em> and points <em>A</em>, <em>B</em>, <em>C</em> and <em>D</em> together
-form the so called <em>harmonic quadruple</em>.
+<h2 id="primer"><a class="header" href="#primer">Primer</a></h2>
+<p><strong>Harmonično konjugirane točke.</strong> Naj bodo podane tri kolinearne točke <em>A</em>, <em>B</em> in <em>C</em>, kjer se <em>C</em> nahaja izven daljice <em>AB</em>.
+Določimo točko <em>D</em> na daljici <em>AB</em> tako, da velja razmerje  <em>|AD|:|BD|=|AC|:|BC|</em>.</p>
+<p>Točko <em>D</em> imenujemo <em>harmonična konjugiranka točke C glede na A in B</em>. Točke <em>A</em>, <em>B</em>, <em>C</em> in <em>D</em> skupaj tvorijo <em>harmonično štirico</em>.
 {/lang}</p>
 <p>{lang=DE}</p>
 <h2 id="beispiel"><a class="header" href="#beispiel">Beispiel</a></h2>
@@ -879,9 +891,9 @@ K řešení úlohy využijeme konstrukci tzv. <a href="https://en.wikipedia.org/
 jak vidíme níže.
 {/lang}</p>
 <p>{lang=SI}
-<em>Result:</em>
-To solve the task, we construct the so called <a href="https://en.wikipedia.org/wiki/Complete_quadrangle">complete quadrangle</a>,
-as shown below.
+<em>Rezultat:</em>
+Da rešimo problem, najprej konstruiramo tako imenovani <a href="https://en.wikipedia.org/wiki/Complete_quadrangle">popolni štirikotnik</a>,
+kot je prikazano spodaj.
 {/lang}</p>
 <p>{lang=DE}
 <em>Resultat:</em>
@@ -917,8 +929,8 @@ wie unten zu sehen ist.
 spolu s přímkou <em>p</em>, která jimi prochází:
 {/lang}</p>
 <p>{lang=SI}
-<em>Programming:</em></p>
-<p>First, we define the bounding box and create two points <em>A</em> and <em>B</em> with the line <em>p</em> passing through them:
+<em>Programiranje:</em></p>
+<p>Najprej definiramo <em>bounding box</em> in ustvarimo točki <em>A</em> in <em>B</em> z premico <em>p</em>, ki poteka skozi njiju. 
 {/lang}</p>
 <p>{lang=DE}
 <em>Programmierung:</em></p>
@@ -939,7 +951,7 @@ Then, we put the point <em>C</em> on <em>p</em> so that it can move along it:
 Potom na přímku <em>p</em> umístíme bod <em>C</em> tak, aby byl po ní volně pohyblivý:
 {/lang}</p>
 <p>{lang=SI}
-Then, we put the point <em>C</em> on <em>p</em> so that it can move along it:
+Potem postavimo točko <em>C</em> na premico <em>p</em> tako, da se lahko premika samo vzdolž nje. 
 {/lang}</p>
 <p>{lang=DE}
 Dann legen wir den Punkt <em>C</em> auf die Gerade <em>p</em>, so dass wir ihn nur entlang der Geraden ziehen können.
@@ -963,8 +975,7 @@ Nyní umístíme čtvrtý bod <em>E</em> nad přímku <em>p</em> a přímkami <e
 <em>A</em> a <em>B</em>:
 {/lang}</p>
 <p>{lang=SI}
-Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it by the straight lines <em>q</em> and <em>r</em> to points
-<em>A</em> and <em>B</em>, respectively:
+Nato postavimo četrto točko <em>E</em> nad premico <em>p</em> in jo povežemo z črtama <em>q</em> in <em>r</em> do točk <em>A</em> in <em>B</em>. 
 {/lang}</p>
 <p>{lang=DE}
 Nun erzeugen wir einen vierten Punkt <em>E</em> oberhalb der Geraden <em>p</em> an und konstruieren zwei Geraden <em>q</em> und <em>r</em>
@@ -991,8 +1002,7 @@ Poté umístíme na přímku <em>q</em> bod <em>F</em>, někam mezi body <em>A</
 a určíme její průsečík <em>G</em> s přímkou <em>r</em>:
 {/lang}</p>
 <p>{lang=SI}
-After this, we put the point <em>F</em> on <em>q</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
-points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
+Za tem določimo točko <em>F</em> na premici <em>q</em> nekje med <em>A</em> in <em>E</em>, narišemo premico <em>s</em> skozi točki <em>C</em> in <em>F</em> in določimo njeno presečišče s premico <em>r</em>.
 {/lang}</p>
 <p>{lang=DE}
 Danach legen wir einen Punkt <em>F</em> auf die Gerade <em>q</em> (d.h. einen <em>glider</em>) irgendwo zwischen <em>A</em> und <em>E</em>,
@@ -1022,8 +1032,8 @@ Nakonec sestrojíme přímky <em>t=AG</em> a <em>u=BF</em>, určíme a označím
 procházející body <em>H</em> a <em>E</em> a určíme hledaný bod <em>D</em> jako průsečík přímek <em>v</em> a <em>p</em>:
 {/lang}</p>
 <p>{lang=SI}
-Finally, we draw lines <em>t=AG</em> and <em>u=BF</em>, denote <em>H</em> their point of intersection, construct
-the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the desired point <em>D</em> as the intersection of lines <em>v</em> and <em>p</em>:
+Na koncu narišemo črti <em>t=AG</em> in <em>u=BF</em>, s <em>H</em> označimo njuni presečišči, konstruiramo premico <em>v</em> skozi <em>h</em> in <em>E</em> ter s črko <em>D</em> 
+označimo presečišče premic <em>v</em> in <em>p</em>.
 {/lang}</p>
 <p>{lang=DE}
 Schließlich, erzeugen wir die Geraden <em>t=AG</em> und <em>u=BF</em>, bezeichnen mit <em>H</em> ihren Schnittpunkt, konstruieren
@@ -1057,7 +1067,11 @@ with different <a href="https://jsxgraph.org/docs/symbols/JXG.Circle.html#method
 create a circle with either two points, or a point and a radius.
 Let us look at the example.
 {/lang}</p>
-<p>{lang=SI}##Circles{/lang}</p>
+<p>{lang=SI}</p>
+<h2 id="krogi"><a class="header" href="#krogi">Krogi</a></h2>
+<p>V JSXGraphu nimamo samo točk in premic. V tem poglavju se bomo naučili konstruirati krožnice in kroge. Uporabimo lahko različne 
+<a href="https://jsxgraph.org/docs/symbols/JXG.Circle.html#method">metode</a>. Pokazali bomo, kako definirati krog bodisi z dvema točkama, bodisi s točko in polmerom.
+{/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="kružnice"><a class="header" href="#kružnice">Kružnice</a></h2>
 <p>V JSXGraphu nemáme k dispozici jenom body a přímky. Jsou zde definovány ještě další objekty, se kterými se postupně seznámíme.
@@ -1108,18 +1122,15 @@ many objects in the construction (and generating objects dynamically). We also u
 namely <em>fillColor</em> which defines the color of the fill and <em>fillOpacity</em> sets the opacity of the area (ranging from $0$ to $1$, where $1$ means solid color with no opacity).
 {/lang}</p>
 <p>{lang=SI}
-First what we notice is, that when we initialized the board with a new argument <code>keepAspectRatio:true</code> which we use
-to tell JSXGraph that we want that html object and drawing board keep the aspect ratio between $x$ and $y$ axis. Setting this to
-true is necessary if circles should look like circles and not like ellipses.</p>
-<p>After creating both points we create two circles. <em>Circle1</em> is created with <code>var circle1 = board.create(&quot;circle&quot;,[p,q],{strokecolor:&quot;red&quot;, strokeWidth:4});</code>.
-We can see, that here we created circle with two points which is default method for creating the circles. We used
-two additional attributes which we used to set the color and width of the stroke. Color here was not defined with
-RGB system, but with the <a href="https://en.wikipedia.org/wiki/Web_colors">color name</a>.</p>
-<p><em>Circle2</em> is more interesting <code>var circle2 = board.create(&quot;circle&quot;,[&quot;B&quot;,1.8],{method:&quot;pointRadius&quot;, fillcolor:&quot;gray&quot;, fillopacity:0.2});</code>
-since we created it with the point and radius method. We explicitly set this as a attribute.
-Also instead of using variable name for the point, we used name of the point <code>&quot;B&quot;</code>, which can be very useful when having
-many objects in the construction (and generating objects dynamically). We also used two attributes for filling the area of circle,
-namely <em>fillColor</em> which defines the color of the fill and <em>fillOpacity</em> sets the opacity of the area (ranging from $0$ to $1$, where $1$ means solid color with no opacity).
+Najprej opazimo, da smo risalno desko opremili z novim atributom, to je <code>keepAspectRatio:true</code>, s katerim povemo, da želimo ohraniti
+razmerje med osjo $x$ in $y$. Vrednost moramo nastaviti na true, če želimo, da naši krogi izgledajo kot krogi in ne kot elipse. </p>
+<p>Ko ustvarimo obe točki lahko definiramo kroga. <em>Circle1</em> konstruiramo z <code>var circle1 = board.create(&quot;circle&quot;,[p,q],{strokecolor:&quot;red&quot;, strokeWidth:4});</code>.
+Narisali smo torej krog, ki gre skozi točki $p$ in $q$. Uporabili smo tudi dva atributa, s katerima smo določili barvo in debelino črte.
+Pri tem nismo barve definirali z RGB sistemom, ampak z <a href="https://en.wikipedia.org/wiki/Web_colors">imenom barve</a>.</p>
+<p>Drugi krog <em>Circle2</em> je bolj zanimiv: <code>var circle2 = board.create(&quot;circle&quot;,[&quot;B&quot;,1.8],{method:&quot;pointRadius&quot;, fillcolor:&quot;gray&quot;, fillopacity:0.2});</code>, ker smo ga ustvarili
+z metodo točke in polmera, kar moramo posebej sporočiti kot atribut <code>method:&quot;pointRadius&quot;</code>. 
+Pri tem nismo uporabili imena spremenljivke točke, ampak njeno ime B, kar je tudi veljaven način za sklicevanje na že prej zapisane objekte. Zapisali smo tudi 
+dva nova atributa za zapolnitev notranjosti kroga, torej <em>fillColor</em> in <em>fillOpacity</em>, ki določita barvo in motnost notranjosti. 
 {/lang}</p>
 <p>{lang=CZ}
 Především je třeba zmínit, že jsme v příkazu pro inicializaci nákresny použili nový atribut <code>keepAspectRatio:true</code>, kterým
@@ -1165,8 +1176,10 @@ to the object.</p>
 <p>Example:
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="polygons-1"><a class="header" href="#polygons-1">Polygons</a></h2>
-<p>{/lang}</p>
+<h2 id="poligoni"><a class="header" href="#poligoni">Poligoni</a></h2>
+<p>Poligoni ali n-kotniki so objekti, s katerimi rišemo zaprta območja omejena s poljubno mnogo točkami (najmanj tremi). Lahko so konveksni ali konkavni,
+odvisno od podanih točk. Spet lahko definiramo različne <a href="https://jsxgraph.org/docs/symbols/Polygon.html">atribute</a>. Poglejmo primer:
+{/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="mnohoúhelníky"><a class="header" href="#mnohoúhelníky">Mnohoúhelníky</a></h2>
 <p>Mnohoúhelníky jsou v geometrii velmi frekventované objekty. Můžeme je chápat jako části roviny ohraničené uzavřenou
@@ -1225,14 +1238,12 @@ particularly interesting, because it does not have just a value, but a dictionar
 is that we can control the vertices with more than one attribute.
 {/lang}</p>
 <p>{lang=SI}
-As we mentioned earlier we need at least three points to make a polygon. In our example we created five points which then used
-to create a polygon. We used an attribute <em>withLabel</em> which tells JSXGraph to show the name of the polygon.</p>
-<p>For the second polygon we created a list of points, which is another approach to create a polygon. Here we again few new
-attributes. Attribute <em>hasInnerPoints</em> enables user to move entire polygon. For example, moving Polygon 1 is not possible,
-only its points can be moved. Adding this attribute will enable moving the polygon.
-Next attribute, <em>withLines</em> tells JSXGraph whether to draw borders of the polygon or not. The last attribute <em>vertices</em> is
-particularly interesting, because it does not have just a value, but a dictionary on the right side of <code>:</code>. The reason behind
-is that we can control the vertices with more than one attribute.
+Kot smo že omenili, potrebujemo za definicijo poligona vsaj tri točke. V našem primeru smo ustvarili 5 točk in nad njimi definirali poligon. Uporabili smo 
+atribut <em>withLabel</em>, ki pove, da naj bo na sliki označeno ime poligona. </p>
+<p>V drugem primeru pa smo ustvarili seznam točk in s pomočjo seznama definirali 4-kotnik. Tukaj imamo ponovno nekaj novih atributov.
+Atribut <em>hasInnerPoints</em> omogoča uporabniku, da premika celoten objekt. Pri prvem poligonu to ni mogoče, lahko premikamo samo njegove robne točke. 
+Naslednji atribut <em>withLines</em> pove JSXGraphu, da naj nariše robove poligona. Zadnji atribut <em>vertices</em> je posebej zanimiv, saj nima samo vrednosti,
+ampak ima slovar na desni strani dvopičja. Razlog za to je v tem, da lahko oglišča nadzorujemo z več kot eno lastnostjo. 
 {/lang}</p>
 <p>{lang=CZ}
 Jak je zřejmé z geometrické podstaty mnohoúhelníku, pro jeho vytvoření potřebujeme alespoň tři body.
@@ -1277,10 +1288,10 @@ Středem úsečky <em>AG</em> je bod <em>P</em>. Dokažte, že úhel <em>RPQ</em
 The Mathematical association of America, Dolciani Mathematical Expositions – No. 18. 1996.</em>)
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="example-regular-polygons-1"><a class="header" href="#example-regular-polygons-1">Example: Regular polygons</a></h2>
-<p><strong>A Hexagon-Triangle Hinge.</strong> In the diagram below, <em>Q</em> is the center of a regular hexagon with a vertex <em>B</em> at which it touches
-an equilateral triangle with center <em>R</em>. Let <em>P</em> be the midpoint of <em>AG</em>. Show that <em>RPQ</em> is a right angle.</p>
-<p>(Source: <em>Konhauser, J. D. E., Velleman, D., Wagon, S. Which Way Did the Bicycle Go? … and Other Intriguing Mathematical Mysteries. 
+<h2 id="primer-pravilni-n-kotniki"><a class="header" href="#primer-pravilni-n-kotniki">Primer: Pravilni n-kotniki</a></h2>
+<p><strong>Tečaj iz šestkotnika in trikotnika.</strong> V spodnji sliki je <em>Q</em> središče pravilnega 6-kotnika z ogliščem <em>B</em>, v katerem se dotika enakokrakega
+trikotnika s središčem <em>R</em>. Naj bo <em>P</em> razpolovišče daljice <em>AG</em>. Pokažimo, da je <em>RPQ</em> pravi kot.</p>
+<p>(Vir: <em>Konhauser, J. D. E., Velleman, D., Wagon, S. Which Way Did the Bicycle Go? … and Other Intriguing Mathematical Mysteries. 
 The Mathematical association of America, Dolciani Mathematical Expositions – No. 18. 1996.</em>)
 {/lang}</p>
 <p>{lang=DE}</p>
@@ -1324,8 +1335,8 @@ Here we will deal only with the programming of the illustrative dynamic figure.
 Zde se budeme věnovat pouze programování dynamického obrázku ilustrujícího daný problém. 
 {/lang}</p>
 <p>{lang=SI}
-The solution to the example, i.e. proving the given statement, is left to the reader. 
-Here we will deal only with the programming of the illustrative dynamic figure. 
+Rešitve oziroma pisnega dokaza tukaj ne bomo zapisali, ampak bomo samo demonstrirali, kako sprogramirati dinamično skico 
+iz katere je razvidna resničnost trditve. 
 {/lang}</p>
 <p>{lang=DE}
 Die Lösung der Aufgabe, d.h. der Beweis der Behauptung, sei dem Leser überlassen.
@@ -1340,8 +1351,8 @@ Hier wollen wir uns nur mit der Programmierung der erläuternden dynamischen Zei
 <p>Nejprve musíme definovat parametry nákresny:
 {/lang}</p>
 <p>{lang=SI}
-<em>Programming:</em></p>
-<p>First, we define the Bounding box as follows:
+<em>Programiranje:</em></p>
+<p>Najprej definiramo <em>bounding box</em> na naslednji način:
 {/lang}</p>
 <p>{lang=DE}
 <em>Programmierung:</em></p>
@@ -1363,9 +1374,8 @@ Pro nastavení jejich zobrazení použijeme následující dvě obecné volby. J
 s čarami obrázku, použijeme volbu <a href="https://jsxgraph.org/docs/symbols/Label.html#autoPosition"><code>autoPosition = true</code></a> (dostupná ve verzi v1.1+):
 {/lang}</p>
 <p>{lang=SI}
-There will be eleven points in the diagram, namely vertices of polygons, their centers and a midpoint.
-To set their appearance we use two general options, as follows. First, to get the best possible positions 
-of their labels, with as few overlaps with image lines as possible, we use the <a href="https://jsxgraph.org/docs/symbols/Label.html#autoPosition"><code>autoPosition = true</code></a> option (it works in v1.1+):
+Na skici bo prisotnih 11 točk, ki bodo predstavljale oglišča, presečišča in središča likov. Da bo slika izgledala čim bolj berljivo, nastavimo dve lastnosti.
+Lastnost <a href="https://jsxgraph.org/docs/symbols/Label.html#autoPosition"><code>autoPosition = true</code></a> bo narisala imena točk na ta način, da bo čim manj prekrivanja. 
 {/lang}</p>
 <p>{lang=DE}
 In der Zeichnung sind elf Punkte enthalten, nämlich die Ecken der Polygone, deren Mittelpunke und ein Strecken-Mittelpunkt.
@@ -1386,7 +1396,7 @@ Then, we set the basic point size to 1:
 Jednak nastavíme základní velikost bodů na 1:
 {/lang}</p>
 <p>{lang=SI}
-Then, we set the basic point size to 1:
+Nato nastavimo osnovno velikost vseh točk na 1:
 {/lang}</p>
 <p>{lang=DE}
 Ausserdem setzen wir die Standardgröße der Punkte auf den Wert 1:
@@ -1407,8 +1417,7 @@ for example the appearance of points using the command <code>board.options.point
 např. podobu symbolu bodu použitím příkazu <code>board.options.point.face = '[]';</code> atd.
 {/lang}</p>
 <p>{lang=SI}
-<em>Note:</em> In this way we can also set other common attributes of objects in the board, 
-for example the appearance of points using the command <code>board.options.point.face = '[]';</code> etc.
+<em>Opomba:</em> Na ta način lahko poenotimo tudi ostale atribute enakih objektov, naprimer izgled točk z ukazom <code>board.options.point.face = '[]';</code> ipd. 
 {/lang}</p>
 <p>{lang=DE}
 <em>Hinweis:</em> Auf diese Weise können auch andere Attribute für die gesamte Konstruktion vorbelegt werden, zum Beispiel
@@ -1423,8 +1432,7 @@ Pro konstrukci pravidelného šestiúhelníku nejprve sestrojíme body <em>A</em
 a obarvíme je oranžově, pro zdůraznění toho, že se jedná o volné body: 
 {/lang}</p>
 <p>{lang=SI}
-To obtain the regular hexagon we first construct points <em>A</em> and <em>B</em>, its future two adjacent vertices, 
-and then color them orange to highlight them as movers: 
+Za konstrukcijo pravilnega 6-kotnika najprej ustvarimo točki <em>A</em> in <em>B</em> in ju pobarvamo oranžno, da ju označimo kot točki, ki ju je možno premikati:
 {/lang}</p>
 <p>{lang=DE}
 Um ein reguläres Sechseck anzulegen, konstruieren wir zuerst die Punkte <em>A</em> und <em>B</em> als zwei nebeneinanderliegende Ecken des künftigen Sechsecks und färben diese orange um sie als beweglich / ziehbar zu markieren:
@@ -1447,8 +1455,7 @@ Poté použijeme tyto body jako vstupní parametry objektu <a href="https://jsxg
 požadovaného šestiúhelníku:
 {/lang}</p>
 <p>{lang=SI}
-Then, using these points as the input parameters to the <a href="https://jsxgraph.org/docs/symbols/RegularPolygon.html">regularpolygon</a> object, 
-we create the desired hexagon:
+Nato uporabimo ti točki kot vhodna parametra za konstrukcijo objekta <a href="https://jsxgraph.org/docs/symbols/RegularPolygon.html">pravilni n-kotnik</a>:
 {/lang}</p>
 <p>{lang=DE}
 Wir verwenden nun diese Punkte als Eingabeparameter für das <a href="https://jsxgraph.org/docs/symbols/RegularPolygon.html">regularpolygon</a>-Objekt,
@@ -1475,8 +1482,8 @@ K vrcholům <em>A</em> a <em>B</em> přidáme ještě bod <em>D</em>, v pořad�
 (protože program začíná indexovat od 0, je indexem tohoto vrcholu číslo 3)<br />
 {/lang}</p>
 <p>{lang=SI}
-The center of the regular polygon is the center of its circumcircle, therefore we have to identify at least three vertices of the hexagon to determine its center.
-We chose <em>D</em>, the fourth vertex from <em>A</em> (index number is 3 because the software starts to count from 0)<br />
+Središče pravilnega n-kotnika je enako središču njegove očrtane krožnice, zato moramo določiti tri oglišča 6-kotnika. Poleg <em>A</em> in <em>B</em> smo izbrali še oglišče <em>D</em>, 
+to je četrto oglišče od oglišča <em>A</em> (indeks tega oglišča ni 4, ampak 3, saj se štetje seznamov začne pri 0). 
 {/lang}</p>
 <p>{lang=DE}
 Der Mittelpunkt des regulären Polygons ist der Mittelpunkt des Umkreises. Wir müssen daher auf mindestens drei Ecken des Sechsecks
@@ -1501,7 +1508,7 @@ to determine the center <em>Q</em> of the regular hexagon as the center of the c
 pro určení středu pravidelného šestiúhelníku <em>Q</em> jako středu kružnice opsané trojúhelníku <em>ABD</em>:<br />
 {/lang}</p>
 <p>{lang=SI}
-to determine the center <em>Q</em> of the regular hexagon as the center of the circumcircle to the triangle <em>ABD</em>:
+Zdaj lahko z ukazom <code>circumcenter</code> določimo središče krožnice skozi oglišča <em>A</em>, <em>B</em> in <em>D</em>.
 {/lang}</p>
 <p>{lang=DE}
 um den Mittelpunkt <em>Q</em> des regulären Sechsecks als Mittelpunkt des Umkreises des Dreiecks <em>ABD</em> zu bestimmen:
@@ -1519,16 +1526,16 @@ var Q = board.create('circumcenter',  [A, B, D], {name:'Q'});
 &lt;/script&gt;
 </code></pre>
 <p>{lang=EN}
-In an analogous way, we then create an equilateral triangle <em>BGH</em> with center <em>N</em>:<br />
+In an analogous way, we then create an equilateral triangle <em>BGH</em> with center <em>R</em>:<br />
 {/lang}</p>
 <p>{lang=CZ}
-Analogicky sestrojíme rovnostranný trojúhelník <em>BGH</em> se středem <em>N</em>:<br />
+Analogicky sestrojíme rovnostranný trojúhelník <em>BGH</em> se středem <em>R</em>:<br />
 {/lang}</p>
 <p>{lang=SI}
-In an analogous way, we then create an equilateral triangle <em>BGH</em> with center <em>N</em>:<br />
+Analogno konstruiramo pravilni trikotnik <em>BGH</em> s središčem <em>R</em>: 
 {/lang}</p>
 <p>{lang=DE}
-Genauso können wir das gleichseitige Dreieck <em>BGH</em> mit Mittelpunkt <em>N</em> konstruieren:
+Genauso können wir das gleichseitige Dreieck <em>BGH</em> mit Mittelpunkt <em>R</em> konstruieren:
 {/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:400px; height:300px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
@@ -1555,9 +1562,8 @@ Nakonec doplníme trojúhelník <em>AGB</em>, střed jeho strany <em>AB</em> bod
 jejichž kolmost je předmětem důkazu: 
 {/lang}</p>
 <p>{lang=SI}
-Then, we add the triangle <em>AGB</em>, the midpoint <em>P</em> of its side <em>AB</em> and the lines <em>PQ</em> and <em>PR</em>, 
-which we have to prove are always perpendicular:<br />
-{/lang}</p>
+Potem konstruiramo trikotnik <em>AGB</em>, razpolovišče <em>P</em> daljice <em>AB</em> in premici <em>PQ</em> ter <em>PR</em>, za kateri moramo pokazati, da sta med seboj pravokotni:</p>
+<p>{/lang}</p>
 <p>{lang=DE}
 Dann legen wir das Dreieck <em>AGB</em>, den Mittelpunkt <em>P</em> seiner Seite <em>AB</em> und die Geraden <em>PQ</em> und <em>PR</em> an,
 für die zu beweisen ist, dass sie immer aufeinander senkrecht stehen.
@@ -1591,8 +1597,7 @@ Nakonec můžeme zobrazit předmětný úhel <em>RPQ</em>. JSXGraph ho identifik
 jak vidíme na obrázku výše:<br />
 {/lang}</p>
 <p>{lang=SI}
-Finally, we can identify the angle <em>RPQ</em>, the rightness of which we have to prove. 
-JSXGraph recognizes it as a right angle, so it marks it accordingly, as can be seen in figure belaboveow:
+Na koncu moramo samo še identificirati kot <em>RPQ</em>, za katerega JSXGraph prepozna, da je pravi in ga na ustrezen način označi (glej sliko zgoraj):
 {/lang}</p>
 <p>{lang=DE}
 Schließlich zeichnen wir den Winkel <em>RPQ</em>, für den zu zeigen ist, dass es sich immer um einen rechten Winkel handelt.
@@ -1629,8 +1634,7 @@ Pokud nám takovéto symbolické vyznačení pravého úhlu nepostačuje, může
 číselné hodnoty jeho velikosti:<br />
 {/lang}</p>
 <p>{lang=SI}
-If this symbolic expression of the right angle is not enough for us,
-we can enter the code to display the size of the respective angle:<br />
+Če nismo zadovoljni s simbolično predstavitvijo pravega kota, lahko zapišemo njegovo velikost še v stopinjah:<br />
 {/lang}</p>
 <p>{lang=DE}
 Falls die symbolische Kennzeichnung des rechten Winkels noch nicht deutlich genug ist,
@@ -1667,7 +1671,7 @@ The task solution code is now complete.
 Kód uvedeného dynamického obrázku je nyní kompletní.
 {/lang}</p>
 <p>{lang=SI}
-The task solution code is now complete.
+Koda rešitve je s tem zaključena.
 {/lang}</p>
 <p>{lang=DE}
 Damit ist die Zeichnung fertiggestellt.

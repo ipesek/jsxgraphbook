@@ -3,9 +3,12 @@
 Lines are the next type of objects that we will learn. Line is defined by two points through which a line is drawn.
 Here is an example of a board with two lines.
 {/lang}
+
 {lang=SI}
-Creating basic objects
+## Ustvarjanje premic
+Premice so naslednji objekti, ki se jih bomo naučili. Premico definiramo z dvema točkama, skozi kateri poteka ravna črta. Tukaj je primer platna z dvema premicama.
 {/lang}
+
 {lang=CZ}
 ## Kreslení přímek
 Dalším objektem, s jehož konstrukcí se seznámíme, je přímka.
@@ -47,6 +50,10 @@ Výsledek:
 Resultat:
 {/lang}
 
+{lang=SI}
+Rezultat:
+{/lang}
+
 
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
@@ -67,6 +74,18 @@ see why it is useful to store objects in variables, because now we could define 
 and we don't need to worry if coordinates are correct.
 
 _Note: In Javascript lists are written in square brackets **[ ]**._
+{/lang}
+
+{lang=SI}
+Premici smo ustvarili na dva načina. Vrstica `var line1 = board.create("line",[[-3,1],[3,-1]]);` ustvari črto z imenom $line1$ skozi dve točki s koordinatama
+ `[-3,1]` in `[3,-1]`. Ker potrebujemo dva podatka, oziroma dve točki, moramo podatke našteti v seznamu, torej med oglate oklepaje []. 
+ Zato dobimo zapis `[[-3,1],[3,-1]]`.
+
+Za drugo premico $line2$ smo najprej definirali dve točki $p$ in $q$ in uporabili seznam `[p,q]` za definicijo $line2$. Tukaj lahko opazimo, zakaj je koristno 
+shranjevati objekte v spremenljivke. Če želimo zapisati več različnih premic, ki grejo skozi eno izmed točk $p$ ali $q$, ne rabimo vsakič znova zapisovat koordinat 
+teh dveh točk, saj sta točki že prej definirani. 
+
+_Opomba: V Javascriptu se seznami pišejo v oglate oklepaje **[ ]**._
 {/lang}
 
 {lang=CZ}

@@ -26,15 +26,15 @@ prostřednictvím jednoduchých příkladů.
 {/lang}
 
 {lang=SI}
-## Basics
-JSXGraph construction is composed from:
-* drawing board
-* objects (points, lines, etc.)
-* relations between objects (optional, if we want some dynamics in the construction)
-* events (optional, if we want some additional actions to be triggered)
+## Osnove
+JSXGraph kostrukcijo sestavljajo:
+* risalna povšina
+* objekti (točke, črte, itd.)
+* relacije med objekti (če želimo dinamiko med objekti)
+* dogodki (če želimo sprožiti kakšne dodatne akcije)
 
 
-In this section we will cover how to create drawing board, objects and use them to construct some simple examples.
+V tem poglavju bomo opisali, kako konstruirati risalno površino in točke na njej ter kako jih uporabiti za preproste konstrukcije. 
 
 {/lang}
 

@@ -9,7 +9,10 @@ Example:
 {/lang}
 
 {lang=SI}
-## Polygons
+## Poligoni
+
+Poligoni ali n-kotniki so objekti, s katerimi rišemo zaprta območja omejena s poljubno mnogo točkami (najmanj tremi). Lahko so konveksni ali konkavni,
+odvisno od podanih točk. Spet lahko definiramo različne [atribute](https://jsxgraph.org/docs/symbols/Polygon.html). Poglejmo primer:
 {/lang}
 
 {lang=CZ}
@@ -82,15 +85,13 @@ is that we can control the vertices with more than one attribute.
 {/lang}
 
 {lang=SI}
-As we mentioned earlier we need at least three points to make a polygon. In our example we created five points which then used
-to create a polygon. We used an attribute _withLabel_ which tells JSXGraph to show the name of the polygon.
+Kot smo že omenili, potrebujemo za definicijo poligona vsaj tri točke. V našem primeru smo ustvarili 5 točk in nad njimi definirali poligon. Uporabili smo 
+atribut _withLabel_, ki pove, da naj bo na sliki označeno ime poligona. 
 
-For the second polygon we created a list of points, which is another approach to create a polygon. Here we again few new
-attributes. Attribute _hasInnerPoints_ enables user to move entire polygon. For example, moving Polygon 1 is not possible,
-only its points can be moved. Adding this attribute will enable moving the polygon.
-Next attribute, _withLines_ tells JSXGraph whether to draw borders of the polygon or not. The last attribute _vertices_ is
-particularly interesting, because it does not have just a value, but a dictionary on the right side of `:`. The reason behind
-is that we can control the vertices with more than one attribute.
+V drugem primeru pa smo ustvarili seznam točk in s pomočjo seznama definirali 4-kotnik. Tukaj imamo ponovno nekaj novih atributov.
+Atribut _hasInnerPoints_ omogoča uporabniku, da premika celoten objekt. Pri prvem poligonu to ni mogoče, lahko premikamo samo njegove robne točke. 
+Naslednji atribut _withLines_ pove JSXGraphu, da naj nariše robove poligona. Zadnji atribut _vertices_ je posebej zanimiv, saj nima samo vrednosti,
+ampak ima slovar na desni strani dvopičja. Razlog za to je v tem, da lahko oglišča nadzorujemo z več kot eno lastnostjo. 
 {/lang}
 
 {lang=CZ}

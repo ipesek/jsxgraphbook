@@ -7,7 +7,12 @@ with different [methods](https://jsxgraph.org/docs/symbols/JXG.Circle.html#metho
 Let us look at the example.
 {/lang}
 
-{lang=SI}##Circles{/lang}
+{lang=SI}
+## Krogi
+
+V JSXGraphu nimamo samo točk in premic. V tem poglavju se bomo naučili konstruirati krožnice in kroge. Uporabimo lahko različne 
+[metode](https://jsxgraph.org/docs/symbols/JXG.Circle.html#method). Pokazali bomo, kako definirati krog bodisi z dvema točkama, bodisi s točko in polmerom.
+{/lang}
 
 {lang=CZ}
 ## Kružnice
@@ -71,20 +76,17 @@ namely _fillColor_ which defines the color of the fill and _fillOpacity_ sets th
 {/lang}
 
 {lang=SI}
-First what we notice is, that when we initialized the board with a new argument `keepAspectRatio:true` which we use
-to tell JSXGraph that we want that html object and drawing board keep the aspect ratio between $x$ and $y$ axis. Setting this to
-true is necessary if circles should look like circles and not like ellipses.
+Najprej opazimo, da smo risalno desko opremili z novim atributom, to je `keepAspectRatio:true`, s katerim povemo, da želimo ohraniti
+razmerje med osjo $x$ in $y$. Vrednost moramo nastaviti na true, če želimo, da naši krogi izgledajo kot krogi in ne kot elipse. 
 
-After creating both points we create two circles. _Circle1_ is created with `var circle1 = board.create("circle",[p,q],{strokecolor:"red", strokeWidth:4});`.
-We can see, that here we created circle with two points which is default method for creating the circles. We used
-two additional attributes which we used to set the color and width of the stroke. Color here was not defined with
-RGB system, but with the [color name](https://en.wikipedia.org/wiki/Web_colors).
+Ko ustvarimo obe točki lahko definiramo kroga. _Circle1_ konstruiramo z `var circle1 = board.create("circle",[p,q],{strokecolor:"red", strokeWidth:4});`.
+Narisali smo torej krog, ki gre skozi točki $p$ in $q$. Uporabili smo tudi dva atributa, s katerima smo določili barvo in debelino črte.
+Pri tem nismo barve definirali z RGB sistemom, ampak z [imenom barve](https://en.wikipedia.org/wiki/Web_colors).
 
-_Circle2_ is more interesting `var circle2 = board.create("circle",["B",1.8],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`
-since we created it with the point and radius method. We explicitly set this as a attribute.
-Also instead of using variable name for the point, we used name of the point `"B"`, which can be very useful when having
-many objects in the construction (and generating objects dynamically). We also used two attributes for filling the area of circle,
-namely _fillColor_ which defines the color of the fill and _fillOpacity_ sets the opacity of the area (ranging from $0$ to $1$, where $1$ means solid color with no opacity).
+Drugi krog _Circle2_ je bolj zanimiv: `var circle2 = board.create("circle",["B",1.8],{method:"pointRadius", fillcolor:"gray", fillopacity:0.2});`, ker smo ga ustvarili
+z metodo točke in polmera, kar moramo posebej sporočiti kot atribut `method:"pointRadius"`. 
+Pri tem nismo uporabili imena spremenljivke točke, ampak njeno ime B, kar je tudi veljaven način za sklicevanje na že prej zapisane objekte. Zapisali smo tudi 
+dva nova atributa za zapolnitev notranjosti kroga, torej _fillColor_ in _fillOpacity_, ki določita barvo in motnost notranjosti. 
 {/lang}
 
 {lang=CZ}

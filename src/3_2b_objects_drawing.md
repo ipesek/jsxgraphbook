@@ -10,14 +10,12 @@ Let us look now at the example.
 {/lang}
 
 {lang=SI}
-## Adding attributes to the objects
-Objects in JSXGraph have attributes, which describes them. Some of them are common (like color, name, etc.) and some are 
-more specific. Points have properties for e.g. shape, where line has other attribute e.g. if (attribute straightLast) and 
-how line ends at the second point (more [here](https://jsxgraph.org/docs/symbols/Line.html)). 
-We can always look at the [JSXGraph API documentation](https://jsxgraph.org/docs/index.html), which describes 
-all the objects and their attributes. 
+## Dodajanje atributov k objektom 
+Objekti v JSXGraphu lahko imajo atribute, ki jih opisujejo. Nekateri so pogosti (npr. barva, ime, velikost), drugi bolj specifični. 
+Različni objekti imajo lahko različne atribute. Vedno si lahko pomagamo z [JSXGraph API dokumentacijo](https://jsxgraph.org/docs/index.html), ki opisuje
+vse objekte in vse njihove atribute. 
 
-Let us look now at the example. 
+Poglejmo primer.
 {/lang}
 
 {lang=CZ}
@@ -63,9 +61,8 @@ Betrachten wir folgendes Beispiel.
 Result:
 {/lang}
 
-
 {lang=SI}
-Result:
+Rezultat:
 {/lang}
 
 {lang=CZ}
@@ -119,37 +116,29 @@ examples of their usage.__
 {/lang}
 
 {lang=SI}
-In this example we added some attributes to the both points and to the line. 
-In all three examples we defined attributes as a list written between `{ }`. For each attribute we must write its name
-and a value. As we mentioned earlier, objects can have specific attributes and also more general borrowed (inherited) 
-from other objects.  
+V primeru smo dodali nekaj atributov k točkama in premici. 
+V vseh situacijah smo morali atribute našteti med oklepaje `{ }`. Za vsak atribut je potrebno zapisati njegovo ime in vednost. Kot smo že povedali imajo lahko 
+objekti specifične atribute, lahko pa imajo sposojene (podedovane) od drugih objektov.   
 
-In `var p = board.create('point',[-2,-1],{name:"first", size:5, color:"FF0000"});` first attribute is _name_ which is borrowed 
-from [GeometryElement](https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#name), attribute _color_ is also 
-borrowed, where attribute [_size_](https://jsxgraph.org/docs/symbols/Point.html#size) is not borrowed but belongs to object Point.
-We can read from the documentation: _Size of a point, either in pixel or user coordinates. Means radius resp. half the 
-width of a point (depending on the face)._
+V vrstici `var p = board.create('point',[-2,-1],{name:"first", size:5, color:"FF0000"});` je prvi atribut _name_, ki je sposojen iz
+[GeometryElement](https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#name).  Atribut _color_ je tudi sposojen, med tem ko 
+[_size_](https://jsxgraph.org/docs/symbols/Point.html#size) pripada objektu Point. 
+
  
-Second point has some interesting attributes `var q = board.create('point',[3,1],{name:"last",fixed:true, face:"[]"});`
-First is the attribute _fixed_ which defines whether objects can be moved (dragged) on the board. *Default* value for this
-attribute is false, which means we can move all objects on the board if they are not explicitly fixed. Now we first mentioned
-*default value*, which is used when do not explicitly set another value for some attribute. In the documentation for each 
-attribute default value is also presented. The second new attribute is [_face_](https://jsxgraph.org/docs/symbols/Point.html#face)
-where we used one of the possible shapes of a point. 
+Za drugo točko uporabimo nekaj zanimivih lastnosti `var q = board.create('point',[3,1],{name:"last",fixed:true, face:"[]"});`
+Prvi atribut je _fixed_, ki pove, če lahko objekt premikamo po risalni površini. Če tega atributa ne zapišemo sami, je vedno privzeta vrednost false,
+torej lahko objekt premikamo. Privzeta vrednost je vrednost, ki jo atribut zavzame, če ga sami ne zapišemo. V dokumentaciji objektov so zapisane tudi vse
+privzete vrednosti atributov. Naslednja nova lastnost je [_face_](https://jsxgraph.org/docs/symbols/Point.html#face), s katero določimo obliko objekta.
  
-When we defined `var line2 = board.create("line",[p,q],{straightLast:false, dash:"4" });`, we used two attributes,
-first defining how line will end at second point (_straightLast_) and second defining how the line will be drawn (_dash_).
-Again, _dash_  can have different values, [documentation for dash attribute](https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#dash) 
-tells us which are possible values.
+Pri definicij premice `var line2 = board.create("line",[p,q],{straightLast:false, dash:"4" });`, smo uporabili dva atributa.
+Prvi nam pove, na kak način se zaključi črta pri drugi točki (_straightLast_), drugi pa nam pove, kako bo črta narisana (_dash_).
+Ta atribut ima spet lahko več vrednosti, kar si lahko pogledamo v [dokumentaciji za dash](https://jsxgraph.org/docs/symbols/JXG.GeometryElement.html#dash) .
 
-All objects have attributes, also Board object has [them](https://jsxgraph.org/docs/symbols/JXG.Board.html). 
-One of the attributes is _boundingbox_, which we used from first example, but didn't talk about it until now. 
-E.g. if you don't like the navigation (bottom right), then you can add attribute _showNavigation_ and set it to false. Try it!
+Vsi objekti imajo atribute, tudi objekt [Board](https://jsxgraph.org/docs/symbols/JXG.Board.html). 
+Eden izmed teh je _boundingbox_, ki smo ga uporabili v prvem primeru. Če ne želimo imeti navigacije v spodnjem desnem kotu platna, lahko to storimo z atributom 
+ _showNavigation_, ki mu določimo vrednost false. 
 
-_*We can see that we can use attributes to fine tune on how our construction will behave and look.*_
-
-__Documentation is a great resource for discovering attributes and also has some
-examples of their usage.__
+__Dokumentacija je odličen vir za preučevanje atributov in njihovih vrednosti, ki nam pokaže tudi kakšen primer njihove uporabe.__
 {/lang}
 
 {lang=CZ}

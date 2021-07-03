@@ -30,28 +30,32 @@ Then we declared a coordinate system and its size, which we will use to place ob
 {/lang}
  
 {lang=SI}
-JSXGraph needs canvas as a place to put constructions on. Because we have HTML and Javascript we need an element in 
-HTML which we will tell Javascript to use as canvas. This is done like this
+## Risalna površina
+JSXGraph potrebuje platno kot prostor, kamor postavljamo našo konstrukcijo. Ker uporabljamo HTML in Javascript, potrebujemo element v HTML, ki pove Javascriptu, 
+da uporabljamo platno. To storimo na naslednji način
 ```HTML
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 ```
 
-If look at the line closely we see a few properties. For us it is important `id="jxgbox"` which we use to connect with JSXGraph.
-Next is `class="jxgbox"` where we can specify how our board will look like. This is more advanced topic and will be discussed later.
-Last property is `style="width:500px; height:200px;"` where we define size of our drawing board.  
-_Important: here we do not define our coordinate system, but only the size of our canvas._
+Opazimo lahko nekaj lastnosti. Za nas so pomembni `id="jxgbox"`, s katerim se povežemo z JSXGraph. Naslednji je `class="jxgbox"`, kjer določimo, kako bo 
+naša površina izgledala. Gre za malo naprednješo temo in bo v podrobnosti opisana kasneje. Nazadnje imamo `style="width:500px; height:200px;"`, s tem določimo 
+velikost naše površine v pikslih. 
 
-When we have defined our canvas, we have to connect them with JSXGraph. This is done with the following line, which should be put inside
+_Pomembno: tukaj ne definiramo koordinatnega sistema, ampak samo velikost platna._
+
+Sedaj ga lahko povežemo z JSXGraph z naslednjo vrstico, ki jo moramo zapisati med simbola `<script> </script>`
 
 ```JS
 var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
 ```
 
-We can see we called function `initBoard`, which constructs our drawing board . This function need at least one argument,
-which is the name of id we defined earlier for div in our example ``jxgbox``. ``boundingbox: [-5, 2, 5, -2]`` tells
- JSXGraph the coordinate system of our construction.
+Vidimo, da kličemo funkcijo z imenom `initBoard`, ki konstruira risalno površino. Ta funkcija potrebuje vsaj en argument, ki je ime oziroma identiteta `id`
+prej definiranega platna. V našem primeru je to ``jxgbox``. V tem primeru smo uporabili še en agrument, to je ``boundingbox: [-5, 2, 5, -2]``, ki našemu platnu določi
+meje koordinatnega sistema. 
  
- Code of whole example is then following:{/lang}
+ 
+
+{/lang}
  
 {lang=CZ}
 ## Nákresna

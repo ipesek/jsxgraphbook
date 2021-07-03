@@ -20,12 +20,12 @@ Středem úsečky *AG* je bod *P*. Dokažte, že úhel *RPQ* je pravý.
 {/lang}
 
 {lang=SI}
-## Example: Regular polygons
+## Primer: Pravilni n-kotniki
 
-**A Hexagon-Triangle Hinge.** In the diagram below, *Q* is the center of a regular hexagon with a vertex *B* at which it touches
- an equilateral triangle with center *R*. Let *P* be the midpoint of *AG*. Show that *RPQ* is a right angle.
+**Tečaj iz šestkotnika in trikotnika.** V spodnji sliki je *Q* središče pravilnega 6-kotnika z ogliščem *B*, v katerem se dotika enakokrakega
+trikotnika s središčem *R*. Naj bo *P* razpolovišče daljice *AG*. Pokažimo, da je *RPQ* pravi kot.
  
- (Source: *Konhauser, J. D. E., Velleman, D., Wagon, S. Which Way Did the Bicycle Go? … and Other Intriguing Mathematical Mysteries. 
+ (Vir: *Konhauser, J. D. E., Velleman, D., Wagon, S. Which Way Did the Bicycle Go? … and Other Intriguing Mathematical Mysteries. 
  The Mathematical association of America, Dolciani Mathematical Expositions – No. 18. 1996.*)
 {/lang}
 
@@ -76,8 +76,8 @@ Zde se budeme věnovat pouze programování dynamického obrázku ilustrujícíh
 {/lang}
 
 {lang=SI}
-The solution to the example, i.e. proving the given statement, is left to the reader. 
-Here we will deal only with the programming of the illustrative dynamic figure. 
+Rešitve oziroma pisnega dokaza tukaj ne bomo zapisali, ampak bomo samo demonstrirali, kako sprogramirati dinamično skico 
+iz katere je razvidna resničnost trditve. 
 {/lang}
 
 {lang=DE}
@@ -99,9 +99,9 @@ Nejprve musíme definovat parametry nákresny:
 {/lang}
 
 {lang=SI}
-*Programming:*
+*Programiranje:*
 
-First, we define the Bounding box as follows:
+Najprej definiramo _bounding box_ na naslednji način:
 {/lang}
 
 {lang=DE}
@@ -132,9 +132,8 @@ s čarami obrázku, použijeme volbu [`autoPosition = true`](https://jsxgraph.or
 
 
 {lang=SI}
-There will be eleven points in the diagram, namely vertices of polygons, their centers and a midpoint.
-To set their appearance we use two general options, as follows. First, to get the best possible positions 
-of their labels, with as few overlaps with image lines as possible, we use the [`autoPosition = true`](https://jsxgraph.org/docs/symbols/Label.html#autoPosition) option (it works in v1.1+):
+Na skici bo prisotnih 11 točk, ki bodo predstavljale oglišča, presečišča in središča likov. Da bo slika izgledala čim bolj berljivo, nastavimo dve lastnosti.
+Lastnost [`autoPosition = true`](https://jsxgraph.org/docs/symbols/Label.html#autoPosition) bo narisala imena točk na ta način, da bo čim manj prekrivanja. 
 {/lang}
 
 {lang=DE}
@@ -162,7 +161,7 @@ Jednak nastavíme základní velikost bodů na 1:
 {/lang}
 
 {lang=SI}
-Then, we set the basic point size to 1:
+Nato nastavimo osnovno velikost vseh točk na 1:
 {/lang}
 
 {lang=DE}
@@ -188,8 +187,7 @@ např. podobu symbolu bodu použitím příkazu `board.options.point.face = '[]'
 {/lang}
 
 {lang=SI}
-*Note:* In this way we can also set other common attributes of objects in the board, 
-for example the appearance of points using the command `board.options.point.face = '[]';` etc.
+*Opomba:* Na ta način lahko poenotimo tudi ostale atribute enakih objektov, naprimer izgled točk z ukazom `board.options.point.face = '[]';` ipd. 
 {/lang}
 
 {lang=DE}
@@ -209,8 +207,7 @@ a obarvíme je oranžově, pro zdůraznění toho, že se jedná o volné body:
 {/lang}
 
 {lang=SI}
-To obtain the regular hexagon we first construct points *A* and *B*, its future two adjacent vertices, 
-and then color them orange to highlight them as movers: 
+Za konstrukcijo pravilnega 6-kotnika najprej ustvarimo točki *A* in *B* in ju pobarvamo oranžno, da ju označimo kot točki, ki ju je možno premikati:
 {/lang}
 
 {lang=DE}
@@ -239,8 +236,7 @@ požadovaného šestiúhelníku:
 {/lang}
 
 {lang=SI}
-Then, using these points as the input parameters to the [regularpolygon](https://jsxgraph.org/docs/symbols/RegularPolygon.html) object, 
-we create the desired hexagon:
+Nato uporabimo ti točki kot vhodna parametra za konstrukcijo objekta [pravilni n-kotnik](https://jsxgraph.org/docs/symbols/RegularPolygon.html):
 {/lang}
 
 {lang=DE}
@@ -274,8 +270,8 @@ K vrcholům *A* a *B* přidáme ještě bod *D*, v&nbsp;pořadí čtvrtý vrchol
 {/lang}
 
 {lang=SI}
-The center of the regular polygon is the center of its circumcircle, therefore we have to identify at least three vertices of the hexagon to determine its center.
-We chose *D*, the fourth vertex from *A* (index number is 3 because the software starts to count from 0)  
+Središče pravilnega n-kotnika je enako središču njegove očrtane krožnice, zato moramo določiti tri oglišča 6-kotnika. Poleg *A* in *B* smo izbrali še oglišče *D*, 
+to je četrto oglišče od oglišča *A* (indeks tega oglišča ni 4, ampak 3, saj se štetje seznamov začne pri 0). 
 {/lang}
 
 {lang=DE}
@@ -306,7 +302,7 @@ pro určení středu pravidelného šestiúhelníku *Q* jako středu kružnice o
 {/lang}
 
 {lang=SI}
-to determine the center *Q* of the regular hexagon as the center of the circumcircle to the triangle *ABD*:
+Zdaj lahko z ukazom `circumcenter` določimo središče krožnice skozi oglišča *A*, *B* in *D*.
 {/lang}
 
 {lang=DE}
@@ -329,19 +325,19 @@ var Q = board.create('circumcenter',  [A, B, D], {name:'Q'});
 ```
 
 {lang=EN}
-In an analogous way, we then create an equilateral triangle *BGH* with center *N*:  
+In an analogous way, we then create an equilateral triangle *BGH* with center *R*:  
 {/lang}
 
 {lang=CZ}
-Analogicky sestrojíme rovnostranný trojúhelník *BGH* se středem *N*:  
+Analogicky sestrojíme rovnostranný trojúhelník *BGH* se středem *R*:  
 {/lang}
 
 {lang=SI}
-In an analogous way, we then create an equilateral triangle *BGH* with center *N*:  
+Analogno konstruiramo pravilni trikotnik *BGH* s središčem *R*: 
 {/lang}
 
 {lang=DE}
-Genauso können wir das gleichseitige Dreieck *BGH* mit Mittelpunkt *N* konstruieren:
+Genauso können wir das gleichseitige Dreieck *BGH* mit Mittelpunkt *R* konstruieren:
 {/lang}
 
 ```JS
@@ -373,8 +369,8 @@ jejichž kolmost je předmětem důkazu:
 {/lang}
 
 {lang=SI}
-Then, we add the triangle *AGB*, the midpoint *P* of its side *AB* and the lines *PQ* and *PR*, 
-which we have to prove are always perpendicular:  
+Potem konstruiramo trikotnik *AGB*, razpolovišče *P* daljice *AB* in premici *PQ* ter *PR*, za kateri moramo pokazati, da sta med seboj pravokotni:
+ 
 {/lang}
 
 {lang=DE}
@@ -415,8 +411,7 @@ jak vidíme na obrázku výše:
 {/lang}
 
 {lang=SI}
-Finally, we can identify the angle *RPQ*, the rightness of which we have to prove. 
-JSXGraph recognizes it as a right angle, so it marks it accordingly, as can be seen in figure belaboveow:
+Na koncu moramo samo še identificirati kot *RPQ*, za katerega JSXGraph prepozna, da je pravi in ga na ustrezen način označi (glej sliko zgoraj):
 {/lang}
 
 {lang=DE}
@@ -459,8 +454,7 @@ Pokud nám takovéto symbolické vyznačení pravého úhlu nepostačuje, může
 {/lang}
 
 {lang=SI}
-If this symbolic expression of the right angle is not enough for us,
-we can enter the code to display the size of the respective angle:  
+Če nismo zadovoljni s simbolično predstavitvijo pravega kota, lahko zapišemo njegovo velikost še v stopinjah:  
 {/lang}
 
 {lang=DE}
@@ -503,7 +497,7 @@ Kód uvedeného dynamického obrázku je nyní kompletní.
 {/lang}
 
 {lang=SI}
-The task solution code is now complete.
+Koda rešitve je s tem zaključena.
 {/lang}
 
 {lang=DE}

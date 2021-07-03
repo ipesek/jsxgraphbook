@@ -178,11 +178,12 @@
 <h2 id="creating-lines"><a class="header" href="#creating-lines">Creating lines</a></h2>
 <p>Lines are the next type of objects that we will learn. Line is defined by two points through which a line is drawn.
 Here is an example of a board with two lines.
-{/lang}
-{lang=SI}
-Creating basic objects
-{/lang}
-{lang=CZ}</p>
+{/lang}</p>
+<p>{lang=SI}</p>
+<h2 id="ustvarjanje-premic"><a class="header" href="#ustvarjanje-premic">Ustvarjanje premic</a></h2>
+<p>Premice so naslednji objekti, ki se jih bomo naučili. Premico definiramo z dvema točkama, skozi kateri poteka ravna črta. Tukaj je primer platna z dvema premicama.
+{/lang}</p>
+<p>{lang=CZ}</p>
 <h2 id="kreslení-přímek"><a class="header" href="#kreslení-přímek">Kreslení přímek</a></h2>
 <p>Dalším objektem, s jehož konstrukcí se seznámíme, je přímka.
 Ta je v JSXGraphu definována dvěma body, kterými prochází. </p>
@@ -215,6 +216,9 @@ Výsledek:
 <p>{lang=DE}
 Resultat:
 {/lang}</p>
+<p>{lang=SI}
+Rezultat:
+{/lang}</p>
 <div id="jxgbox" class="jxgbox" style="width:500px; height:200px;"></div>
 <script>
  var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, 2, 5, -2]});
@@ -231,6 +235,15 @@ we enclose both points in square brackets, therefore the list of two points is <
 see why it is useful to store objects in variables, because now we could define another line, that could also go through point $p$ or $q$
 and we don't need to worry if coordinates are correct.</p>
 <p><em>Note: In Javascript lists are written in square brackets <strong>[ ]</strong>.</em>
+{/lang}</p>
+<p>{lang=SI}
+Premici smo ustvarili na dva načina. Vrstica <code>var line1 = board.create(&quot;line&quot;,[[-3,1],[3,-1]]);</code> ustvari črto z imenom $line1$ skozi dve točki s koordinatama
+<code>[-3,1]</code> in <code>[3,-1]</code>. Ker potrebujemo dva podatka, oziroma dve točki, moramo podatke našteti v seznamu, torej med oglate oklepaje []. 
+Zato dobimo zapis <code>[[-3,1],[3,-1]]</code>.</p>
+<p>Za drugo premico $line2$ smo najprej definirali dve točki $p$ in $q$ in uporabili seznam <code>[p,q]</code> za definicijo $line2$. Tukaj lahko opazimo, zakaj je koristno 
+shranjevati objekte v spremenljivke. Če želimo zapisati več različnih premic, ki grejo skozi eno izmed točk $p$ ali $q$, ne rabimo vsakič znova zapisovat koordinat 
+teh dveh točk, saj sta točki že prej definirani. </p>
+<p><em>Opomba: V Javascriptu se seznami pišejo v oglate oklepaje <strong>[ ]</strong>.</em>
 {/lang}</p>
 <p>{lang=CZ}
 Řádek s kódem <code>var line1 = board.create(&quot;line&quot;,[[-3,1],[3,-1]]);</code> vytváří přímku $line1$, která prochází 

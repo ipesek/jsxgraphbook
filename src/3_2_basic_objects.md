@@ -6,6 +6,7 @@ board variable for the construction of all objects that will be on board.
 
 {lang=SI}
 ## Risanje točk
+Točke so eni izmed najbolj osnovnih objektov v JSXGraphu. Objekte vedno ustvarimo na risalni površini. 
 {/lang}
 
 {lang=CZ}
@@ -47,6 +48,21 @@ in the constructions we often reference different object and define their relati
 
 
 {/lang}
+
+{lang=SI}
+
+
+Opazujmo zapis `board.create('point',[-2,1]);`. Tukaj uporabimo spremenljivko `board` in kličemo metodo *create*, ki potrebuje dva argumenta.
+Prvi je tip objekta, drugi pa položaj, kjer se naj ta objekt nahaja. Če definiramo položaj, ki je izven našega koordinatnega sistema, bo objekt sicer obstajal,
+vendar ne bo viden na sliki. 
+
+Naslednja vrstica `var q = board.create('point',[3,0]);` je podobna prejšnji, z eno razliko. Zapis smo začeli z `var q = `, kar pomeni,
+da shranimo objekt v neko spremenljivko z imenom *q*. To je dobra praksa, saj se velikokrat v konstukcijah navezujemo na že prej definirane objekte, 
+kar lahko storimo samo, če jih prej shranimo v spremenljivko. Primer te uporabe bo razložen v naslednjem poglavju. 
+
+
+{/lang}
+
 {lang=CZ}
 Zaměřme se nyní na `board.create('point',[-2,1]);`. Zde využíváme proměnnou *board* a metodu *create*, která vyžaduje dva argumenty. Prvním argumentem určujeme, jaký typ objekt se má v nákresně vytvořit, což je v našem případě bod, *point*. Druhý argument určuje souřadnice, na kterých bude bod v nákresně sestrojen. Pokud použijeme souřadnice, které leží mimo námi nadefinovaný systém souřadnic, tak se bod stejně sestrojí. Vytvořený bod ale nebude na naší nákresně viditelný, neboť bude sestrojen mimo zobrazovanou plochu. Pohybem po nákresně pomocí zoomu a šipek v jejím pravém dolním rohu je však možné sestrojený bod objevit.
 

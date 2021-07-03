@@ -181,7 +181,11 @@ with different <a href="https://jsxgraph.org/docs/symbols/JXG.Circle.html#method
 create a circle with either two points, or a point and a radius.
 Let us look at the example.
 {/lang}</p>
-<p>{lang=SI}##Circles{/lang}</p>
+<p>{lang=SI}</p>
+<h2 id="krogi"><a class="header" href="#krogi">Krogi</a></h2>
+<p>V JSXGraphu nimamo samo točk in premic. V tem poglavju se bomo naučili konstruirati krožnice in kroge. Uporabimo lahko različne 
+<a href="https://jsxgraph.org/docs/symbols/JXG.Circle.html#method">metode</a>. Pokazali bomo, kako definirati krog bodisi z dvema točkama, bodisi s točko in polmerom.
+{/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="kružnice"><a class="header" href="#kružnice">Kružnice</a></h2>
 <p>V JSXGraphu nemáme k dispozici jenom body a přímky. Jsou zde definovány ještě další objekty, se kterými se postupně seznámíme.
@@ -232,18 +236,15 @@ many objects in the construction (and generating objects dynamically). We also u
 namely <em>fillColor</em> which defines the color of the fill and <em>fillOpacity</em> sets the opacity of the area (ranging from $0$ to $1$, where $1$ means solid color with no opacity).
 {/lang}</p>
 <p>{lang=SI}
-First what we notice is, that when we initialized the board with a new argument <code>keepAspectRatio:true</code> which we use
-to tell JSXGraph that we want that html object and drawing board keep the aspect ratio between $x$ and $y$ axis. Setting this to
-true is necessary if circles should look like circles and not like ellipses.</p>
-<p>After creating both points we create two circles. <em>Circle1</em> is created with <code>var circle1 = board.create(&quot;circle&quot;,[p,q],{strokecolor:&quot;red&quot;, strokeWidth:4});</code>.
-We can see, that here we created circle with two points which is default method for creating the circles. We used
-two additional attributes which we used to set the color and width of the stroke. Color here was not defined with
-RGB system, but with the <a href="https://en.wikipedia.org/wiki/Web_colors">color name</a>.</p>
-<p><em>Circle2</em> is more interesting <code>var circle2 = board.create(&quot;circle&quot;,[&quot;B&quot;,1.8],{method:&quot;pointRadius&quot;, fillcolor:&quot;gray&quot;, fillopacity:0.2});</code>
-since we created it with the point and radius method. We explicitly set this as a attribute.
-Also instead of using variable name for the point, we used name of the point <code>&quot;B&quot;</code>, which can be very useful when having
-many objects in the construction (and generating objects dynamically). We also used two attributes for filling the area of circle,
-namely <em>fillColor</em> which defines the color of the fill and <em>fillOpacity</em> sets the opacity of the area (ranging from $0$ to $1$, where $1$ means solid color with no opacity).
+Najprej opazimo, da smo risalno desko opremili z novim atributom, to je <code>keepAspectRatio:true</code>, s katerim povemo, da želimo ohraniti
+razmerje med osjo $x$ in $y$. Vrednost moramo nastaviti na true, če želimo, da naši krogi izgledajo kot krogi in ne kot elipse. </p>
+<p>Ko ustvarimo obe točki lahko definiramo kroga. <em>Circle1</em> konstruiramo z <code>var circle1 = board.create(&quot;circle&quot;,[p,q],{strokecolor:&quot;red&quot;, strokeWidth:4});</code>.
+Narisali smo torej krog, ki gre skozi točki $p$ in $q$. Uporabili smo tudi dva atributa, s katerima smo določili barvo in debelino črte.
+Pri tem nismo barve definirali z RGB sistemom, ampak z <a href="https://en.wikipedia.org/wiki/Web_colors">imenom barve</a>.</p>
+<p>Drugi krog <em>Circle2</em> je bolj zanimiv: <code>var circle2 = board.create(&quot;circle&quot;,[&quot;B&quot;,1.8],{method:&quot;pointRadius&quot;, fillcolor:&quot;gray&quot;, fillopacity:0.2});</code>, ker smo ga ustvarili
+z metodo točke in polmera, kar moramo posebej sporočiti kot atribut <code>method:&quot;pointRadius&quot;</code>. 
+Pri tem nismo uporabili imena spremenljivke točke, ampak njeno ime B, kar je tudi veljaven način za sklicevanje na že prej zapisane objekte. Zapisali smo tudi 
+dva nova atributa za zapolnitev notranjosti kroga, torej <em>fillColor</em> in <em>fillOpacity</em>, ki določita barvo in motnost notranjosti. 
 {/lang}</p>
 <p>{lang=CZ}
 Především je třeba zmínit, že jsme v příkazu pro inicializaci nákresny použili nový atribut <code>keepAspectRatio:true</code>, kterým

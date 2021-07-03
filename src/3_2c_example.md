@@ -21,14 +21,12 @@ vytváří tzv. *harmonickou čtveřici*.
 {/lang}
 
 {lang=SI}
-## Example
+## Primer
 
-**Harmonic conjugate points.** Given three collinear points *A*, *B* and *C*; *C* being outside the line segment *AB*.
-Determine the point *D* of the segment *AB* so that the ratio of its distances to *A* and *B*, respectively, is equal to the
-ratio of distances of the point *C* to points *A* and *B*, respectively, i.e. *\|AD\|\/\|BD\|=\|AC\|\/\|BC\|*.
+**Harmonično konjugirane točke.** Naj bodo podane tri kolinearne točke *A*, *B* in *C*, kjer se *C* nahaja izven daljice *AB*.
+Določimo točko *D* na daljici *AB* tako, da velja razmerje  *\|AD\|\:\|BD\|=\|AC\|:\|BC\|*.
 
-This point *D* is called the *harmonic conjugate of C with respect to A and B* and points *A*, *B*, *C* and *D* together
-form the so called *harmonic quadruple*.
+Točko *D* imenujemo *harmonična konjugiranka točke C glede na A in B*. Točke *A*, *B*, *C* in *D* skupaj tvorijo *harmonično štirico*.
 {/lang}
 
 {lang=DE}
@@ -56,9 +54,9 @@ jak vidíme níže.
 {/lang}
 
 {lang=SI}
-*Result:*
-To solve the task, we construct the so called [complete quadrangle](https://en.wikipedia.org/wiki/Complete_quadrangle),
-as shown below.
+*Rezultat:*
+Da rešimo problem, najprej konstruiramo tako imenovani [popolni štirikotnik](https://en.wikipedia.org/wiki/Complete_quadrangle),
+kot je prikazano spodaj.
 {/lang}
 
 {lang=DE}
@@ -103,9 +101,9 @@ spolu s přímkou *p*, která jimi prochází:
 {/lang}
 
 {lang=SI}
-*Programming:*
+*Programiranje:*
 
-First, we define the bounding box and create two points *A* and *B* with the line *p* passing through them:
+Najprej definiramo _bounding box_ in ustvarimo točki *A* in *B* z premico *p*, ki poteka skozi njiju. 
 {/lang}
 
 {lang=DE}
@@ -134,7 +132,7 @@ Potom na přímku *p* umístíme bod *C* tak, aby byl po ní volně pohyblivý:
 
 
 {lang=SI}
-Then, we put the point *C* on *p* so that it can move along it:
+Potem postavimo točko *C* na premico *p* tako, da se lahko premika samo vzdolž nje. 
 {/lang}
 
 {lang=DE}
@@ -164,8 +162,7 @@ Nyní umístíme čtvrtý bod *E* nad přímku *p* a přímkami *q* a *r* ho spo
 {/lang}
 
 {lang=SI}
-Now, we put the fourth point *E* above the line *p* and connect it by the straight lines *q* and *r* to points
-*A* and *B*, respectively:
+Nato postavimo četrto točko *E* nad premico *p* in jo povežemo z črtama *q* in *r* do točk *A* in *B*. 
 {/lang}
 
 {lang=DE}
@@ -197,8 +194,7 @@ a určíme její průsečík *G* s přímkou *r*:
 {/lang}
 
 {lang=SI}
-After this, we put the point *F* on *q*, somewhere between *A* and *E*, draw a line *s* passing through
-points *C* and *F* and determine its intersection *G* with the line *r*:
+Za tem določimo točko *F* na premici *q* nekje med *A* in *E*, narišemo premico *s* skozi točki *C* in *F* in določimo njeno presečišče s premico *r*.
 {/lang}
 
 {lang=DE}
@@ -234,8 +230,8 @@ procházející body *H* a *E* a určíme hledaný bod *D* jako průsečík př�
 {/lang}
 
 {lang=SI}
-Finally, we draw lines *t=AG* and *u=BF*, denote *H* their point of intersection, construct
-the line *v* passing points *H* and *E* and determine the desired point *D* as the intersection of lines *v* and *p*:
+Na koncu narišemo črti *t=AG* in *u=BF*, s *H* označimo njuni presečišči, konstruiramo premico *v* skozi *h* in *E* ter s črko *D* 
+označimo presečišče premic *v* in *p*.
 {/lang}
 
 {lang=DE}

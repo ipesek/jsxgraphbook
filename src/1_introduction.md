@@ -31,7 +31,7 @@ Níže je uvedena ukázka možností JSXGraphu
 {/lang}
 
 {lang=SI}
-To je priročnik o JSXGraphu.
+## To je priročnik o [JSXGraphu](https://jsxgraph.org/).
 
 JSXGraph je knjižnica JavaScript v brskalniku za interaktivno geometrijo, risanje funkcij, grafikone in vizualizacijo podatkov v spletnem brskalniku.
 

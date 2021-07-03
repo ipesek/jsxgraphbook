@@ -191,12 +191,10 @@ vzdáleností bodu <em>C</em> od bodů <em>A</em> a <em>B</em>, tj. <em>|AD|/|BD
 vytváří tzv. <em>harmonickou čtveřici</em>.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="example-1"><a class="header" href="#example-1">Example</a></h2>
-<p><strong>Harmonic conjugate points.</strong> Given three collinear points <em>A</em>, <em>B</em> and <em>C</em>; <em>C</em> being outside the line segment <em>AB</em>.
-Determine the point <em>D</em> of the segment <em>AB</em> so that the ratio of its distances to <em>A</em> and <em>B</em>, respectively, is equal to the
-ratio of distances of the point <em>C</em> to points <em>A</em> and <em>B</em>, respectively, i.e. <em>|AD|/|BD|=|AC|/|BC|</em>.</p>
-<p>This point <em>D</em> is called the <em>harmonic conjugate of C with respect to A and B</em> and points <em>A</em>, <em>B</em>, <em>C</em> and <em>D</em> together
-form the so called <em>harmonic quadruple</em>.
+<h2 id="primer"><a class="header" href="#primer">Primer</a></h2>
+<p><strong>Harmonično konjugirane točke.</strong> Naj bodo podane tri kolinearne točke <em>A</em>, <em>B</em> in <em>C</em>, kjer se <em>C</em> nahaja izven daljice <em>AB</em>.
+Določimo točko <em>D</em> na daljici <em>AB</em> tako, da velja razmerje  <em>|AD|:|BD|=|AC|:|BC|</em>.</p>
+<p>Točko <em>D</em> imenujemo <em>harmonična konjugiranka točke C glede na A in B</em>. Točke <em>A</em>, <em>B</em>, <em>C</em> in <em>D</em> skupaj tvorijo <em>harmonično štirico</em>.
 {/lang}</p>
 <p>{lang=DE}</p>
 <h2 id="beispiel"><a class="header" href="#beispiel">Beispiel</a></h2>
@@ -218,9 +216,9 @@ K řešení úlohy využijeme konstrukci tzv. <a href="https://en.wikipedia.org/
 jak vidíme níže.
 {/lang}</p>
 <p>{lang=SI}
-<em>Result:</em>
-To solve the task, we construct the so called <a href="https://en.wikipedia.org/wiki/Complete_quadrangle">complete quadrangle</a>,
-as shown below.
+<em>Rezultat:</em>
+Da rešimo problem, najprej konstruiramo tako imenovani <a href="https://en.wikipedia.org/wiki/Complete_quadrangle">popolni štirikotnik</a>,
+kot je prikazano spodaj.
 {/lang}</p>
 <p>{lang=DE}
 <em>Resultat:</em>
@@ -256,8 +254,8 @@ wie unten zu sehen ist.
 spolu s přímkou <em>p</em>, která jimi prochází:
 {/lang}</p>
 <p>{lang=SI}
-<em>Programming:</em></p>
-<p>First, we define the bounding box and create two points <em>A</em> and <em>B</em> with the line <em>p</em> passing through them:
+<em>Programiranje:</em></p>
+<p>Najprej definiramo <em>bounding box</em> in ustvarimo točki <em>A</em> in <em>B</em> z premico <em>p</em>, ki poteka skozi njiju. 
 {/lang}</p>
 <p>{lang=DE}
 <em>Programmierung:</em></p>
@@ -278,7 +276,7 @@ Then, we put the point <em>C</em> on <em>p</em> so that it can move along it:
 Potom na přímku <em>p</em> umístíme bod <em>C</em> tak, aby byl po ní volně pohyblivý:
 {/lang}</p>
 <p>{lang=SI}
-Then, we put the point <em>C</em> on <em>p</em> so that it can move along it:
+Potem postavimo točko <em>C</em> na premico <em>p</em> tako, da se lahko premika samo vzdolž nje. 
 {/lang}</p>
 <p>{lang=DE}
 Dann legen wir den Punkt <em>C</em> auf die Gerade <em>p</em>, so dass wir ihn nur entlang der Geraden ziehen können.
@@ -302,8 +300,7 @@ Nyní umístíme čtvrtý bod <em>E</em> nad přímku <em>p</em> a přímkami <e
 <em>A</em> a <em>B</em>:
 {/lang}</p>
 <p>{lang=SI}
-Now, we put the fourth point <em>E</em> above the line <em>p</em> and connect it by the straight lines <em>q</em> and <em>r</em> to points
-<em>A</em> and <em>B</em>, respectively:
+Nato postavimo četrto točko <em>E</em> nad premico <em>p</em> in jo povežemo z črtama <em>q</em> in <em>r</em> do točk <em>A</em> in <em>B</em>. 
 {/lang}</p>
 <p>{lang=DE}
 Nun erzeugen wir einen vierten Punkt <em>E</em> oberhalb der Geraden <em>p</em> an und konstruieren zwei Geraden <em>q</em> und <em>r</em>
@@ -330,8 +327,7 @@ Poté umístíme na přímku <em>q</em> bod <em>F</em>, někam mezi body <em>A</
 a určíme její průsečík <em>G</em> s přímkou <em>r</em>:
 {/lang}</p>
 <p>{lang=SI}
-After this, we put the point <em>F</em> on <em>q</em>, somewhere between <em>A</em> and <em>E</em>, draw a line <em>s</em> passing through
-points <em>C</em> and <em>F</em> and determine its intersection <em>G</em> with the line <em>r</em>:
+Za tem določimo točko <em>F</em> na premici <em>q</em> nekje med <em>A</em> in <em>E</em>, narišemo premico <em>s</em> skozi točki <em>C</em> in <em>F</em> in določimo njeno presečišče s premico <em>r</em>.
 {/lang}</p>
 <p>{lang=DE}
 Danach legen wir einen Punkt <em>F</em> auf die Gerade <em>q</em> (d.h. einen <em>glider</em>) irgendwo zwischen <em>A</em> und <em>E</em>,
@@ -361,8 +357,8 @@ Nakonec sestrojíme přímky <em>t=AG</em> a <em>u=BF</em>, určíme a označím
 procházející body <em>H</em> a <em>E</em> a určíme hledaný bod <em>D</em> jako průsečík přímek <em>v</em> a <em>p</em>:
 {/lang}</p>
 <p>{lang=SI}
-Finally, we draw lines <em>t=AG</em> and <em>u=BF</em>, denote <em>H</em> their point of intersection, construct
-the line <em>v</em> passing points <em>H</em> and <em>E</em> and determine the desired point <em>D</em> as the intersection of lines <em>v</em> and <em>p</em>:
+Na koncu narišemo črti <em>t=AG</em> in <em>u=BF</em>, s <em>H</em> označimo njuni presečišči, konstruiramo premico <em>v</em> skozi <em>h</em> in <em>E</em> ter s črko <em>D</em> 
+označimo presečišče premic <em>v</em> in <em>p</em>.
 {/lang}</p>
 <p>{lang=DE}
 Schließlich, erzeugen wir die Geraden <em>t=AG</em> und <em>u=BF</em>, bezeichnen mit <em>H</em> ihren Schnittpunkt, konstruieren
