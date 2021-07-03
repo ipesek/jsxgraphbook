@@ -8,7 +8,10 @@ We cannot use other objects to create this object.
 {/lang}
 
 {lang=SI}
-## Intersections
+## Presečišča
+
+Včasih želimo izračunati ali narisati presečišča med objekti. To lahko rešimo računsko, lahko pa uporabimo objekt v JSXGraphu imenovan [_Intersection_](https://jsxgraph.org/docs/symbols/Intersection.html).
+S pomočjo tega lahko določamo presečišča med dvema premicama, dvema krožnicama, ali pa med krožnico in premico. Med drugimi objekti to ni mogoče. 
 {/lang}
 
 
@@ -74,6 +77,17 @@ with the intersection objects. We can therefore use newly created objects as reg
 {/lang}
 
 {lang=SI}
+Ko smo ustvarili točke in dva kroga, smo konstruirali dva objekta tipa _intersection_.
+
+V vrstici `var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});` določimo presečišče med dvema krogoma in dodamo še tretji parameter, 
+ki ima vrednost `0`. To uporabimo takrat, ko je presečišč med objekti več in moramo določiti eno izmed njiju (če sta presečišči dve, imata vrednosti $0$ in $1$).
+Za definicijo drugega presečišča smo zato zapisali vrednost `1`.
+Opazimo lahko, da smo v imenu `{name:'I_2'})` uporabili zapis z podčrtajem. To je [$LATEX$](https://www.mathjax.org/) notacija in se uporablja za lep 
+zapis matematičnih znakov in simbolov.
+
+Na koncu ustvarimo še novo premico `var line = board.create('line',[inter1,inter2]);`, ki gre skozi presečišči. Torej presečišča so tudi točke, ki jih lahko
+uporabljamo za nadaljevanje konstrukcije.
+
 
 {/lang}
 

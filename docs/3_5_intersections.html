@@ -182,8 +182,10 @@ which we can use, to do just that. In order to create an intersection, we need t
 We cannot use other objects to create this object.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="intersections-1"><a class="header" href="#intersections-1">Intersections</a></h2>
-<p>{/lang}</p>
+<h2 id="presečišča"><a class="header" href="#presečišča">Presečišča</a></h2>
+<p>Včasih želimo izračunati ali narisati presečišča med objekti. To lahko rešimo računsko, lahko pa uporabimo objekt v JSXGraphu imenovan <a href="https://jsxgraph.org/docs/symbols/Intersection.html"><em>Intersection</em></a>.
+S pomočjo tega lahko določamo presečišča med dvema premicama, dvema krožnicama, ali pa med krožnico in premico. Med drugimi objekti to ni mogoče. 
+{/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="průsečíky"><a class="header" href="#průsečíky">Průsečíky</a></h2>
 <p>Pro určení průsečíků přímek a kružnic můžeme v JSXGraphu použít přímo objekt
@@ -233,7 +235,15 @@ This is <a href="https://www.mathjax.org/">$LATEX$</a> notation and can be used 
 <p>As last we created new line <code>var line = board.create('line',[inter1,inter2]);</code>
 with the intersection objects. We can therefore use newly created objects as regular points in our constructions.
 {/lang}</p>
-<p>{lang=SI}</p>
+<p>{lang=SI}
+Ko smo ustvarili točke in dva kroga, smo konstruirali dva objekta tipa <em>intersection</em>.</p>
+<p>V vrstici <code>var inter1 = board.create('intersection',[circle1,circle2,0],{name:'I_1'});</code> določimo presečišče med dvema krogoma in dodamo še tretji parameter, 
+ki ima vrednost <code>0</code>. To uporabimo takrat, ko je presečišč med objekti več in moramo določiti eno izmed njiju (če sta presečišči dve, imata vrednosti $0$ in $1$).
+Za definicijo drugega presečišča smo zato zapisali vrednost <code>1</code>.
+Opazimo lahko, da smo v imenu <code>{name:'I_2'})</code> uporabili zapis z podčrtajem. To je <a href="https://www.mathjax.org/">$LATEX$</a> notacija in se uporablja za lep 
+zapis matematičnih znakov in simbolov.</p>
+<p>Na koncu ustvarimo še novo premico <code>var line = board.create('line',[inter1,inter2]);</code>, ki gre skozi presečišči. Torej presečišča so tudi točke, ki jih lahko
+uporabljamo za nadaljevanje konstrukcije.</p>
 <p>{/lang}</p>
 <p>{lang=CZ}
 Po vytvoření bodů a dvou kružnic jsme definovali dva objekty typu průsečík - <em>intersections</em>.</p>
