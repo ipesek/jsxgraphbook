@@ -185,7 +185,24 @@ JSXGraph has some standard trasformations predefined. Some of those are:</p>
 <li>Reflection</li>
 </ul>
 <p>Translation moves the selected object in the given direction. Scaling increases or decreases the size of our object and rotation rotates it. We will
-demonstrate some of their uses by constructing a square that can rotate around one vertex. </p>
+demonstrate some of their uses by constructing a square that can rotate around one vertex. 
+{/lang}</p>
+<p>{lang=SI}</p>
+<h2 id="transformacije"><a class="header" href="#transformacije">Transformacije</a></h2>
+<p>V JSXGraphu je možno vpeljati transformacije ravnine na elemente z uporabo matrike velikosti 3x3. Da je postopek malo lažji, ima JSXGraph nekatere standardne 
+transformacije že definirane. Nekatere izmed teh so:</p>
+<ul>
+<li>Translacija</li>
+<li>Rotacija</li>
+<li>Razteg</li>
+<li>Zrcaljenje</li>
+</ul>
+<p>Translacija premakne objekt v podani smeri. Razteg poveča ali zmanjša objekt, rotacija pa ga zavrti okoli točke za nek kot. Prikazali bomo njihovo uporabo tako, 
+da bomo konstruirali kvadrat, ki se lahko vrti okoli enega svojega oglišča. 
+{/lang}
+{lang=CZ}
+Transformations
+{/lang}</p>
 <pre><code class="language-JS">&lt;div id=&quot;jxgbox&quot; class=&quot;jxgbox&quot; style=&quot;width:500px; height:500px;&quot;&gt;&lt;/div&gt;
 &lt;script&gt;
  var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-4, 4, 4, -4],keepAspectRatio:true, showCopyright:false, showNavigation:false });
@@ -215,9 +232,6 @@ demonstrate some of their uses by constructing a square that can rotate around o
  var rot = board.create('transform', [function(){return s.Value();},A], {type:'rotate'});
  rot.bindTo([B,C,D]);
 </script>
-{/lang}
-<p>{lang=SI}Functions drawing{/lang}
-{lang=CZ}Functions drawing{/lang}</p>
 <p>{lang=EN}
 Let's now look at the code. The first steps are standard, we create a board and a a slider named 'angle' with values from 0 to 2$\pi$, that we can later use to
 rotate the square by 360°. Then we create a point called 'Drag me', from which we will construct the other three points of a square. </p>
@@ -241,6 +255,27 @@ and the center of the rotation is point <code>A</code>. </p>
 with the command <code>rot.bindTo([B,C,D]);</code>. Our transformation is now bound to the points <code>B,C,D</code> (since <code>A</code> is the center of the rotation it does not move, so we 
 dont need to bind it). </p>
 <p>For information on other transformations see <a href="https://jsxgraph.org/docs/symbols/Transformation.html"><em>here</em></a>.
+{/lang}</p>
+<p>{lang=SI}
+Poglejmo sedaj konstrukcijo. Prvi koraki so že standardni, ustvarimo risalni prostor in na njem drsnik z imenom 'angle' z vrednostmi od 0 do 2$\pi$, s katerim 
+bomo izvajali rotacijo. Potem dodamo točko z imenom 'Drag me', iz katere bomo s pomočjo translacij konstruirali kvadrat.</p>
+<p>Naslednji dve vrstici <code>var right = board.create('transform', [2,0], {type:'translate'});</code> in <code>var up = board.create('transform', [0,2], {type:'translate'});</code>
+definirata naši prvi transformaciji. Prvi parameter katerekoli transformacije je tekst <code>'transform'</code>, zadnji pa je vedno <code>{type:''}</code>. TheDrugi parametri so
+odvisni od tipa transformacije. V primeru translacije moramo podati vektor oblike <code>[x,y]</code>, ki lahko vsebuje konstantne vrednosti, lahko pa ima koordinate
+izražene s funkcijami. Mi smo definirali smeri kot <code>[0,2]</code>, torej premik za dva v desno in <code>[2,0]</code>, torej za 2 gor. Zdaj konstruiramo preostanek kvadrata:</p>
+<p><code>var B = board.create('point', [A,right], {name: 'B', style:7});</code><br />
+<code>var C = board.create('point', [A,[right,up]], {name: 'C', style:7});</code><br />
+<code>var D = board.create('point', [A,up], {name: 'D', style:7});</code></p>
+<p>Vidimo, da so vse tri točke dobljene iz začetne točke <code>A</code> z uporabo <code>up</code> in <code>right</code> translacij. To naredimo z zapisom <code>[A, up]</code> ali<code>[A, right]</code>.
+Torej moramo za konstrukcijo nove točke zapisati začetno točko in transformacijo. Če uporabimo več transformacij, jih zapišemo v seznam kot <code>[A,[right,up]]</code>. 
+Ker smo dobili 4 točke, ki so oglišča kvadrata s stranico 2, lahko definiramo 4-kotnik <code>var sq</code>.</p>
+<p>Nato moramo definirati rotacijo <code>var rot = board.create('transform', [function(){return s.Value();},A], {type:'rotate'});</code>. 
+Prvi in zadnji parameter sta podobna kot prej, le da smo uporabili tip <code>'rotate'</code>. Pri rotaciji sta potrebna center vrtenja in kot vrtenja v obliki <code>[kot, točka]</code>. 
+V našem primeru to pomeni <code>[function(){return s.Value();},A]</code>. 
+Opazimo, da prvi parameter ni konstanta, ampak funkcija, ki vrne vrednost drsnika. Na ta način lahko uporabnik vpliva na vrtenje, središče rotacije pa je točka <code>A</code>.</p>
+<p>Za konec moramo še povezati rotacijo s kvadratom. S tem bomo poskrbeli, da se vse točke kvadrata premikajo sočasno in za isti kot. To storimo z ukazom 
+<code>rot.bindTo([B,C,D]);</code>. Transformacija je sedaj vezana na točke <code>B,C,D</code> (ker je <code>A</code> središče vrtenja, se ne premika in ga zato ni potrebno vezati na rotacijo). </p>
+<p>Za informacije o ostalih transformacijah glej <a href="https://jsxgraph.org/docs/symbols/Transformation.html"><em>tukaj</em></a>.
 {/lang}</p>
 
                     </main>

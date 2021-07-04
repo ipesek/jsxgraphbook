@@ -181,8 +181,10 @@ final point (using method moveTo()) or only visiting some point and returning ba
 We will use both methods in the next example.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="moving-objects-1"><a class="header" href="#moving-objects-1">Moving objects</a></h2>
-<p>{/lang}</p>
+<h2 id="premikanje-objektov"><a class="header" href="#premikanje-objektov">Premikanje objektov</a></h2>
+<p>Kadar želimo razložiti kakšne težje koncepte, nam statična slika ne pomaga in bi želeli videti gibanje. Najbolj preprosta primera premika sta premik točke do 
+nekega mesta in vrnitev na začetek. Oba bomo pokazali v spodnjem primeru.
+{/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="pohybování-s-objekty"><a class="header" href="#pohybování-s-objekty">Pohybování s objekty</a></h2>
 <p>Pro ilustraci nebo vysvětlení některých jevů potřebujeme mít někdy možnost cíleně pohybovat s vybranými body obrázku. 
@@ -232,6 +234,26 @@ Here a new method <em>moveTo</em> is used on the point <code>q</code>, which tak
 then we multiply it by $8$ and subtract $4$. The result will be a number between $-4$ and $4$m which are also the limits of our bounding box.
 We do the same for both coordinates. As a result our point <code>p</code> (<code>&quot;A&quot;</code>) moves across the board randomly. 
 {/lang}</p>
+<p>{lang=SI}
+Prve tri vrstice so enake kot običajno, naslednja vrstica <code>var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);</code> pa vsebuje
+nekaj novih ukazov.</p>
+<p>Podobno kot smo ustvarjali točke, premice in krožnice, lahko ustvarimo tudi gumbe tipa <code>'button'</code>, ki izvedejo neko dejavnost ob kliku. Parametri v seznamu so sledeči:
+<strong>[x-koordinata, y-koordinata, napis na gumbu, dejanje]</strong>. Torej položaj gumba, napis in kaj naj stori ob kliku. </p>
+<p>V našem primeru želimo, da se ob kliku izvede funkcija <code>function(){q.visit([3,-2],1800,2)}</code>. Tukaj smo klicali nov ukaz, ki se imenuje <a href="https://jsxgraph.org/docs/symbols/JXG.CoordsElement.html#visit"><em>visit()</em></a>.
+Njegov zapis je oblike <strong>visit(lokacija, čas, možnosti)</strong> s tremi parametri:</p>
+<ul>
+<li>lokacija so koordinate točke, kamor se naj objekt premakne (v našem primeru <code>[3, -2]</code>),</li>
+<li>čas pomeni čas trajanja animacije v milisekundah (<code>1800</code>),</li>
+<li>možnosti pomeni število ponovitev (pri nas je to <code>2</code>).</li>
+</ul>
+<p>V naslednji vrstici smo ustvarili nov gumb s koordinatami <code>-3,3</code>, z napisom <code>'Move A'</code> in z ukazom <code>function(){p.moveTo([Math.random()*8-4,Math.random()*8-4],500);}</code>.
+Tukaj smo uporabili novo metodo imenovano <em>moveTo</em>, ki prejme dva parametra:</p>
+<ul>
+<li>koordinate, ki jih zapišemo kot seznam dveh števil,</li>
+<li>čas animacije v milisekundah. </li>
+</ul>
+<p>Za koordinate premika smo uporabili metodo <em>Math.random</em>, ki ustvari naključno število med $0$ in $1$.  Potem smo jo pomnožili s številom $8$ in odšteli $4$. Rezultat
+bo vedno naključno število med $-4$ in $4$, tako da bomo ostali znotraj mej našega platna. </p>
 <p>{lang=CZ}
 Význam prvích tří řádků (za značkou &lt;script&gt;) už známe, další řádek <code>var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);</code> ale přináší 
 dva nové příkazy. </p>

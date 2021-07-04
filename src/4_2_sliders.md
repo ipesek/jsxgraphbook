@@ -6,7 +6,9 @@ we will use a quadratic function.
 {/lang}
 
 {lang=SI}
-## Sliders
+## Drsniki
+
+Drsniki so koristen dodatek, kadar želimo, da uporabnik sam spreminja vrednosti objektov na sliki. V našem primeru bomo uporabili drsnike na grafu kvadratne funkcije.
 {/lang}
 
 {lang=CZ}
@@ -51,6 +53,26 @@ In last line we now used the values from both sliders and extended our quadratic
 We can see, that to get the value of the slider we used the variable name and method _Value()_ e.g. `a.Value()`. 
 
 Now the quadratic function is not fixed with the values but can be dynamically changed with the user interaction.
+
+{/lang}
+
+{lang=SI}
+
+Ustvarili smo dva drsnika, ki nadzirata vrednosti v kvadratni funkciji. Poglejmo prvega: 
+`var a = board.create('slider', [[-7.5, -3], [-4,-3], [-3, 1, 3]], {name:'a', snapWidth: 0.1});`
+
+Zapisati smo morali naslednje parametre:
+* koordinate začetka drsnika, torej `[-7.5, -3]`,
+* koordinate konca drsnika, torej `[-4,-3]`,
+* vrednosti na drsniku v seznamu oblike `[min, začetek, max]`, torej `[-3, 1, 3]`.
+
+Uporabili smo še atribut _snapWidth_, ki pove JSXGraphu kako fini naj bodo premiki po drsniku. Drugi drsnik je konstruiran na podoben način, le 
+da smo pri atributu _snapWidth_ uporabili vrednost $1$, kar pomeni, da se bo drsnik premikal samo po celih številih (bolj grobo). 
+
+V zadnji vrstici smo povezali podatke iz drsnikov z grafom kvadratne funkcije s pomočjo metode _Value()_, ki vrne trenutno vrednost na drsniku. Funkcija potem
+izgleda tako `function(x){return a.Value()*x*x + c.Value();`.
+
+Zdaj funkcija ni fiksna, ampak se njene vrednosti spreminjajo glede na drsnika. 
 
 {/lang}
 

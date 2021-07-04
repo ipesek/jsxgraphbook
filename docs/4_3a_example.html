@@ -183,12 +183,10 @@ the resulting curve is called a <em>prolate cycloid</em>, see figure below. Crea
 given situation, movement of the circle controlled by the slider.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="example-animation-with-slider-1"><a class="header" href="#example-animation-with-slider-1">Example: Animation with slider</a></h2>
-<p><strong>Cycloids.</strong> Rolling a circle along a straight line a point firmly connected to its rim draws a curve 
-called a <a href="https://mathworld.wolfram.com/Cycloid.html">cycloid</a>. If the point is closer to the center a 
-curve drawn by it is called a <em>curtate cycloid</em>. If the point is further from the center than the rim, 
-the resulting curve is called a <em>prolate cycloid</em>, see figure below. Create a dynamic geometry model of the 
-given situation, movement of the circle controlled by the slider.
+<h2 id="primer-animacija-z-drsnikom"><a class="header" href="#primer-animacija-z-drsnikom">Primer: animacija z drsnikom</a></h2>
+<p><strong>Cikloida.</strong> Če fiksiramo točko na krožnici in krog zakotalimo po ravni podlagi, nam fiksirana točka opiše krivuljo, ki se imenuje<br />
+<a href="https://mathworld.wolfram.com/Cycloid.html">cikloida</a>. Če je točka znotraj kroga, rečemo krivulji skrčena cikloida, če pa je točka zunaj kroga, pa 
+raztegnjena cikloida. Ustvarili bomo dinamično sliko, ki bo narisala cikloido od premikanju drsnika. 
 {/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="příklad-animace-užitím-posuvníku"><a class="header" href="#příklad-animace-užitím-posuvníku">Příklad: Animace užitím posuvníku</a></h2>
@@ -234,8 +232,8 @@ ovládán posuvníkem, viz níže uvedený obrázek.
 <p>First, we define dimensions, width and height, of the drawing area setting the corresponding properties of the <code>div</code> element:
 {/lang}</p>
 <p>{lang=SI}
-<em>Programming:</em></p>
-<p>First, we define dimensions, width and height, of the drawing area setting the corresponding properties of the <code>div</code> element:
+<em>Programiranje:</em></p>
+<p>Določimo dimenzije risalne površine:
 {/lang}</p>
 <p>{lang=CZ}
 <em>Programování:</em></p>
@@ -248,8 +246,7 @@ Subsequently, at the beginning of the code bounded by the tags <em>&lt;script&gt
 we determine the Bounding box as follows:
 {/lang}</p>
 <p>{lang=SI}
-Subsequently, at the beginning of the code bounded by the tags <em>&lt;script&gt;, &lt;/script&gt;</em>, 
-we determine the Bounding box as follows:
+Nadalje določimo <em>bounding box</em> na naslednji način:
 {/lang}</p>
 <p>{lang=CZ}
 Následně, na začátku kódu vymezeného tagy <em>&lt;script&gt;, &lt;/script&gt;</em>, 
@@ -266,9 +263,8 @@ the traces of points, see the circled <em>x</em> at the bottom of the bounding b
 <p>As the first construction, we draw a straight line <em>MN</em>, a path for the circle:
 {/lang}</p>
 <p>{lang=SI}
-Note the attribute <code>showClearTraces</code> used above. Setting its value to <code>true</code> displays the button for deleting 
-the traces of points, see the circled times at the bottom of the bounding box.</p>
-<p>As the first of construction, we draw a straight line <em>MN</em>, a path for the circle:
+Opazimo atribut <code>showClearTraces</code>. Če nastavimo njegovo vrednost na <code>true</code>, se ustvari gumb, ki izbriše sled točke (obkrožen $x$ spodaj desno).</p>
+<p>Narišemo še premico <em>MN</em>, ki bo predstavljala pot kotaljenja kroga:
 {/lang}</p>
 <p>{lang=CZ}
 Všimněme si atributu <code>showClearTraces</code>, který je použit ve výše uvedeném příkazu pro iniciaci nákresny. 
@@ -289,8 +285,7 @@ Before drawing the circle, we create two sliders to control the values of <em>r<
 the amount of translation of the circle center, respectively:
 {/lang}</p>
 <p>{lang=SI}
-Before drawing the circle, we create two sliders to control the values of <em>r</em>, radius of the circle, and <em>l</em>, 
-the amount of translation of the circle center, respectively:
+Predno narišemo krog, ustvarimo dva drsnika, ki nadzirata vrednosti polmera <em>r</em> in premika <em>l</em> krožnice po premici . 
 {/lang}</p>
 <p>{lang=CZ}
 Před sestrojením vlastního kruhu vytvoříme dva posuvníky pro ovládání hodnot
@@ -310,7 +305,7 @@ parametrů <em>r</em>, poloměru kruhu, a <em>l</em>, velikosti posunutí střed
 Then we proceed to the construction of the circle <em>c</em> with center <em>C</em> and radius <em>r</em>:
 {/lang}</p>
 <p>{lang=SI}
-Then we proceed to the construction of the circle <em>c</em> with center <em>C</em> and radius <em>r</em>:
+Potem nadaljujemo s konstrukcijo kroga <em>c</em> s središčem v <em>C</em> in polmerom <em>r</em>:
 {/lang}</p>
 <p>{lang=CZ}
 Pokračujeme sestrojením samotného kruhu <em>c</em> se středem <em>C</em> a poloměrem <em>r</em>:
@@ -332,8 +327,7 @@ By defining three fixed points <em>A0</em>, <em>B0</em>, <em>C0</em> with differ
 the above mentioned cycloids; <em>curtate</em>, <em>normal</em> and <em>prolate cycloid</em>, respectively:
 {/lang}</p>
 <p>{lang=SI}
-By defining three fixed points <em>A0</em>, <em>B0</em>, <em>C0</em> with different distances from the circle’s center we contribute to obtaining 
-the above mentioned cycloids; <em>curtate</em>, <em>normal</em> and <em>prolate cycloid</em>, respectively:
+Definiramo tri fiksne točke <em>A_0, B_0, C_0</em>, na različnih oddaljenostih od središča kroga, ki nam bodo določale vse tri prej opisane cikloide:
 {/lang}</p>
 <p>{lang=CZ}
 Definováním následujících tří pevných bodů <em>A0</em>, <em>B0</em>, <em>C0</em> s různými vzdálenostmi od 
@@ -360,8 +354,8 @@ In fact, we will not directly move these points <em>A0</em>, <em>B0</em>, <em>C0
 controlled by sliders, especially <em>l</em>, can gain:
 {/lang}</p>
 <p>{lang=SI}
-In fact, we will not directly move these points <em>A0</em>, <em>B0</em>, <em>C0</em>, but will create their instant images <em>A</em>, <em>B</em>, <em>C</em> dependent on values that variables 
-controlled by sliders, especially <em>l</em>, can gain:
+V resnici ne bomo premikali teh treh točk, ampak bomo ustvarjali njihove kopije glede na vrednosti spremenljivk, ki jih bomo nadzirali z drsnikoma, 
+še posebej z drsnikom <em>l</em>:
 {/lang}</p>
 <p>{lang=CZ}
 Je třeba říci, že při animaci nepohybujeme přímo s těmito body <em>A0</em>, <em>B0</em>, <em>C0</em>, ale vytváříme jejich 
@@ -400,7 +394,7 @@ okamžité obrazy <em>A</em>, <em>B</em>, <em>C</em> příslušející konkrétn
 The task solution code is now complete.
 {/lang}</p>
 <p>{lang=SI}
-The task solution code is now complete.
+Koda rešitve je s tem končana.
 {/lang}</p>
 <p>{lang=CZ}
 Kód řešení úlohy je nyní kompletní.

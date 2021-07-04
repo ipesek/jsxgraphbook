@@ -181,8 +181,11 @@ As an input we need to provide three points $p1, p2, p3$ and the angle is drawn 
 Other combinations include two lines and two directions (by +/- 1) or a line and two coordinates.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="angles-1"><a class="header" href="#angles-1">Angles</a></h2>
-<p>{/lang}</p>
+<h2 id="koti"><a class="header" href="#koti">Koti</a></h2>
+<p>Kadar želimo povdariti določen kot v naši konstrukciji, lahko to storimo z objektom <a href="https://jsxgraph.org/docs/symbols/Angle.html"><em>Angle</em></a>. Kot vhodne parametre
+lahko podamo tri točke $p_1$, $p_2$ in $p_3$, potem se kot nariše v obratni smeri urinega kazalca od $p_1$ do $p_3$ okoli $p_2$. Drugi način je s pomočjo dveh premic
+in dveh smeri (+/- 1), ali pa se zapiše premica in dve točki. 
+{/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="Úhly"><a class="header" href="#Úhly">Úhly</a></h2>
 <p>Pro zvýraznění konkrétních úhlů v konstrukci nabízí JSXGraph objekt <a href="https://jsxgraph.org/docs/symbols/Angle.html"><em>Angle</em></a> (<em>Úhel</em>).
@@ -236,15 +239,11 @@ method to input the parameters of an angle. We can combine them differently to g
 describe the same angle but with different input parameters.
 {/lang}</p>
 <p>{lang=SI}
-In this example we first created three points and then through them created two lines with common/intersection point $A$. </p>
-<p>Then we created first angle with <code>var angle = board.create('angle',[r, p, q], {radius:2});</code> using three points. Remember, 
-when defining angle with three points we have to provide them in counterclockwise order, where the angle is centered by the second point. Additionaly, we set an attribute
-<em>radius</em> to $2$, which tells JSXGraph how big the arc of an angle should be. </p>
-<p>Then the second angle $\beta$ was created using two lines and two directions (+/- 1) with following line
-<code>var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});</code>. This line presents another possible 
-method to input the parameters of an angle. We can combine them differently to get different angles at the intersection point $A$.</p>
-<p>Last angle is only a variation of <code>angle2</code> with different directions and as a result we can see that <code>angle1</code> and <code>angle3</code> 
-describe the same angle but with different input parameters.</p>
+V tem primeru smo najprej ustvarili tri točke in skozi njih dve premici s skupno točko $A$. </p>
+<p>Prvi kot smo konstruirali z <code>var angle = board.create('angle',[r, p, q], {radius:2});</code>, torej s pomočjo treh točk. Še enkrat opomnimo, da je vrstni red točk
+pomemben, središče kota je vedno sredinska točka. Dodatno smo uporabili atribut <code>radius:2</code>, ki pove velikost loka, ki nakazuje kot.</p>
+<p>Potem smo dodali drugi kot $\beta$ s pomočjo dveh premic in dveh smeri: <code>var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});</code></p>
+<p>Zadnji kot je podoben prejšnjemu, vendar z drugačnimi smermi. Opazimo lahko, da sta <code>angle1</code> in <code>angle3</code> enaka, vendar smo ju opisali z različnimi parametri.</p>
 <p>{/lang}</p>
 <p>{lang=CZ}
 Nejprve jsme vytvořili tři body <em>A</em>, <em>B</em>, <em>C</em> a jimi určené dvě přímky se společným bodem $A$. </p>

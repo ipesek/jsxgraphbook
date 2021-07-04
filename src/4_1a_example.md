@@ -9,13 +9,13 @@ base and height are the same as that of the parallelogram.
 {/lang}
 
 {lang=SI}
-## Example: Proof without words
+## Primer: dokaz brez besed
 
-**Area of a parallelogram.** The area of a parallelogram equals its base multiplied by its height. Prove it!
+**Površina paralelograma.** Površina paralelograma je enaka produktu dolžine osnovnice in njegove višine. Dokažite!
 
-To solve the example we will use a dynamic [proof without words](https://en.wikipedia.org/wiki/Proof_without_words), 
-see figure below. By this means we will show that the area of a parallelogram equals the area of a rectangle whose 
-base and height are the same as that of the parallelogram. 
+Za rešitev problema bomo uporabili metodo [dokaz brez besed](https://en.wikipedia.org/wiki/Proof_without_words).
+To bomo storili tako, da bomo pokazali, da je površina paralelograma enaka površini pravokotnika, ki ima eno stranico enako osnovnici paralelograma, druga stranica
+pa je enaka višini paralelograma.
 {/lang}
 
 {lang=CZ}
@@ -62,9 +62,9 @@ First, we define dimensions, width and height, of the drawing area setting the c
 {/lang}
 
 {lang=SI}
-*Programming:*
+*Programiranje:*
 
-First, we define dimensions, width and height, of the drawing area setting the corresponding properties of the ``div`` element:
+Najprej definiramo dimenzije risalne površine z nastavitvijo lastnosti ``div`` elementa:
 {/lang}
 
 {lang=CZ}
@@ -82,8 +82,7 @@ we determine the Bounding box as follows:
 {/lang}
 
 {lang=SI}
-Subsequently, at the beginning of the code bounded by the tags _\<script\>, \</script\>_, 
-we determine the Bounding box as follows:
+Nadalje določimo naš _bounding box_ tako:
 {/lang}
 
 {lang=CZ}
@@ -104,8 +103,7 @@ that is visible only by its boundary, having no filling:
 {/lang}
 
 {lang=SI}
-As an initial sketch, the foundation of the dynamic figure, we draw the fixed parallelogram *ABCD* 
-that is visible only by its boundary, having no filling:
+Kot osnovo naše dinamične slike narišemo paralelogram *ABCD*, ki ima vidne robove, v notranjosti pa je prazen:
 {/lang}
 
 {lang=CZ}
@@ -131,8 +129,7 @@ and use it to define a trapezoid *QBCD* with blue filling, an invariable part of
 {/lang}
 
 {lang=SI}
-Then, we determine point *Q*, invisible in the figure, the foot of the line passing through *D* perpendicular to *AB*, 
-and use it to define a trapezoid *QBCD* with blue filling, an invariable part of the intended dynamic figure:
+Potem določimo točko *Q* (ki bo na sliki nevidna) kot nožišče pravokotnice na osnovnico skozi točko *D*. S tem lahko določimo trapez *QBCD* z modrim polnilom:
 {/lang}
 
 {lang=CZ}
@@ -164,9 +161,8 @@ be independent on the other objects of the figure:
 {/lang}
 
 {lang=SI}
-To complete the parallelogram, we create the right triangle *MNP*, again filled with blue, 
-the moving part of the visual proof without words. To allow its movement the vertices *M*, *N*, *P* will 
-be independent on the other objects of the figure:
+Da dopolnimo trapez do paralelograma, ustvarimo še pravokotni trikotnik *MNP*, spet z modrim polnilom. To bo gibljivi del našega dokaza, zato morajo njegova
+oglišča biti neodvisna od preostalih objektov na sliki. 
 {/lang}
 
 {lang=CZ}
@@ -201,7 +197,7 @@ Finally, we define two buttons to control the movement of the triangle *MNP* bac
 {/lang}
 
 {lang=SI}
-Finally, we define two buttons to control the movement of the triangle *MNP* back and forth:
+Nato definiramo dva gumba, ki bosta premikala trikotnik *MNP* naprej ali nazaj:
 {/lang}
 
 {lang=CZ}
@@ -236,7 +232,7 @@ The task solution code is now complete.
 {/lang}
 
 {lang=SI}
-The task solution code is now complete.
+Koda dokaza je s tem končana.
 {/lang}
 
 {lang=CZ}

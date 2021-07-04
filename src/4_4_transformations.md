@@ -10,6 +10,26 @@ JSXGraph has some standard trasformations predefined. Some of those are:
 
 Translation moves the selected object in the given direction. Scaling increases or decreases the size of our object and rotation rotates it. We will
 demonstrate some of their uses by constructing a square that can rotate around one vertex. 
+{/lang}
+
+{lang=SI}
+## Transformacije
+
+V JSXGraphu je možno vpeljati transformacije ravnine na elemente z uporabo matrike velikosti 3x3. Da je postopek malo lažji, ima JSXGraph nekatere standardne 
+transformacije že definirane. Nekatere izmed teh so:
+- Translacija
+- Rotacija
+- Razteg
+- Zrcaljenje
+
+Translacija premakne objekt v podani smeri. Razteg poveča ali zmanjša objekt, rotacija pa ga zavrti okoli točke za nek kot. Prikazali bomo njihovo uporabo tako, 
+da bomo konstruirali kvadrat, ki se lahko vrti okoli enega svojega oglišča. 
+{/lang}
+{lang=CZ}
+Transformations
+{/lang}
+
+
 
 ```JS
 <div id="jxgbox" class="jxgbox" style="width:500px; height:500px;"></div>
@@ -41,10 +61,8 @@ demonstrate some of their uses by constructing a square that can rotate around o
  var rot = board.create('transform', [function(){return s.Value();},A], {type:'rotate'});
  rot.bindTo([B,C,D]);
 </script>
-{/lang}
 
-{lang=SI}Functions drawing{/lang}
-{lang=CZ}Functions drawing{/lang}
+
 
 {lang=EN}
 Let's now look at the code. The first steps are standard, we create a board and a a slider named 'angle' with values from 0 to 2$\pi$, that we can later use to
@@ -76,5 +94,34 @@ dont need to bind it).
 
 For information on other transformations see [_here_](https://jsxgraph.org/docs/symbols/Transformation.html).
 {/lang}
+
+{lang=SI}
+Poglejmo sedaj konstrukcijo. Prvi koraki so že standardni, ustvarimo risalni prostor in na njem drsnik z imenom 'angle' z vrednostmi od 0 do 2$\pi$, s katerim 
+bomo izvajali rotacijo. Potem dodamo točko z imenom 'Drag me', iz katere bomo s pomočjo translacij konstruirali kvadrat.
+
+Naslednji dve vrstici `var right = board.create('transform', [2,0], {type:'translate'});` in `var up = board.create('transform', [0,2], {type:'translate'});`
+definirata naši prvi transformaciji. Prvi parameter katerekoli transformacije je tekst `'transform'`, zadnji pa je vedno `{type:''}`. TheDrugi parametri so
+odvisni od tipa transformacije. V primeru translacije moramo podati vektor oblike `[x,y]`, ki lahko vsebuje konstantne vrednosti, lahko pa ima koordinate
+izražene s funkcijami. Mi smo definirali smeri kot `[0,2]`, torej premik za dva v desno in `[2,0]`, torej za 2 gor. Zdaj konstruiramo preostanek kvadrata:
+
+`var B = board.create('point', [A,right], {name: 'B', style:7});`\
+`var C = board.create('point', [A,[right,up]], {name: 'C', style:7});`\
+`var D = board.create('point', [A,up], {name: 'D', style:7});`
+
+Vidimo, da so vse tri točke dobljene iz začetne točke `A` z uporabo `up` in `right` translacij. To naredimo z zapisom `[A, up]` ali`[A, right]`.
+Torej moramo za konstrukcijo nove točke zapisati začetno točko in transformacijo. Če uporabimo več transformacij, jih zapišemo v seznam kot `[A,[right,up]]`. 
+Ker smo dobili 4 točke, ki so oglišča kvadrata s stranico 2, lahko definiramo 4-kotnik `var sq`.
+
+Nato moramo definirati rotacijo `var rot = board.create('transform', [function(){return s.Value();},A], {type:'rotate'});`. 
+Prvi in zadnji parameter sta podobna kot prej, le da smo uporabili tip `'rotate'`. Pri rotaciji sta potrebna center vrtenja in kot vrtenja v obliki `[kot, točka]`. 
+V našem primeru to pomeni `[function(){return s.Value();},A]`. 
+Opazimo, da prvi parameter ni konstanta, ampak funkcija, ki vrne vrednost drsnika. Na ta način lahko uporabnik vpliva na vrtenje, središče rotacije pa je točka `A`.
+
+Za konec moramo še povezati rotacijo s kvadratom. S tem bomo poskrbeli, da se vse točke kvadrata premikajo sočasno in za isti kot. To storimo z ukazom 
+`rot.bindTo([B,C,D]);`. Transformacija je sedaj vezana na točke `B,C,D` (ker je `A` središče vrtenja, se ne premika in ga zato ni potrebno vezati na rotacijo). 
+
+Za informacije o ostalih transformacijah glej [_tukaj_](https://jsxgraph.org/docs/symbols/Transformation.html).
+{/lang}
+
 
 

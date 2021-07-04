@@ -9,13 +9,11 @@ given situation, movement of the circle controlled by the slider.
 {/lang}
 
 {lang=SI}
-## Example: Animation with slider
+## Primer: animacija z drsnikom
 
-**Cycloids.** Rolling a circle along a straight line a point firmly connected to its rim draws a curve 
-called a [cycloid](https://mathworld.wolfram.com/Cycloid.html). If the point is closer to the center a 
-curve drawn by it is called a *curtate cycloid*. If the point is further from the center than the rim, 
-the resulting curve is called a *prolate cycloid*, see figure below. Create a dynamic geometry model of the 
-given situation, movement of the circle controlled by the slider.
+**Cikloida.** Če fiksiramo točko na krožnici in krog zakotalimo po ravni podlagi, nam fiksirana točka opiše krivuljo, ki se imenuje  
+[cikloida](https://mathworld.wolfram.com/Cycloid.html). Če je točka znotraj kroga, rečemo krivulji skrčena cikloida, če pa je točka zunaj kroga, pa 
+raztegnjena cikloida. Ustvarili bomo dinamično sliko, ki bo narisala cikloido od premikanju drsnika. 
 {/lang}
 
 {lang=CZ}
@@ -67,9 +65,9 @@ First, we define dimensions, width and height, of the drawing area setting the c
 {/lang}
 
 {lang=SI}
-*Programming:*
+*Programiranje:*
 
-First, we define dimensions, width and height, of the drawing area setting the corresponding properties of the ``div`` element:
+Določimo dimenzije risalne površine:
 {/lang}
 
 {lang=CZ}
@@ -88,8 +86,7 @@ we determine the Bounding box as follows:
 {/lang}
 
 {lang=SI}
-Subsequently, at the beginning of the code bounded by the tags _\<script\>, \</script\>_, 
-we determine the Bounding box as follows:
+Nadalje določimo _bounding box_ na naslednji način:
 {/lang}
 
 {lang=CZ}
@@ -112,10 +109,9 @@ As the first construction, we draw a straight line *MN*, a path for the circle:
 {/lang}
 
 {lang=SI}
-Note the attribute ``showClearTraces`` used above. Setting its value to ``true`` displays the button for deleting 
-the traces of points, see the circled times at the bottom of the bounding box.
+Opazimo atribut ``showClearTraces``. Če nastavimo njegovo vrednost na ``true``, se ustvari gumb, ki izbriše sled točke (obkrožen $x$ spodaj desno).
 
-As the first of construction, we draw a straight line *MN*, a path for the circle:
+Narišemo še premico *MN*, ki bo predstavljala pot kotaljenja kroga:
 {/lang}
 
 {lang=CZ}
@@ -144,8 +140,7 @@ the amount of translation of the circle center, respectively:
 {/lang}
 
 {lang=SI}
-Before drawing the circle, we create two sliders to control the values of *r*, radius of the circle, and *l*, 
-the amount of translation of the circle center, respectively:
+Predno narišemo krog, ustvarimo dva drsnika, ki nadzirata vrednosti polmera *r* in premika *l* krožnice po premici . 
 {/lang}
 
 {lang=CZ}
@@ -170,7 +165,7 @@ Then we proceed to the construction of the circle *c* with center *C* and radius
 {/lang}
 
 {lang=SI}
-Then we proceed to the construction of the circle *c* with center *C* and radius *r*:
+Potem nadaljujemo s konstrukcijo kroga *c* s središčem v *C* in polmerom *r*:
 {/lang}
 
 {lang=CZ}
@@ -199,8 +194,7 @@ the above mentioned cycloids; *curtate*, *normal* and *prolate cycloid*, respect
 {/lang}
 
 {lang=SI}
-By defining three fixed points *A0*, *B0*, *C0* with different distances from the circle’s center we contribute to obtaining 
-the above mentioned cycloids; *curtate*, *normal* and *prolate cycloid*, respectively:
+Definiramo tri fiksne točke *A_0, B_0, C_0*, na različnih oddaljenostih od središča kroga, ki nam bodo določale vse tri prej opisane cikloide:
 {/lang}
 
 {lang=CZ}
@@ -232,8 +226,8 @@ controlled by sliders, especially *l*, can gain:
 {/lang}
 
 {lang=SI}
-In fact, we will not directly move these points *A0*, *B0*, *C0*, but will create their instant images *A*, *B*, *C* dependent on values that variables 
-controlled by sliders, especially *l*, can gain:
+V resnici ne bomo premikali teh treh točk, ampak bomo ustvarjali njihove kopije glede na vrednosti spremenljivk, ki jih bomo nadzirali z drsnikoma, 
+še posebej z drsnikom *l*:
 {/lang}
 
 {lang=CZ}
@@ -278,7 +272,7 @@ The task solution code is now complete.
 {/lang}
 
 {lang=SI}
-The task solution code is now complete.
+Koda rešitve je s tem končana.
 {/lang}
 
 {lang=CZ}

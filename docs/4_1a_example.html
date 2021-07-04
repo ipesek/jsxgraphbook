@@ -182,11 +182,11 @@ see figure below. By this means we will show that the area of a parallelogram eq
 base and height are the same as that of the parallelogram. 
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="example-proof-without-words-1"><a class="header" href="#example-proof-without-words-1">Example: Proof without words</a></h2>
-<p><strong>Area of a parallelogram.</strong> The area of a parallelogram equals its base multiplied by its height. Prove it!</p>
-<p>To solve the example we will use a dynamic <a href="https://en.wikipedia.org/wiki/Proof_without_words">proof without words</a>, 
-see figure below. By this means we will show that the area of a parallelogram equals the area of a rectangle whose 
-base and height are the same as that of the parallelogram. 
+<h2 id="primer-dokaz-brez-besed"><a class="header" href="#primer-dokaz-brez-besed">Primer: dokaz brez besed</a></h2>
+<p><strong>Površina paralelograma.</strong> Površina paralelograma je enaka produktu dolžine osnovnice in njegove višine. Dokažite!</p>
+<p>Za rešitev problema bomo uporabili metodo <a href="https://en.wikipedia.org/wiki/Proof_without_words">dokaz brez besed</a>.
+To bomo storili tako, da bomo pokazali, da je površina paralelograma enaka površini pravokotnika, ki ima eno stranico enako osnovnici paralelograma, druga stranica
+pa je enaka višini paralelograma.
 {/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="příklad-důkaz-beze-slov"><a class="header" href="#příklad-důkaz-beze-slov">Příklad: Důkaz beze slov</a></h2>
@@ -225,8 +225,8 @@ základna a výška jsou stejné jako u rovnoběžníku.
 <p>First, we define dimensions, width and height, of the drawing area setting the corresponding properties of the <code>div</code> element:
 {/lang}</p>
 <p>{lang=SI}
-<em>Programming:</em></p>
-<p>First, we define dimensions, width and height, of the drawing area setting the corresponding properties of the <code>div</code> element:
+<em>Programiranje:</em></p>
+<p>Najprej definiramo dimenzije risalne površine z nastavitvijo lastnosti <code>div</code> elementa:
 {/lang}</p>
 <p>{lang=CZ}
 <em>Programování:</em></p>
@@ -239,8 +239,7 @@ Subsequently, at the beginning of the code bounded by the tags <em>&lt;script&gt
 we determine the Bounding box as follows:
 {/lang}</p>
 <p>{lang=SI}
-Subsequently, at the beginning of the code bounded by the tags <em>&lt;script&gt;, &lt;/script&gt;</em>, 
-we determine the Bounding box as follows:
+Nadalje določimo naš <em>bounding box</em> tako:
 {/lang}</p>
 <p>{lang=CZ}
 Následně, na začátku kódu vymezeného tagy <em>&lt;script&gt;, &lt;/script&gt;</em>, 
@@ -256,8 +255,7 @@ As an initial sketch, the foundation of the dynamic figure, we draw the fixed pa
 that is visible only by its boundary, having no filling:
 {/lang}</p>
 <p>{lang=SI}
-As an initial sketch, the foundation of the dynamic figure, we draw the fixed parallelogram <em>ABCD</em> 
-that is visible only by its boundary, having no filling:
+Kot osnovo naše dinamične slike narišemo paralelogram <em>ABCD</em>, ki ima vidne robove, v notranjosti pa je prazen:
 {/lang}</p>
 <p>{lang=CZ}
 Jako výchozí motiv, který se stane základem dynamického obrázku, sestrojíme pevný (tj. nepohyblivý) 
@@ -278,8 +276,7 @@ Then, we determine point <em>Q</em>, invisible in the figure, the foot of the li
 and use it to define a trapezoid <em>QBCD</em> with blue filling, an invariable part of the intended dynamic figure:
 {/lang}</p>
 <p>{lang=SI}
-Then, we determine point <em>Q</em>, invisible in the figure, the foot of the line passing through <em>D</em> perpendicular to <em>AB</em>, 
-and use it to define a trapezoid <em>QBCD</em> with blue filling, an invariable part of the intended dynamic figure:
+Potem določimo točko <em>Q</em> (ki bo na sliki nevidna) kot nožišče pravokotnice na osnovnico skozi točko <em>D</em>. S tem lahko določimo trapez <em>QBCD</em> z modrim polnilom:
 {/lang}</p>
 <p>{lang=CZ}
 Jako patu kolmice z vrcholu <em>D</em> na přímku <em>AB</em> určíme bod <em>Q</em>, který je v dynamickém obrázku skryt. 
@@ -307,9 +304,8 @@ the moving part of the visual proof without words. To allow its movement the ver
 be independent on the other objects of the figure:
 {/lang}</p>
 <p>{lang=SI}
-To complete the parallelogram, we create the right triangle <em>MNP</em>, again filled with blue, 
-the moving part of the visual proof without words. To allow its movement the vertices <em>M</em>, <em>N</em>, <em>P</em> will 
-be independent on the other objects of the figure:
+Da dopolnimo trapez do paralelograma, ustvarimo še pravokotni trikotnik <em>MNP</em>, spet z modrim polnilom. To bo gibljivi del našega dokaza, zato morajo njegova
+oglišča biti neodvisna od preostalih objektov na sliki. 
 {/lang}</p>
 <p>{lang=CZ}
 Pro dokončení výplně rovnoběžníku vytvoříme pravoúhlý trojúhelník <em>MNP</em>, opět modře vybarvený, který bude 
@@ -339,7 +335,7 @@ jako body nezávislé na ostatních prvcích obrázku:
 Finally, we define two buttons to control the movement of the triangle <em>MNP</em> back and forth:
 {/lang}</p>
 <p>{lang=SI}
-Finally, we define two buttons to control the movement of the triangle <em>MNP</em> back and forth:
+Nato definiramo dva gumba, ki bosta premikala trikotnik <em>MNP</em> naprej ali nazaj:
 {/lang}</p>
 <p>{lang=CZ}
 Nakonec vytvoříme dvě tlačítka pro ovládání pohybu pravoúhlého trojúhelníku <em>MNP</em> tam a zpět:
@@ -369,7 +365,7 @@ Nakonec vytvoříme dvě tlačítka pro ovládání pohybu pravoúhlého trojúh
 The task solution code is now complete.
 {/lang}</p>
 <p>{lang=SI}
-The task solution code is now complete.
+Koda dokaza je s tem končana.
 {/lang}</p>
 <p>{lang=CZ}
 Kód řešení úlohy je nyní kompletní.

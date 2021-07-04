@@ -6,7 +6,10 @@ JSXGraph provides a convenient method for drawing such functions. Let's look at 
 {/lang}
 
 {lang=SI}
-## Functions drawing
+## Risanje funkcij
+
+V konstrukcijah pogosto želimo narisati grafe znanik funkcij kot na primer sinus ali kosinus, polinome, itd. JSXGraph ponuja priročno metodo za risanje grafov.
+Poglejmo primer.
 {/lang}
 
 {lang=CZ}
@@ -69,31 +72,23 @@ Another example would be `['x^3',-5,5]` as a variant to [function(x){return x*x*
 {/lang}
 
 {lang=SI}
-In this example we first changed properties of `div` and set the width and heigth to form a square area, because we wanted
-nicer looking construction (other possibility would be to use attribute _keepAspectRatio_ in `initBoard()`). Then we created
-two functions. 
+Na začetku smo rahlo spremenili lastnosti `div` in nastavili višino in širino na isto vrednost, da bo naša risalna površina kvadrat. Potem smo ustvarili dva grafa.
 
-To draw a $\sin (x)$ function we used _functiongraph_ as a type 
+Za risanje grafa funkcije $\sin (x)$ smo uporabili tip _functiongraph_ v vrstici 
 `var graph1 = board.create('functiongraph', `.  
-But what follows is something new.
-Let us look closely to `[function(x){return Math.sin(x);},-Math.PI,Math.PI]`. With type _functiongraph_ we told JSXGraph that
-we will be drawing a function on some interval, therefore we need to provide the function we want to draw. 
-`function(x){return Math.sin(x);}` does just that. Here we use anonymous function `function(x)` where we provide parameter `x`,
-that is used by JSXGraph to provide `x` values from the interval we have set with second and third element of the list. In our 
-case this is `-Math.PI, Math.PI`. Now we have to define a function that will return a value ($y$-coordinate) for the given $x$.
-This was done by `{return Math.sin(x);}`. We have to use reserved word `return` which is followed by a function, in our case
-`Math.sin(x)`. We end this with `;}` which must use to end the statement and the function.
+Kar sledi temu zapisu pa je nekaj novega. Oglejmo si najprej zapis `[function(x){return Math.sin(x);},-Math.PI,Math.PI]`. Ko smo navedli tip, smo JSXGraphu povedali,
+da mora narisati neko funkcijo na intervalu. Zato je potrebno podati funkcijo in pa interval. Funkcijo zapišemo z  `function(x){return Math.sin(x);}`, interval pa 
+kot `-Math.PI,Math.PI`. Uporabili smo anonimno funkcijo `function(x)` s parametrom `x`, kjer `x` zavzame vse vrednosti iz podanega intervala. Zdaj pa moramo definirati 
+specifično funkcijo, ki bo vrnila vrednost (koordinato $y$) pri danem $x$-u. To storimo z `{return Math.sin(x);}`.
 
-In the second _graph2_ we have drawn a quadratic function `{return x*x-2;}` on the interval `-3, 3`. We also used some attributes
-which we already explained on previous pages.
+V drugem grafu je postopek podoben. Za konkretno funkcijo uporabimo `{return x*x-2;}`, kar je kvadratna funkcija, interval pa zapišemo kot `-3, 3`.
 
-Note: For the _sine_ function we used
-[Javascript Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) object.
+Opomba: za funkcijo _sinus_ smo uporabili objekt
+[Javascript Math](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
 
-Alternatively, we could input the function term as string in the form
-`['sin(x)',-Math.PI,Math.PI]`. Then, the JSXGraph internal language *JessieCode* is used (see the JessieCode chapter)
-which "understands" the usual math notation.
-Another example would be `['x^3',-5,5]` as a variant to [function(x){return x*x*x;},-5,5]`.
+Alternativno bi lahko zapisali funkcijo v obliki `['sin(x)',-Math.PI,Math.PI]`. Potem bi notranji jezik JSXGrapha imenovan *JessieCode* 
+to razumel kot standardno matematično notacijo. 
+Podoben primer bi bil zapis `['x^3',-5,5]` namesto oblike `[function(x){return x*x*x;},-5,5]`.
 {/lang}
 
 {lang=CZ}

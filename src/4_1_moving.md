@@ -7,7 +7,10 @@ We will use both methods in the next example.
 {/lang}
 
 {lang=SI}
-## Moving objects
+## Premikanje objektov
+
+Kadar želimo razložiti kakšne težje koncepte, nam statična slika ne pomaga in bi želeli videti gibanje. Najbolj preprosta primera premika sta premik točke do 
+nekega mesta in vrnitev na začetek. Oba bomo pokazali v spodnjem primeru.
 {/lang}
 
 {lang=CZ}
@@ -65,6 +68,28 @@ For the coordinates we use _Math.random_ method, which  creates new random numbe
 then we multiply it by $8$ and subtract $4$. The result will be a number between $-4$ and $4$m which are also the limits of our bounding box.
 We do the same for both coordinates. As a result our point `p` (`"A"`) moves across the board randomly. 
 {/lang}
+
+
+{lang=SI}
+Prve tri vrstice so enake kot običajno, naslednja vrstica `var button1 = board.create('button',[2,3,'Start B', function(){q.visit([3,-2],1800,2)}]);` pa vsebuje
+nekaj novih ukazov.
+
+Podobno kot smo ustvarjali točke, premice in krožnice, lahko ustvarimo tudi gumbe tipa `'button'`, ki izvedejo neko dejavnost ob kliku. Parametri v seznamu so sledeči:
+__[x-koordinata, y-koordinata, napis na gumbu, dejanje]__. Torej položaj gumba, napis in kaj naj stori ob kliku. 
+
+V našem primeru želimo, da se ob kliku izvede funkcija `function(){q.visit([3,-2],1800,2)}`. Tukaj smo klicali nov ukaz, ki se imenuje [_visit()_](https://jsxgraph.org/docs/symbols/JXG.CoordsElement.html#visit).
+Njegov zapis je oblike __visit(lokacija, čas, možnosti)__ s tremi parametri:
+* lokacija so koordinate točke, kamor se naj objekt premakne (v našem primeru `[3, -2]`),
+* čas pomeni čas trajanja animacije v milisekundah (`1800`),
+* možnosti pomeni število ponovitev (pri nas je to `2`).
+
+V naslednji vrstici smo ustvarili nov gumb s koordinatami `-3,3`, z napisom `'Move A'` in z ukazom `function(){p.moveTo([Math.random()*8-4,Math.random()*8-4],500);}`.
+Tukaj smo uporabili novo metodo imenovano _moveTo_, ki prejme dva parametra:
+* koordinate, ki jih zapišemo kot seznam dveh števil,
+* čas animacije v milisekundah. 
+
+Za koordinate premika smo uporabili metodo _Math.random_, ki ustvari naključno število med $0$ in $1$.  Potem smo jo pomnožili s številom $8$ in odšteli $4$. Rezultat
+bo vedno naključno število med $-4$ in $4$, tako da bomo ostali znotraj mej našega platna. 
 
  
 {lang=CZ}

@@ -7,7 +7,10 @@ for data plotting, for other uses please check the API documentation.
 {/lang}
 
 {lang=SI}
-## Curves
+## Krivulje
+
+[Krivulja](https://jsxgraph.org/docs/symbols/Curve.html) v JSXGraphu ne pomeni samo graf funkcije, ampak tudi parametrična krivulja, polarna krivulja ali 
+grafični prikaz podatkov. V tem primeru bomo pokazali uporabo podatkov za prikaz poligonske črte oziroma črtnega diagrama.
 {/lang}
 
 {lang=CZ}
@@ -56,12 +59,10 @@ Finally we had to set the type of curve using attribute [_curveType_](https://js
 {/lang}
 
 {lang=SI}
-In this example we had to change the bounding box of the board in order to accommodate the data. Otherwise not all points
-will be visible.  
+Za začetek smo morali spremeniti velikost objekta _bounding box_, da bodo vsi podatki vidni. Za risanje grafa potrebujemo dva seznama podatkov. Uporabili smo 
+seznama `x`in `y`, ki smo ju napolnili s števili. To ni edini način zapisovanja podatkov, za več glejte [primer](https://jsxgraph.org/wiki/index.php/Data_plot)).
+Na koncu samo določimo tip krivulje z atributom [_curveType_](https://jsxgraph.org/docs/symbols/Curve.html#curveType).
 
-To draw a data plot we need first two lists of data. In our case we used two lists `x` and `y` and filled them with numbers.
-But is not the only way how to obtain the data (e.g. see this [example](https://jsxgraph.org/wiki/index.php/Data_plot)).
-As last we had to set the type of curve using attribute [_curveType_](https://jsxgraph.org/docs/symbols/Curve.html#curveType).
 {/lang}
 
 {lang=CZ}

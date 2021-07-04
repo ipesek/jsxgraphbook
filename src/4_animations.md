@@ -11,7 +11,14 @@ In this chapter we will learn
 {/lang}
 
 {lang=SI}
-## Animating
+## Animiranje
+
+Čeprav je risanje točk, premic in krivulj pogosto zelo koristno, pa se prava korist JSXGrapha pokaže takrat, ko želimo imeti dinamično sliko, ki simulira 
+gibanje ali animacijo. V tem poglavju se bomo naučili, kako
+* premikati objekte,
+* prilepiti objekte na druge objekte,
+* ustvariti drsnike,
+* preoblikovati objekte (povečati, rotirati,...).
 {/lang}
 
 {lang=CZ}

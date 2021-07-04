@@ -181,8 +181,10 @@ or polynomials, but also parametric curves, polar curves or data plots. In our e
 for data plotting, for other uses please check the API documentation.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="curves-1"><a class="header" href="#curves-1">Curves</a></h2>
-<p>{/lang}</p>
+<h2 id="krivulje"><a class="header" href="#krivulje">Krivulje</a></h2>
+<p><a href="https://jsxgraph.org/docs/symbols/Curve.html">Krivulja</a> v JSXGraphu ne pomeni samo graf funkcije, ampak tudi parametrična krivulja, polarna krivulja ali 
+grafični prikaz podatkov. V tem primeru bomo pokazali uporabo podatkov za prikaz poligonske črte oziroma črtnega diagrama.
+{/lang}</p>
 <p>{lang=CZ}</p>
 <h2 id="křivky"><a class="header" href="#křivky">Křivky</a></h2>
 <p>Objekt <em>křivka</em> (<a href="https://jsxgraph.org/docs/symbols/Curve.html">Curve</a>) v JSXGraphu nezahrnuje jenom
@@ -220,12 +222,10 @@ But it is not the only way to obtain the data (e.g. see this <a href="https://js
 Finally we had to set the type of curve using attribute <a href="https://jsxgraph.org/docs/symbols/Curve.html#curveType"><em>curveType</em></a>.
 {/lang}</p>
 <p>{lang=SI}
-In this example we had to change the bounding box of the board in order to accommodate the data. Otherwise not all points
-will be visible.</p>
-<p>To draw a data plot we need first two lists of data. In our case we used two lists <code>x</code> and <code>y</code> and filled them with numbers.
-But is not the only way how to obtain the data (e.g. see this <a href="https://jsxgraph.org/wiki/index.php/Data_plot">example</a>).
-As last we had to set the type of curve using attribute <a href="https://jsxgraph.org/docs/symbols/Curve.html#curveType"><em>curveType</em></a>.
-{/lang}</p>
+Za začetek smo morali spremeniti velikost objekta <em>bounding box</em>, da bodo vsi podatki vidni. Za risanje grafa potrebujemo dva seznama podatkov. Uporabili smo 
+seznama <code>x</code>in <code>y</code>, ki smo ju napolnili s števili. To ni edini način zapisovanja podatkov, za več glejte <a href="https://jsxgraph.org/wiki/index.php/Data_plot">primer</a>).
+Na koncu samo določimo tip krivulje z atributom <a href="https://jsxgraph.org/docs/symbols/Curve.html#curveType"><em>curveType</em></a>.</p>
+<p>{/lang}</p>
 <p>{lang=CZ}
 V tomto příkladu jsme především upravili nastavení nákresny, aby více odpovídala potřebám zobrazení daných dat. Kromě změny
 rozsahu souřadnic, aby byly vidět všechny body, jsme mimo jiné atributem <em>axis</em> s hodnotou <em>true</em> zajistili zobrazení souřadnicových os.</p>

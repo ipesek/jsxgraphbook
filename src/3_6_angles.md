@@ -7,7 +7,11 @@ Other combinations include two lines and two directions (by +/- 1) or a line and
 {/lang}
 
 {lang=SI}
-## Angles
+## Koti
+
+Kadar želimo povdariti določen kot v naši konstrukciji, lahko to storimo z objektom [_Angle_](https://jsxgraph.org/docs/symbols/Angle.html). Kot vhodne parametre
+lahko podamo tri točke $p_1$, $p_2$ in $p_3$, potem se kot nariše v obratni smeri urinega kazalca od $p_1$ do $p_3$ okoli $p_2$. Drugi način je s pomočjo dveh premic
+in dveh smeri (+/- 1), ali pa se zapiše premica in dve točki. 
 {/lang}
 
 {lang=CZ}
@@ -77,18 +81,14 @@ describe the same angle but with different input parameters.
 {/lang}
 
 {lang=SI}
-In this example we first created three points and then through them created two lines with common/intersection point $A$. 
+V tem primeru smo najprej ustvarili tri točke in skozi njih dve premici s skupno točko $A$. 
 
-Then we created first angle with `var angle = board.create('angle',[r, p, q], {radius:2});` using three points. Remember, 
-when defining angle with three points we have to provide them in counterclockwise order, where the angle is centered by the second point. Additionaly, we set an attribute
-_radius_ to $2$, which tells JSXGraph how big the arc of an angle should be. 
+Prvi kot smo konstruirali z `var angle = board.create('angle',[r, p, q], {radius:2});`, torej s pomočjo treh točk. Še enkrat opomnimo, da je vrstni red točk
+pomemben, središče kota je vedno sredinska točka. Dodatno smo uporabili atribut `radius:2`, ki pove velikost loka, ki nakazuje kot.
 
-Then the second angle $\beta$ was created using two lines and two directions (+/- 1) with following line
-`var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});`. This line presents another possible 
-method to input the parameters of an angle. We can combine them differently to get different angles at the intersection point $A$.
+Potem smo dodali drugi kot $\beta$ s pomočjo dveh premic in dveh smeri: `var angle2 = board.create('angle',[line2,line1,-1,-1], {radius:1,color:'green'});`
 
-Last angle is only a variation of `angle2` with different directions and as a result we can see that `angle1` and `angle3` 
-describe the same angle but with different input parameters.
+Zadnji kot je podoben prejšnjemu, vendar z drugačnimi smermi. Opazimo lahko, da sta `angle1` in `angle3` enaka, vendar smo ju opisali z različnimi parametri.
 
 {/lang}
 
