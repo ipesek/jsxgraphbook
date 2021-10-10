@@ -168,6 +168,6 @@ blockquote {
     visibility: visible;
 }
 
-#menu-bar-sticky-container {
+#menu-bar-sticky-container{
     display: contents;
 }
