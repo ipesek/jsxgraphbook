@@ -24,17 +24,9 @@
     - [{lang=EN}Transformations{/lang}{lang=SI}Transformacije{/lang}{lang=CZ}Transformace{/lang} {lang=DE}Transformationen{/lang}](4_4_transformations.md)
 - [{lang=EN}Advanced topics{/lang}{lang=SI}Napredne teme{/lang}{lang=CZ}Pokročilá témata{/lang} {lang=DE}Fortgeschrittene Themen{/lang}](5_advanced.md)
     - [{lang=EN}Adding images{/lang}{lang=SI}Dodajanje slik{/lang}{lang=CZ}Vkládání obrázků{/lang} {lang=DE}Bilder einbinden{/lang}](5_1_adding_images.md)
-    - [{lang=EN}Capture the construction as image{/lang}{lang=SI}Shranjevanje konstrukcije v obliki slike{/lang}{lang=CZ}Zachycení konstrukce jako obrázku{/lang} {lang=DE}Speichern einer Konstruktion als Bild{/lang}](5_1_screencapture.md)
-    - [{lang=EN}JSXGraph options{/lang}{lang=SI}JSXGraph možnosti{/lang}{lang=CZ}Volby JSXGraphu{/lang} {lang=DE}JSXGraph-Optionen{/lang}](5_2_jsxoptions.md)
+    - [{lang=EN}Capture the construction as image{/lang}{lang=SI}Shranjevanje konstrukcije v obliki slike{/lang}{lang=CZ}Zachycení konstrukce jako obrázku{/lang} {lang=DE}Speichern einer Konstruktion als Bild{/lang}](5_2_screencapture.md)
     - [{lang=EN}Events{/lang}{lang=SI}Dogodki{/lang}{lang=CZ}Události{/lang} {lang=DE}Ereignisbehandlung{/lang}](5_3_trigers.md)
-    - [{lang=EN}Saving user actions{/lang}{lang=SI}Saving user actions{/lang}{lang=CZ}Uložení uživatelských akcí{/lang} {lang=DE}Nutzeraktionen abspeichern{/lang}](5_4_user_actions.md)
-    - [{lang=EN}Jessie Code{/lang}{lang=SI}Jessie Code{/lang}{lang=CZ}Jessie Code{/lang} {lang=DE}JessieCode{/lang}](5_5_jessie_code.md)
-    - [{lang=EN}JSXGraph and Moodle{/lang}{lang=SI}JSXGraph and Moodle{/lang}{lang=CZ}JSXGraph a Moodle{/lang} {lang=DE}JSXGraph und Moodle{/lang}](6_moodle.md)
-    - [{lang=EN}JSXGraph as a Moodle Filter{/lang}{lang=SI}JSXGraph as a Moodle Filter{/lang}{lang=CZ}JSXGraph jako filtr v Moodlu{/lang} {lang=DE}JSGraph als Moodle-Filter{/lang}](6_1_jsxfilter.md)
-    - [{lang=EN}JSXGraph and Moodle Formulas{/lang}{lang=SI}JSXGraph and Moodle Formulas{/lang}{lang=CZ}JSXGraph a Moodle Formulas{/lang} {lang=DE}JSXGraph und Moodle-Formulas{/lang}](6_2_formulas.md)
     - [{lang=EN}JSXGraph and Stack{/lang}{lang=SI}JSXGraph and Stack{/lang}{lang=CZ}JSXGraph a Stack{/lang} {lang=DE}JSXGraph und STACK{/lang}](6_3_stack.md)
-- [{lang=EN}Templates{/lang}{lang=SI}Templates{/lang}{lang=CZ}Šablony{/lang} {lang=DE}Vorlagen{/lang}](7_templates.md)
-- [{lang=EN}JSX Gui{/lang}{lang=SI}JSX Gui{/lang}{lang=CZ}JSX GUI{/lang} {lang=DE}JSXGraph-Oberfläche{/lang}](8_gui.md)
 ----------------
 [{lang=EN}Contributors{/lang}{lang=SI}Contributors{/lang}{lang=CZ}Přispěvatelé{/lang} {lang=DE}Mitwirkende{/lang}](contributors.md)
 

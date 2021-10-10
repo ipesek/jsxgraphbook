@@ -36,7 +36,7 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
 .hide-boring .boring { display: none; }
 .hidden { display: none; }
 
-h2, h3 { margin-top: 1.5em; }
+h2, h3 { margin-top: 2.5em; }
 h4, h5 { margin-top: 2em; }
 
 .header + .header h3,
@@ -78,7 +78,6 @@ h4 a.header:target {
     overflow-y: auto;
     padding: 0 15px;
     padding-bottom: 50px;
-    margin-top: 30px;
 }
 .content main {
     margin-left: auto;
@@ -166,8 +165,4 @@ blockquote {
 }
 .tooltipped .tooltiptext {
     visibility: visible;
-}
-
-#menu-bar-sticky-container{
-    display: contents;
 }
