@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="">
+        <link rel="shortcut icon" href="favicon.png">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -174,16 +174,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <p>{lang=EN}</p>
-<h2 id="capture-the-construction-as-image"><a class="header" href="#capture-the-construction-as-image">Capture the construction as image</a></h2>
-<p>JSXGraph enables us to save a construction in the form of a .png file. </p>
-<p>{/lang}
-{lang=SI}</p>
-<h2 id="shranjevanje-konstrukcije-v-obliki-slike"><a class="header" href="#shranjevanje-konstrukcije-v-obliki-slike">Shranjevanje konstrukcije v obliki slike</a></h2>
-<p>JSXGraph omogoča, da ustvarjeno konstrukcijo shranimo kot .png datoteko, torej kot sliko.
-{/lang}
-{lang=CZ}Capture the construction as image{/lang}
-{lang=DE}Speichern einer Konstruktion als Bild{/lang}</p>
+                        <h1><a class="header" href="#langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelanglangdespeichern-einer-konstruktion-als-bildlang" id="langencapture-the-construction-as-imagelanglangsicapture-the-construction-as-imagelanglangczcapture-the-construction-as-imagelanglangdespeichern-einer-konstruktion-als-bildlang">{lang=EN}Capture the construction as image{/lang}{lang=SI}Capture the construction as image{/lang}{lang=CZ}Capture the construction as image{/lang}{lang=DE}Speichern einer Konstruktion als Bild{/lang}</a></h1>
 
                     </main>
 
@@ -225,7 +216,7 @@
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            var socket = new WebSocket("ws://localhost:3001");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();

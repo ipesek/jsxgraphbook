@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="">
+        <link rel="shortcut icon" href="favicon.png">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -175,7 +175,7 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2 id="triggers"><a class="header" href="#triggers">Triggers</a></h2>
+<h2><a class="header" href="#triggers" id="triggers">Triggers</a></h2>
 <p>In JSXGraph we can add functions that happen when a user based event occurs. These events are:</p>
 <ul>
 <li>mouse drag,</li>
@@ -188,7 +188,7 @@
 All events are defined with the method <code>object.on('event', function)</code>. Let us look at a few examples.
 {/lang}</p>
 <p>{lang=SI}</p>
-<h2 id="dogodki"><a class="header" href="#dogodki">Dogodki</a></h2>
+<h2><a class="header" href="#dogodki" id="dogodki">Dogodki</a></h2>
 <p>V JSXGraph lahko dodamo funkcije, ki se izvedejo, ko uporabnik opravi določeno dejanje. Ta dejanja so:</p>
 <ul>
 <li>poteg z miško,</li>
@@ -282,7 +282,7 @@ to change the text of our before defined element. The end result is a line of te
         
         <!-- Livereload script (if served using the cli tool) -->
         <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            var socket = new WebSocket("ws://localhost:3001");
             socket.onmessage = function (event) {
                 if (event.data === "reload") {
                     socket.close();
