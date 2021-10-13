@@ -17,7 +17,7 @@ Body jsou základními a nejjednoduššími objekty v JSXGraph. V tomto příkla
 {lang=DE}
 ## Punkte erzeugen
 
-Punkte gehören zu den grundlegensten Objekten in JSXGraph.
+Punkte gehören zu den grundlegendsten Objekten in JSXGraph.
 Wir legen alle Objekte auf die Zeichenfläche (genannt "board"), deshalb verwenden wir für alle Objekte, die auf dieser Zeichenfläche
 entstehen sollen, dieselbe Variable `board`.
 {/lang}
