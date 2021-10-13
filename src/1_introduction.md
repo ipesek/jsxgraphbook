@@ -53,7 +53,7 @@ JSXGraph ist eine browser-unabhängige JavaScript-Bibliothek zu interaktiver Geo
 Dieses Handbuch beschreibt die Grundlagen, wie einfache Konstruktionen erstellt werden können, sowie einige fortgeschrittenere Themen, zum Beispiel
 die Einbindung von JSXGraph in Moodle.
 
-**_Um JSXGraph-Konstruktionen erstellen zu können, muss man kein Programmierer sein (obwohl es hilfreich ist); es ist mer ein Zusammenstellen der Konstruktionselemente._**
+**_Um JSXGraph-Konstruktionen erstellen zu können, muss man kein Programmierer sein (obwohl es hilfreich ist); es ist mehr ein Zusammenstellen der Konstruktionselemente._**
 
 Das Beispiel unten zeigt die Mächtigkeit von JSXGraph.
 *Hinweis: Bewegen Sie den Punkt und beobachten Sie was geschieht.*
