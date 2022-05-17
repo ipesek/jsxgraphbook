@@ -1,5 +1,5 @@
 {lang=EN}
-## This is a manual about the [JSXGraph](https://jsxgraph.org/).
+## This is a manual about [JSXGraph](https://jsxgraph.org/).
 
 #### (Work in progress)
 
