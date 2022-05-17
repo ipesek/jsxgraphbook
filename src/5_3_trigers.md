@@ -50,7 +50,7 @@ Vsi dogodki se definirajo z metodo `objekt.on('dogodek', funkcija)`. Poglejmo ne
  var board = JXG.JSXGraph.initBoard('jxgbox');
  var A = board.create('point',[-2,1], {fixed: true});
  var B = board.create('point',[3,1]);
- A.on('down', function(){q.visit([3,-2],1000,1)});
+ A.on('down', function(){B.visit([3,-2],1000,1)});
  B.on('over', function(){document.getElementById('output').innerHTML = "This is point "+this.name;});
  B.on('out', function(){document.getElementById('output').innerHTML = 'Click on A or hover over B' ;});
 </script>
