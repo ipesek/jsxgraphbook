@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -190,7 +190,7 @@ board variable for the construction of all objects that will be on board.
 {/lang}</p>
 <p>{lang=DE}</p>
 <h2><a class="header" href="#punkte-erzeugen" id="punkte-erzeugen">Punkte erzeugen</a></h2>
-<p>Punkte gehören zu den grundlegensten Objekten in JSXGraph.
+<p>Punkte gehören zu den grundlegendsten Objekten in JSXGraph.
 Wir legen alle Objekte auf die Zeichenfläche (genannt &quot;board&quot;), deshalb verwenden wir für alle Objekte, die auf dieser Zeichenfläche
 entstehen sollen, dieselbe Variable <code>board</code>.
 {/lang}</p>
@@ -279,21 +279,6 @@ Dies wird auf den folgenden Seiten klarer werden.
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

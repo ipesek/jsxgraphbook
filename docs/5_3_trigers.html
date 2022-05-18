@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -219,7 +219,7 @@ Vsi dogodki se definirajo z metodo <code>objekt.on('dogodek', funkcija)</code>. 
  var board = JXG.JSXGraph.initBoard('jxgbox');
  var A = board.create('point',[-2,1], {fixed: true});
  var B = board.create('point',[3,1]);
- A.on('down', function(){q.visit([3,-2],1000,1)});
+ A.on('down', function(){B.visit([3,-2],1000,1)});
  B.on('over', function(){document.getElementById('output').innerHTML = "This is point "+this.name;});
  B.on('out', function(){document.getElementById('output').innerHTML = 'Click on A or hover over B' ;});
 </script>
@@ -280,21 +280,6 @@ to change the text of our before defined element. The end result is a line of te
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         

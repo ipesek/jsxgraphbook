@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-        <link rel="shortcut icon" href="favicon.png">
+        <link rel="shortcut icon" href="">
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
@@ -176,7 +176,7 @@
                 <div id="content" class="content">
                     <main>
                         <p>{lang=EN}</p>
-<h2><a class="header" href="#this-is-a-manual-about-the-a-hrefhttpsjsxgraphorgjsxgrapha" id="this-is-a-manual-about-the-a-hrefhttpsjsxgraphorgjsxgrapha">This is a manual about the <a href="https://jsxgraph.org/">JSXGraph</a>.</a></h2>
+<h2><a class="header" href="#this-is-a-manual-about-a-hrefhttpsjsxgraphorgjsxgrapha" id="this-is-a-manual-about-a-hrefhttpsjsxgraphorgjsxgrapha">This is a manual about <a href="https://jsxgraph.org/">JSXGraph</a>.</a></h2>
 <h4><a class="header" href="#work-in-progress" id="work-in-progress">(Work in progress)</a></h4>
 <p>JSXGraph is a cross-browser JavaScript library for interactive geometry, function plotting, charting, and data visualization in the web browser.</p>
 <p>This book covers the basics, how to build simple constructions and also some advanced topics on how to include JSXGraph in Moodle.</p>
@@ -209,7 +209,7 @@ Namig: premaknite piko in opazujte.
 <p>JSXGraph ist eine browser-unabhängige JavaScript-Bibliothek zu interaktiver Geometrie, Funktionsgraphen, Diagrammen und Daten-Visualisierung im Web-Browser.</p>
 <p>Dieses Handbuch beschreibt die Grundlagen, wie einfache Konstruktionen erstellt werden können, sowie einige fortgeschrittenere Themen, zum Beispiel
 die Einbindung von JSXGraph in Moodle.</p>
-<p><strong><em>Um JSXGraph-Konstruktionen erstellen zu können, muss man kein Programmierer sein (obwohl es hilfreich ist); es ist mer ein Zusammenstellen der Konstruktionselemente.</em></strong></p>
+<p><strong><em>Um JSXGraph-Konstruktionen erstellen zu können, muss man kein Programmierer sein (obwohl es hilfreich ist); es ist mehr ein Zusammenstellen der Konstruktionselemente.</em></strong></p>
 <p>Das Beispiel unten zeigt die Mächtigkeit von JSXGraph.
 <em>Hinweis: Bewegen Sie den Punkt und beobachten Sie was geschieht.</em>
 {/lang}</p>
@@ -343,21 +343,6 @@ die Einbindung von JSXGraph in Moodle.</p>
 
         </div>
 
-        
-        <!-- Livereload script (if served using the cli tool) -->
-        <script type="text/javascript">
-            var socket = new WebSocket("ws://localhost:3001");
-            socket.onmessage = function (event) {
-                if (event.data === "reload") {
-                    socket.close();
-                    location.reload(true); // force reload from server (not from cache)
-                }
-            };
-
-            window.onbeforeunload = function() {
-                socket.close();
-            }
-        </script>
         
 
         
