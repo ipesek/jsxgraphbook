@@ -65,11 +65,11 @@ Rezultat:
 </script>
 
 {lang=EN}
-Line of code `var line1 = board.create("line",[[-3,1],[3,-1]]);` creates $line1$ through two points `[-3,1]` and `[3,-1]`.
+Line of code `var line1 = board.create("line",[[-3,1],[3,-1]]);` creates `line1` through two points `[-3,1]` and `[3,-1]`.
 For each point again we had to define $x$ and $y$ coordinate. Because for the line we need to provide a list of two points,
 we enclose both points in square brackets, therefore the list of two points is `[[-3,1],[3,-1]]`.
 
-For the second $line2$ we first defined two points $p$ and $q$ and used them as `[p,q]` when defining the $line2$. Here we already
+For the second `line2` we first defined two points $p$ and $q$ and used them as `[p,q]` when defining the `line2`. Here we already
 see why it is useful to store objects in variables, because now we could define another line, that could also go through point $p$ or $q$
 and we don't need to worry if coordinates are correct.
 
@@ -77,11 +77,11 @@ _Note: In Javascript lists are written in square brackets **[ ]**._
 {/lang}
 
 {lang=SI}
-Premici smo ustvarili na dva načina. Vrstica `var line1 = board.create("line",[[-3,1],[3,-1]]);` ustvari črto z imenom $line1$ skozi dve točki s koordinatama
+Premici smo ustvarili na dva načina. Vrstica `var line1 = board.create("line",[[-3,1],[3,-1]]);` ustvari črto z imenom `line1` skozi dve točki s koordinatama
  `[-3,1]` in `[3,-1]`. Ker potrebujemo dva podatka, oziroma dve točki, moramo podatke našteti v seznamu, torej med oglate oklepaje []. 
  Zato dobimo zapis `[[-3,1],[3,-1]]`.
 
-Za drugo premico $line2$ smo najprej definirali dve točki $p$ in $q$ in uporabili seznam `[p,q]` za definicijo $line2$. Tukaj lahko opazimo, zakaj je koristno 
+Za drugo premico `line2` smo najprej definirali dve točki $p$ in $q$ in uporabili seznam `[p,q]` za definicijo `line2`. Tukaj lahko opazimo, zakaj je koristno 
 shranjevati objekte v spremenljivke. Če želimo zapisati več različnih premic, ki grejo skozi eno izmed točk $p$ ali $q$, ne rabimo vsakič znova zapisovat koordinat 
 teh dveh točk, saj sta točki že prej definirani. 
 
@@ -89,12 +89,12 @@ _Opomba: V Javascriptu se seznami pišejo v oglate oklepaje **[ ]**._
 {/lang}
 
 {lang=CZ}
-Řádek s kódem `var line1 = board.create("line",[[-3,1],[3,-1]]);` vytváří přímku $line1$, která prochází 
+Řádek s kódem `var line1 = board.create("line",[[-3,1],[3,-1]]);` vytváří přímku `line1`, která prochází 
 body `[-3,1]` a `[3,-1]`. 
 Každý bod je definován uspořádanou dvojicí (seznamem) souřadnic $x$ a $y$. Uspořádaný seznam je uzavřen do hranatých
 závorek \[...\]. Protože přímka je určena dvěma body, zapisujeme do její definice seznam těchto bodů`[[-3,1],[3,-1]]`.
 
-V případě druhé přímky $line2$ jsme nejprve definovali dva body $p$ a $q$ a v definici přímky použili 
+V případě druhé přímky `line2` jsme nejprve definovali dva body $p$ a $q$ a v definici přímky použili 
 jejich proměnné `[p,q]`. Již na tomto jednoduchém příkladě vidíme, jak je užitečné
 ukládat objekty do proměnných. Potom můžeme například klidně definovat třetí přímku, procházející 
 některým z bodů $p$, $q$ a nemusíme se strachovat, zda jeho souřadnice opisujeme dobře.

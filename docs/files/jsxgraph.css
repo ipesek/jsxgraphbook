@@ -1,10 +1,9 @@
 /*
-    Copyright 2008-2022
+    Copyright 2008-2020
         Matthias Ehmann,
         Michael Gerhaeuser,
         Carsten Miller,
         Bianca Valentin,
-        Andreas Walter,
         Alfred Wassermann,
         Peter Wilfahrt
 
@@ -34,15 +33,14 @@
     /* for IE 7 */
     position: relative;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #ffffff;
     border-style: solid;
     border-width: 1px;
-    border-color: #356aa0;
+    border-color: #356AA0;
     border-radius: 10px;
-    margin: 0;
     -webkit-border-radius: 10px;
     -ms-touch-action: none;
-    /* "touch-action: none;" is set with JavaScript. */
+    /* touch-action: none; */ /* Set with JavaScript */
 }
 
 .jxgbox svg text {
@@ -55,10 +53,13 @@
 
 .JXGtext {
     font-family: Courier, monospace;
-    /*
+    /**
      * The default font family is now set in
      * JXG.Options.text.cssdefaultstyle = 'font-family: Arial, Helvetica, Geneva, sans-serif;'
      */
+    /*
+        font-family: Arial, Helvetica, Geneva, sans-serif;
+    */
 
     /* "background-color: transparent;" may produce artefacts in IE. Solution: setting a color explicitly. */
     background-color: transparent;
@@ -68,24 +69,25 @@
 
 .JXGinfobox {
     border-style: none;
-    border-width: 0;
+    border-width: 1px;
     border-color: black;
 }
 
-/* CSS attributes will (permantely) overwrite attributes set in JSXGraph */
+/* 
+    CSS attributes will (permantely) overwrite attributes set in JSXGraph 
+*/
 .JXGimage {
     /* opacity: 1.0; */
 }
+
 .JXGimageHighlight {
     /* opacity: 0.6; */
 }
 
-.jxgbox :focus {
-    outline-width: 0.5px;
-    outline-style: dotted;
-}
+/*
+    CSS rules for the navigation bar 
+*/
 
-/* CSS rules for the navigation bar */
 .JXG_navigation {
     position: absolute;
     right: 5px;
@@ -99,41 +101,48 @@
     cursor: pointer;
 }
 
+.JXG_navigation:hover {
+
+}
+
 .JXG_navigation_button {
-    color: #666;
+    color: #666666;
 }
 
 .JXG_navigation_button:hover {
     border-radius: 2px;
-    background: rgba(184, 184, 184, 0.5);
+    background-color: #c0c0c0;
+    background-color: rgba(184, 184, 184, 0.5);
 }
 
-/* CSS rules for the wrapping div in fullscreen mode */
+/* 
+    CSS rules for the wrapping div in fullscreen mode 
+*/
 
 .JXG_wrap_private:-moz-full-screen {
-    background-color: #ccc;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+   background-color: #cccccc;
+   padding: 0px;
+   width: 100%;
+   height: 100%;
 }
 
 .JXG_wrap_private:-webkit-full-screen {
-    background-color: #ccc;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+   background-color: #cccccc;
+   padding: 0px;
+   width: 100%;
+   height: 100%;
 }
 
 .JXG_wrap_private:fullscreen {
-    background-color: #ccc;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+   background-color: #cccccc;
+   padding: 0px;
+   width: 100%;
+   height: 100%;
 }
 
 .JXG_wrap_private:-ms-fullscreen {
-    background-color: #ccc;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+   background-color: #cccccc;
+   padding: 0px;
+   width: 100%;
+   height: 100%;
 }

@@ -42,7 +42,7 @@ two arguments. First argument is the type of the object and second the coordinat
 define coordinates outside of the bounding box, the object will exist but won't be visible because it is outside visible
 area of our drawing board.
 
-Next line `var q = board.create('point',[3,0]);` is very similar to the previous line, with only one diference. We start
+Next line `var q = board.create('point',[3,0]);` is very similar to the previous line, with only one difference. We start
 the line with `var q = ` which we use to store this object in variable *q*. This is good and necessary practice, because
 in the constructions we often reference different object and define their relationships, which will be more apparent in following pages.
 

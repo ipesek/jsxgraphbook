@@ -1,7 +1,7 @@
 {lang=EN}
 ## Polygons
 
-Polygons are very useful objects which can be used to construct a closed area with arbitraryly many points (minimum is three).
+Polygons are very useful objects which can be used to construct a closed area with arbitrarily many points (minimum is three).
 Polygons can be convex or concave, depending on the input points. We can again define different [attributes](https://jsxgraph.org/docs/symbols/Polygon.html)
 to the object.
 

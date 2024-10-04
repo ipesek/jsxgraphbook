@@ -1,7 +1,7 @@
 {lang=EN}
 ## Angles
 
-When we need to emphasise a specific angle in our construction, we can do this with object [_Angle_](https://jsxgraph.org/docs/symbols/Angle.html).
+When we need to emphasize a specific angle in our construction, we can do this with object [_Angle_](https://jsxgraph.org/docs/symbols/Angle.html).
 As an input we need to provide three points $p1, p2, p3$ and the angle is drawn counterclockwise from $p1$ to $p3$ around $p2$.
 Other combinations include two lines and two directions (by +/- 1) or a line and two coordinates.
 {/lang}

@@ -177,8 +177,8 @@
                     <main>
                         <p>{lang=EN}</p>
 <h2><a class="header" href="#adding-images" id="adding-images">Adding images</a></h2>
-<p>So far we have larned to create many different objects in JSXGraph. In this section we will learn how to include images from the internet onto 
-our drawing board. Transformations can also be used on images, similarly to points or poligons. Let us look at the example below.
+<p>So far we have learned to create many different objects in JSXGraph. In this section we will learn how to include images from the internet onto 
+our drawing board. Transformations can also be used on images, similarly to points or polygons. Let us look at the example below.
 {/lang}</p>
 <p>{lang=SI}</p>
 <h2><a class="header" href="#dodajanje-slik" id="dodajanje-slik">Dodajanje slik</a></h2>
@@ -192,7 +192,7 @@ lahko uporabljamo tudi transformacije, podobno kot pri točkah ali poligonih. Po
  var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, -5, 5, 5],
      keepAspectRatio:true, showCopyright:false, showNavigation:false, axis: true });
   var p = board.create('point',[-1,-1], {size:4, opacity:0.5});
-  var urlImg = &quot;https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/92/owl_1f989.png&quot;;
+  var urlImg = &quot;https://jsxgraph.org/distrib/images/uccellino.jpg&quot;;
   var im1 = board.create('image',[urlImg, [0,1], [2,2] ]);
   var im2 = board.create('image',[urlImg, [function(){return p.X();},function(){return p.Y();}], [2,2]], { opacity: 0.6, rotate: 30 });
 &lt;/script&gt;
@@ -202,16 +202,16 @@ lahko uporabljamo tudi transformacije, podobno kot pri točkah ali poligonih. Po
  var board = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-5, -5, 5, 5],
      keepAspectRatio:true, showCopyright:false, showNavigation:false, axis: true });
   var p = board.create('point',[-1,-1], {size:4, opacity:0.5});
-  var urlImg = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/92/owl_1f989.png";
+  var urlImg = "https://jsxgraph.org/distrib/images/uccellino.jpg";
   var im1 = board.create('image',[urlImg, [0,1], [2,2] ]);
   var im2 = board.create('image',[urlImg, [function(){return p.X();},function(){return p.Y();}], [2,2]], { opacity: 0.6, rotate: 30 });
 </script>
 <p>{lang=EN}
-We created a board and bounding box, added the coordinate system and create a point <code>p</code>. With the next line <code>var urlImg = &quot;https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/92/owl_1f989.png&quot;;</code>
+We created a board and bounding box, added the coordinate system and create a point <code>p</code>. With the next line <code>var urlImg = &quot;https://jsxgraph.org/distrib/images/uccellino.jpg&quot;;</code>
 we saved the URL of our image in the variable <code>urlImg</code> for easier use in the next line. </p>
 <p>To create the image, we use <code>var im1 = board.create('image',[urlImg, [0,1], [2,2] ]);</code>. We can see that it takes a list of three parameters. Those are:</p>
 <ul>
-<li>URL of the image (we used the variable, but another way is to write <code>&quot;https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/92/owl_1f989.png&quot;</code>),</li>
+<li>URL of the image (we used the variable, but another way is to write <code>&quot;https://jsxgraph.org/distrib/images/uccellino.jpg&quot;</code>),</li>
 <li>coordinates of the lower left point of the image (<code>[0,1]</code>),</li>
 <li>width and height of the image (<code>[2,2]</code>).</li>
 </ul>
@@ -222,11 +222,11 @@ moves with it. </p>
 only rotates around the lower left point. So if we want to rotate the image around another point, we have to use transformations. For more, see <a href="https://jsxgraph.org/wiki/index.php?title=Images.">here.</a>
 {/lang}</p>
 <p>{lang=SI}
-Ustvarili smo površino, <em>bounding box</em> in koordinatni sistem s točko <code>p</code>. Z vrstico <code>var urlImg = &quot;https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/92/owl_1f989.png&quot;;</code>
+Ustvarili smo površino, <em>bounding box</em> in koordinatni sistem s točko <code>p</code>. Z vrstico <code>var urlImg = &quot;https://jsxgraph.org/distrib/images/uccellino.jpg&quot;;</code>
 smo shranili URL naslov slike v spremenljivko, ki nam bo pomagala v nadaljevanju. </p>
 <p>Za konstrukcije slike zapišemo <code>var im1 = board.create('image',[urlImg, [0,1], [2,2] ]);</code>. Vidimo, da smo zapisali seznam s tremi paramteri. To so:</p>
 <ul>
-<li>URL naslov (tukaj smo uporabili spremeljivko, lahko bi tudi zapisali <code>&quot;https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/facebook/92/owl_1f989.png&quot;</code>),</li>
+<li>URL naslov (tukaj smo uporabili spremeljivko, lahko bi tudi zapisali <code>&quot;https://jsxgraph.org/distrib/images/uccellino.jpg&quot;</code>),</li>
 <li>koordinate spodnje leve točke slike (<code>[0,1]</code>),</li>
 <li>širina in višina slike (<code>[2,2]</code>).</li>
 </ul>

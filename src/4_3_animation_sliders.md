@@ -50,14 +50,14 @@ First are the coordinates for the button, then the text on it and lastly is the 
 of the slider. This function has 3 parameters:
 - direction 
 - step count 
-- delay (in miliseconds)
+- delay (in milliseconds)
 
 Direction is either +1 or -1, we used one for increasing and the other for decreasing the radius. Step count is in our case 40, this means that the slider
-is separated into 40 subsections - the bigger the number, the smoother the animation. And lastly the delay is 30 miliseconds, that is how much time passes between moving to the next subsection of the slider. 
+is separated into 40 subsections - the bigger the number, the smoother the animation. And lastly the delay is 30 milliseconds, that is how much time passes between moving to the next subsection of the slider. 
 The smaller the number, the faster it moves.  
 
-The second button is created in a similar way, the main diference is in the direction and we made the animation less smooth by reducing the step count. 
-The third button is used to stop the animation of the slider, this is done with the funkction `r.stopAnimation()`, which doesn't need any parameters. 
+The second button is created in a similar way, the main difference is in the direction and we made the animation less smooth by reducing the step count. 
+The third button is used to stop the animation of the slider, this is done with the function `r.stopAnimation()`, which doesn't need any parameters. 
 
 Then we just have to create a circle with center `A` and the radius given by the slider.
 {/lang}

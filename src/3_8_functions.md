@@ -44,7 +44,7 @@ Wollen wir uns ein Beispiel ansehen:
 </script>
 
 {lang=EN}
-In this example we first changed the properties of `div` and set the width and heigth to form a square area, because we wanted a
+In this example we first changed the properties of `div` and set the width and height to form a square area, because we wanted a
 nicer looking construction (another possibility would be to use attribute _keepAspectRatio_ in `initBoard()`). Then we created
 two functions.
 
@@ -93,7 +93,7 @@ Podoben primer bi bil zapis `['x^3',-5,5]` namesto oblike `[function(x){return x
 
 {lang=CZ}
 
-V tomto příkladě jsme nejprve změnili vlastnosti bloku `div`, konkrétně jsme nastavili šířku (*width*) a výšku (*heigth*)
+V tomto příkladě jsme nejprve změnili vlastnosti bloku `div`, konkrétně jsme nastavili šířku (*width*) a výšku (*height*)
 nákresny tak, aby měla čtvercový tvar (další možností by bylo použití atributu _keepAspectRatio_ ve funkci `initBoard()`,
 viz kapitola *3.6 Kružnice*). Potom jsme zadali zobrazení grafů dvou funkcí. 
 

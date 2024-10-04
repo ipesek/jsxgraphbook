@@ -178,7 +178,7 @@
                         <p>{lang=EN}</p>
 <h2><a class="header" href="#transformations" id="transformations">Transformations</a></h2>
 <p>In JSXGraph it is possible to apply a plane projective transformation to elements using a 3x3 matrix to define the specific transformation. To make life easier
-JSXGraph has some standard trasformations predefined. Some of those are:</p>
+JSXGraph has some standard transformations predefined. Some of those are:</p>
 <ul>
 <li>Translation</li>
 <li>Rotation</li>
@@ -237,7 +237,7 @@ Transformations
 Let's now look at the code. The first steps are standard, we create a board and a a slider named 'angle' with values from 0 to 2$\pi$, that we can later use to
 rotate the square by 360°. Then we create a point called 'Drag me', from which we will construct the other three points of a square. </p>
 <p>The next two lines <code>var right = board.create('transform', [2,0], {type:'translate'});</code> and <code>var up = board.create('transform', [0,2], {type:'translate'});</code>
-create our first transformations. The first parameter of any thansformation is the text <code>'transform'</code> and the last parameter is always <code>{type:''}</code>. The
+create our first transformations. The first parameter of any transformation is the text <code>'transform'</code> and the last parameter is always <code>{type:''}</code>. The
 second parameter is based on the type of our transformation. In the case of a translation, we need to input a vector <code>[x,y]</code> with either constants or functions as the 
 input. We defined ours with directions <code>[0,2]</code>, meaning movement of a point 2 units to the right, and <code>[2,0]</code>; moving 2 units up. Now we can construct the
 rest of our square:</p>

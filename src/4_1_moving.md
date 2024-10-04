@@ -62,7 +62,7 @@ Its syntax is __visit(where, time, options)__ with three parameters,
  The second button is created in next line, but let us now look at the action more closely which is `p.moveTo([Math.random()*8-4,Math.random()*8-4],500);`.
  Here a new method _moveTo_ is used on the point `q`, which takes only two parameters
 * destination coordinates as a list of two elements e.g  `[Math.random()*8-4,Math.random()*8-4]`
-* animation time in miliseconds, e.g `500`.
+* animation time in milliseconds, e.g `500`.
 
 For the coordinates we use _Math.random_ method, which  creates new random number between 0 and 1 every time we click on the button,
 then we multiply it by $8$ and subtract $4$. The result will be a number between $-4$ and $4$m which are also the limits of our bounding box.
